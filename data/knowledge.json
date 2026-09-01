@@ -1,5 +1,39 @@
 [
   {
+    "id": "google-antigravity-teamwork",
+    "title": "Google Antigravity Teamwork",
+    "summary": "여러 에이전트가 후보 생성·비판·검증·통합을 반복하며 장기 연구와 복잡한 개발 과제를 수행하는 멀티에이전트 오케스트레이션 기능",
+    "type": "도구",
+    "categories": [
+      "AI 에이전트",
+      "연구 자동화",
+      "개발 워크플로우"
+    ],
+    "tags": [
+      "멀티에이전트",
+      "오케스트레이션",
+      "병렬 작업",
+      "자기 검증"
+    ],
+    "status": "테스트 중",
+    "importance": 5,
+    "updated": "2026-09-02",
+    "url": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner",
+    "content": [
+      "Antigravity에서 `/teamwork-preview`를 실행하면 과제 특성에 따라 반복 코딩, 분산 코딩, 장문 증명, 자기 검증, 문서 리뷰 패턴을 자동 선택합니다.",
+      "여러 에이전트가 후보를 병렬로 만들고 서로의 오류를 검토한 뒤 강한 결과를 통합하도록 설계되어, 단일 에이전트로 처리하기 어려운 장기 연구·엔지니어링 문제에 적합합니다.",
+      "패턴은 에이전트 설명과 오케스트레이션 로직을 분리하며, 실행 중 필요한 에이전트 수와 반복 횟수를 동적으로 조정합니다."
+    ],
+    "cautions": [
+      "공식 기능명과 현재 명령어는 `/teamwork-preview`입니다. 비공식 예시에서 쓰이는 `/teamwork`와 다르므로 공식 문서를 기준으로 사용해야 합니다.",
+      "다중 에이전트 장시간 실행은 비용과 처리 시간이 커질 수 있습니다. 목표와 최종 승인 기준을 명확히 설정해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner",
+      "https://antigravity.google/docs/teamwork"
+    ]
+  },
+  {
     "id": "openmaic-course-generator",
     "title": "OpenMAIC",
     "summary": "학습 주제를 입력하면 나레이션, 실습, 퀴즈가 포함된 강좌를 자동 생성하는 멀티에이전트 교육 도구",
