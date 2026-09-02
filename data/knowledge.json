@@ -1415,5 +1415,167 @@
       "https://console.upstage.ai/api/chat",
       "https://console.upstage.ai/docs/getting-started"
     ]
+  },
+  {
+    "id": "openclaw-v2026-8-2-release",
+    "title": "OpenClaw v2026.8.2 업데이트",
+    "summary": "세션/작업 Dock UI 개편, Linux 데스크톱 컴패니언, 새 테마, 크론·하트비트 스케줄링 개선을 담은 OpenClaw 정식 릴리스",
+    "type": "도구",
+    "categories": [
+      "AI 에이전트",
+      "개발 워크플로우"
+    ],
+    "tags": [
+      "OpenClaw",
+      "에이전트 하네스",
+      "릴리스",
+      "스케줄링"
+    ],
+    "status": "테스트 중",
+    "importance": 4,
+    "updated": "2026-09-02",
+    "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.8.2",
+    "content": [
+      "세션·작업을 한눈에 보는 Dock 뷰 UI가 추가되고, x86-64 Linux용 데스크톱 컴패니언(.deb/AppImage)이 새로 지원됩니다.",
+      "CRT, Manuscript, Rosé, Miami 등 새 테마와 음성 출력 개선, 업데이트·롤백 안전성 강화, 보안 마스킹 확장이 포함되었습니다.",
+      "크론(cron)·하트비트(heartbeat) 방식 예약 작업 기능이 개선되어 반복 자동화 시나리오에 활용하기 좋아졌습니다."
+    ],
+    "cautions": [
+      "정식 배포 채널(GitHub Releases)에서 받은 빌드인지 확인 후 설치하는 것이 안전합니다.",
+      "이전 버전에서 다중 에이전트가 설정된 상태로 업데이트할 경우 설정 마이그레이션이 실패하는 사례가 보고되었으니, 문제가 발생하면 공식 setup 절차로 복구하는 것이 좋습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.8.2"
+    ]
+  },
+  {
+    "id": "comfyui-dlss5-enhancer",
+    "title": "ComfyUI-DLSS5-Enhancer",
+    "summary": "NVIDIA DLSS 5 신경망 렌더링을 ComfyUI 안에서 이미지·영상 프레임에 적용해 피부·머리카락·직물 질감을 보강하는 노드팩",
+    "type": "GitHub",
+    "categories": [
+      "이미지·영상 생성",
+      "ComfyUI 확장"
+    ],
+    "tags": [
+      "ComfyUI",
+      "DLSS",
+      "업스케일링",
+      "노드팩"
+    ],
+    "status": "테스트 중",
+    "importance": 3,
+    "updated": "2026-09-02",
+    "url": "https://github.com/Blueforcer/ComfyUI-DLSS5-Enhancer",
+    "content": [
+      "게임 렌더링에 쓰이는 NVIDIA DLSS 5 신경망 렌더링 패스를 비디오 프레임·이미지 배치에 적용하는 ComfyUI 커스텀 노드팩입니다.",
+      "게임 엔진의 버퍼 정보 없이도 피부 서브서피스 스캐터링, 머리카락 결, 직물 구조 등 소재 반응을 복원하도록 설계되었습니다.",
+      "선택적으로 1.5배~3배 업스케일링 기능도 함께 제공합니다."
+    ],
+    "cautions": [
+      "NVIDIA GPU와 DLSS 5 호환 드라이버 등 실행 환경 요구사항을 사전에 확인해야 합니다.",
+      "커뮤니티 제작 노드팩이므로 공식 NVIDIA 제품은 아니며, 업데이트 빈도와 유지보수 상태를 별도로 확인하는 것이 좋습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/Blueforcer/ComfyUI-DLSS5-Enhancer"
+    ]
+  },
+  {
+    "id": "sodam-family-claude-code-plugins",
+    "title": "SoDam Family (소담 패밀리)",
+    "summary": "Claude Code를 더 안전하고 편리하게 쓰도록 돕는 7개 플러그인 묶음 — 위험 행동 차단, 사용설명서 점검, 반복 작업 자동화, 계획·검토 워크플로 등",
+    "type": "GitHub",
+    "categories": [
+      "AI 에이전트",
+      "개발 워크플로우"
+    ],
+    "tags": [
+      "Claude Code",
+      "플러그인",
+      "안전 게이트",
+      "워크플로 자동화",
+      "한국어"
+    ],
+    "status": "테스트 중",
+    "importance": 4,
+    "updated": "2026-09-02",
+    "url": "https://github.com/sodam-ai/SoDam-Family",
+    "content": [
+      "SoDamHarness(위험 행동 자동 차단·백업 확인), SoDamContext(CLAUDE.md/AGENTS.md 점검·정비), SoDamLoop(반복 작업 자동화, 최대 8회·30분 제한), SoDamAgentic(계획-실행-검토), SoDamPrompt(초보자용 한국어 글쓰기 스킬), SoDamReverse(역공학 시도 차단), SoDamGraph(진행 상황 시각화) 7개 플러그인으로 구성됩니다.",
+      "각 플러그인은 개별 GitHub 저장소로 분리되어 있어 필요한 기능만 선택적으로 설치할 수 있습니다.",
+      "비개발자도 이해할 수 있도록 한국어 설명과 초심자용 개념 안내를 README에 포함하고 있습니다."
+    ],
+    "cautions": [
+      "라이선스·상업적 사용 조건은 저장소의 법률/저작권 안내 섹션을 직접 확인해야 합니다.",
+      "각 하위 플러그인의 설치·실행 요구사항(Claude Code 버전 등)이 다를 수 있어 개별 저장소 문서를 함께 참고해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/sodam-ai/SoDam-Family"
+    ]
+  },
+  {
+    "id": "upstage-cli-solar-pro2",
+    "title": "Upstage CLI",
+    "summary": "Upstage Solar Pro2 기반 에이전트형 터미널 UI — 코드 분석·페어 프로그래밍·자동화를 도구 30종과 MCP 서버 연동으로 지원",
+    "type": "GitHub",
+    "categories": [
+      "AI 에이전트",
+      "개발 워크플로우"
+    ],
+    "tags": [
+      "Upstage",
+      "Solar Pro2",
+      "터미널",
+      "MCP",
+      "에이전트 하네스"
+    ],
+    "status": "테스트 중",
+    "importance": 3,
+    "updated": "2026-09-02",
+    "url": "https://github.com/VectorSophie/upstage-cli",
+    "content": [
+      "Upstage의 Solar Pro2 모델을 기반으로 코드 분석, 페어 프로그래밍, 자동화 작업을 터미널 안에서 지원하는 에이전트형 TUI입니다.",
+      "30개의 내장 도구와 MCP 서버 연동, 평가용 하네스를 포함합니다.",
+      "macOS/Linux는 설치 스크립트, Windows는 릴리스 바이너리, 또는 Bun 1.3+ 환경에서 npm으로 설치할 수 있으며 `upstage chat`, `upstage ask` 명령으로 실행합니다."
+    ],
+    "cautions": [
+      "Windows 설치 시 릴리스 페이지에서 플랫폼에 맞는 바이너리를 직접 선택해야 합니다.",
+      "Upstage API 키 발급 등 별도 계정·인증 설정이 필요할 수 있어 README의 설치 절차를 순서대로 따라야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/VectorSophie/upstage-cli"
+    ]
+  },
+  {
+    "id": "agent-file-lock-afl",
+    "title": "agent-file-lock (afl)",
+    "summary": "OS 수준 불변(immutable) 플래그로 코딩 에이전트가 특정 파일을 수정·삭제·이름변경하지 못하도록 잠그는 CLI 도구",
+    "type": "GitHub",
+    "categories": [
+      "개발 워크플로우",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "에이전트 안전",
+      "파일 잠금",
+      "CLI",
+      "Linux"
+    ],
+    "status": "테스트 중",
+    "importance": 3,
+    "updated": "2026-09-02",
+    "url": "https://github.com/Mineru98/agent-file-lock",
+    "content": [
+      "합의되어 더 이상 바뀌지 않아야 하는 문서·설정 파일을 코딩 에이전트의 실수나 자동 수정으로부터 보호하기 위해 만들어진 CLI 도구입니다.",
+      "OS 수준의 불변(immutable) 플래그로 파일을 잠그고, 상위 디렉터리에는 추가 전용(append-only) 플래그를 걸어 '삭제 후 재생성' 우회 시도도 차단합니다.",
+      "Linux 및 WSL2의 Linux 파일시스템을 지원하며, 네이티브 Windows/DrvFs에서는 지원이 제한적입니다."
+    ],
+    "cautions": [
+      "OS 파일시스템 플래그를 직접 조작하므로 잠금 해제 방법과 권한 요구사항을 사용 전에 숙지해야 합니다.",
+      "네이티브 Windows 환경에서는 완전히 동작하지 않을 수 있어 사전에 지원 범위를 확인해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/Mineru98/agent-file-lock"
+    ]
   }
 ]
