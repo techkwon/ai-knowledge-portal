@@ -1577,5 +1577,107 @@
     "sourceEvidence": [
       "https://github.com/Mineru98/agent-file-lock"
     ]
+  },
+  {
+    "id": "llm-configurator-hardware-analyzer",
+    "title": "LLM Configurator Hardware Analyzer",
+    "summary": "GPU·VRAM·시스템 메모리를 기준으로 실행 가능한 로컬 LLM과 예상 속도·전력 비용·Ollama 설치 명령을 안내하는 브라우저 도구",
+    "type": "Tool",
+    "categories": [
+      "로컬 AI",
+      "AI 도구"
+    ],
+    "tags": [
+      "VRAM",
+      "GPU",
+      "모델 선택",
+      "Ollama",
+      "Apple Silicon"
+    ],
+    "status": "사용 가능",
+    "importance": 4,
+    "updated": "2026-09-03",
+    "url": "https://llmconfigurator.com/en/analyzer",
+    "content": [
+      "GPU를 직접 고르거나 브라우저 자동 감지를 사용하고 VRAM·시스템 RAM을 입력하면 모델을 실행 적합도에 따라 분류합니다.",
+      "모델별 예상 VRAM 사용량, 초당 토큰 수, 전력 비용과 복사 가능한 Ollama 설치 명령을 함께 보여줍니다.",
+      "Apple Silicon은 전용 VRAM 대신 통합 메모리 총량을 입력해 비교할 수 있으며 로그인 없이 브라우저에서 사용할 수 있습니다."
+    ],
+    "cautions": [
+      "속도와 전력 비용은 추정치이므로 실제 성능은 모델 양자화, 컨텍스트 길이, 냉각과 다른 앱의 메모리 사용량에 따라 달라질 수 있습니다.",
+      "브라우저 자동 감지 결과와 모델 요구량은 실행 전 공식 모델 문서로 한 번 더 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://llmconfigurator.com/en/analyzer"
+    ]
+  },
+  {
+    "id": "mlx-core-mlx-serve-mac",
+    "title": "MLX Core · mlx-serve",
+    "summary": "Apple Silicon Mac에서 대화·도구 호출·문서 질의와 OpenAI·Anthropic·Ollama 호환 API를 로컬로 실행하는 무료 AI 앱·서버",
+    "type": "Tool",
+    "categories": [
+      "로컬 AI",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "Apple Silicon",
+      "MLX",
+      "로컬 LLM",
+      "MCP",
+      "Claude Code"
+    ],
+    "status": "사용 가능",
+    "importance": 5,
+    "updated": "2026-09-03",
+    "url": "https://mlxserve.com/",
+    "content": [
+      "메뉴 막대 앱에서 로컬 모델을 내려받아 채팅, 문서 폴더 질의, 음성·이미지·영상·음악 생성과 에이전트 작업을 Mac 안에서 실행합니다.",
+      "mlx-serve는 OpenAI Chat Completions, Anthropic Messages, Ollama 호환 API와 도구 호출·MCP 연결을 제공해 Claude Code, Cursor, Open WebUI 같은 클라이언트에 연결할 수 있습니다.",
+      "기본 서버는 127.0.0.1에 바인딩되며 계정이나 클라우드 API 키 없이 로컬에서 사용할 수 있습니다."
+    ],
+    "cautions": [
+      "Apple Silicon 전용이며 실행 가능한 모델 크기는 통합 메모리와 저장공간에 크게 좌우됩니다.",
+      "에이전트의 셸·파일 도구에는 별도 승인이나 샌드박스를 적용하고, 원격 Telegram 기능은 접근 주체와 권한을 엄격히 확인하세요.",
+      "사이트의 자체 벤치마크 수치는 기기·모델·버전·설정이 다른 환경에 그대로 적용되지 않을 수 있습니다."
+    ],
+    "sourceEvidence": [
+      "https://mlxserve.com/",
+      "https://github.com/ddalcu/mlx-serve/releases/latest"
+    ]
+  },
+  {
+    "id": "studentsim-llm-student-simulator",
+    "title": "StudentSim",
+    "summary": "소량의 학생별 기록으로 학습자 응답과 교사 지도에 대한 변화를 모사하는 개인화 LLM 학생 시뮬레이터 연구 프레임워크",
+    "type": "Research",
+    "categories": [
+      "교육 AI",
+      "연구·논문"
+    ],
+    "tags": [
+      "학생 시뮬레이션",
+      "AI 튜터",
+      "개인화",
+      "학습자 모델링",
+      "평가"
+    ],
+    "status": "연구 공개",
+    "importance": 4,
+    "updated": "2026-09-03",
+    "url": "https://huggingface.co/papers/2609.01591",
+    "content": [
+      "전체 학생 자료를 함께 학습한 뒤 학생별로 특화하는 방식으로, 적은 개인 데이터에서도 특정 학습자의 응답 특성을 모사하도록 설계됐습니다.",
+      "StudentSimEval은 체스, 제2언어 영어 쓰기, 수학의 비식별 공개 학습자 데이터로 행동 충실도와 지도 반응성을 평가합니다.",
+      "실제 학생에게 반복 실험하기 전에 튜터의 설명·교정 전략을 점검하는 연구용 대리 환경으로 활용할 수 있습니다."
+    ],
+    "cautions": [
+      "학생 시뮬레이터의 반응은 실제 학생의 학습 결과나 정서적 반응을 대신하지 않으므로 수업 의사결정은 실제 학습자 근거로 재검증해야 합니다.",
+      "개인화 과정에서 사용하는 학생 데이터는 최소 수집·비식별화·접근 통제 원칙을 적용해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/papers/2609.01591",
+      "https://arxiv.org/abs/2609.01591"
+    ]
   }
 ]
