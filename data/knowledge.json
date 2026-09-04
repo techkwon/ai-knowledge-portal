@@ -1679,5 +1679,159 @@
       "https://huggingface.co/papers/2609.01591",
       "https://arxiv.org/abs/2609.01591"
     ]
+  },
+  {
+    "id": "gpt-6-astra",
+    "title": "GPT-6 Astra",
+    "summary": "OpenAI가 컴퓨터 조작·브라우징·개발·연구 작업을 위한 모델로 발표한 GPT-6 Astra의 활용과 도입 시 확인 사항",
+    "type": "도구",
+    "categories": [
+      "LLM",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "OpenAI",
+      "컴퓨터 사용",
+      "연구 자동화"
+    ],
+    "importance": 5,
+    "url": "https://openai.com/index/gpt-6-astra/",
+    "content": [
+      "공식 발표는 양식 작성, CRM 기록 갱신, 온라인 조사, 데이터 분석과 시각화, 웹사이트 제작 및 프런트엔드 QA를 활용 예로 소개합니다.",
+      "제한된 조직부터 시작해 ChatGPT 유료 플랜과 API, Azure, AWS Bedrock으로 순차 제공한다고 안내합니다. 실제 계정에서 사용 가능 여부를 확인하세요.",
+      "도입할 때는 작은 테스트 데이터로 조사·초안·검증 단계를 나누고, 외부 전송이나 데이터 변경은 사람의 승인 뒤 실행하는 방식으로 시작할 수 있습니다."
+    ],
+    "cautions": [
+      "벤치마크와 안전성 수치는 공급자의 평가이며 실제 업무에서의 무오류나 안전을 보장하지 않습니다.",
+      "제공 일정·플랜·API 지원은 변할 수 있습니다. 민감한 자료를 보내기 전에 데이터 처리 조건을 확인하세요."
+    ],
+    "updated": "2026-09-05",
+    "status": "자료 확인",
+    "sourceEvidence": [
+      "https://openai.com/index/gpt-6-astra/"
+    ]
+  },
+  {
+    "id": "cerebras-inference-model-catalog",
+    "title": "Cerebras Inference 모델 카탈로그",
+    "summary": "공유 API의 모델 ID, 컨텍스트 한도와 전용 엔드포인트 차이를 확인하는 Cerebras 공식 모델 안내",
+    "type": "가이드",
+    "categories": [
+      "LLM",
+      "API"
+    ],
+    "tags": [
+      "Cerebras",
+      "모델 선택",
+      "추론"
+    ],
+    "importance": 4,
+    "url": "https://inference-docs.cerebras.ai/models/overview",
+    "content": [
+      "공식 공유 엔드포인트 목록에는 gpt-oss-120b와 qwen-3.8-27b가 기재되어 있습니다. 모델 이름 대신 문서의 정확한 ID로 API를 설정합니다.",
+      "무료와 유료의 컨텍스트 한도가 다릅니다. 추가 모델 계열, 예약 용량, 높은 처리량과 운영 SLA는 Dedicated Endpoints 안내를 별도로 확인합니다.",
+      "공유 API의 모델은 가지치기하지 않은 원본 모델이라고 설명합니다. REAP 연구용 가지치기 모델과 운영 API를 구분하세요."
+    ],
+    "cautions": [
+      "무료 체험에도 요청 제한이 있고 유료 사용에는 요금이 발생할 수 있습니다.",
+      "문서의 처리 속도는 모든 입력·상황에서 보장되는 속도가 아닙니다. 실제 작업으로 지연과 품질을 확인하세요."
+    ],
+    "updated": "2026-09-05",
+    "status": "자료 확인",
+    "sourceEvidence": [
+      "https://inference-docs.cerebras.ai/models/overview"
+    ]
+  },
+  {
+    "id": "minimax-speech-2-8",
+    "title": "MiniMax Speech 2.8",
+    "summary": "숨소리·웃음 등 사운드 태그와 음성 복제를 지원하는 MiniMax의 음성 합성 모델",
+    "type": "도구",
+    "categories": [
+      "음성 생성"
+    ],
+    "tags": [
+      "MiniMax",
+      "TTS",
+      "음성 합성"
+    ],
+    "importance": 4,
+    "url": "https://www.minimax.io/news/minimax-speech-28",
+    "content": [
+      "공식 소개는 (chuckle), (breath), (clear-throat), (laughs) 같은 사운드 태그로 말의 호흡과 표현을 조절하는 예를 제공합니다.",
+      "10초 샘플을 이용한 음성 복제 기능을 소개합니다. 본인 음성이나 이용 허락을 받은 음성으로 짧은 내레이션을 시험하고 발음과 표현을 직접 들어 확인하세요.",
+      "MiniMax Audio 또는 Open Platform에서 사용할 수 있습니다. 발표일은 2026년 1월 23일이며, 새 출시 소식이 아니라 활용 자료로 정리한 카드입니다."
+    ],
+    "cautions": [
+      "타인의 동의 없는 음성 복제와 사칭에 사용하지 마세요. 원본 음성과 생성물의 이용 권리를 확인하세요.",
+      "공식 사례의 언어 간 개선은 중국어·일본어 중심입니다. 한국어 품질을 동일하게 보장한다고 해석하지 마세요."
+    ],
+    "updated": "2026-09-05",
+    "status": "자료 확인",
+    "sourceEvidence": [
+      "https://www.minimax.io/news/minimax-speech-28"
+    ]
+  },
+  {
+    "id": "kmsg-macos-cli-mcp",
+    "title": "kmsg: macOS 메시징 CLI·MCP",
+    "summary": "macOS 손쉬운 사용 API로 KakaoTalk 앱을 제어하는 비공식 오픈소스 CLI 및 네이티브 MCP 서버",
+    "type": "GitHub",
+    "categories": [
+      "AI 에이전트",
+      "업무 자동화"
+    ],
+    "tags": [
+      "macOS",
+      "MCP",
+      "CLI"
+    ],
+    "importance": 4,
+    "url": "https://github.com/channprj/kmsg",
+    "content": [
+      "프로젝트 문서는 macOS 13 이상과 해당 데스크톱 앱, 설치한 바이너리의 손쉬운 사용 권한을 요구합니다.",
+      "읽기·실시간 감시·메시지 전송과 구조화된 JSON 출력을 제공하며, 비공개 통신 프로토콜 대신 화면의 Accessibility API를 이용합니다.",
+      "자동화는 읽기 전용으로 시작하고, 텍스트 전송 전에는 dry-run 결과에서 대상과 내용을 검토하세요. 실제 전송은 명시적 승인 뒤 별도 단계로 두는 것을 권장합니다."
+    ],
+    "cautions": [
+      "서비스 운영사의 공식 도구가 아닙니다. 서비스 약관과 조직 보안 정책, 계정 제한 가능성을 검토해야 합니다.",
+      "대화 내용은 공개 저장소나 로그에 넣지 마세요. UI 변경으로 탐색이 실패할 수 있으며 이미지 전송에는 dry-run이 없다고 명시되어 있습니다."
+    ],
+    "updated": "2026-09-05",
+    "status": "자료 확인",
+    "sourceEvidence": [
+      "https://github.com/channprj/kmsg"
+    ]
+  },
+  {
+    "id": "microduck-physical-ai-robot",
+    "title": "Microduck: 물리 AI 실험용 이족 로봇",
+    "summary": "시뮬레이션과 실제 로봇 사이의 강화학습 실험을 지향하는 Pollen Robotics의 소형 프로그래머블 로봇",
+    "type": "도구",
+    "categories": [
+      "로보틱스",
+      "AI 교육"
+    ],
+    "tags": [
+      "물리 AI",
+      "강화학습",
+      "시뮬레이션"
+    ],
+    "importance": 3,
+    "url": "https://store.pollen-robotics.com/products/microduck",
+    "content": [
+      "공식 제품 설명은 15개 모터, 전면 카메라, 8×8 ToF 센서와 2개 IMU를 갖춘 이족 로봇으로 소개합니다.",
+      "제공 행동과 컨트롤러로 시작하고, 오픈소스 SDK를 통해 행동을 개발하거나 시뮬레이션에서 학습한 정책을 실제 로봇에 적용하는 활용을 안내합니다.",
+      "교육·연구 도입 전에는 SDK와 시뮬레이터의 현재 지원 상태, 필요한 개발 환경을 확인하고 안전한 실험 공간을 마련하세요."
+    ],
+    "cautions": [
+      "사전 주문 제품입니다. 같은 페이지에 초기 배송 목표와 신규 주문 지연 안내가 함께 있으므로 배송 시점을 확정적으로 해석하지 마세요.",
+      "세금·배송비·지역별 판매 조건을 확인해야 합니다. 학습 성능이나 수업 적합성을 직접 시험한 것은 아닙니다."
+    ],
+    "updated": "2026-09-05",
+    "status": "자료 확인",
+    "sourceEvidence": [
+      "https://store.pollen-robotics.com/products/microduck"
+    ]
   }
 ]
