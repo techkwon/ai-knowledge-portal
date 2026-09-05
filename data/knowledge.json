@@ -1833,5 +1833,98 @@
     "sourceEvidence": [
       "https://store.pollen-robotics.com/products/microduck"
     ]
+  },
+  {
+    "id": "claude-commerce-agents",
+    "title": "Claude Commerce Agents: 승인형 상거래 에이전트 예제",
+    "summary": "쇼핑 안내와 판매자 운영을 분리하고 쓰기 작업을 사람의 승인 뒤 적용하는 Anthropic 참조 구현",
+    "type": "GitHub",
+    "categories": [
+      "AI 에이전트",
+      "업무 자동화"
+    ],
+    "tags": [
+      "Claude",
+      "승인 절차",
+      "참조 구현"
+    ],
+    "importance": 4,
+    "url": "https://github.com/anthropics/commerce-agents",
+    "content": [
+      "쇼핑 에이전트와 판매자 에이전트를 Messages API, Claude Agent SDK, Managed Agents에서 실행하는 구조를 제공합니다. 소매·여행·통신·공연의 네 가지 데모가 포함됩니다.",
+      "데모는 Python 3.11 이상과 Node 22, API 키를 요구합니다. 쇼핑 체크아웃은 실제 결제 대신 호스트에 장바구니를 전달하며, 판매자 쓰기 작업은 승인 대기 변경으로 준비합니다.",
+      "도입 실험은 검색·상품 상세 또는 읽기 전용 지표부터 시작하세요. 자체 백엔드에 인증과 권한 검사를 연결하고 승인 화면을 별도로 검증하는 것이 좋습니다."
+    ],
+    "cautions": [
+      "예제 앱에는 인증이 없습니다. 실제 고객 데이터나 결제 시스템을 바로 연결하지 마세요.",
+      "공식 README는 유지보수와 외부 기여를 받지 않는 참조 구현이라고 명시합니다. 운영용 완제품이나 안전 보증이 아닙니다."
+    ],
+    "updated": "2026-09-06",
+    "status": "자료 확인",
+    "sourceEvidence": [
+      "https://github.com/anthropics/commerce-agents"
+    ]
+  },
+  {
+    "id": "deepseek-v4-flash-vision-exp",
+    "title": "DeepSeek V4 Flash Vision Exp: 실험적 시각 이해 모델",
+    "summary": "DeepSeek V4 Flash에 시각 모듈을 추가한 멀티모달 모델과 추론 참조 자료",
+    "type": "도구",
+    "categories": [
+      "AI 모델",
+      "개발 도구"
+    ],
+    "tags": [
+      "DeepSeek",
+      "멀티모달",
+      "vLLM"
+    ],
+    "importance": 4,
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+    "content": [
+      "공식 모델 카드는 실험적 멀티모달 모델로 소개하며 토크나이저, 프롬프트 인코딩과 최소 PyTorch 추론 구현을 안내합니다.",
+      "입력 인코딩은 OpenAI 스타일 JSON 콘텐츠 블록과 이미지 경로를 포함하는 TXT 표기를 지원합니다. 이미지 기반 문서·차트 이해 실험의 출발점으로 참고할 수 있습니다.",
+      "vLLM과 SGLang 실행 예제가 제공됩니다. 공식 카드의 vLLM 예시는 GB300 GPU 4개 노드를 사용하므로 배포 전에 별도 하드웨어 레시피와 메모리 요구량을 확인하세요."
+    ],
+    "cautions": [
+      "실험적 모델이며 공개 벤치마크 수치는 제작자 평가입니다. 실제 정확도와 업무 적합성을 직접 검증한 것은 아닙니다.",
+      "일반 개인용 컴퓨터에서 바로 실행된다고 가정하지 마세요. 민감한 이미지의 업로드·저장 정책도 별도 검토해야 합니다."
+    ],
+    "updated": "2026-09-06",
+    "status": "자료 확인",
+    "sourceEvidence": [
+      "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp"
+    ]
+  },
+  {
+    "id": "mai-image-2-6-flash",
+    "title": "MAI Image 2.6 Flash: 생성과 부분 편집 모델",
+    "summary": "텍스트 기반 이미지 생성과 일관성을 유지하는 이미지 편집을 안내하는 Microsoft Foundry 모델",
+    "type": "도구",
+    "categories": [
+      "이미지 생성",
+      "AI 모델"
+    ],
+    "tags": [
+      "Microsoft",
+      "Foundry",
+      "이미지 편집"
+    ],
+    "importance": 3,
+    "url": "https://ai.azure.com/catalog/models/MAI-Image-2.6-Flash?publisher=microsoft",
+    "content": [
+      "공식 카탈로그는 텍스트에서 이미지를 생성하거나 기존 이미지를 편집하는 확산 기반 모델로 설명합니다. 표기된 버전은 2026-07-31입니다.",
+      "객체 부분 수정, 레이아웃 조정, 이미지 속 텍스트 변경과 모션 블러 같은 흔적 정리를 활용 사례로 제시합니다.",
+      "시안의 특정 요소만 바꾸는 실험에서는 원본과 수정본을 비교하고, 유지해야 할 객체·배치·텍스트를 명시해 결과의 일관성을 확인하세요."
+    ],
+    "cautions": [
+      "공식 소개의 기능 설명을 확인한 것이며 직접 생성 품질을 시험하지 않았습니다.",
+      "실제 사용 전 지역·계정별 제공 여부와 가격, 배포 조건을 확인하세요. 입력 이미지의 권리와 개인정보도 검토해야 합니다."
+    ],
+    "updated": "2026-09-06",
+    "status": "자료 확인",
+    "sourceEvidence": [
+      "https://ai.azure.com/catalog/models/MAI-Image-2.6-Flash?publisher=microsoft"
+    ]
   }
 ]
