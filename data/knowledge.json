@@ -2188,5 +2188,102 @@
     "sourceEvidence": [
       "https://github.com/marktext/marktext"
     ]
+  },
+  {
+    "id": "chatgpt-images-2-5-editing",
+    "title": "ChatGPT Images 2.5: 스케치와 반복 편집",
+    "summary": "스케치·템플릿·이미지 코멘트로 구도를 전달하고 여러 차례 수정하는 이미지 제작 워크플로우",
+    "type": "도구",
+    "categories": [
+      "이미지 생성",
+      "콘텐츠 제작"
+    ],
+    "tags": [
+      "OpenAI",
+      "Sketch",
+      "이미지 편집",
+      "API"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-09",
+    "url": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+    "content": [
+      "공식 발표는 참조 이미지의 피사체 보존과 여러 차례 편집 지시의 일관성 개선을 소개합니다. 실제 결과는 입력과 작업에 따라 검토해야 합니다.",
+      "ChatGPT의 Sketch에서 대략적인 구도를 그리고 원하는 스타일을 설명하거나, 템플릿으로 제작 형식을 정한 다음 이미지 위 코멘트로 수정 위치를 전달할 수 있습니다.",
+      "개발자용 API는 GPT-Image-2.5 Flare와 Sunburst를 제공합니다. 공식 소개에서 Flare는 일반적인 제작·반복 작업, Sunburst는 정밀한 편집이 필요한 작업에 초점을 둡니다."
+    ],
+    "cautions": [
+      "이미지에 표시된 문자·수치·세부 묘사는 최종 검수하고 참조 이미지의 이용 권한과 개인정보를 확인하세요.",
+      "API 가격과 사용량 제한은 공식 가격표에서 별도로 확인하세요. 이 카드는 발표 자료 확인이며 품질·속도 실측이 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://openai.com/index/introducing-chatgpt-images-2-5/"
+    ]
+  },
+  {
+    "id": "claude-cyber-verification-program",
+    "title": "Claude 사이버 검증 프로그램과 오탐 대응",
+    "summary": "Opus·Sonnet의 방어 목적 보안 작업이 차단될 때 이용 플랫폼과 조직별 승인 범위를 확인하는 공식 안내",
+    "type": "가이드",
+    "categories": [
+      "AI 안전",
+      "개발 워크플로우"
+    ],
+    "tags": [
+      "Claude",
+      "보안",
+      "CVP",
+      "조직 관리"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-09",
+    "url": "https://support.claude.com/ko/articles/14604842-claude-opus-%EB%B0%8F-sonnet%EC%9D%98-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%82%AC%EC%9D%B4%EB%B2%84-%EB%B3%B4%EC%95%88-%EC%A1%B0%EC%B9%98",
+    "content": [
+      "공식 문서는 Opus·Sonnet의 실시간 보안 조치가 금지된 사용과 고위험 이중 사용을 구분한다고 설명합니다. 정당한 방어 업무는 무료 신청 기반 CVP의 검토 대상이 될 수 있습니다.",
+      "신청 경로는 Anthropic 자체 플랫폼, Microsoft Foundry 등 이용 환경에 따라 다릅니다. 공식 안내에서 해당 플랫폼의 지원 여부와 관리자·신원 확인 요건을 먼저 확인하세요.",
+      "승인은 특정 조직에 연결됩니다. 승인 후에도 정당한 작업이 차단되면 현재 조직과 승인 조직이 같은지 확인하고 공식 오탐 보고·이의 제기 경로를 이용하세요."
+    ],
+    "cautions": [
+      "CVP는 금지된 행위를 허용하거나 안전 조치를 우회하는 프로그램이 아닙니다. 승인 후에도 금지된 사용은 차단됩니다.",
+      "공식 문서상 ZDR 조직은 현재 CVP 참여에 제한이 있습니다. 지원 플랫폼과 조건은 변경될 수 있으므로 최신 문서를 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://support.claude.com/ko/articles/14604842-claude-opus-%EB%B0%8F-sonnet%EC%9D%98-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%82%AC%EC%9D%B4%EB%B2%84-%EB%B3%B4%EC%95%88-%EC%A1%B0%EC%B9%98"
+    ]
+  },
+  {
+    "id": "cinematique-cinematic-prompt-library",
+    "title": "Cinematique: 영상 문법 프롬프트 라이브러리",
+    "summary": "카메라·렌즈·조명·구도를 기준으로 이미지와 영상 생성용 프롬프트를 구성하는 공개 참고 자료",
+    "type": "가이드",
+    "categories": [
+      "프롬프트",
+      "이미지 생성",
+      "영상 생성"
+    ],
+    "tags": [
+      "구도",
+      "조명",
+      "카메라",
+      "영상 문법"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-09",
+    "url": "https://vvsvs.pro/cinematique",
+    "content": [
+      "제작자 사이트는 150개 이상의 영화·사진 기법과 복사해 활용할 수 있는 프롬프트 템플릿을 무료로 제공합니다. 카테고리·난도·분위기 기준으로 기법을 탐색하도록 안내합니다.",
+      "원하는 카메라 시점이나 조명 기법을 고른 뒤 템플릿의 [Subject]를 자신의 장면으로 바꾸고 사용하는 생성 도구에 입력하는 방식입니다.",
+      "같은 피사체로 시점·조명 조건 하나씩을 바꿔 결과를 비교하면 시각적 의도를 구체적으로 전달하는 연습에 활용할 수 있습니다."
+    ],
+    "cautions": [
+      "특정 생성 모델의 공식 프롬프트 규격이 아니라 독립 제작자의 참고 라이브러리입니다. 도구별 지시 해석과 결과는 다를 수 있습니다.",
+      "카메라명·해상도 표현이 실제 촬영 장비나 출력 해상도를 보장하지 않습니다. 예시 이미지의 재배포 권한과 도구 약관은 별도로 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://vvsvs.pro/cinematique"
+    ]
   }
 ]
