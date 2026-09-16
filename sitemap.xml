@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/chatgpt-images-2-5-editing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/kakaotalk-mcp-windows/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/browser-use-agent-automation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/naver-land-mcp-community/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/photon-studio-local-image-editor/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ai-alternatives-before-execution/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-code-session-resume/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ai-project-handoff-documentation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/obsidian-sync-and-ai-index-boundaries/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/sodam-o-brain-codex-local-memory/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/comfy-mcp/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/llm-wiki-source-knowledge-base/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/huggingface-gui-model-management/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -23,7 +29,6 @@
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/token-monitor-ai-usage-dashboard/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/mark-markdown-ai-editor/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/marktext-markdown-export/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/chatgpt-images-2-5-editing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-cyber-verification-program/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/cinematique-cinematic-prompt-library/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/exo-local-ai-cluster/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
