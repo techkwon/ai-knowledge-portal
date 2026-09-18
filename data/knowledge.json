@@ -3184,5 +3184,35 @@
     "sourceEvidence": [
       "https://www.anthropic.com/engineering/building-effective-agents"
     ]
+  },
+  {
+    "id": "google-labs-cc-family-agent",
+    "title": "Google Labs CC: 가족 단위로 확장된 개인 에이전트",
+    "summary": "가족 최대 6명이 공유 일정·할 일을 맡기는 실험적 에이전트",
+    "type": "도구",
+    "categories": [
+      "AI 에이전트"
+    ],
+    "tags": [
+      "실무 가이드",
+      "커뮤니티 인사이트"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-18",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/",
+    "content": [
+      "Google Labs 공식 발표에 따르면 CC는 원래 개인용 일일 브리핑 에이전트였으나, 최대 6명까지 가족·가구 구성원이 함께 쓰는 그룹 에이전트로 확장되었습니다. CC는 자체 검증된 구글 계정을 가지며 그룹 구성원에게만 응답합니다.",
+      "구성원은 이메일·문자·사진 등에서 CC와 공유할 정보를 스스로 선택하고 언제든 바꿀 수 있습니다. 학교·학원·동물병원 메일을 지정해 자동으로 공유(Auto cc)하거나, 개별 건을 CC로 전달(Send it to CC)하는 두 가지 방식이 있습니다.",
+      "CC는 Gmail·Chat·Docs·Calendar와 연동되며 Google의 에이전트 실행 환경 Antigravity와 최신 Gemini 모델 위에서 각 사용자별 격리된 클라우드 인스턴스로 동작합니다. 신청서 사전 작성, 준비물 목록, 주간 식단 계획 등 가사 행정 작업을 지원한다고 설명합니다.",
+      "CC는 가구 전체에 적용되는 정보(단골 장보기 목록 등)와 개인별 정보(식단 제한, 시간대 등)를 구분해 기억한다고 설명합니다."
+    ],
+    "cautions": [
+      "미국 거주 만 18세 이상 개인 Google 계정 사용자 대상 초기 실험(Google Labs)이며, 대기자 명단(labs.google/cc) 등록 방식입니다. 다른 국가·연령대에는 아직 적용되지 않습니다.",
+      "가족 구성원 간 정보 공유 범위와 권한 설정을 직접 검토해야 합니다. 공식 발표는 기능 소개이며 실제 사용성·오류율을 독립적으로 검증한 자료는 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/"
+    ]
   }
 ]
