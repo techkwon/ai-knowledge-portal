@@ -3094,5 +3094,95 @@
     "sourceEvidence": [
       "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
     ]
+  },
+  {
+    "id": "unity-official-codex-plugin",
+    "title": "Unity 공식 Codex 플러그인: 프로젝트 확인부터 검증까지",
+    "summary": "Unity 6 이상에서 엔진 전용 스킬을 사용하는 개발 흐름",
+    "type": "활용법",
+    "categories": [
+      "AI 에이전트"
+    ],
+    "tags": [
+      "실무 가이드",
+      "커뮤니티 인사이트"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-18",
+    "url": "https://unity.com/kr/blog/unity-plugin-codex",
+    "content": [
+      "Unity 공식 안내는 Unity 엔지니어가 작성한 31개 스킬과 Unity 6 이상 호환을 설명합니다. UI, 타일맵, 렌더링, 오디오, 물리와 현지화 등 작업별 지침을 제공합니다.",
+      "시작: 공식 안내에 연결된 플러그인 디렉터리와 문서에서 설치 절차를 확인합니다. 기존 프로젝트는 별도 브랜치나 복사본에서 열고 엔진 버전·사용 패키지·UI 시스템부터 확인하도록 요청합니다.",
+      "활용 예시: 메뉴를 만들어 달라는 요청 전에 UI Toolkit인지 uGUI인지 검사하게 합니다. 작업 후 빌드·테스트·로그와 실제 화면을 함께 확인합니다.",
+      "unity-cli 스킬은 에디터 설치, 프로젝트 생성·열기, 패키지 관리와 빌드·테스트·로그 확인을 지원합니다."
+    ],
+    "cautions": [
+      "공식 스킬이 모든 오류를 없애는 것은 아닙니다. 설치·성능 시험을 수행한 자료가 아니라 공식 문서 확인입니다.",
+      "패키지 변경과 에디터 설치는 별도 승인·백업 절차를 두고, 외부 모델에 보낼 코드와 자산의 권한을 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://unity.com/kr/blog/unity-plugin-codex"
+    ]
+  },
+  {
+    "id": "ltx25-cq-generative-restoration",
+    "title": "LTX 2.5 CQ Enhancer: 생성형 복원과 원본 보존",
+    "summary": "이미지·영상 LoRA를 구분하고 V2 워크플로를 맞추는 체크리스트",
+    "type": "활용법",
+    "categories": [
+      "이미지·영상"
+    ],
+    "tags": [
+      "실무 가이드",
+      "커뮤니티 인사이트"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-18",
+    "url": "https://huggingface.co/CQdesign/LTX-2.5-CQ-Video-and-Image-Enhancer-LoRAs",
+    "content": [
+      "제작자는 이미지용과 영상용 LoRA를 따로 제공하며 일반 업스케일러가 아닌 생성형 품질 개선 도구라고 설명합니다.",
+      "절차: 원본을 보관하고 짧은 복사본으로 시작합니다. 제작자 모델 페이지의 Workflow 폴더에서 목적에 맞는 워크플로를 선택합니다. V2 영상 LoRA에는 새 V2 워크플로를 함께 사용합니다.",
+      "제작자는 특히 이미지 작업에 ltx-2.5-video-vae-conv-bf16.safetensors VAE를 권장하며 일반 VAE에서 과도한 샤프닝이 나타날 수 있다고 설명합니다.",
+      "검수 예시: 얼굴·글자·의상·배경과 영상의 프레임 간 일관성을 원본과 비교합니다. 개선본은 별도 파일로 저장하고 생성형 보정 사실을 표시합니다."
+    ],
+    "cautions": [
+      "새 디테일은 실제 원본의 복구를 보장하지 않습니다. 기록·증거용 자료를 대체하지 마세요.",
+      "제작자의 속도·품질 우위와 고스팅 제거 주장을 독립 검증하지 않았습니다. 개인 영상의 동의·저작권과 실행 환경을 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/CQdesign/LTX-2.5-CQ-Video-and-Image-Enhancer-LoRAs"
+    ]
+  },
+  {
+    "id": "agent-complexity-decision-guide",
+    "title": "에이전트 팀을 만들기 전에: 가장 단순한 작업 흐름부터",
+    "summary": "단일 요청·고정 워크플로·자율 에이전트를 업무 조건으로 선택하기",
+    "type": "활용법",
+    "categories": [
+      "AI 에이전트"
+    ],
+    "tags": [
+      "실무 가이드",
+      "커뮤니티 인사이트"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-18",
+    "url": "https://www.anthropic.com/engineering/building-effective-agents",
+    "content": [
+      "핵심 원리: Anthropic의 설계 안내는 가장 단순한 해결책에서 시작하고 측정 가능한 개선이 있을 때 복잡성을 늘리라고 권합니다. 워크플로는 미리 정한 경로, 에이전트는 모델이 동적으로 경로와 도구를 선택하는 방식입니다.",
+      "절차: 업무 입력·완료 조건·허용 비용·실패 시 조치를 적습니다. 예시와 자료 검색을 제공한 단일 요청으로 먼저 기준 성능을 만듭니다.",
+      "선택 예시: 순서가 고정된 보고서 작성·번역은 단계별 워크플로와 중간 검사를 고려합니다. 필요한 하위 작업을 사전에 알기 어려운 코드 수정은 감독자와 작업자 분업을 검토합니다.",
+      "팀을 추가하기 전 같은 과제로 정확도·소요 시간·비용을 비교하고, 도구 권한·최대 반복 횟수·사람에게 넘길 조건을 정합니다. 반복 검토를 늘렸다는 이유만으로 정확성이 보장되지는 않습니다."
+    ],
+    "cautions": [
+      "특정 제품이나 구독 등급이 우월하다는 뜻이 아닙니다. 업무 보안 요구와 운영 역량에 맞춰 선택하세요.",
+      "참조 문서는 2024년 설계 원칙이며 도구 환경 변화 안내가 붙어 있습니다. 현재 제품 기능·요금은 별도 확인하고 테스트 환경에서 검증하세요."
+    ],
+    "sourceEvidence": [
+      "https://www.anthropic.com/engineering/building-effective-agents"
+    ]
   }
 ]
