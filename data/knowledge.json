@@ -3214,5 +3214,134 @@
     "sourceEvidence": [
       "https://blog.google/innovation-and-ai/models-and-research/google-labs/cc-expanding-to-groups/"
     ]
+  },
+  {
+    "id": "typesafe-jev-system-one-model",
+    "title": "TypeSafe AI Jev: 구조화 출력 전용 System One 모델",
+    "summary": "토큰을 순차 생성하지 않고 확률 기반 구조화 값을 병렬로 내는 자동화 특화 모델",
+    "type": "도구",
+    "categories": [
+      "AI 모델 출시",
+      "자동화"
+    ],
+    "tags": [
+      "구조화 출력",
+      "실무 가이드",
+      "커뮤니티 인사이트"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-19",
+    "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+    "content": [
+      "TypeSafe AI가 공식 블로그에서 발표한 'System One Models'와 첫 모델 Jev는 문자열을 순차 생성하는 기존 LLM과 달리, 미리 정의된 타입의 구조화된 값과 보정된 확률을 한 번에 병렬로 출력하도록 설계됐습니다. 'Reinforcement Learning for Calibrated Decisions(RLCD)'라는 자체 학습 방식을 사용한다고 설명합니다.",
+      "공식 설명에 따르면 분류·라우팅·점수화·추출·분기처럼 소프트웨어에 바로 꽂히는 '퍼지 if문' 형태의 워크플로우, 대용량 데이터의 맵리듀스, 100ms급 응답이 필요한 실시간 애플리케이션에 적합하다고 소개합니다. 반대로 챗봇·코딩 에이전트처럼 자유도가 필요한 대화형 작업이나 수학 증명 같은 검증 가능 문제에는 기존 LLM 방식이 더 적합하다고 스스로 구분합니다.",
+      "구조가 사전 정의돼 있어 타입 오류가 수학적으로 불가능하다는 점을 자사의 검증 가능한 주장으로 제시하며, 나머지 속도·비용·정확도 비교 수치는 자체 워크플로우 평가와 벤치마크 사이트(evals.typesafe.ai) 링크로 근거를 공개했습니다."
+    ],
+    "cautions": [
+      "현재 조기 이용(early access) 단계이며 대기자 명단을 통한 온보딩 방식입니다. 속도·비용 비교 수치는 TypeSafe 자체 발표 자료이며, 독립된 제3자의 재현 검증은 아직 없습니다.",
+      "문자열 생성을 포기한 구조이므로 자유 형식 텍스트 생성이 필요한 용도에는 적합하지 않다고 공식 문서도 명시합니다. 도입 전 자사 워크플로우가 '구조화된 의사결정' 유형에 해당하는지 검토가 필요합니다."
+    ],
+    "sourceEvidence": [
+      "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+    ]
+  },
+  {
+    "id": "oliveyoung-sllm-alignment-dpo-grpo",
+    "title": "올리브영 sLLM 정렬 학습기: DPO·GRPO로 추천 카드 품질 수치화",
+    "summary": "SFT 이후 자연스러움·문맥적합을 계량화해 선호 학습과 강화학습으로 이어간 실무 사례",
+    "type": "가이드",
+    "categories": [
+      "언어 모델",
+      "AI 활용"
+    ],
+    "tags": [
+      "DPO",
+      "GRPO",
+      "정렬 학습",
+      "실무 가이드",
+      "커뮤니티 인사이트"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-19",
+    "url": "https://oliveyoung.tech/2026-09-18/oy_sllm_alignment/",
+    "content": [
+      "올리브영 공식 기술 블로그에 따르면, Gemma 3 기반 sLLM으로 상품 추천 카드 문구를 생성하는 'AI Pick' 서비스에서 지도 미세조정(SFT)만으로는 자연스러움과 문맥 적합성 품질을 더 끌어올리기 어려운 한계에 부딪혔습니다.",
+      "이에 '측정할 수 없으면 개선할 수 없다'는 문제의식에서, 자연스러움과 문맥적합을 수치화하는 자체 평가 방법을 먼저 설계하고, 이 점수를 선호 학습(DPO, Direct Preference Optimization)과 그룹 상대 정책 최적화(GRPO)로 연결해 카드 생성 모델을 정렬(alignment)했다고 설명합니다.",
+      "카드 문구는 브랜드명·상품명 언급 금지, 원문에 없는 효능 추가 금지, 과장·의학적 보장 표현 금지, 필드 간 단어 중복 회피 등 엄격한 제약이 있는 실서비스 UI 출력이라, SFT 다음 단계로 정렬 학습을 도입한 과정 전체(측정 지표 설계 → DPO/GRPO 적용)를 공개했습니다."
+    ],
+    "cautions": [
+      "특정 서비스(상품 추천 카드)의 좁은 도메인에 맞춘 사례이며, 다른 도메인에 그대로 적용 가능한 범용 레시피로 일반화된 것은 아닙니다. 실제 수치·하이퍼파라미터는 원문 게시물에서 직접 확인이 필요합니다.",
+      "자체 평가 지표(자연스러움·문맥적합 점수화 방식)는 해당 기업의 내부 설계이며, 표준화된 공개 벤치마크는 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://oliveyoung.tech/2026-09-18/oy_sllm_alignment/"
+    ]
+  },
+  {
+    "id": "remiqora-local-music-studio",
+    "title": "Remiqora: ACE-Step·YuE2 통합 로컬 음악 생성 스튜디오",
+    "summary": "두 개의 오픈소스 음악 생성 엔진을 하나의 UI와 멀티트랙 DAW로 묶은 로컬 GPU 도구",
+    "type": "도구",
+    "categories": [
+      "음성 생성",
+      "오픈소스 모델"
+    ],
+    "tags": [
+      "음악 생성",
+      "로컬 AI",
+      "오픈소스",
+      "커뮤니티 인사이트"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-19",
+    "url": "https://github.com/inikolax/remiqora",
+    "content": [
+      "Remiqora는 오픈소스 음악 생성 엔진 ACE-Step 1.5와 YuE2-3B를 하나의 로컬 웹 UI로 통합한 GPU 기반 음악 제작 스튜디오입니다. 공식 GitHub README에 따르면 두 엔진은 한 GPU에서 동시 실행이 어려워 헤더에서 모델을 선택하면 자동으로 전환·정지되는 상호 배타적 오케스트레이터를 제공합니다.",
+      "생성된 트랙은 SQLite 기반 공유 라이브러리에 저장되며 Demucs 스템 분리, MuScriptor MIDI 전사, 멀티트랙 DAW(이펙트 랙·페이드·워프·언두 30단계 등)로 후처리할 수 있습니다. 브라우저에서 바로 ACE-Step LoRA 파인튜닝(데이터셋 업로드부터 학습까지)도 지원한다고 설명합니다.",
+      "Windows(NVIDIA CUDA)와 macOS(Apple Silicon, Metal/MPS)를 모두 지원하며, 아직 개발 초기(actively in development) 단계로 파괴적 변경이 있을 수 있다고 README에 명시돼 있습니다."
+    ],
+    "cautions": [
+      "Remiqora 자체 코드는 MIT 라이선스지만, 생성된 음악의 라이선스는 사용한 모델마다 다릅니다. ACE-Step 1.5는 상업적 이용이 가능하다고 명시하지만, YuE2-3B 가중치는 CC BY-NC 4.0(비상업적 이용만 허용, 출처 표기 필수)이므로 배포 전 반드시 해당 모델의 라이선스를 확인해야 합니다.",
+      "NVIDIA GPU 드라이버는 스크립트가 자동 설치하지 않으며 수동 설치가 필요합니다. 아직 안정 릴리스가 아니라고 제작자가 직접 경고하고 있습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/inikolax/remiqora"
+    ]
+  },
+  {
+    "id": "korea-open-law-api-legal-text-automation",
+    "title": "국가법령정보 공동활용 Open API: 법령 원문 자동화의 공식 출발점",
+    "summary": "법제처가 제공하는 공식 오픈 API로 법령 검색·본문 조회를 프로그램으로 연동",
+    "type": "도구",
+    "categories": [
+      "공공데이터",
+      "업무 자동화"
+    ],
+    "tags": [
+      "공공 API",
+      "법령 정보",
+      "자동화",
+      "커뮤니티 인사이트"
+    ],
+    "status": "자료 확인",
+    "importance": 2,
+    "updated": "2026-09-19",
+    "url": "https://open.law.go.kr/LSO/main.do",
+    "content": [
+      "법제처가 운영하는 '국가법령정보 공동활용' 사이트는 대한민국 법령·행정규칙·자치법규 등을 오픈 API 형태로 제공하는 공식 정부 서비스입니다. law.go.kr의 검색 엔드포인트(DRF/lawSearch.do 등)로 법령명·조문 키워드를 조회하고, 이어서 상세 본문을 조회하는 2단계 흐름이 일반적입니다.",
+      "커뮤니티에서는 이 공식 API를 n8n 같은 노코드 자동화 도구와 연결해 법령 원문을 다국어로 번역하는 개인 워크플로우 사례가 공유됐습니다(예: GitLab의 개인 프로젝트 n8n-law-translate). 이런 개인 프로젝트는 공식 서비스가 아니라 공식 API를 활용한 커뮤니티 구현 예시로 참고하는 것이 적절합니다.",
+      "표 형태의 법령 데이터를 다루는 자동화 파이프라인에서는 XML/HTML 응답보다 JSON 응답을 선택하면 병합 셀·표 구조가 깨지는 문제를 줄일 수 있다는 실무 팁도 함께 공유됐습니다."
+    ],
+    "cautions": [
+      "사용 신청과 이용 문의는 공식 대표번호(02-2109-6446)를 통해야 하며, API 키 발급 등 절차는 open.law.go.kr에서 직접 확인해야 합니다.",
+      "언급된 n8n 연동 예시(GitLab 개인 저장소)는 법제처의 공식 도구가 아닌 제3자의 개인 프로젝트이므로, 실제 도입 시 소스와 신뢰도를 별도로 검증해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://open.law.go.kr/LSO/main.do",
+      "https://gitlab.com/MonolytX/n8n-law-translate"
+    ]
   }
 ]
