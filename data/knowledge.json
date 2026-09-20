@@ -3343,5 +3343,135 @@
       "https://open.law.go.kr/LSO/main.do",
       "https://gitlab.com/MonolytX/n8n-law-translate"
     ]
+  },
+  {
+    "id": "sodam-wikimate-codex",
+    "title": "SoDam WikiMate for Codex: Obsidian 지식베이스 정리 플러그인",
+    "summary": "웹·PDF·메모를 승인 기반 절차로 Obsidian Markdown 노트로 수집·검사·연결·분류·요약하는 로컬 우선 Codex 플러그인",
+    "type": "GitHub",
+    "categories": [
+      "AI 코딩",
+      "지식 관리"
+    ],
+    "tags": [
+      "Obsidian",
+      "Codex",
+      "MCP",
+      "로컬 우선",
+      "커뮤니티 인사이트"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-20",
+    "url": "https://github.com/sodam-ai/SoDam-WikiMate-Codex",
+    "content": [
+      "SoDam WikiMate for Codex는 원래 Claude Code용으로 나온 WikiMate를 Codex 플러그인으로 포팅한 오픈소스 도구입니다. 공식 README에 따르면 웹 페이지·PDF 텍스트·직접 입력 메모를 Obsidian Markdown 볼트에 정리하되, 모든 새 노트 생성과 기존 노트 수정은 기본적으로 dry-run(미리보기)으로 계획만 보여주고 사용자 승인 후에만 실제로 저장합니다.",
+      "8개 스킬(wikimate, organize, query, lint, link, classify, summarize, reviewer)과 8개 MCP 도구로 구성되며, 중복 노트·끊어진 링크·고립 노트·frontmatter 누락을 검사하는 lint 기능, 관련 노트 추천 및 MOC(Map of Content) 구성, 노트 삭제 대신 99_Archive로 이동하는 안전 정책을 제공합니다.",
+      "설치는 `codex plugin marketplace add sodam-ai/SoDam-WikiMate-Codex` 후 `codex plugin add wikimate@wikimate-codex`로 진행하며, 새 Codex 작업을 열어야 스킬과 MCP 구성이 반영됩니다. Apache License 2.0으로 배포되며 Notion 연동은 선택 사항이고 핵심 MCP 서버는 Notion API를 직접 호출하지 않습니다."
+    ],
+    "cautions": [
+      "공식 README(2026-09-20 확인)는 핵심 검증 236개·MCP smoke 18개·보안 검사 88개 통과 등 코드 자체의 검증 상태만 밝히고 있으며, 실제 사용자 볼트에 대한 쓰기 작업과 실시간 Notion 연동은 배포 전 별도로 환경별 확인이 필요하다고 명시합니다.",
+      "자료 수집 전 저작권·개인정보·robots 정책 준수 여부를 사용자가 직접 확인해야 하며, SoDam·WikiMate 명칭이나 로고를 자체 브랜드처럼 사용하는 것은 라이선스가 허용하지 않습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/sodam-ai/SoDam-WikiMate-Codex"
+    ]
+  },
+  {
+    "id": "hacktron-ai-agent-pentest-case-study",
+    "title": "AI 에이전트 기반 자율 침투테스트로 OpenAI 내부 접근 확보 사례",
+    "summary": "보안 리서치팀이 Claude 기반 에이전트로 취약점 체인을 자동 탐색해 OpenAI 직원 계정과 내부 저장소 접근을 실증한 공개 공개 사례 보고",
+    "type": "Research",
+    "categories": [
+      "AI 안전",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "보안 리서치",
+      "취약점 공개",
+      "버그 바운티",
+      "사례 연구"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-20",
+    "url": "https://www.hacktron.ai/blog/hacking-openai",
+    "content": [
+      "보안 리서치 회사 Hacktron의 공식 블로그에 따르면, 이들은 2026년 7월 OpenAI 공식 커뮤니티 포럼(community.openai.com)의 이미지 업로드 처리 과정에서 시작해 libheif 디코더 취약점, Debian 보안 백포트 누락, ImageMagick·Discourse 연동, OpenAI SSO 결함까지 이어지는 취약점 체인을 발견하고 연결했습니다.",
+      "체인의 최종 단계에서 OpenAI 직원의 ChatGPT/Codex 계정에 접근할 수 있음을 확인했고, 해당 계정에 연결된 GitHub 연동을 통해 내부 저장소(openai/openai)에 접근 가능함을 증명하기 위해 직원의 Codex를 이용해 실제 PR을 여는 방식으로 개념 증명을 수행했습니다. 최초 발견부터 내부 저장소 접근 확인까지 72시간이 걸리지 않았다고 밝힙니다.",
+      "공식 발표에 따르면 취약점은 발견 즉시 OpenAI와 Discourse에 책임 있게 공개(responsible disclosure)했고 OpenAI 버그바운티 프로그램(Bugcrowd)을 통해 6,500달러의 포상금을 받았으며, 패치가 완료된 이후 상세 타임라인과 AI 에이전트 활용 방법을 블로그로 공개했습니다."
+    ],
+    "cautions": [
+      "이 사례는 책임 있는 공개 절차를 거쳐 이미 패치된 취약점에 대한 사후 공개 보고서이며, 유사한 기법을 승인되지 않은 시스템에 시도하는 것은 불법입니다. 보안 리서치·침투테스트는 반드시 적법한 권한과 프로그램 범위 내에서만 수행해야 합니다.",
+      "AI 에이전트가 취약점 탐색과 체이닝을 가속화했다는 회사 측 설명이며, 정량적 속도 향상 수치나 재현성은 제3자가 독립 검증하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://www.hacktron.ai/blog/hacking-openai"
+    ]
+  },
+  {
+    "id": "qwen-image-2-1-comfyui",
+    "title": "Qwen-Image-2.1: RGBA 투명도 지원 7B 오픈 웨이트 이미지 생성·편집 모델",
+    "summary": "알리바바 Qwen팀이 공개한 7B 파라미터 오픈 웨이트 이미지 모델로 네이티브 2K 출력과 최대 10장 참조 이미지 편집을 지원하며 ComfyUI에 정식 통합됨",
+    "type": "모델",
+    "categories": [
+      "이미지 생성",
+      "이미지 편집",
+      "ComfyUI",
+      "오픈소스 모델"
+    ],
+    "tags": [
+      "Qwen",
+      "오픈 웨이트",
+      "RGBA",
+      "ComfyUI"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-20",
+    "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
+    "content": [
+      "ComfyUI 공식 블로그에 따르면 Qwen-Image-2.1은 알리바바 Qwen팀이 공개한 오픈 웨이트 이미지 모델로, MMDiT 구조 기반 7B 파라미터를 사용해 2026년 2월 공개된 Qwen-Image 2.0의 후속작입니다. 소비자용 GPU에서도 추론이 가능한 크기이며 생성과 편집 기능을 하나의 체크포인트로 제공합니다.",
+      "가장 두드러진 특징은 RGBA(알파 채널 포함) 출력을 기본 지원한다는 점으로, 별도의 배경 제거 노드나 매팅 모델 없이도 스프라이트·로고·아이콘·제품 컷아웃을 바로 합성 가능한 형태로 생성할 수 있습니다. 또한 업스케일 없이 2048×2048 네이티브 해상도로 직접 생성하며, Text Encode Qwen Image 2.1 노드를 통해 캐릭터·제품·배경 등 최대 10장의 참조 이미지를 텍스트 인코더에 함께 입력할 수 있습니다.",
+      "사용 방법은 ComfyUI를 최신 버전으로 업데이트하거나 Comfy Cloud를 이용하고, Hugging Face(Comfy-Org/Qwen-Image-2.1)에서 가중치를 내려받아 모델 폴더에 배치한 뒤 Templates 패널의 Qwen-Image-2.1 템플릿을 불러오는 순서입니다."
+    ],
+    "cautions": [
+      "공식 블로그는 모델의 기능과 사용법을 설명하며, 다른 이미지 모델 대비 정량적 품질 비교 수치는 제시하지 않습니다. 실제 결과물 품질은 프롬프트와 참조 이미지 구성에 따라 달라질 수 있습니다.",
+      "가중치는 Hugging Face의 Comfy-Org 배포판을 통해 받아야 하며, 라이선스와 상업적 사용 가능 여부는 Hugging Face 모델 카드에서 별도로 확인해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://blog.comfy.org/p/qwen-image-21-in-comfyui-open-weight",
+      "https://huggingface.co/Comfy-Org/Qwen-Image-2.1"
+    ]
+  },
+  {
+    "id": "openai-additional-safety-checks-bio-cyber",
+    "title": "OpenAI 공식: 생물보안·사이버보안 요청에 대한 추가 자동 안전검사",
+    "summary": "ChatGPT·Codex·API가 생물학·사이버보안 관련 일부 요청에 자동으로 추가 검사를 적용해 응답을 지연시키거나 제한할 수 있다는 공식 정책 설명",
+    "type": "자료",
+    "categories": [
+      "AI 안전성"
+    ],
+    "tags": [
+      "OpenAI",
+      "안전 정책",
+      "공식 문서"
+    ],
+    "status": "자료 확인",
+    "importance": 2,
+    "updated": "2026-09-20",
+    "url": "https://help.openai.com/ko-kr/articles/20001326-additional-safety-checks-for-biological-and-cybersecurity-requests-in-chatgpt-codex-and-the-api",
+    "content": [
+      "OpenAI 공식 도움말 문서에 따르면 ChatGPT, Codex, OpenAI API는 사이버보안이나 생물학 연구·응용과 관련된 일부 요청에 대해 추가 자동 보호 조치를 적용합니다. 이 검사로 인해 응답 시간이 평소보다 길어질 수 있으며, 안전하게 제공 가능한 응답은 검사 후 정상 진행되지만 그렇지 않으면 콘텐츠가 반환되지 않을 수 있습니다.",
+      "공식 문서는 추가 검사 알림이 표시됐다고 해서 곧바로 사용 정책 위반으로 판단된 것은 아니라고 명시하며, 검사는 요청 내용의 위험도에 따라 자동으로 트리거되는 절차임을 설명합니다.",
+      "생물보안·사이버보안 분야에서 정당한 연구·개발 목적으로 API나 Codex를 사용하는 경우에도 이 검사가 적용될 수 있으므로, 관련 워크플로우를 설계할 때는 응답 지연 가능성을 고려해야 합니다."
+    ],
+    "cautions": [
+      "문서 자체가 검사의 구체적 판정 기준이나 트리거 조건을 공개하지 않으므로, 특정 요청이 검사에 걸릴지 사전에 예측하기는 어렵습니다.",
+      "비밀번호·인증 코드·독점 데이터 등 민감 정보를 요청 본문에 포함하지 말라고 공식 문서가 별도로 권고합니다."
+    ],
+    "sourceEvidence": [
+      "https://help.openai.com/ko-kr/articles/20001326-additional-safety-checks-for-biological-and-cybersecurity-requests-in-chatgpt-codex-and-the-api"
+    ]
   }
 ]
