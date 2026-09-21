@@ -3473,5 +3473,129 @@
     "sourceEvidence": [
       "https://help.openai.com/ko-kr/articles/20001326-additional-safety-checks-for-biological-and-cybersecurity-requests-in-chatgpt-codex-and-the-api"
     ]
+  },
+  {
+    "id": "langchain-paid-media-agent-case-study",
+    "title": "LangChain 페이드미디어 에이전트: 스킬과 위키를 분리한 실전 설계",
+    "summary": "LangChain이 자사 마케팅팀에 배치한 에이전트에서 계산은 코드로, 판단은 모델로 넘기고 재사용 가능한 스킬과 회사 고유 지식(위키)을 분리한 실전 운영 사례",
+    "type": "가이드",
+    "categories": [
+      "AI 에이전트"
+    ],
+    "tags": [
+      "실무 가이드",
+      "LangChain",
+      "에이전트 설계"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-22",
+    "url": "https://www.langchain.com/blog/paid-media-agent",
+    "content": [
+      "핵심 원리: LangChain은 자사 유료광고 운영 에이전트를 만들며 반복 가능한 계산·규칙은 코드로 처리하고, 원인 분석과 다음 행동 제안처럼 판단이 필요한 부분만 모델에 맡겼습니다. 초기 버전은 모든 걸 모델에 맡겨 보고서 1건에 약 390만 토큰을 소모했는데, 계산을 코드로 옮긴 뒤 같은 작업이 약 40배 저렴하고 13배 빨라졌습니다.",
+      "절차: 시스템 프롬프트·스킬·위키·실시간 도구·결정론적 코드 5개 계층으로 맥락을 나눕니다. 스킬은 \"다른 회사에서도 통하는\" 재사용 가능한 작업 방식만 담고, 회사 고유 정보(캠페인 목적, 과거 결정 이유 등)는 위키에 둡니다. 매 데이터 지표마다 신뢰할 단일 출처 시스템을 정하고, 그 출처 밖 도구는 에이전트에서 아예 제거해 잘못된 조회를 막습니다.",
+      "예시: 서브에이전트 격리 설계에서 두 플랫폼 담당 서브에이전트가 같은 파일 경로와 완료 플래그를 공유해 한쪽이 먼저 끝나면 다른 쪽이 멈추는 문제를 겪었고, 플랫폼별로 별도 저장 경로와 완료 상태를 부여해 해결했습니다. 도구 탐색도 200개 넘는 광고 플랫폼 도구를 한 번에 로드하는 대신 검색→스키마 조회→실행 3단계 인터페이스로 바꿔 첫 턴 토큰을 4배 줄였습니다.",
+      "적용 조건: 여러 데이터 소스·플랫폼을 다루며 판단과 계산이 섞인 반복 업무(운영 보고, 주간 분석 등)에 적합합니다. 사람이 변경을 승인하는 게이트를 두고, 모델은 분석과 제안까지만 담당하게 설계했습니다."
+    ],
+    "cautions": [
+      "이 사례는 LangChain의 자체 마케팅 운영에 맞춘 설계이며 수치(비용 절감률, 토큰 감소율)는 해당 조직의 특정 워크로드 기준입니다. 다른 도메인에 그대로 적용하면 결과가 달라질 수 있습니다.",
+      "LangSmith Sandbox, Deep Agents 등 특정 벤더 도구를 전제로 한 구현 세부사항이 포함되어 있어, 다른 프레임워크에서는 아키텍처 원칙만 참고하고 세부 구현은 별도로 검증해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://www.langchain.com/blog/paid-media-agent",
+      "https://github.com/langchain-ai/open-paid-media-agent"
+    ]
+  },
+  {
+    "id": "microsoft-surface-rtx-spark-dev-box",
+    "title": "Surface RTX Spark Dev Box: AI 개발 전용 소형 데스크톱",
+    "summary": "Microsoft가 공개한 AI 개발자용 소형 데스크톱으로, Windows 11 Pro에 AI 개발 환경이 사전 구성되어 있고 로컬 추론으로 API 토큰·클라우드 비용을 줄이는 것을 목표로 함",
+    "type": "도구",
+    "categories": [
+      "AI 인프라"
+    ],
+    "tags": [
+      "Microsoft",
+      "로컬 AI",
+      "개발 환경"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-22",
+    "url": "https://www.microsoft.com/en-us/surface/devices/surface-rtx-spark-dev-box",
+    "content": [
+      "핵심 원리: 일반 워크스테이션과 달리 처음부터 AI 개발에 맞춰 사전 구성된 Windows 11 Pro 환경을 제공해 설정 시간을 줄이는 것이 목표입니다. VS Code, WSL, PowerShell 7이 미리 설치되어 있고, 명령줄에서 AI 지원을 받을 수 있는 Intelligent Terminal이 포함됩니다.",
+      "특징: 1,000테라플롭스 연산 성능에 맞춘 방열 설계(알루미늄 3D 프린팅 바디, 1,000개 통풍구)와 100W 열설계전력으로 장시간 학습·실험 중 성능을 유지하도록 설계했습니다. USB-C 2개, USB-A, HDMI, 이더넷 등 개발자용 포트를 갖췄습니다.",
+      "활용 근거: 공식 페이지는 로컬에서 추론·실험을 돌리면 API 토큰 비용과 클라우드 사용료를 줄일 수 있다고 설명합니다. BitLocker, Microsoft Defender, Entra ID, Intune과 연동되는 보안 코어 PC로 조직 배포 환경도 고려했습니다."
+    ],
+    "cautions": [
+      "공식 페이지에 출시 전 제품이며 기능이 출시 전 변경될 수 있다고 명시되어 있고, FCC 인증이 아직 완료되지 않아 정식 출하 여부와 시점이 확정되지 않았습니다.",
+      "가격, 정확한 사양(VRAM 용량 등), 국내 출시 여부는 공식 페이지에 명시되어 있지 않아 별도 확인이 필요합니다."
+    ],
+    "sourceEvidence": [
+      "https://www.microsoft.com/en-us/surface/devices/surface-rtx-spark-dev-box"
+    ]
+  },
+  {
+    "id": "nobg-ai-chroma-key-transparent-background",
+    "title": "nobg: 크로마키 합성으로 투명 배경 이미지 생성하기",
+    "summary": "이미지 생성 모델에 단색 그린스크린 배경으로 그리도록 지시한 뒤 해당 색을 투명으로 치환하는 방식으로 투명 배경 PNG를 만드는 오픈소스 CLI 기법",
+    "type": "GitHub",
+    "categories": [
+      "이미지 생성"
+    ],
+    "tags": [
+      "오픈소스",
+      "이미지 편집",
+      "투명 배경"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-22",
+    "url": "https://github.com/statico/nobg",
+    "content": [
+      "핵심 원리: 이미지 생성 모델 대부분은 투명 배경을 직접 지원하지 않거나 격자무늬로 표현합니다. nobg는 모델에게 단색(기본값 #00FF00) 그린스크린 배경으로 이미지를 생성하도록 프롬프트를 지시한 뒤, sharp 라이브러리로 해당 색상 영역만 투명하게 치환하는 전통적인 크로마키 합성 기법을 AI 생성 이미지에 적용합니다.",
+      "사용 절차: bunx nobg@latest \"a red apple\"처럼 프롬프트만 넘기면 기본 설정(1:1 비율, 1k 해상도)으로 생성합니다. -a 16:9 -r 2k로 비율과 해상도를 조절하고, -i photo.jpg \"배경 제거\"처럼 기존 이미지를 입력해 배경만 제거할 수도 있으며, -c로 크로마키 색상을 직접 지정할 수 있습니다. 기본 모델은 Gemini 3 Pro Image Preview이며 GEMINI_API_KEY 환경변수가 필요합니다.",
+      "적용 조건: 아이콘, 로고, 스티커처럼 투명 배경이 필요한 생성물에 적합합니다. 원본 이미지의 피사체 경계 색이 크로마키 색과 겹치면(예: 초록 계열 피사체) 해당 부분도 함께 투명 처리될 수 있으므로 -c 옵션으로 색을 바꿔 회피할 수 있습니다."
+    ],
+    "cautions": [
+      "GitHub star 수가 적은 개인 프로젝트(Unlicense 라이선스)로, 공식 벤더 지원이 없으며 유지보수 지속 여부가 불확실합니다.",
+      "Gemini API 키가 필요해 별도 비용이 발생할 수 있고, 결과 품질은 사용하는 이미지 생성 모델의 지시 순응도에 따라 달라집니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/statico/nobg"
+    ]
+  },
+  {
+    "id": "ai-grading-rubric-vs-binary-design",
+    "title": "이진 판정 대신 세분화된 루브릭으로 AI 채점 설계하기",
+    "summary": "AI를 활용한 채점과 평가에서 단순 합격/불합격 대신 세분화된 채점 기준과 근거 설명을 함께 요구해 평가자 간 일치도와 신뢰도를 높이는 루브릭 설계 원칙",
+    "type": "활용법",
+    "categories": [
+      "AI 평가",
+      "AI 교육"
+    ],
+    "tags": [
+      "루브릭",
+      "평가·벤치마크",
+      "실무 가이드"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-22",
+    "url": "https://snorkel.ai/blog/the-science-of-rubric-design/",
+    "content": [
+      "핵심 원리: 루브릭은 평가 기준(criteria)과 각 기준의 등급 수준(quality levels)으로 구성됩니다. 이진(합격/불합격) 척도는 더 단호한 판단을 끌어내지만 합격과 불합격 기준이 명확히 정의되어 있어야 하고, 일반적으로는 5~7단계 척도가 세분성과 판단 부담 사이의 균형을 잘 맞춘다고 설명합니다.",
+      "절차: 채점 기준마다 근거(rationale) 설명을 함께 요구하면 평가자(사람 또는 AI)가 왜 그렇게 판단했는지 드러나 모호한 기준을 찾아 개선할 수 있습니다. 복잡한 과제는 상위 목표를 하위 세부 기준으로 쪼개는 계층적 루브릭 구조를 쓰면 부분 점수를 줄 수 있어 진행 상황을 더 세밀하게 측정할 수 있습니다.",
+      "예시: HealthBench 벤치마크는 5,000개 대화에 48,000개 이상의 세부 루브릭 기준을 사용했는데도 평가자 간 일치도가 55~75%에 머물렀다고 보고했습니다. 이는 기준이 아무리 상세해도 모호함이나 해석 차이가 남을 수 있음을 보여주며, 루브릭 작성 후 실제 평가자 간 일치도를 측정해 기준을 반복 수정하는 과정이 필요함을 시사합니다.",
+      "적용 조건: 과제, 에세이, 에이전트 결과물처럼 정답이 하나로 정해지지 않는 평가에 특히 유용합니다. 단순 정오 판정이 가능한 객관식 채점에는 이진 방식이 더 적합할 수 있습니다."
+    ],
+    "cautions": [
+      "이 원칙은 일반적인 평가 설계 지침이며 특정 교육기관이나 과목에 즉시 적용 가능한 완성된 채점 기준표가 아닙니다. 실제 도입 전 자체 과제에 맞게 루브릭을 만들고 소규모로 시범 적용해 일치도를 확인해야 합니다.",
+      "언급된 HealthBench, PaperBench 수치는 의료, 연구 재현이라는 특정 고난도 도메인의 사례로, 다른 과목과 수준에서는 일치도가 다르게 나타날 수 있습니다."
+    ],
+    "sourceEvidence": [
+      "https://snorkel.ai/blog/the-science-of-rubric-design/"
+    ]
   }
 ]
