@@ -3597,5 +3597,140 @@
     "sourceEvidence": [
       "https://snorkel.ai/blog/the-science-of-rubric-design/"
     ]
+  },
+  {
+    "id": "hermes-claude-subscription-directsdk",
+    "title": "Hermes Agent에서 Claude 구독을 공식 CLI로 연결하기",
+    "summary": "공식 Claude Code CLI의 로그인 상태를 사용하면서 Hermes의 도구·승인·컴팩션 흐름을 유지하는 실험적 모델 제공자 플러그인",
+    "type": "가이드",
+    "categories": [
+      "AI 에이전트",
+      "개발 워크플로우"
+    ],
+    "tags": [
+      "Hermes Agent",
+      "Claude Code",
+      "구독 연결",
+      "실험적"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-22",
+    "url": "https://hermes-agent.nousresearch.com/docs/plugins/claude-subscription-directsdk",
+    "content": [
+      "핵심 원리: Hermes의 실험적 Claude Subscription DirectSDK 플러그인은 별도 Anthropic API 키 대신 로그인된 공식 Claude Code CLI를 요청 단위 모델 클라이언트로 실행합니다. 모델 호출은 Claude 구독을 사용하지만, 도구 실행·승인·대화 저장·컴팩션은 계속 Hermes가 담당합니다.",
+      "설치 조건: Hermes Agent 0.21.4 이상, Python 3.10 이상, 공식 Claude Code CLI가 필요합니다. `hermes plugins install claude-subscription-directsdk`로 플러그인을 설치하고 `claude auth login`으로 로그인한 다음 `hermes model`에서 Claude Subscription DirectSDK (Experimental)을 선택합니다.",
+      "자격 증명 경계: 플러그인은 Claude Code의 인증 파일을 열거나 복사·갱신·출력하지 않으며 Hermes API 키도 요구하지 않습니다. 일반 실행 경로에서는 API 키, 사용자 지정 Anthropic 엔드포인트, 클라우드 백엔드 재정의가 함께 설정되어 있으면 조용히 우회하지 않고 충돌을 오류로 표시합니다.",
+      "안전한 시험 절차: 별도 Hermes 프로필과 민감하지 않은 테스트 저장소에서 먼저 모델 선택·도구 승인 거부·취소·재개를 확인합니다. 실제 업무로 넓히기 전 Hermes 사용량과 Claude 계정의 구독 허용량·추가 사용 설정을 함께 확인합니다."
+    ],
+    "cautions": [
+      "공식 문서가 명시하듯 전체 기능 동등성이나 운영 준비가 완료된 제품이 아니라 실험적 review build입니다. Claude Code 버전과 히스토리 재생 방식에 민감하고, 강제 tool choice·assistant prefill·원격 이미지 다운로드 등 일부 기능은 지원하지 않습니다.",
+      "구독 사용량은 Claude Code 대화형 TUI와 다르게 소모될 수 있습니다. 문서의 측정값은 특정 Pro 계정·모델·시점의 결과이며 실제 청구 증빙이 아닙니다. 초과 과금을 원치 않으면 계정의 extra usage를 끄고 별도로 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://hermes-agent.nousresearch.com/docs/plugins/claude-subscription-directsdk"
+    ]
+  },
+  {
+    "id": "googlebook-android-gemini-laptop",
+    "title": "Googlebook: Android 기반 Gemini 노트북의 첫 공식 제품군",
+    "summary": "Android 기술 스택과 ChromeOS의 데스크톱 기반을 결합해 휴대전화 연속 작업·Android 앱·Linux 개발 환경을 제공하는 Google의 새 노트북 범주",
+    "type": "도구",
+    "categories": [
+      "AI 하드웨어",
+      "Android"
+    ],
+    "tags": [
+      "Googlebook",
+      "Gemini",
+      "Android",
+      "ChromeOS"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-22",
+    "url": "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/",
+    "content": [
+      "핵심 구성: Google 공식 발표에 따르면 Googlebook은 Android 기술 스택 위에 ChromeOS의 데스크톱 기반을 결합한 노트북 범주입니다. 초기 제품은 Acer·ASUS·Dell·HP·Lenovo가 만들며 미국 시작 가격은 899달러입니다.",
+      "휴대전화 연동: Continue On으로 Android 휴대전화에서 하던 작업을 노트북에서 이어가고, Files에서 휴대전화의 파일·사진을 검색하며, Cast My Apps로 휴대전화 앱을 데스크톱 창에서 조작할 수 있습니다. 초기 설정에서는 저장 비밀번호·Wi-Fi·메시지 등을 종단간 암호화로 옮긴다고 설명합니다.",
+      "AI·개발 기능: Magic Pointer는 화면 위 맥락에 Gemini를 불러오고, Rambler는 음성 메모를 구조화된 글로 정리하며, Create My Widget은 자연어로 데스크톱 위젯을 만듭니다. Chrome 확장과 Android 앱을 함께 실행하고, 격리된 Linux 터미널에서 Claude Code나 Antigravity CLI 같은 개발 도구도 사용할 수 있습니다.",
+      "출시 정보: 공식 발표 시점 기준 미국은 10월 4일, 캐나다·영국·아일랜드·프랑스·독일·호주는 10월 5일 판매 시작 예정입니다. 기기별로 Intel 또는 Qualcomm 프로세서, 45 TOPS 이상 NPU, 최대 14시간 배터리와 최대 2.8K OLED 구성을 제시합니다."
+    ],
+    "cautions": [
+      "한국은 공식 발표의 1차 판매 국가에 포함되지 않았습니다. 국내 출시·가격·한글 앱 호환성·교육기관 관리 정책은 별도 확인이 필요합니다.",
+      "화면·배터리·NPU·앱 지원은 제조사와 모델별로 다를 수 있으며, 공식 발표의 최대 수치를 모든 Googlebook 공통 사양으로 해석하면 안 됩니다."
+    ],
+    "sourceEvidence": [
+      "https://blog.google/products-and-platforms/devices/googlebook/pre-order-googlebook/"
+    ]
+  },
+  {
+    "id": "fish-audio-s2-pro-multilingual-tts",
+    "title": "Fish Audio S2 Pro: 다국어·감정 제어형 음성 생성 모델",
+    "summary": "짧은 참조 음성으로 목소리를 복제하고 80개 이상 언어·자유형 감정 태그·다중 화자 대화를 지원하는 4B TTS 모델",
+    "type": "모델",
+    "categories": [
+      "음성 생성",
+      "오픈 웨이트 모델"
+    ],
+    "tags": [
+      "Fish Speech",
+      "TTS",
+      "보이스 클로닝",
+      "로컬 실행"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-22",
+    "url": "https://github.com/fishaudio/fish-speech",
+    "content": [
+      "핵심 기능: Fish Audio 공식 저장소에 따르면 S2 Pro는 4B 파라미터의 다국어 TTS 모델로 80개 이상 언어를 지원합니다. `[whisper]`, `[excited]`, `[angry]` 같은 자연어 태그를 문장 안에 넣어 억양·감정·호흡·강조를 세밀하게 조절할 수 있습니다.",
+      "목소리와 대화: 일반적으로 10~30초 참조 음성으로 별도 파인튜닝 없이 음색·말투·감정 경향을 반영하며, 하나의 참조 파일에 여러 화자가 있어도 화자 토큰으로 구분해 다중 화자·다중 턴 대화를 생성할 수 있다고 설명합니다.",
+      "실행 경로: 공식 문서는 명령줄 추론, WebUI, 서버, Docker 설치를 각각 제공하고 SGLang·vLLM Omni 서버 레시피도 안내합니다. 교사용 영상 내레이션이나 다국어 듣기 자료를 만들 때는 짧은 샘플로 먼저 발음·화자 일관성을 확인한 뒤 긴 원고를 구간별로 생성하는 방식이 안전합니다.",
+      "모델 구조: 시간축의 의미 코드를 생성하는 4B Slow AR과 나머지 음향 코드를 생성하는 400M Fast AR을 결합한 Dual-AR 구조를 사용합니다. 저장소의 품질·속도 수치는 제작팀 자체 평가이므로 실제 하드웨어와 한국어 원고로 별도 시험해야 합니다."
+    ],
+    "cautions": [
+      "코드와 가중치는 일반 오픈소스 라이선스가 아니라 Fish Audio Research License입니다. 연구·비상업 용도는 허용되지만 상업적 이용과 조직 내부 운영에는 별도 서면 라이선스가 필요합니다.",
+      "목소리 복제에는 당사자 동의와 개인정보·퍼블리시티권 검토가 필요합니다. 학생·교직원 음성을 허가 없이 학습·복제하거나 공개 자료로 배포하지 마세요.",
+      "공식 벤치마크는 제작팀이 제시한 값이며 이 카드에서는 설치, 장문 안정성, 한국어 발음 품질을 직접 재현하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/fishaudio/fish-speech",
+      "https://raw.githubusercontent.com/fishaudio/fish-speech/main/LICENSE"
+    ]
+  },
+  {
+    "id": "laya-open-decision-model",
+    "title": "Laya: 텍스트를 생성하지 않는 오픈 웨이트 판단 모델",
+    "summary": "문서·메일·티켓·JSON을 입력받아 예/아니오·선택·점수형 질문을 한 번의 순전파로 판정하는 소형 System 1 모델군",
+    "type": "모델",
+    "categories": [
+      "AI 에이전트",
+      "분류·라우팅"
+    ],
+    "tags": [
+      "Laya",
+      "System 1",
+      "오픈 웨이트",
+      "다국어"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-22",
+    "url": "https://huggingface.co/convaiinnovations/laya",
+    "content": [
+      "핵심 원리: Laya는 문장을 새로 생성하지 않고 주어진 상태(state)에 대해 예/아니오, 선택지, 점수 같은 형식화된 답과 확률을 반환합니다. 고객 문의 분류, 긴급도·이탈 위험 판정, 에이전트 다음 행동 선택처럼 생성보다 빠른 구조화 판단이 필요한 파이프라인을 겨냥합니다.",
+      "모델 구성: 영어용 ModernBERT-large 기반 421M 모델, 100개 이상 언어를 대상으로 한 mmBERT-base 기반 322M 모델, 특정 typed-decisions 작업용 파인튜닝 체크포인트를 한 저장소에서 제공합니다. 가중치와 코드는 Apache 2.0이며 `pip install laya` 후 Router 또는 단일 모델 SDK로 실행합니다.",
+      "권장 사용법: Router는 입력의 문자 체계와 언어를 먼저 감지해 영어·다국어 체크포인트를 자동 선택합니다. 서버에서는 필요한 체크포인트를 미리 로드해 언어가 바뀔 때마다 모델을 다시 읽는 지연을 피하고, 실제 업무 데이터로 정확도·확률 보정·오탐 비용을 측정한 뒤 자동화를 확대합니다.",
+      "적용 예시: 이메일·지원 티켓을 담당 부서로 보내고, 환불 요청·취소 위험·긴급도를 동시에 판정하거나, AI 에이전트의 툴 호출을 허용·차단·검토 대기로 나누는 1차 라우터로 사용할 수 있습니다."
+    ],
+    "cautions": [
+      "모델 카드가 명시하듯 기본 체크포인트는 typed-decisions 벤치마크에서 제로샷 성능이 다수 클래스 기준보다 낮았습니다. 높은 수치는 해당 학습 분할로 파인튜닝한 체크포인트의 결과이므로 범용 성능으로 일반화하면 안 됩니다.",
+      "선택지가 매우 많을 때는 기본 토큰 예산 때문에 정확도가 크게 떨어질 수 있고, 확률도 과신하는 경향이 있어 자체 데이터로 온도 보정과 단계형 분류를 검토해야 합니다.",
+      "지연 시간과 Jev 비교 수치는 제작자 모델 카드와 서로 다른 제3자 벤치마크를 조합한 값입니다. 동일 환경의 독립 비교로 간주하지 마세요."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/convaiinnovations/laya"
+    ]
   }
 ]
