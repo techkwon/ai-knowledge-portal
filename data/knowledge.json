@@ -3957,5 +3957,71 @@
     "sourceEvidence": [
       "https://developers.openai.com/api/docs/guides/image-prompting"
     ]
+  },
+  {
+    "id": "malkuth-korean-decision-model",
+    "title": "Malkuth: 한국어 중심 다국어 판단(분류) 모델",
+    "summary": "텍스트를 생성하지 않고 선택지·예/아니오·단계형 확률만 반환하는 한국어 중심 경량 분류 모델(4B·2B), Kev 프레임워크로 서빙",
+    "type": "GitHub",
+    "categories": [
+      "AI 모델",
+      "자연어 처리"
+    ],
+    "tags": [
+      "분류",
+      "판단 모델",
+      "한국어",
+      "오픈 웨이트",
+      "커뮤니티 인사이트"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-25",
+    "url": "https://github.com/newfull5/malkuth",
+    "content": [
+      "Malkuth는 문장을 생성하는 대신 고정된 선택지에 대한 확률을 반환하는 다국어 판단 모델로, 한국어에 중점을 두고 만들어졌습니다. 공식 README에 따르면 choice(최대 255개 선택지 중 하나), noul(예/아니오), score(순서 있는 단계) 세 가지 질문 유형을 지원하며, 하나의 요청에 같은 입력에 대해 여러 독립적인 질문을 함께 보낼 수 있습니다.",
+      "Malkuth-4B(Qwen3.5-4B-Base 기반)와 Malkuth-2B(Qwen3.8-2B-Distill 기반) 두 크기가 있으며 Kev 프레임워크로 사후학습·서빙됩니다. Kev와 uv를 설치한 뒤 `uv run --extra serve python -m kev.serve --run dhtocks/malkuth-4b --port 8009` 명령으로 로컬에 띄우고, `/v1/systemone` 엔드포인트에 상태(state)와 질문(questions)을 JSON으로 보내 선택·확률을 받는 구조입니다.",
+      "공식 README는 29개 평가 스위트·약 12만9천 문항 기준 정확도·Brier 점수 표를 공개하며, 이 중 9개는 학습에 쓰이지 않은 held-out 세트입니다. 코드는 Apache-2.0이지만 가중치는 연구용으로만 배포되고, 학습 데이터 일부(XNLI 등)는 비상업적 라이선스이므로 상업적 사용 전 라이선스 조건을 직접 확인해야 합니다."
+    ],
+    "cautions": [
+      "README에 공개된 정확도·Brier·지연시간 수치는 제작자가 자체 측정한 벤치마크이며, TypeSafe Jev API 등 타사 모델과의 비교치도 같은 문서 내 자체 평가입니다. 독립된 제3자 재현 검증은 별도로 확인해야 합니다.",
+      "가중치는 연구 목적(research use only) 라이선스이며 학습 데이터 일부는 비상업적 조건입니다. 상업적 서비스에 적용하려면 각 데이터셋 라이선스와 모델 카드 조건을 직접 확인해야 합니다. 설치·구동 테스트는 이번에 직접 수행하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/newfull5/malkuth"
+    ]
+  },
+  {
+    "id": "sodam-rhino-mcp-offline",
+    "title": "SoDam Rhino Offline MCP: JSON 입력으로 3DM 건물 모델 생성",
+    "summary": "Rhino 설치·라이선스 없이 건물 위치·크기·종류를 적은 JSON에서 구성요소별 메시가 담긴 .3dm 파일을 만들고 재검수하는 Windows용 로컬 MCP 도구",
+    "type": "GitHub",
+    "categories": [
+      "AI 코딩",
+      "3D·디자인"
+    ],
+    "tags": [
+      "MCP",
+      "Rhino",
+      "3D 모델링",
+      "로컬 우선",
+      "커뮤니티 인사이트"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-25",
+    "url": "https://github.com/sodam-ai/SoDam-Rhino-MCP-Codex",
+    "content": [
+      "SoDam Rhino Offline MCP는 건물의 위치·크기·종류 정보를 담은 JSON 설계 입력 파일에서 구성요소별 메시가 포함된 Rhino용 `.3dm` 파일을 생성하는 Windows 전용 로컬 도구입니다. 공식 README(한국어 사용 설명서, 2026-09-25 기준)는 Rhino 실행 파일이나 라이선스 없이 `rhino3dm` 라이브러리로 3DM을 직접 작성하며, 생성된 파일을 다시 읽어 치수를 검수하는 기능도 포함한다고 설명합니다.",
+      "MCP(Model Context Protocol)를 통해 Codex나 Claude Code 같은 AI 호스트가 로컬 프로그램의 도구를 호출하는 구조이며, 스킬은 AI에게 작업 절차를 안내하고 실제 파일 생성은 프로젝트의 MCP 서버가 수행합니다. Blender 연동을 통한 재질 렌더링과 기존 Blender 장면 가져오기 기능도 문서에 포함되어 있습니다.",
+      "README는 사진만으로 정확한 3D가 자동 완성되는 제품이 아니며 Rhino의 모든 기능을 복제하지도 않는다고 명시적으로 한계를 밝히고 있습니다. 독립 치수 평가와 테스트 현황도 문서에 별도로 정리되어 있습니다."
+    ],
+    "cautions": [
+      "Windows 전용 로컬 도구로 설명되어 있으며, 이번 확인은 공식 README 본문을 직접 읽은 것이고 실제 설치·3DM 생성 테스트는 수행하지 않았습니다.",
+      "README 자체가 '사진 입력만으로 정확한 3D 자동 완성'이 아니라고 명시한 한계이며, Rhino 전체 기능을 대체하지 않는다는 점을 공식 문서가 강조하고 있습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/sodam-ai/SoDam-Rhino-MCP-Codex"
+    ]
   }
 ]
