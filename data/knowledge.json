@@ -4119,5 +4119,176 @@
     "sourceEvidence": [
       "https://arxiv.org/html/2609.27331v1"
     ]
+  },
+  {
+    "id": "gemini-3-8-flash-tts-voice-design",
+    "title": "Gemini 3.8 Flash TTS·Flash-Lite TTS: 목소리 설계와 대사 연출",
+    "summary": "자연어로 새 목소리를 설계하고 대사 한 줄마다 톤·속도·감정을 지시하는 Gemini 음성 생성 모델 2종의 용도 구분과 이용 경로",
+    "type": "모델",
+    "categories": [
+      "음성 생성",
+      "AI 모델 출시"
+    ],
+    "tags": [
+      "Gemini",
+      "TTS",
+      "음성 합성",
+      "더빙",
+      "Google AI Studio"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-26",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+    "content": [
+      "Google 공식 블로그는 Gemini 3.8 Flash TTS를 캐릭터 목소리 설계와 세밀한 연기 지시용으로, Gemini 3.8 Flash-Lite TTS를 대량 더빙·오디오 콘텐츠·음성 에이전트처럼 비용 효율이 중요한 작업용으로 구분해 소개합니다.",
+      "Flash TTS는 역할·억양·음색을 자연어로 설명해 새 목소리를 만들 수 있고, 100개 이상의 언어·방언과 2,000개 이상의 기본 음성 라이브러리를 지원한다고 안내됩니다. 두 모델 모두 대본 안의 연출 지시, 장시간 생성, 한 대본 안의 2인 대화 구성, 웃음·한숨 같은 비언어 표현과 맞장구 삽입을 지원합니다.",
+      "개발자는 Gemini API와 Google AI Studio의 음성 생성 화면에서 사용할 수 있고, 일반 사용자는 Flash TTS를 Gemini Notebook, Flash-Lite TTS를 Google Vids에서 먼저 접하게 됩니다. 기업용 Gemini Enterprise API는 발표 시점 기준 '곧 제공' 상태입니다.",
+      "수업 자료 낭독이나 역할극 오디오를 만들 때는 같은 대본을 두 모델로 생성해 품질과 비용을 비교하고, 대사마다 연출 지시를 짧게 붙이는 방식부터 시작해 볼 수 있습니다."
+    ],
+    "cautions": [
+      "30초 샘플로 목소리를 복제하는 기능은 목소리 주인의 음성 동의 녹음이 필요하며, 일부 지역(일리노이·텍사스·EEA·영국·스위스·인도)에서는 AI Studio 복제 기능이 제공되지 않는다고 공식 글에 적혀 있습니다. 권리가 없는 타인의 목소리를 복제하면 안 됩니다.",
+      "생성된 음성에는 SynthID 워터마크가 들어간다고 안내됩니다. 벤치마크 순위는 제조사가 인용한 외부 평가이며 한국어 품질을 보장하지 않습니다. 이 카드는 공식 발표문 확인이며 실사용 테스트가 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/"
+    ]
+  },
+  {
+    "id": "opencode-open-source-coding-agent",
+    "title": "OpenCode: 여러 모델을 연결해 쓰는 오픈소스 코딩 에이전트와 Plan·Build 모드",
+    "summary": "터미널·데스크톱·IDE에서 쓰는 오픈소스 코딩 에이전트로, 수정 권한이 제한된 Plan과 전체 도구를 쓰는 Build를 오가며 다양한 공급사 모델을 연결할 수 있다",
+    "type": "도구",
+    "categories": [
+      "AI 코딩",
+      "개발 도구"
+    ],
+    "tags": [
+      "OpenCode",
+      "코딩 에이전트",
+      "오픈소스",
+      "멀티 모델",
+      "서브에이전트"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-26",
+    "url": "https://opencode.ai/",
+    "content": [
+      "OpenCode 공식 사이트는 이 도구를 터미널, 데스크톱 앱, IDE 확장에서 쓰는 오픈소스 코딩 에이전트로 소개합니다. Models.dev를 통해 75개 이상의 LLM 공급사와 로컬 모델을 연결할 수 있고, GitHub Copilot이나 ChatGPT Plus/Pro 계정 로그인도 지원한다고 안내합니다.",
+      "공식 문서의 기본 주 에이전트는 두 가지입니다. Build는 모든 도구가 켜진 기본 개발 모드이고, Plan은 파일 수정과 bash 명령이 기본적으로 '확인 요청(ask)'으로 설정된 분석·계획 모드입니다. Tab 키로 전환할 수 있어 먼저 Plan으로 계획을 정리하고 Build로 구현하는 흐름을 만들기 쉽습니다.",
+      "하위 에이전트로 General(병렬 작업), Explore(읽기 전용 코드 탐색), Scout(외부 문서·의존성 조사)가 기본 제공되며, `opencode.json`이나 마크다운 파일로 에이전트별 모델·권한·프롬프트를 따로 지정할 수 있습니다. 예를 들어 검토 전용 에이전트는 편집 권한을 deny로 두는 식입니다.",
+      "OpenCode Go는 월 10달러 구독으로 오픈 모델 위주의 코딩 모델 묶음을 제공하는 별도 상품이며, 다른 에이전트에서도 쓸 수 있다고 공식 페이지가 안내합니다. 모델별 예상 요청 한도는 페이지의 표로 공개됩니다."
+    ],
+    "cautions": [
+      "Go 요금제의 모델 목록·한도·기간 한정 무료 모델은 수시로 바뀝니다. 기간 한정 익명 모델은 데이터 처리 조건을 확인한 뒤 민감한 코드나 학생 정보에는 쓰지 마세요.",
+      "같은 모델이라도 도구(하네스)에 따라 결과가 달라질 수 있다는 사용자 의견이 있지만 이는 검증된 수치가 아닙니다. 이 카드는 공식 사이트·문서 확인이며 설치·성능 테스트는 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://opencode.ai/",
+      "https://opencode.ai/docs/agents/",
+      "https://opencode.ai/go"
+    ]
+  },
+  {
+    "id": "claude-code-advisor-tool",
+    "title": "Claude Code 어드바이저: 중요한 결정 순간에만 더 강한 모델에게 조언받기",
+    "summary": "주 모델이 작업하다가 접근법 결정·반복 오류·완료 선언 같은 순간에 더 강한 모델을 호출해 조언을 받는 Claude Code의 실험 기능 설정법과 비용 구조",
+    "type": "가이드",
+    "categories": [
+      "AI 코딩",
+      "비용 최적화"
+    ],
+    "tags": [
+      "Claude Code",
+      "advisor",
+      "모델 조합",
+      "비용 관리",
+      "검증"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-26",
+    "url": "https://code.claude.com/docs/en/advisor",
+    "content": [
+      "Claude Code 공식 문서에 따르면 어드바이저 도구는 주 모델이 작업 중 핵심 시점, 예를 들어 방식을 정하기 전, 같은 오류가 반복될 때, 완료를 선언하기 전에 두 번째 모델을 호출해 조언을 받는 기능입니다. 어드바이저는 도구 호출과 결과를 포함한 전체 대화를 읽고 지침을 돌려줍니다.",
+      "설정 방법은 세 가지입니다. 세션 중 `/advisor opus`처럼 지정하거나, 설정 파일의 `advisorModel` 값으로 기본값을 두거나, `claude --advisor opus`로 한 세션에만 적용합니다. 끌 때는 `/advisor off`를 씁니다.",
+      "어드바이저는 주 모델보다 같거나 강해야 하며, 주 모델별 허용 조합표가 공식 문서에 있습니다. 문서가 제시하는 대표 조합은 'Sonnet 주 모델 + Opus 어드바이저'처럼 일상 작업은 빠른 모델이 하고 계획·애매한 실패·완료 점검만 강한 모델에 맡기는 방식입니다.",
+      "어드바이저 호출은 매 턴이 아니라 결정 시점에만 일어나므로 강한 모델을 처음부터 끝까지 쓰는 것보다 저렴할 수 있다고 안내됩니다. 프롬프트에 '진행 전에 어드바이저와 상의해'처럼 적어 호출을 요청할 수도 있습니다."
+    ],
+    "cautions": [
+      "실험 기능이며 Anthropic API 경로에서만 동작하고 Amazon Bedrock·Google Cloud·Microsoft Foundry 등에서는 제공되지 않습니다. 구독 요금제에서는 어드바이저 사용량도 한도에 포함되고, 일부 요금제에서 Fable 어드바이저는 사용 크레딧으로 과금됩니다.",
+      "허용되지 않는 조합은 오류 없이 어드바이저 없이 진행될 수 있으니 `/advisor` 출력으로 적용 여부를 확인하세요. 상위 모델 한도가 끝나도 어드바이저로 계속 쓸 수 있다는 식의 사용자 전언은 공식 문서로 확인되지 않았습니다. 이 카드는 공식 문서 확인이며 실사용 측정이 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://code.claude.com/docs/en/advisor"
+    ]
+  },
+  {
+    "id": "codex-subagent-concurrency-settings",
+    "title": "Codex 서브에이전트: 동시 실행 개수와 모델·추론 강도 설정 확인법",
+    "summary": "요청한 에이전트 수와 동시에 열리는 스레드 수는 다르다. Codex 공식 문서 기준 동시 실행 상한 설정 키와 서브에이전트 모델 지정 방법 정리",
+    "type": "가이드",
+    "categories": [
+      "AI 코딩",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "Codex",
+      "서브에이전트",
+      "config.toml",
+      "병렬 작업",
+      "토큰 관리"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-26",
+    "url": "https://developers.openai.com/codex/agent-configuration/subagents",
+    "content": [
+      "Codex 공식 문서는 서브에이전트 작업이 기본으로 켜져 있으며, 사용자가 직접 요청하거나 AGENTS.md·스킬 지침이 요청할 때 작업을 나눠 맡긴다고 설명합니다. 각 서브에이전트가 따로 모델과 도구를 쓰므로 단일 에이전트보다 토큰을 더 소비합니다.",
+      "동시에 열 수 있는 서브에이전트 스레드 수는 `config.toml`의 `[agents]` 아래 `max_concurrent_threads_per_session`으로 제한하며, 기존 설정의 `max_threads`는 이전 이름(별칭)으로 계속 쓸 수 있습니다. 값을 비워 두면 Codex가 기본값을 정한다고 되어 있어, 에이전트를 10개 요청해도 동시에 도는 수는 이 상한에 따라 달라질 수 있습니다.",
+      "서브에이전트의 모델과 추론 강도를 따로 정하지 않으면 부모 세션 설정을 물려받습니다. `[agents]`의 기본 모델·추론 강도나 `~/.codex/agents/`, `.codex/agents/`에 둔 사용자 정의 에이전트 TOML 파일로 역할별(탐색·검토·수정) 모델과 샌드박스를 다르게 지정할 수 있습니다.",
+      "공식 문서는 읽기 위주 작업(탐색·테스트·로그 분석·요약)부터 병렬화하고, 여러 에이전트가 동시에 코드를 고치는 작업은 충돌 위험이 커지므로 신중하라고 권합니다. 좋은 요청문에는 작업 분할 방식, 모두 기다릴지 여부, 돌려받을 요약 형식을 적습니다."
+    ],
+    "cautions": [
+      "동시 실행 기본값은 버전과 환경에 따라 다를 수 있고 공식 문서도 고정 숫자를 제시하지 않습니다. 커뮤니티에서 도는 '기본 3개' 같은 숫자를 사실로 단정하지 말고 본인 설정과 앱 표시를 확인하세요.",
+      "이 카드는 공식 문서 확인이며, 동시 실행 개수에 따른 속도·비용 측정은 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://developers.openai.com/codex/agent-configuration/subagents"
+    ]
+  },
+  {
+    "id": "hermes-agent-slack-thread-settings",
+    "title": "Hermes Agent Slack 연동: 스레드 답장 대신 채널에 바로 답하게 하는 설정",
+    "summary": "Hermes Agent를 Slack에 연결했을 때 답장이 스레드 댓글로 달리는 동작을 reply_in_thread 등 공식 설정 키로 조정하는 방법",
+    "type": "가이드",
+    "categories": [
+      "AI 에이전트",
+      "협업 도구"
+    ],
+    "tags": [
+      "Hermes Agent",
+      "Slack",
+      "메신저 연동",
+      "설정"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-26",
+    "url": "https://hermes-agent.nousresearch.com/docs/user-guide/messaging/slack",
+    "content": [
+      "Hermes Agent 공식 Slack 문서에 따르면 기본값에서는 채널 메시지에 스레드로 답합니다. `platforms.slack.extra.reply_in_thread`를 `false`로 바꾸면 채널 메시지에 스레드 대신 채널에 바로 답하며, 이미 스레드 안에서 온 메시지에는 계속 스레드로 답합니다.",
+      "여러 조각으로 나뉜 답장의 스레드 처리 방식은 `platforms.slack.reply_to_mode`로 정하며 `off`, `first`(기본), `all` 중 고를 수 있습니다. `reply_broadcast`를 켜면 스레드 답장의 첫 조각을 채널에도 함께 게시합니다.",
+      "그 밖에 링크 미리보기 카드 표시(`unfurl_links`, `unfurl_media`), 다른 봇 메시지 수용 범위(`allow_bots`), 반복 작업(cron) 결과를 채널에 바로 게시할지 스레드로 게시할지 등도 같은 설정 영역에서 조정합니다.",
+      "DM은 한 흐름, 팀 채널은 스레드로 나누는 식으로 대화 성격에 맞게 설정을 정한 뒤, 에이전트에게 설정 변경을 맡기는 경우에도 실제 저장값을 확인하는 절차를 두는 것이 좋습니다."
+    ],
+    "cautions": [
+      "설정을 바꾼 뒤 실행 중인 게이트웨이를 재시작해야 반영될 수 있습니다. 에이전트에게 설정 파일 수정 권한을 줄 때는 변경 범위를 확인하고 재시작 여부를 직접 승인하세요.",
+      "이 카드는 공식 문서 확인이며, 버전에 따라 키 이름과 기본값이 바뀔 수 있습니다. 실제 Slack 워크스페이스 연동 테스트는 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://hermes-agent.nousresearch.com/docs/user-guide/messaging/slack"
+    ]
   }
 ]
