@@ -4290,5 +4290,177 @@
     "sourceEvidence": [
       "https://hermes-agent.nousresearch.com/docs/user-guide/messaging/slack"
     ]
+  },
+  {
+    "id": "openai-gpt6-prompt-caching-guide",
+    "title": "GPT-6 프롬프트 캐싱: 30분 재사용 할인과 캐시 미스 진단 도구",
+    "summary": "장시간 에이전트의 반복 컨텍스트 비용을 줄이는 OpenAI의 향상된 프롬프트 캐싱. 30분 재사용 기준, 명시적 중단점, 대시보드·진단 도구, 캐시를 깨지 않는 도구·지침 관리법 정리",
+    "type": "가이드",
+    "categories": [
+      "비용 최적화",
+      "AI 모델 API"
+    ],
+    "tags": [
+      "OpenAI",
+      "GPT-6",
+      "프롬프트 캐싱",
+      "Responses API",
+      "에이전트 비용"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-27",
+    "url": "https://openai.com/index/better-prompt-caching-for-gpt-6/",
+    "content": [
+      "OpenAI 공식 발표(2026-09-22)에 따르면 GPT-6 제품군과 함께 기본 캐시 적중률을 높인 프롬프트 캐싱 시스템이 도입됐습니다. 여러 요청이 같은 지침·도구 정의·이전 대화를 앞부분(접두부)으로 공유하면, 30분 이내에 재사용되는 적격 공유 접두부에 캐시 할인이 적용되며 캐시된 입력 토큰은 최대 90%까지 할인됩니다.",
+      "공식 프롬프트 캐싱 가이드의 비교표 기준으로 GPT-5.6 이후 모델은 캐시 읽기가 일반 입력 단가의 0.1배, 캐시 쓰기가 1.25배이며, 수명은 `prompt_cache_options.ttl`의 `30m`(기본값)으로 마지막 쓰기·재사용 뒤 최소 30분입니다. 한 번 쓰고 여러 번 읽을수록 절감 폭이 커집니다.",
+      "새 도구로 프롬프트 캐싱 대시보드(시간별 적중률, 캐시된/미캐시 토큰 비율)와 진단 도구가 제공됩니다. 진단 결과는 예를 들어 `tools_changed`처럼 무엇이 바뀌어 재사용이 막혔는지와 영향받은 토큰 수를 알려 줍니다.",
+      "캐시를 지키는 요령: 명시적 캐시 중단점으로 재사용할 접두부를 고르고 자주 바뀌는 내용은 프롬프트 끝에 둡니다. 도구 정의·스키마·순서는 그대로 두고 `allowed_tools`로 호출 가능한 도구만 제한하거나 필요 없을 땐 tool_choice를 none으로 둡니다. 지침을 바꿀 때는 기존 지침을 고치지 말고 새 개발자 메시지를 끝에 덧붙입니다. 알려진 공통 컨텍스트는 사전 준비(prewarm)로 미리 캐시할 수 있고, GPT-6에서는 `configuration_update`로 대화 중 추론 강도를 바꿔도 캐시가 유지됩니다."
+    ],
+    "cautions": [
+      "'비용 90% 절감'은 전체 비용이 아니라 캐시된 입력 토큰에 대한 최대 할인입니다. 캐시 쓰기 요금이 붙는 모델이 있고, 세션을 유지한다고 캐시 적중이 보장되지는 않습니다. 모델 세대별 규칙이 달라 공식 가이드의 비교표를 먼저 확인하세요.",
+      "이 카드는 공식 발표·가이드 확인이며 실제 적중률이나 비용 절감을 측정하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://openai.com/index/better-prompt-caching-for-gpt-6/",
+      "https://developers.openai.com/api/docs/guides/prompt-caching"
+    ]
+  },
+  {
+    "id": "in-app-webview-login-testing-guide",
+    "title": "앱 안 웹뷰 로그인·본인인증: 외부 브라우저 원칙과 실제 환경 테스트",
+    "summary": "AI로 로그인·본인확인 기능은 빨리 붙어도, 브라우저에서 되던 흐름이 앱 내부 웹뷰에서 막히는 일이 흔하다. Google 공식 정책과 IETF 표준으로 확인한 원칙과 테스트 체크리스트",
+    "type": "가이드",
+    "categories": [
+      "개발 워크플로우",
+      "AI 코딩"
+    ],
+    "tags": [
+      "OAuth",
+      "웹뷰",
+      "Google 로그인",
+      "본인인증",
+      "테스트"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-27",
+    "url": "https://developers.googleblog.com/upcoming-security-changes-to-googles-oauth-20-authorization-endpoint-in-embedded-webviews/",
+    "content": [
+      "회원가입·로그인·본인확인 연동은 공식 연동 문서를 AI 코딩 도구에 주면 비교적 쉽게 구현되지만, 실제로 시간이 드는 부분은 예외 처리와 실행 환경별 테스트라는 실무 논의를 공식 자료로 좁혀 확인해 정리했습니다. 특히 일반 웹브라우저에서 잘 되던 흐름이 앱 내부 웹뷰에 띄우면 실패할 수 있습니다.",
+      "Google 공식 발표에 따르면 2021년 9월 30일부터 임베디드 웹뷰에서의 Google OAuth 요청은 차단되며 `disallowed_useragent` 오류가 납니다. Android WebView, iOS·macOS의 WKWebView(및 구형 UIWebView)가 여기에 해당합니다. 대안은 기기의 기본 브라우저로 열거나 Android Custom Tabs, iOS SFSafariViewController를 쓰는 것이고, 앱이 실행될 플랫폼(Android·iOS·데스크톱)마다 알맞은 OAuth 클라이언트를 등록해야 합니다.",
+      "근거가 되는 IETF 표준 RFC 8252(OAuth 2.0 for Native Apps, BCP 212)는 네이티브 앱이 임베디드 user-agent로 권한 요청을 해서는 안 된다(MUST NOT)고 규정합니다. 웹뷰를 띄운 앱은 로그인 입력을 기록하거나 세션 쿠키를 복사할 수 있고, 사용자는 주소창·인증서 확인 없이 자격증명을 입력하게 되기 때문입니다.",
+      "Google은 메신저·뉴스 앱이 링크를 인앱 웹뷰로 열면 해당 웹사이트의 Google 로그인도 영향받을 수 있다고 안내합니다. 제안 체크리스트: ① 일반 브라우저·인앱 브라우저·앱 내부 웹뷰를 각각 실기기(Android·iOS)에서 테스트, ② 인증 요청 후 이탈·재시도·시간 초과 같은 예외 케이스를 AI에게 목록으로 뽑게 하고 테스트 항목으로 받기, ③ 로그인 제공자·본인확인 서비스의 공식 오류 처리 문서를 구현 전에 함께 제공하기."
+    ],
+    "cautions": [
+      "국내 휴대폰 본인확인 서비스의 앱 연동 방식과 요금은 제공사마다 다르며 이 카드에서 확인하지 않았습니다. 해당 서비스 공식 문서를 따르세요.",
+      "Google 외 로그인 제공자의 웹뷰 정책은 각 제공자 문서를 확인해야 합니다. 체크리스트는 공식 원칙에서 도출한 제안이며 실제 앱으로 검증한 결과가 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://developers.googleblog.com/upcoming-security-changes-to-googles-oauth-20-authorization-endpoint-in-embedded-webviews/",
+      "https://datatracker.ietf.org/doc/html/rfc8252#section-8.12"
+    ]
+  },
+  {
+    "id": "cognitive-surrender-think-first-ai",
+    "title": "인지적 항복: AI 답을 검토 없이 따르는 현상과 '먼저 생각하고 AI' 원칙",
+    "summary": "AI를 제3의 사고 체계로 본 와튼스쿨 연구(프리프린트)의 핵심 결과와, 학생·사용자가 AI 답에 끌려가지 않도록 스스로 먼저 생각하게 하는 수업·업무 적용 제안",
+    "type": "자료",
+    "categories": [
+      "AI 교육",
+      "AI 안전"
+    ],
+    "tags": [
+      "인지적 항복",
+      "비판적 사고",
+      "AI 리터러시",
+      "수업 설계",
+      "연구"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-27",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646",
+    "content": [
+      "펜실베이니아대 와튼스쿨 연구진의 논문 「Thinking—Fast, Slow, and Artificial」(2026, SSRN·PsyArXiv 공개)은 직관(System 1)과 숙고(System 2)에 더해, 뇌 밖에서 작동하는 AI를 System 3으로 보는 '삼중 체계 이론'을 제안합니다. 핵심 개념인 인지적 항복(cognitive surrender)은 AI 출력을 거의 검토하지 않고 받아들여 자신의 직관과 숙고를 덮어쓰는 현상입니다.",
+      "초록에 따르면 사전등록한 세 실험(변형 인지반응검사, 1,372명·9,593회 시행)에서 AI의 정확도를 숨겨진 프롬프트로 무작위로 바꿨습니다. 참가자는 과반의 시행에서 AI를 참고했고, AI가 맞을 때 정답률은 기준보다 25%p 올랐지만 틀릴 때는 15%p 떨어졌습니다(연구 1). AI를 쓰면 틀린 뒤에도 자신감이 높아졌습니다.",
+      "시간 압박(연구 2)이나 문항별 보상·피드백(연구 3)을 줘도 이 패턴은 사라지지 않았고, AI 신뢰가 높고 인지 욕구·유동 지능이 낮은 참가자일수록 더 크게 항복했습니다.",
+      "적용 제안(연구가 직접 검증한 처치는 아님): ① 학생이 먼저 자기 답과 근거를 적은 뒤 AI 답과 비교하는 '선사고 후AI' 순서, ② AI 답의 출처·반례를 확인하는 검증 단계를 과제에 포함, ③ '확신한다'와 '맞았다'를 따로 기록해 자신감과 정답 여부를 구분하는 성찰. 업무에서도 AI 결과를 채택하기 전에 스스로의 예상치를 먼저 적어 두면 차이를 발견하기 쉽습니다."
+    ],
+    "cautions": [
+      "동료심사 출판 여부는 이 카드에서 확인하지 않은 프리프린트이며, 실험 과제가 논리 퀴즈형 문항이라 모든 학습·업무 상황으로 일반화하기는 어렵습니다.",
+      "수치는 논문 초록 기준이며 국내 보도 요약이 아닌 원문 초록을 따랐습니다. 수업 적용 방식은 제안이며 효과를 측정한 결과가 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646"
+    ]
+  },
+  {
+    "id": "xiaomi-mimo-v2-6-rl-environments",
+    "title": "Xiaomi MiMo-V2.6 에이전트 강화학습 환경 데이터셋 공개",
+    "summary": "코드·보안·지식 작업·웹 개발·음악 작곡 5개 영역의 에이전트 RL 과제와 검증기를 묶은 Xiaomi MiMo 공식 Hugging Face 데이터셋(Apache-2.0)",
+    "type": "자료",
+    "categories": [
+      "오픈소스 모델",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "Xiaomi MiMo",
+      "강화학습",
+      "데이터셋",
+      "Hugging Face",
+      "에이전트 평가"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-27",
+    "url": "https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss",
+    "content": [
+      "Xiaomi MiMo 공식 Hugging Face 조직이 LLM 에이전트용 강화학습(RL) 훈련 환경 데이터셋 'MiMo-V2.6-RL-oss'를 Apache-2.0 라이선스로 공개했습니다.",
+      "데이터셋 카드에 따르면 5개 영역으로 나뉩니다: 코드(소프트웨어 엔지니어링, 실행 가능한 테스트로 검증), 사이버(취약점 재현, 규칙 검사), 일반(지식 작업, 루브릭 기반 채점), 비주얼(웹 개발, 시각 채점), 음악(기호 음악 작곡, 규칙 검사).",
+      "코드 영역 예시는 실제 오픈소스 이슈 형식의 문제 설명과 과제별 Docker 이미지·작업 경로 정보를 담고 있습니다. 과제 실행용 Docker 이미지(Docker Hub)와 훈련 코드(GitHub XiaomiMiMo/verl) 링크가 함께 제공됩니다.",
+      "활용 방향: 에이전트 RL 연구나 평가 환경을 설계할 때 영역별로 검증기(테스트·규칙·루브릭·시각 채점)를 어떻게 나눴는지 참고하는 자료로 쓸 수 있습니다."
+    ],
+    "cautions": [
+      "데이터 규모·품질이나 모델 성능 기여는 검증하지 않았습니다. 코드 과제는 외부 오픈소스 저장소에서 유래하므로 재사용 시 원 저장소 라이선스도 확인하세요.",
+      "사이버(취약점 재현) 과제는 격리된 승인 환경에서만 다뤄야 합니다. 이 카드는 공식 데이터셋 카드 확인이며 실행 테스트가 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/datasets/XiaomiMiMo/MiMo-V2.6-RL-oss"
+    ]
+  },
+  {
+    "id": "openai-daybreak-individual-fido2-keys",
+    "title": "OpenAI Daybreak 개인 접근: 10월 1일까지 물리 FIDO2 보안 키 요건",
+    "summary": "OpenAI의 보안 연구자용 Trusted Access for Cyber(Daybreak) 개인 계정은 물리 하드웨어 보안 키만 로그인 수단으로 둬야 한다. 공식 도움말 기준 요건과 확인 방법",
+    "type": "가이드",
+    "categories": [
+      "AI 안전",
+      "AI 서비스 운영"
+    ],
+    "tags": [
+      "OpenAI",
+      "Daybreak",
+      "보안 키",
+      "FIDO2",
+      "계정 보안"
+    ],
+    "status": "자료 확인",
+    "importance": 2,
+    "updated": "2026-09-27",
+    "url": "https://help.openai.com/en/articles/20001259",
+    "content": [
+      "OpenAI 도움말에 따르면 Daybreak는 OpenAI의 Trusted Access for Cyber 프로그램이며 Daybreak Blue·Red가 그 안의 접근 등급입니다. 승인된 방어 목적 보안 작업(자신이 소유·운영하거나 명시적으로 허가받은 시스템)에 쓰입니다.",
+      "개인 Trusted Access에는 자격 있는 유료 요금제, Advanced Account Security, 호환되는 물리 FIDO2 하드웨어 보안 키가 필요하고, 하드웨어 키만 등록된 로그인 수단이어야 합니다. 기존 개인 사용자는 2026년 10월 1일까지 이 요건을 충족해야 접근이 유지됩니다. 조직 단위 접근은 별도 온보딩 절차를 따릅니다.",
+      "기기나 비밀번호 관리자에 저장되는 소프트웨어·동기화 패스키는 인정되지 않습니다. OpenAI 계정에 등록된 다른 패스키는 화면 안내에 따라 제거해야 하지만, 기기나 비밀번호 관리자에서 무관한 패스키까지 지울 필요는 없습니다.",
+      "확인 방법: chatgpt.com/cyber에 해당 계정으로 로그인해 'Your eligibility'에서 요금제·계정 보안·보안 키·신원 확인 상태를 점검합니다. 키가 인식되지 않으면 오류 메시지·스크린샷·브라우저와 기기 정보를 준비해 지원팀에 문의하되, 복구 키나 자격증명은 보내지 않습니다."
+    ],
+    "cautions": [
+      "공식 도움말 안에서도 필요한 최소 키 개수가 '최소 1개'와 '1개로는 부족' 으로 엇갈리게 적혀 있습니다. 분실 대비로 2개를 준비하는 편이 안전하다는 것은 제안이며, 최종 기준은 eligibility 페이지 표시를 따르세요.",
+      "마감일 이후 요건이 바뀔 수 있습니다. 이 카드는 2026-09-28 기준 공식 도움말 확인이며 실제 등록 과정을 검증하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://help.openai.com/en/articles/20001259"
+    ]
   }
 ]
