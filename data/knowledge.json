@@ -4702,5 +4702,179 @@
     "sourceEvidence": [
       "https://openrouter.ai/upstage/solar-decide"
     ]
+  },
+  {
+    "id": "scientisttwo-autonomous-research-agent",
+    "title": "ScientistTwo: 가설·실험·반박까지 순환하는 자율 연구 에이전트",
+    "summary": "기준선 재현부터 가설 생성, 실험·절제 연구, 모의 동료평가와 반박까지 연결한 다중 에이전트 연구 프레임워크와 약 3,800달러 실행비의 현실적 한계",
+    "type": "논문",
+    "categories": [
+      "AI 에이전트",
+      "AI 연구"
+    ],
+    "tags": [
+      "ScientistTwo",
+      "자율 연구",
+      "다중 에이전트",
+      "동료평가",
+      "arXiv"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-28",
+    "url": "https://arxiv.org/abs/2609.19644",
+    "content": [
+      "ScientistTwo는 사람이 연구 문제를 주면 관련 선행 연구의 한계를 찾고, 최신 기준선을 재현한 뒤, 새 가설을 세워 실험하는 과정을 여러 전문 에이전트로 조율하는 자율 연구 프레임워크입니다.",
+      "논문은 단순 원고 생성보다 실험 순환을 강조합니다. 데이터셋·지표를 바꿔 실험하고, 구성요소를 하나씩 제거하는 절제 연구로 기여도를 확인하며, 결과가 약하면 가설과 방법을 다시 다듬습니다.",
+      "마지막에는 모의 동료평가 에이전트가 원고를 비판하고 연구 에이전트가 반박·수정하는 폐쇄 루프를 거칩니다. 저자들은 상위 학회 논문 문제를 대상으로 사람의 기존 방법보다 높은 성능과 자동 평가 점수를 보고했습니다.",
+      "운영 비용은 과제 하나당 평균 약 3,765달러, 결론 부분에서는 약 3,800달러로 제시됩니다. 장시간 실험과 큰 문맥·생성량이 주요 원인이므로, 실제 연구실에서는 문제 가치와 검증 예산을 먼저 정해야 합니다."
+    ],
+    "cautions": [
+      "성능과 논문 품질 평가는 저자들이 구성한 실험과 자동 AI 리뷰어에 기반한 자체 보고입니다. 독립 재현이나 실제 학회 동료평가를 통과했다는 뜻이 아닙니다.",
+      "arXiv v1 프리프린트이며 실행 비용도 저자 환경의 평균입니다. 연구 윤리, 데이터 라이선스, 계산 자원, 사람 전문가의 최종 검증을 대체하지 않습니다."
+    ],
+    "sourceEvidence": [
+      "https://arxiv.org/abs/2609.19644",
+      "https://scientist-two.github.io/"
+    ]
+  },
+  {
+    "id": "kling-4-video-model",
+    "title": "Kling 4.0: 최대 10개 키프레임과 30초·4K 출력을 내세운 영상 모델",
+    "summary": "Kling AI가 공개한 4.0 세대의 텍스트·이미지 영상화, 다중 키프레임, 참조 제어, 립싱크와 HDR 사양, 그리고 Flash 한정 조기 접근 범위",
+    "type": "모델",
+    "categories": [
+      "영상 생성",
+      "멀티모달 AI"
+    ],
+    "tags": [
+      "Kling AI",
+      "Kling 4.0",
+      "키프레임",
+      "4K",
+      "HDR"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-28",
+    "url": "https://kling.ai/release-note/release-notes/Kling_4?type=dialog",
+    "content": [
+      "Kling AI 공식 릴리스 노트는 Kling 4.0을 텍스트·이미지 기반 영상 생성, 첫·마지막 프레임, Omni Reference를 한 모델 계열에 묶은 업데이트로 소개합니다.",
+      "사양표에는 입력 키프레임을 최대 10개까지 지정하고, 3~30초 영상을 720p·1080p·4K로 만들 수 있다고 적혀 있습니다. 1080p와 4K에서는 10비트 HDR도 지원한다고 안내합니다.",
+      "제작 제어 측면에서는 여러 키프레임 사이의 움직임과 장면 전환, 립싱크, 영상 안 글자 표현, 기존 영상의 창의적 재구성을 개선 항목으로 제시합니다.",
+      "전체 Kling 4.0 출시는 10월로 예고됐고, 4.0 Flash는 9월 28일부터 일부 사용자에게만 조기 제공됐습니다. 시험할 때는 계정별 실제 제공 모델과 해상도·길이·크레딧 조건을 별도로 기록해야 합니다."
+    ],
+    "cautions": [
+      "품질 향상과 사양은 제작사의 릴리스 노트 기준이며 이 환경에서 같은 프롬프트로 독립 비교하지 않았습니다.",
+      "조기 접근과 정식 출시의 기능·가격·지역 범위가 다를 수 있습니다. 인물·저작물·브랜드를 사용할 때는 동의와 권리, 합성 표시 정책을 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://kling.ai/release-note/release-notes/Kling_4?type=dialog"
+    ]
+  },
+  {
+    "id": "microsoft-copilot-home-code-autopilot",
+    "title": "Microsoft Copilot Home·Code·Autopilot: 대화, 앱 제작, 지속형 에이전트의 분화",
+    "summary": "Copilot을 대화·위임의 Home, 샌드박스 앱 제작 Code, 계속 작동하는 클라우드 에이전트 Autopilot으로 확장한 Microsoft의 2026년 공개 계획",
+    "type": "서비스",
+    "categories": [
+      "AI 에이전트",
+      "업무 자동화"
+    ],
+    "tags": [
+      "Microsoft Copilot",
+      "Copilot Code",
+      "Autopilot",
+      "Microsoft 365",
+      "에이전트"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-28",
+    "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+    "content": [
+      "Microsoft는 새 Copilot을 Home, Code, Autopilot 세 축으로 재구성했습니다. Home은 Chat과 장시간 위임 작업인 Cowork를 한곳에 모으고 Word·Excel·PowerPoint 문서를 대화 옆에서 직접 만들고 편집하는 시작 화면입니다.",
+      "Code는 자연어로 앱, 추적기, 대시보드, 자동화와 워크플로를 만드는 기능입니다. GitHub Copilot 기반 기술을 쓰되 코드는 샌드박스에서 실행되고, 조직 테넌트 안에 안전하게 호스팅하는 Copilot Managed Runtime과 연결됩니다.",
+      "Autopilot은 이전 Scout의 새 이름으로, 목표와 역할을 받은 뒤 채널을 지켜보고 후속 요청·반복 업무를 계속 처리하는 클라우드 에이전트입니다. 자체 ID, 메모리, 컴퓨터, 작업공간을 가지며 Teams·Outlook 등에서 권한과 감사를 적용받습니다.",
+      "Home과 Code는 Frontier 프로그램부터 순차 배포되고 Autopilot은 비공개 미리보기를 확대합니다. Cowork·Code·Autopilot 같은 장시간 에이전트 기능은 사용량 기반 과금 대상이므로 기능 평가와 함께 비용 정책을 설계해야 합니다."
+    ],
+    "cautions": [
+      "발표 시점 기준 단계적 미리보기 계획입니다. 조직·요금제·지역에 따라 기능명, 배포 시점, 실제 사용 가능 범위가 달라질 수 있습니다.",
+      "샌드박스·테넌트 호스팅이 자동으로 안전을 보장하지 않습니다. 플러그인 권한, 데이터 경계, 승인 단계, 감사 로그와 사용량 한도를 관리자가 검토해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+      "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-managed-runtime-a-new-compute-layer-for-the-agentic-enterprise/"
+    ]
+  },
+  {
+    "id": "ollaya-local-decision-model-runtime",
+    "title": "Ollaya: 여러 공개 판단 모델을 로컬 System One API로 실행하는 런타임",
+    "summary": "Laya·Winnow·NLI·Qwen3Guard·CLM 등을 내려받아 CPU·GPU에서 실행하고 TypeSafe 호환 판단 API로 제공하는 Apache-2.0 로컬 도구",
+    "type": "GitHub",
+    "categories": [
+      "분류·라우팅",
+      "로컬 AI"
+    ],
+    "tags": [
+      "Ollaya",
+      "System One",
+      "판단 모델",
+      "로컬 AI",
+      "TypeSafe"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-29",
+    "url": "https://github.com/ollaya-dev/ollaya",
+    "content": [
+      "Ollaya는 생성형 문장을 쓰지 않고 선택·점수·예/아니오와 확률을 반환하는 공개 판단 모델을 로컬에서 내려받고 실행하는 Apache-2.0 런타임입니다. 명령 구조와 로컬 데몬 경험은 Ollama와 비슷하지만 별도 독립 프로젝트입니다.",
+      "Laya, Winnow, Decider, NLI, GLiClass, Qwen3Guard, CLM 등 서로 다른 모델 계열을 지원합니다. 모델 가중치는 각 제작자의 Hugging Face 저장소에서 고정 커밋으로 받고 SHA-256을 확인하며, Ollaya는 작은 변환 그래프와 매니페스트만 제공합니다.",
+      "TypeSafe의 `/v1/systemone` 응답 형식과 호환돼 기존 SDK는 기본 URL만 로컬 서버로 바꿔 쓸 수 있습니다. 자체 `/api/decide`와 MCP 서버도 제공해 분류·라우팅·정책 검사를 에이전트 도구로 연결할 수 있습니다.",
+      "CPU와 NVIDIA CUDA를 지원하고, GGUF 계열은 llama.cpp를 통해 Apple silicon Metal도 사용할 수 있습니다. 실제 도입 전에는 업무 데이터로 정확도와 확률 보정을 재측정하고 자동 처리·사람 검토 임계값을 나눠야 합니다."
+    ],
+    "cautions": [
+      "Ollaya는 Ollama나 TypeSafe가 만들거나 보증한 제품이 아닙니다. 모델마다 라이선스, 언어 성능, 하드웨어 요구량과 보정 방식이 다릅니다.",
+      "프로젝트가 제시한 정확도·지연 시간은 특정 벤치마크와 하드웨어의 자체 측정입니다. 로컬 실행은 외부 전송을 줄일 수 있지만 접근 통제, 로그, 디스크의 모델·입력 데이터 보안은 사용자가 관리해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/ollaya-dev/ollaya",
+      "https://ollaya.dev/docs"
+    ]
+  },
+  {
+    "id": "nobodywho-on-device-llm-sdk",
+    "title": "NobodyWho: 모바일·데스크톱·Godot 앱에 넣는 온디바이스 LLM SDK",
+    "summary": "GGUF 모델을 Kotlin·Swift·React Native·Flutter·Python·Godot에서 오프라인 실행하고 도구 호출·비전·음성 기능을 붙이는 EUPL-1.2 추론 엔진",
+    "type": "GitHub",
+    "categories": [
+      "로컬 AI",
+      "앱 개발"
+    ],
+    "tags": [
+      "NobodyWho",
+      "온디바이스 AI",
+      "GGUF",
+      "llama.cpp",
+      "모바일"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-29",
+    "url": "https://github.com/nobodywho-ooo/nobodywho",
+    "content": [
+      "NobodyWho는 앱 안에서 GGUF 형식의 공개 LLM을 오프라인으로 실행하는 EUPL-1.2 추론 엔진입니다. Kotlin, Swift, React Native·Expo, Flutter, Python, Godot 바인딩을 제공해 모바일·데스크톱·게임에 같은 로컬 추론 코어를 넣을 수 있습니다.",
+      "llama.cpp 기반 텍스트·비전·임베딩·재순위화와, ONNX Runtime 기반 음성 인식·합성·음성 활동 감지를 묶습니다. 함수 서명에서 구조화 문법을 만들어 타입이 정해진 도구 호출을 지원하고 모델은 Hugging Face나 URL에서 내려받습니다.",
+      "가속은 macOS·Apple 기기의 Metal, Linux·Windows·Android의 Vulkan 등을 사용하며 GPU 메모리에 다 들어가지 않는 모델은 일부 계층을 CPU로 넘길 수 있습니다. 원격 API 키나 별도 서버 없이 기기 안에서 데이터 흐름을 유지하는 앱을 만들 때 유용합니다.",
+      "공식 문서는 데스크톱에서 모델 파일의 약 1.5배 여유 RAM, 바쁜 시스템에서는 약 2배를 권장합니다. 모바일은 기기와 운영체제가 차지하는 메모리를 제외하고 모델 파일의 약 2배를 확보하는 것을 경험칙으로 제시합니다."
+    ],
+    "cautions": [
+      "웹 내보내기와 Windows ARM64는 지원하지 않고, Godot의 iOS 내보내기도 제공하지 않습니다. 플랫폼별 패키지와 현재 지원표를 먼저 확인하세요.",
+      "온디바이스 실행이 곧 정확성이나 완전한 개인정보 보호를 뜻하지 않습니다. 선택한 모델의 라이선스·편향·메모리 요구량, 앱 로그·백업·크래시 수집 경로를 별도로 검토해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/nobodywho-ooo/nobodywho",
+      "https://docs.nobodywho.ooo/"
+    ]
   }
 ]
