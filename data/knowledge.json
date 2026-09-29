@@ -4462,5 +4462,245 @@
     "sourceEvidence": [
       "https://help.openai.com/en/articles/20001259"
     ]
+  },
+  {
+    "id": "claude-system-prompt-snapshot-guide",
+    "title": "Claude 시스템 프롬프트 공개본: 웹·앱과 API의 동작 차이 읽기",
+    "summary": "Claude 웹·모바일에 주기적으로 갱신되는 시스템 프롬프트가 적용되며 API에는 적용되지 않는다는 Anthropic 공식 설명과 확인 범위",
+    "type": "가이드",
+    "categories": [
+      "프롬프트",
+      "AI 모델 API"
+    ],
+    "tags": [
+      "Claude",
+      "시스템 프롬프트",
+      "Anthropic",
+      "API"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-28",
+    "url": "https://platform.claude.com/docs/en/release-notes/system-prompts/overview",
+    "content": [
+      "Anthropic 공식 문서에 따르면 Claude 웹 인터페이스와 모바일 앱은 대화를 시작할 때 현재 날짜 같은 최신 정보를 제공하고, Markdown 코드 작성 등 일부 응답 행동을 유도하는 시스템 프롬프트를 사용합니다.",
+      "공개 페이지는 이 프롬프트를 모델별·날짜별로 확인할 수 있게 하며, Anthropic은 응답을 개선하기 위해 내용을 주기적으로 갱신한다고 설명합니다.",
+      "중요한 경계: 웹·모바일의 시스템 프롬프트 변경은 Claude API에 적용되지 않습니다. 같은 모델 이름을 보더라도 claude.ai와 API 결과가 다른 이유를 점검할 때 이 차이를 먼저 확인할 수 있습니다.",
+      "Claude 4.6 세대부터 각 모델 ID는 하나의 고정 스냅샷을 가리키므로 해당 모델에는 공개 항목이 하나만 제공됩니다. 재현 가능한 비교가 필요하면 모델 ID와 사용 표면(웹·앱·API)을 함께 기록하세요."
+    ],
+    "cautions": [
+      "공개본만으로 서비스 내부의 모든 정책·도구 설정을 설명할 수 있다고 가정하면 안 됩니다. 문서가 공개한 범위만 참고하세요.",
+      "공개 시스템 프롬프트를 복사해 API에 넣는다고 웹·앱과 완전히 같은 동작이 재현되는 것은 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://platform.claude.com/docs/en/release-notes/system-prompts/overview"
+    ]
+  },
+  {
+    "id": "nvidia-sol-h3-dgx-spark-video",
+    "title": "NVIDIA Sol-H3: DGX Spark 한 대에서 768p 5초 영상을 56초에 생성",
+    "summary": "MiniMax-H3 초안과 LTX-2.5 정제를 결합해 단일 DGX Spark의 통합 메모리에 상주시킨 NVIDIA Research의 2단계 영상 추론 파이프라인",
+    "type": "도구",
+    "categories": [
+      "영상 생성",
+      "AI 하드웨어"
+    ],
+    "tags": [
+      "NVIDIA",
+      "Sol-H3",
+      "DGX Spark",
+      "MiniMax-H3",
+      "LTX-2.5"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-28",
+    "url": "https://nvlabs.github.io/Sana/Sol-Engine/Sol-H3-Spark/",
+    "content": [
+      "NVIDIA Research의 Sol-H3 Spark 공개 자료는 단일 DGX Spark에서 5초 길이 1344×768 영상을 요청부터 재생 가능한 결과까지 56초에 생성했다고 보고합니다. 먼저 MiniMax-H3로 저해상도 초안을 만들고 LTX-2.5로 768p 정제하는 2단계 구조입니다.",
+      "핵심은 두 모델 전체를 그대로 올리지 않는 것입니다. NVFP4·FP8 양자화, H3 잠재표현을 LTX 공간으로 직접 옮기는 VAE Adapter, 정제 단계의 공통 프롬프트 캐시로 중복 구성요소와 중간 디코드·재인코드를 줄입니다.",
+      "Sol-Attn은 질의 블록마다 필요한 키·값 블록을 실행 중 선택하고, 선택한 블록은 정확한 어텐션으로 처리하면서 건너뛴 부분은 요약 K/V로 보정합니다. 별도 라우팅 맵을 만들지 않는 한 번의 online-softmax 경로를 지향합니다.",
+      "활용 관점: 소형 통합 메모리 장비에 여러 영상 단계를 상주시켜야 할 때 양자화만이 아니라 잠재공간 전달, 조건 캐시, 커널·입출력 융합을 함께 설계한 사례로 볼 수 있습니다."
+    ],
+    "cautions": [
+      "56초 수치는 DGX Spark, 지정 모델·해상도·5초 클립과 프로젝트 측 실행 조건의 결과입니다. 다른 GPU나 프롬프트, 길이, 품질 설정으로 일반화하면 안 됩니다.",
+      "프로젝트 페이지 확인이며 이 환경에서 모델을 내려받아 실행하거나 결과 품질을 독립 측정하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://nvlabs.github.io/Sana/Sol-Engine/Sol-H3-Spark/",
+      "https://github.com/NVlabs/Sana/tree/sol-engine/models/minimax_h3/Sol-H3-Spark"
+    ]
+  },
+  {
+    "id": "pluto-starcraft-brood-war-selfplay-ai",
+    "title": "Pluto: 자가대전 강화학습으로 세 종족을 플레이하는 스타크래프트 AI",
+    "summary": "스크립트 없이 하나의 신경망이 거시·미시 조작을 맡고 CPU에서 실행되는 StarCraft: Brood War용 CoG 2026 바이너리 봇",
+    "type": "GitHub",
+    "categories": [
+      "AI 에이전트",
+      "강화학습"
+    ],
+    "tags": [
+      "Pluto",
+      "StarCraft",
+      "자가대전",
+      "강화학습",
+      "BWAPI"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-28",
+    "url": "https://github.com/tscmoo/pluto",
+    "content": [
+      "Pluto는 자가대전 강화학습으로 훈련한 하나의 신경망이 StarCraft: Brood War의 거시 운영과 미시 조작, 테란·저그·프로토스 세 종족을 모두 맡는 1대1 BWAPI 봇입니다. 저장소는 CoG 2026 StarCraft AI Competition 출전 모델의 바이너리를 제공합니다.",
+      "GPU 없이 CPU 추론으로 동작하며, 게임 프로세스의 32비트 DLL과 별도 64비트 추론 프로세스가 공유 메모리로 통신합니다. 모델은 6게임 프레임마다 한 번 판단하고, 느린 CPU에서는 게임 속도를 낮춰 판단 시점을 맞춥니다.",
+      "요구사항은 Brood War 1.16.1, BWAPI 4.4.0, AVX2 지원 x86-64 CPU, 64비트 Windows 또는 Wine이며 6코어 이상과 약 2GB 여유 메모리를 권장합니다.",
+      "대전별 빌드 선택 통계와 승패, 프레임 시간, 승률 추정 궤적을 로컬 파일에 기록합니다. 선택적으로 벤치마크를 실행해 해당 컴퓨터에 맞는 스레드 수를 저장할 수 있습니다."
+    ],
+    "cautions": [
+      "저장소는 소스 전체가 아니라 서명되지 않은 바이너리 릴리스를 제공합니다. SmartScreen·백신 경고 가능성을 포함해 격리된 환경에서 출처와 파일을 확인한 뒤 실행하세요.",
+      "온라인 래더 등 봇 사용이 허용되지 않은 환경에서는 실행하지 마세요. 이 카드는 저장소 문서 확인이며 성능을 독립 검증하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/tscmoo/pluto"
+    ]
+  },
+  {
+    "id": "joonlab-fold-agent-android",
+    "title": "fold-agent: 확인 게이트와 사람 개입을 갖춘 안드로이드 화면 조작 에이전트",
+    "summary": "접근성 트리·온디바이스 음성 인식·LLM 도구 루프로 폰 앱을 조작하고, 되돌릴 수 없는 동작은 코드 규칙으로 확인받는 MIT 프로젝트",
+    "type": "GitHub",
+    "categories": [
+      "AI 에이전트",
+      "Android"
+    ],
+    "tags": [
+      "fold-agent",
+      "Android",
+      "접근성 서비스",
+      "Human-in-the-loop",
+      "Claude Code"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-28",
+    "url": "https://github.com/joonlab/fold-agent",
+    "content": [
+      "fold-agent는 음성이나 글 요청을 받아 안드로이드 접근성 트리를 읽고, LLM 도구 루프가 탭·입력·스크롤·스와이프를 수행하는 Claude Code 스타일의 휴대폰 에이전트입니다. 공개 저장소는 Android 11 이상을 대상으로 하며 Galaxy Z Fold8·One UI 9에서 확인됐습니다.",
+      "안전 경계는 모델의 말이 아니라 코드로 둡니다. 발송·결제·삭제 같은 되돌릴 수 없는 동작과 일정·메일 등 쓰기 도구는 실행 직전에 확인을 요구하고, 40초 동안 응답이 없으면 거부합니다.",
+      "같은 화면을 반복하거나 진척이 없으면 본 내용·가설·다음 전략을 다시 세우며, 사용자가 중간에 직접 조작한 뒤 현재 화면에서 에이전트에게 다시 넘길 수 있습니다. 비밀번호 칸 입력은 개입 기록에 남기지 않는다고 설명합니다.",
+      "선택형 홈 서버 계약은 캘린더·메일·메모, 정책 기반 스킬 실행, 장시간 작업, 헤드리스 Claude Code 위임을 추가합니다. 다만 실제 홈 서버는 공개하지 않고 계약 문서와 목 서버만 제공합니다."
+    ],
+    "cautions": [
+      "접근성 서비스는 화면 읽기와 대신 조작이라는 강한 권한을 요구합니다. 저장소의 dev.sh와 권한 목록을 검토하고 시험용 기기·계정에서 먼저 확인하세요.",
+      "제작자가 확인한 기기는 한 대뿐이고 공개본 재빌드와 자동화 테스트가 거의 없다고 명시합니다. 금융·보안 앱, 빈약한 접근성 트리, 종량제 LLM 비용에서도 한계가 있습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/joonlab/fold-agent",
+      "https://github.com/joonlab/android-mac-lab"
+    ]
+  },
+  {
+    "id": "google-workspace-studio-custom-integrations",
+    "title": "Workspace Studio 맞춤 트리거·단계·외부 연동·웹훅",
+    "summary": "Apps Script 맞춤 로직과 8개 외부 서비스, HTTP 웹훅을 Workspace Studio 흐름에 연결하는 Google 공식 기능과 관리자 통제 항목",
+    "type": "가이드",
+    "categories": [
+      "업무 자동화",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "Google Workspace Studio",
+      "Apps Script",
+      "웹훅",
+      "외부 연동"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-29",
+    "url": "https://workspaceupdates.googleblog.com/2026/09/automate-workflows-with-custom-starters-and-steps-third-party-integrations-and-webhooks-in-Workspace-Studio.html",
+    "content": [
+      "Google은 Workspace Studio 흐름에 네 가지 확장 기능을 추가했습니다. 맞춤 트리거는 외부 앱 이벤트로 흐름을 시작하고, 맞춤 단계는 Apps Script 같은 사용자 로직을 실행하며, 웹훅은 외부 엔드포인트에 HTTP 요청을 보냅니다.",
+      "외부 연동은 베타로 Asana, Confluence, HubSpot, Jira, Mailchimp, QuickBooks, Salesforce, Slack을 지원합니다. Workspace와 외부 서비스 사이에서 데이터를 전달해 업무 흐름을 자동화하는 용도입니다.",
+      "관리자 설정은 기본적으로 꺼져 있습니다. 관리 콘솔에서 맞춤 단계, 외부 연동, 웹훅을 각각 허용하고 승인 요구 수준을 조정할 수 있으며, 일부 상위 에디션은 웹훅 URL 허용 목록을 설정할 수 있습니다.",
+      "교육 환경에서는 Education Fundamentals·Standard·Plus와 일부 교육 부가 기능에서 제공됩니다. 기능이 보이지 않으면 사용자 권한뿐 아니라 관리자 활성화와 Rapid/Scheduled Release 배포 시점을 함께 확인하세요."
+    ],
+    "cautions": [
+      "외부 연동 단계는 Gmail·Calendar 같은 Google 계정 데이터를 제3자 서비스와 공유할 수 있습니다. 학교에서는 승인 정책, 최소 권한, 데이터 처리 조건을 먼저 검토하세요.",
+      "기능 제공 범위와 롤아웃 일정은 조직 에디션·릴리스 트랙에 따라 달라집니다. 공식 관리자 도움말의 최신 값을 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://workspaceupdates.googleblog.com/2026/09/automate-workflows-with-custom-starters-and-steps-third-party-integrations-and-webhooks-in-Workspace-Studio.html",
+      "https://support.google.com/workspace-studio/table/17176961"
+    ]
+  },
+  {
+    "id": "elevenlabs-image-video-template-apis",
+    "title": "ElevenLabs 이미지·영상·템플릿 API: Flows를 반복 제작 파이프라인으로",
+    "summary": "Flows에서 승인한 이미지·영상·음성·음악·효과음 구성을 API나 MCP로 반복 실행해 제품별 크리에이티브를 자동 생성하는 ElevenCreative 기능",
+    "type": "도구",
+    "categories": [
+      "이미지·영상 생성",
+      "업무 자동화"
+    ],
+    "tags": [
+      "ElevenLabs",
+      "ElevenCreative",
+      "Templates API",
+      "MCP",
+      "Flows"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-29",
+    "url": "https://elevenlabs.io/blog/introducing-the-image-video-and-templates-apis",
+    "content": [
+      "ElevenLabs는 Flows의 이미지 생성, 영상 생성, 템플릿을 API로 공개했습니다. Google·OpenAI·ByteDance·Creatify 모델을 호출해 이미지를 만들거나 편집하고 영상으로 움직이게 한 뒤 대량 작업에 연결할 수 있습니다.",
+      "템플릿은 이미지·영상·음성·음악·효과음 모델과 프롬프트, 브랜드 참조, 출력 형식을 하나의 승인된 흐름으로 묶습니다. 이후에는 제품 이미지와 이름 같은 새 입력만 바꿔 채널별 광고 에셋과 제품 영상을 반복 생성합니다.",
+      "PIM·DAM·스토어에 새 상품이 등록될 때 템플릿을 자동 실행하는 방식이 대표 예시입니다. 제작팀은 매번 처음부터 만들기보다 템플릿을 한 번 설계·승인하고 이후 결과물을 검토하는 운영 흐름을 만들 수 있습니다.",
+      "같은 이미지·영상 모델과 Flows 노드는 ElevenLabs MCP에서도 사용할 수 있습니다. Claude·ChatGPT·Cursor에서 OAuth로 연결하며 별도 API 키 관리를 줄이는 경로를 제공합니다."
+    ],
+    "cautions": [
+      "템플릿 자동화가 브랜드 정확성, 저작권, 인물·제품 표현의 사실성을 보장하지는 않습니다. 대량 배포 전에 사람 검토와 실패 시 중단·재시도 정책을 두세요.",
+      "모델 제공자, 가격, 지역·콘텐츠 정책이 바뀔 수 있습니다. 실제 파이프라인은 API 문서의 웹훅·비동기 처리·사용량 조건을 확인해 시험하세요."
+    ],
+    "sourceEvidence": [
+      "https://elevenlabs.io/blog/introducing-the-image-video-and-templates-apis",
+      "https://elevenlabs.io/docs/eleven-api/guides/cookbooks/image-and-video"
+    ]
+  },
+  {
+    "id": "upstage-solar-decide-openrouter",
+    "title": "Solar Decide: 512K 문맥에서 선택·점수·예/아니오를 반환하는 판단 모델",
+    "summary": "Solar Mini 4 기반 System One 엔드포인트로 긴 문서를 상태로 넣고 생성 문장 대신 구조화된 결정과 확률을 한 번의 순전파로 반환",
+    "type": "모델",
+    "categories": [
+      "분류·라우팅",
+      "한국어 LLM"
+    ],
+    "tags": [
+      "Upstage",
+      "Solar Decide",
+      "OpenRouter",
+      "System One",
+      "구조화 판단"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-09-29",
+    "url": "https://openrouter.ai/upstage/solar-decide",
+    "content": [
+      "Solar Decide는 Upstage의 Solar Mini 4를 기반으로 한 구조화 판단 모델입니다. 상태(state)와 형식이 지정된 질문을 보내면 자유 문장 대신 선택, 점수, 예/아니오와 모델 확률을 반환합니다.",
+      "OpenRouter 설명 기준 512K급 문맥을 지원해 긴 문서 전체를 상태로 넣는 분류·라우팅·정책 검사에 사용할 수 있습니다. 출력 문장을 생성하지 않아 출력 토큰 요금은 0으로 표시됩니다.",
+      "Jev와 같은 `/v1/systemone` 스키마를 사용하므로 생성형 답변이 필요하지 않은 1차 판정 단계를 기존 System One 파이프라인에서 교체·비교하기 쉽습니다.",
+      "적용 절차: 실제 한국어 업무 문서로 선택 정확도와 확률 보정을 측정하고, 오판 비용에 따라 자동 처리·사람 검토·차단 임계값을 따로 정한 뒤 점진적으로 자동화합니다."
+    ],
+    "cautions": [
+      "OpenRouter의 현재 가격에는 기간 한정 50% 할인이 표시되어 있어 기본 단가로 고정해 기록하면 안 됩니다. 컨텍스트 길이, 가격, 지연 시간은 최신 모델 페이지를 확인하세요.",
+      "모델이 주는 확률은 업무별 신뢰도를 자동으로 보장하지 않습니다. 카드 작성 시점에 독립 벤치마크나 사용자 데이터 보정은 수행하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://openrouter.ai/upstage/solar-decide"
+    ]
   }
 ]
