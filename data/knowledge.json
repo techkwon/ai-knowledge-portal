@@ -4876,5 +4876,217 @@
       "https://github.com/nobodywho-ooo/nobodywho",
       "https://docs.nobodywho.ooo/"
     ]
+  },
+  {
+    "id": "gemini-skills-replace-gems-opal-shutdown",
+    "title": "Gemini 스킬: 저장한 지침을 '/'로 실행하고 Gems·Opal을 대체",
+    "summary": "Google이 Gemini 채팅에 스킬을 전면 도입하며 Gems 지원 종료 일정(개인 11월, Workspace 비즈니스 2027년 3월, 교육 2027년 6월)과 Opal 종료일(2026-11-17)을 공식 안내했습니다.",
+    "type": "가이드",
+    "categories": [
+      "AI 도구",
+      "생산성",
+      "AI 교육"
+    ],
+    "tags": [
+      "Gemini",
+      "스킬",
+      "Gems",
+      "Opal",
+      "Workspace"
+    ],
+    "status": "자료 확인",
+    "importance": 5,
+    "updated": "2026-09-30",
+    "url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/",
+    "content": [
+      "Google 공식 블로그에 따르면 스킬은 자주 쓰는 지침을 한 번 저장해 두고 프롬프트 창에서 슬래시(/)와 스킬 이름으로 다시 실행하는 기능입니다. 오늘부터 Gemini 채팅에 전 세계적으로 제공되며 Workspace 비즈니스·엔터프라이즈·비영리·교육 고객에게는 앞으로 몇 주 안에 들어옵니다.",
+      "대화 내용을 바탕으로 Gemini가 스킬을 만들어 주고, 일치하는 프롬프트를 입력하면 자동으로 실행할 수도 있습니다. 큰 작업에서는 글쓰기 스타일 스킬과 브랜드 가이드라인 스킬처럼 여러 스킬을 함께 쓸 수 있고, 일반 텍스트·PDF·이미지 참조 파일도 포함할 수 있습니다.",
+      "전환 일정: Gems 지원은 개인 계정은 11월, Workspace 비즈니스·엔터프라이즈·비영리는 2027년 3월, 교육은 2027년 6월부터 종료됩니다. Gems는 종료 시점에 스킬로 자동 이전된다고 안내되며, 공유와 Drive 파일·Gemini Notebook 추가 기능은 앞으로 몇 주 안에 스킬에 들어올 예정입니다.",
+      "Opal은 Gems와 같은 시기에 종료되며 Opal FAQ는 2026년 11월 17일에 서비스가 꺼진다고 밝힙니다. 기존 Opal 워크플로는 자동 이전되지 않으므로 그 전에 프롬프트를 복사해 두고, 저장된 파일은 Drive의 Opal 폴더에서 텍스트로 열 수 있습니다."
+    ],
+    "cautions": [
+      "학교 Workspace 계정은 개인 계정보다 적용 시점이 늦습니다. 수업 자료에 Gems나 Opal을 쓰고 있다면 계정 유형별 일정을 확인하고 종료 전에 프롬프트를 따로 보관하세요.",
+      "채팅에서 Opal 중단일을 11월 16일로 전한 글이 있었으나 공식 FAQ 기준은 11월 17일입니다."
+    ],
+    "sourceEvidence": [
+      "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/",
+      "https://developers.google.com/opal/faq"
+    ]
+  },
+  {
+    "id": "gemini-4-argon-announcement",
+    "title": "Gemini 4 Argon: 신뢰된 사이버 방어자부터 단계적으로 여는 Google 프런티어 모델",
+    "summary": "출력 토큰 한도를 100만으로 늘린 Gemini 4 Argon이 Fairwind 프로그램을 통해 제한 공개되었고, 도입 가격은 입력 100만 토큰당 2달러·출력 10달러로 안내됩니다.",
+    "type": "모델",
+    "categories": [
+      "AI 모델 출시",
+      "AI 코딩",
+      "AI 안전"
+    ],
+    "tags": [
+      "Gemini 4",
+      "Argon",
+      "Fairwind",
+      "사이버 방어",
+      "긴 출력"
+    ],
+    "status": "자료 확인",
+    "importance": 5,
+    "updated": "2026-10-01",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+    "content": [
+      "Google은 Gemini 4 Argon을 복잡하고 긴 작업 흐름에서 깊은 추론을 유지하도록 만든 새 프런티어 모델로 소개하며, 우선 Fairwind 프로그램의 신뢰된 사이버 방어자에게 제공합니다. 개발자·기업·일반 사용자 대상 공개는 유료 API 고객과 Google AI Ultra 구독자부터 이어질 예정입니다.",
+      "도입 가격은 입력 토큰 100만 개당 2달러, 출력 토큰 100만 개당 10달러이고 캐시된 입력은 입력 가격의 95% 할인입니다. 출력 토큰 한도는 기존 64K에서 100만 토큰으로 확대됩니다.",
+      "Google이 보고한 수치로는 DeepSWE v1.1 77.9%, AutomationBench 51.3%(1위), LVBench 91.7%, CWE-bench v1 68%(공동 1위)가 있습니다. 사내 사례로 C/C++ 코드의 Rust 이전, 메모리 최적화 등이 소개됩니다.",
+      "안전장치로는 오용 방어, 간접 프롬프트 주입 방어, 사고 과정과 행동 모니터링을 통한 정렬 이탈 감시, 샌드박스 강화를 제시합니다. 신뢰된 방어자와 내부 팀에는 사이버 가드레일 없는 버전을 제공한다고 밝힙니다."
+    ],
+    "cautions": [
+      "성능 수치는 Google 자체 보고입니다. 아직 일반 공개 전이라 가격과 접근 조건이 바뀔 수 있습니다.",
+      "제품 적용 전 공개 시점과 모델 ID를 공식 문서에서 다시 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+    ]
+  },
+  {
+    "id": "openai-dots-always-on-agent",
+    "title": "OpenAI dots: 자체 클라우드 컴퓨터로 일하는 상시 작동 에이전트",
+    "summary": "GPT-6 Astra 기반의 dots가 Pro·Business Premium부터 순차 제공되며, 자체 컴퓨터·권한 규칙·행동 승인 구조와 사용량 산정 방식이 공식 발표에 정리되어 있습니다.",
+    "type": "서비스",
+    "categories": [
+      "AI 에이전트",
+      "AI 도구",
+      "생산성"
+    ],
+    "tags": [
+      "OpenAI",
+      "dots",
+      "GPT-6 Astra",
+      "상시 에이전트",
+      "권한 관리"
+    ],
+    "status": "자료 확인",
+    "importance": 5,
+    "updated": "2026-09-30",
+    "url": "https://openai.com/ko-KR/index/introducing-dots/",
+    "content": [
+      "OpenAI 발표(2026-09-29)에 따르면 dots는 GPT-6 Astra 기반이며 자체 클라우드 컴퓨터와 브라우저를 갖고 24시간 일하는 에이전트입니다. 플러그인 생태계로 4,000개 넘는 앱에 연결할 수 있고 ChatGPT, Slack, Teams에서 대화하며 음성 통화도 가능합니다. 문자 메시지는 곧 제공 예정입니다.",
+      "제공 범위: 지원 지역의 Pro와 Business Premium에 순차 제공하고, Enterprise(Edu·Healthcare 포함)는 워크스페이스 관리자가 베타를 켜면 쓸 수 있습니다. 첫 번째 dot은 추가 비용 없이 요금제에 포함되고, 출시 첫 달은 한도가 확대됩니다.",
+      "사용량: dot과의 대화는 ChatGPT 사용 한도에 포함되지 않지만, dot이 Codex나 ChatGPT Work에서 작업을 시작·관리하면 평소대로 한도에 반영됩니다.",
+      "통제 방식: 각 dot은 자체 컴퓨터에서 일하며 사용자 기기는 직접 연결하기로 한 경우에만 연결됩니다. 접근할 앱은 사용자가 고르고, 맞춤 규칙으로 행동을 허용·승인 요구·차단할 수 있으며 활동 보기에서 백그라운드 작업도 확인합니다. 선제적 조사는 읽기 전용 도구로만 하고, 비밀번호 변경 같은 민감 작업은 항상 사용자가 직접 합니다."
+    ],
+    "cautions": [
+      "지역·요금제·단계적 출시에 따라 계정마다 사용 가능 시점이 다릅니다. 커뮤니티의 사용량 차감 추측은 공식 문서로 확인되지 않았습니다.",
+      "회사나 학교 데이터를 연결하기 전에 조직의 정책과 데이터 설정(모델 개선 사용 여부)을 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://openai.com/ko-KR/index/introducing-dots/"
+    ]
+  },
+  {
+    "id": "anthropic-glm-5-3-cyber-safeguards-analysis",
+    "title": "Anthropic의 GLM-5.3 분석: 공개 가중치 모델의 사이버 역량과 안전장치 우회",
+    "summary": "Anthropic 레드팀이 GLM-5.3의 익스플로잇 개발 능력과, 간단한 기법으로 안전장치를 64~100% 우회할 수 있다는 모의 시험 결과를 공개했습니다.",
+    "type": "자료",
+    "categories": [
+      "AI 안전",
+      "오픈 웨이트 모델",
+      "평가·벤치마크"
+    ],
+    "tags": [
+      "GLM-5.3",
+      "Anthropic",
+      "사이버 보안",
+      "안전장치",
+      "abliteration"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-01",
+    "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+    "content": [
+      "Anthropic 프런티어 레드팀은 Zhipu AI의 공개 가중치 모델 GLM-5.3이 끝까지 이어지는 사이버 익스플로잇을 자율적으로 만들 수 있다고 분석했습니다. ExploitBench에서 410회 중 50회 성공했고, 비교 대상인 Claude Mythos Preview는 56회였습니다.",
+      "안전장치는 거부 반응을 줄이는 abliteration으로 거의 제거됐습니다. 거부율이 90% 이상에서 JailbreakBench 약 3%, HarmBench 약 2%, StrongREJECT 12%로 내려갔고, 작업에 든 비용은 약 2,200 GPU시간(약 4,400달러)이라고 밝힙니다.",
+      "모의 환경에서 가짜 레드팀 설정을 알려주면 64%, 사고 토큰을 미리 채우면 92%, abliterated 버전은 100% 요청에 응했습니다. 같은 기법은 안전장치가 적용된 Claude 모델에는 통하지 않았다고 보고합니다.",
+      "글은 NIST CAISI가 9월 17일 자체 평가를 냈고 GLM-5.3을 가장 사이버 역량이 높은 공개 가중치 모델로 평가했다고 인용하며, 방어자가 쓸 수 있는 최고 수준 도구를 넓혀야 한다고 주장합니다."
+    ],
+    "cautions": [
+      "Anthropic 자체 시험이며 경쟁 모델에 대한 평가입니다. 결과는 모의 환경과 선택한 벤치마크에 한정됩니다.",
+      "공격 절차를 재현하는 자료가 아니라 위험 수준을 이해하기 위한 자료로만 활용하세요."
+    ],
+    "sourceEvidence": [
+      "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities"
+    ]
+  },
+  {
+    "id": "apple-lensvlm-9b-compressed-text-vlm",
+    "title": "Apple LensVLM-9B: 압축된 텍스트 이미지에서 필요한 쪽만 펼쳐 읽는 VLM",
+    "summary": "긴 문서를 압축 이미지로 훑고 관련 페이지만 원본으로 확장하는 9B 비전 언어 모델로, 5x·10x·15x 압축 옵션과 Apple 모델 라이선스가 적용됩니다.",
+    "type": "모델",
+    "categories": [
+      "멀티모달 AI",
+      "연구·논문",
+      "문서 처리"
+    ],
+    "tags": [
+      "Apple",
+      "LensVLM",
+      "VLM",
+      "긴 문맥",
+      "압축"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-09-30",
+    "url": "https://huggingface.co/apple/LensVLM-9B",
+    "content": [
+      "Hugging Face 모델 카드는 LensVLM을 텍스트를 압축한 이미지로 훑어본 뒤 학습된 도구로 관련 있는 페이지만 압축 전 형태로 선택 확장하는 9B 비전 언어 모델이라고 설명합니다.",
+      "기반 모델은 Qwen3.5-9B 계열이고, 논문은 arXiv 2605.07019, 코드는 apple-aiml-research/ml-lensvlm 저장소에 있습니다. 데모 스크립트는 텍스트 파일과 질문을 받아 5x, 10x, 15x 압축을 고를 수 있습니다.",
+      "모델 파일은 Apple Machine Learning Research Model License를, 함께 제공되는 코드는 Apple Sample Code License를 따릅니다. 긴 문서 질의응답에서 문맥 비용을 줄이는 접근으로 참고할 만합니다."
+    ],
+    "cautions": [
+      "연구용 모델이며 성능 수치는 논문 기준입니다. 자료를 쓰기 전에 라이선스 범위를 확인하세요.",
+      "민감한 문서는 로컬 실행 환경과 저장 방식을 먼저 점검하세요."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/apple/LensVLM-9B",
+      "https://arxiv.org/abs/2605.07019",
+      "https://github.com/apple-aiml-research/ml-lensvlm"
+    ]
+  },
+  {
+    "id": "comfy-api-deploy-workflow-endpoint",
+    "title": "Comfy API: ComfyUI 워크플로를 환경째 패키징해 API로 배포",
+    "summary": "노드·모델·LoRA·파이썬 의존성을 묶은 Build에서 불변 릴리스를 만들고 자동 확장 엔드포인트로 배포하는 유료 플랜용 서비스로, CLI와 SDK를 제공합니다.",
+    "type": "서비스",
+    "categories": [
+      "ComfyUI",
+      "AI 인프라",
+      "이미지·영상 생성"
+    ],
+    "tags": [
+      "ComfyUI",
+      "Comfy API",
+      "배포",
+      "엔드포인트",
+      "SDK"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-01",
+    "url": "https://blog.comfy.org/p/comfy-api-is-live-deploy-comfyui",
+    "content": [
+      "Comfy 공식 블로그는 Comfy API를 ComfyUI 워크플로를 앱·도구·서비스의 엔진으로 바꾸는 서비스라고 소개하며, 현재 유료 Comfy 플랜 이용자에게 열려 있다고 밝힙니다.",
+      "흐름은 워크플로 JSON 또는 Comfy Desktop 스냅샷으로 Build를 만들고, 필요한 모델·커스텀 노드·의존성을 확인한 뒤 불변 릴리스를 잘라 고유 URL의 엔드포인트로 배포하는 것입니다. 터미널에서는 comfy build init 과 comfy build push --release 로 진행합니다.",
+      "최소 워커를 0으로 두면 요청이 없을 때 GPU 시간이 들지 않고, 지연이 중요하면 워커를 켜 둘 수 있습니다. GPU는 초 단위, 저장소는 시간 단위로 정산되고 사용 요금은 플랜과 별도입니다. 사용량·비용·API 키는 platform.comfy.org 콘솔에서 봅니다."
+    ],
+    "cautions": [
+      "유료 플랜과 사용량 요금이 필요합니다. 이미 RunPod나 Modal에서 잘 돌리고 있다면 바꿀 이유가 적다고 공식 글도 밝힙니다.",
+      "공개 전 워크플로에 포함된 모델과 커스텀 노드의 라이선스를 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://blog.comfy.org/p/comfy-api-is-live-deploy-comfyui",
+      "https://docs.comfy.org/development/serverless/overview"
+    ]
   }
 ]
