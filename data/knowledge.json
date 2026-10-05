@@ -5511,5 +5511,339 @@
     "sourceEvidence": [
       "https://developers.openai.com/api/docs/guides/agent-builder-safety"
     ]
+  },
+  {
+    "id": "aleph-alpha-kolibri-1",
+    "title": "Kolibri 1: 독일어·영어 중심 오픈 웨이트 추론 모델",
+    "summary": "Aleph Alpha가 공개한 총 78B·토큰당 활성 3.46B의 MoE 모델로, 추론 모드·도구 호출·장문 문서 처리를 지원합니다.",
+    "type": "모델",
+    "categories": [
+      "로컬 AI",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "Kolibri",
+      "Aleph Alpha",
+      "MoE",
+      "독일어"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-06",
+    "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+    "content": [
+      "공식 모델 카드는 독일어·영어를 주요 언어로 설명하며, reasoning mode와 tool calling을 지원한다고 명시합니다.",
+      "최대 문맥은 1,048,576토큰이나, 제작자는 서빙 효율과 복잡한 과제에는 262,144토큰 이하를 권장합니다. 문서 검색·추론·코딩에 적용하기 전 실제 문서 길이와 목표 언어로 평가하세요.",
+      "Apache 2.0으로 공개된 가중치이며 FP8 모델의 메모리 규모는 약 78GB입니다. 설치 전에 공식 하드웨어 요구사항을 확인하세요."
+    ],
+    "cautions": [
+      "독일어·영어 중심이라는 특성을 한국어 성능 보장으로 확대하면 안 됩니다.",
+      "제작자 하드웨어 표에는 최소 구성이 별도로 제시돼 있습니다. 가중치 파일 크기만 보고 단일 80GB GPU에서 모든 과제를 실행할 수 있다고 판단하지 마세요. 직접 실행 테스트는 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/Aleph-Alpha/Kolibri-1"
+    ]
+  },
+  {
+    "id": "strata-qwen-local-pc-runtime",
+    "title": "Strata: GPU·RAM을 함께 쓰는 Qwen 로컬 추론 엔진",
+    "summary": "Qwen3.8-Flash-Next를 NVIDIA·AMD PC에서 실행하고 OpenAI·Anthropic 호환 인터페이스로 코딩 도구에 연결하는 오픈소스 런타임입니다.",
+    "type": "GitHub",
+    "categories": [
+      "로컬 AI",
+      "개발 워크플로우"
+    ],
+    "tags": [
+      "Strata",
+      "Qwen",
+      "GPU 오프로딩",
+      "로컬 LLM"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-06",
+    "url": "https://github.com/Niko1221/Strata",
+    "content": [
+      "제작자 README는 Windows·Linux, 지원 GPU의 VRAM 12GB 이상, RAM 32GB 이상, 약 80GB 여유 디스크를 안내합니다. 모델 변형에 따라 더 많은 RAM이 필요하며 64GB는 모든 안내된 기본 크기를 실행하는 기준입니다.",
+      "설정 도구가 GPU·RAM·디스크와 모델 크기·문맥 길이를 선택합니다. 기본 UI는 로컬 8080 포트이며 OpenAI 호환 /v1, Anthropic Messages, OpenAI Responses 인터페이스를 제공합니다.",
+      "처음에는 작은 모델 크기와 한 요청으로 한국어·코딩 표본을 평가한 뒤 문맥 길이·동시성을 늘리세요. 기본 동시 요청은 하나이며 늘리면 작은 GPU에서 각 응답이 느려질 수 있습니다."
+    ],
+    "cautions": [
+      "README의 속도 수치는 제작자가 특정 PC·엔진·양자화 설정에서 측정한 값이지 이 환경의 실측이 아닙니다.",
+      "Coder 변형은 일부 전문가를 제거해 RAM을 줄이며 제작자가 CJK 등 비코딩 과제의 약점을 안내합니다. 한국어 목적이면 별도 확인하세요.",
+      "다른 기기에서 접속하도록 바인딩을 넓히면 API 키와 네트워크 접근 제어를 설정하세요. 설치 스크립트는 실행하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/Niko1221/Strata"
+    ]
+  },
+  {
+    "id": "gliner-2-5-decide-local-classifier",
+    "title": "GLiNER2.5-Decide: 생성 토큰 없이 라벨을 고르는 로컬 분류 모델",
+    "summary": "호출할 때 라벨 집합을 지정해 의도·감정·라우팅·우선순위를 판정하는 Fastino의 영어용 분류 모델입니다.",
+    "type": "모델",
+    "categories": [
+      "AI 에이전트",
+      "로컬 AI"
+    ],
+    "tags": [
+      "GLiNER",
+      "판단 모델",
+      "분류",
+      "라우팅"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-06",
+    "url": "https://huggingface.co/fastino/GLiNER2.5-Decide",
+    "content": [
+      "제작자 설명상 340M 규모의 DeBERTa-v3-large 기반 분류기이며 gliner2의 AutoExtractor로 CPU·GPU에서 실행합니다. 프롬프트 템플릿이나 생성 토큰 없이 한 번의 순전파로 여러 분류 헤드를 처리합니다.",
+      "단일 라벨은 하나의 문자열을, 다중 라벨은 임계값을 넘는 라벨들을 반환합니다. 라벨 이름만으로 모호하면 짧은 설명을 함께 제공해 조직의 분류 기준을 전달할 수 있습니다.",
+      "예를 들어 문의를 로그인·결제·기타로 분류한 뒤 우선순위와 사람 연결 여부를 함께 결정하는 흐름에 적용할 수 있습니다. 실제 업무 표본과 오분류 비용으로 임계값을 검토하고 고위험 판단은 사람에게 넘기세요."
+    ],
+    "cautions": [
+      "영어용 전문 분류기이지 추론 설명이나 자유형 답변을 만드는 범용 챗봇이 아닙니다. 다국어 입력에는 제작자가 별도 multi-Decide 모델을 안내합니다.",
+      "공식 벤치마크는 영어 데이터셋 기준입니다. 그 결과를 한국어 업무 정확도나 특정 상용 모델 전체 우열로 일반화하지 마세요. 설치·성능 시험은 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/fastino/GLiNER2.5-Decide"
+    ]
+  },
+  {
+    "id": "taiga-s1-freecad-decision-model",
+    "title": "Taiga-S1: FreeCAD 명령을 고르는 초소형 실행 모델",
+    "summary": "목표 형상·현재 FreeCAD 상태·사용 가능한 명령을 받아 다음 명령의 확률을 반환하는 1.2M 파라미터 실험 모델입니다.",
+    "type": "모델",
+    "categories": [
+      "AI 에이전트",
+      "로컬 AI"
+    ],
+    "tags": [
+      "Taiga",
+      "FreeCAD",
+      "CAD",
+      "판단 모델"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-06",
+    "url": "https://huggingface.co/shhivv/taiga-s1",
+    "content": [
+      "계획자가 작업할 순서를 정하고 Taiga-S1이 단계별 실행을 담당하는 구조입니다. PartDesign의 스케치·돌출·구멍·패턴·필렛 등의 명령을 선택하며 수치는 목표에서 가져옵니다.",
+      "모델은 화면 이미지 대신 FreeCAD의 피처 트리·선택·스케치 제약·워크벤치 상태를 읽습니다. 공개 예제는 policy.score(state, goal, actions)로 명령별 확률을 얻는 형태입니다.",
+      "작은 CAD 과제에서 목표와 허용 명령을 제한한 실행기를 연구할 때 참고할 수 있습니다. 완료 여부는 최종 형상이 목표와 맞는지 별도 확인하는 평가와 함께 설계하세요."
+    ],
+    "cautions": [
+      "FreeCAD를 테스트베드로 삼은 실험입니다. 제작자 결과는 합성 과제·특정 FreeCAD 버전 기준이며 일반 데스크톱 앱 전체를 제어하는 성능이 아닙니다.",
+      "접근성 트리를 통한 다른 앱 확장은 향후 방향으로 설명돼 있습니다. 지금 지원하는 기능으로 표시하지 마세요. 직접 실행하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/shhivv/taiga-s1"
+    ]
+  },
+  {
+    "id": "cogsend-selfhost-social-scheduler",
+    "title": "CogSend: Cloudflare에서 운영하는 소셜 예약 발행 도구",
+    "summary": "한 초안을 플랫폼별로 다듬어 Mastodon·Bluesky·LinkedIn·Threads·X에 발행하고, API·MCP로 에이전트와 연결하는 셀프 호스팅 도구입니다.",
+    "type": "GitHub",
+    "categories": [
+      "업무 자동화",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "CogSend",
+      "Cloudflare",
+      "예약 발행",
+      "MCP"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-06",
+    "url": "https://github.com/deepakness/cogsend",
+    "content": [
+      "개인 Cloudflare 계정의 Workers·D1·R2를 사용하고 한 관리자 계정과 자신의 플랫폼 인증 정보로 운영하는 구조입니다.",
+      "플랫폼별 문구 수정·스레드 분할·예약 변경·취소·재시도·발행 결과 통계를 지원합니다. 공식 README는 일시 실패를 최대 5회 재시도한다고 안내합니다.",
+      "API 키는 읽기 전용과 읽기·쓰기 권한을 구분할 수 있으며 MCP 클라이언트로 초안·예약·게시를 연결합니다. 자동 생성 초안과 실제 공개 발행의 승인 단계를 분리하는 용도로 활용할 수 있습니다."
+    ],
+    "cautions": [
+      "도구 자체 구독료가 없더라도 Cloudflare 무료 한도·R2 결제 수단·플랫폼 API 또는 연결 서비스 비용은 별도 확인해야 합니다.",
+      "LinkedIn·Threads·X는 OAuth 앱이나 Zernio 등의 연결 구성이 필요합니다. 모든 플랫폼이 로그인만으로 즉시 연결되는 것은 아닙니다.",
+      "공개 발행 권한과 인증 정보를 다루므로 최소 권한·2단계 인증·백업을 설정하세요. 설치·게시 테스트는 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/deepakness/cogsend"
+    ]
+  },
+  {
+    "id": "agent-messenger-multi-platform-cli",
+    "title": "Agent Messenger: 여러 메신저를 연결하는 CLI·SDK",
+    "summary": "Slack·Discord·Teams·LINE·KakaoTalk 등 메시징 플랫폼을 공통 CLI와 TypeScript SDK로 다루는 프로젝트로, 개인 세션 권한을 사용할 수 있어 보안 검토가 중요합니다.",
+    "type": "GitHub",
+    "categories": [
+      "AI 에이전트",
+      "업무 자동화"
+    ],
+    "tags": [
+      "Agent Messenger",
+      "메신저 연동",
+      "CLI",
+      "권한 검토"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-06",
+    "url": "https://github.com/agent-messenger/agent-messenger",
+    "content": [
+      "공식 README는 플랫폼별 CLI, 구조화된 JSON 출력, TypeScript SDK와 에이전트 스킬을 제공합니다. 읽기·검색·메시지 전송 등 지원 기능은 플랫폼별 표와 문서를 확인해야 합니다.",
+      "일부 플랫폼은 데스크톱·브라우저에서 세션 인증 정보를 읽고 다른 플랫폼은 QR·휴대전화 코드·봇 토큰 등을 사용합니다. 개인 세션으로 작동하면 자신의 이름과 권한으로 메시지를 보낼 수 있다는 점이 핵심입니다.",
+      "연결하기 전에 필요한 플랫폼만 선택하고 인증 방식·인증 정보 저장·전송 권한을 검토하세요. 읽기 중심 작업과 실제 발송을 분리하고, 조직 계정에서는 정책과 담당자의 허가를 먼저 확인하세요."
+    ],
+    "cautions": [
+      "프로젝트가 제공하는 개인 세션 연동을 플랫폼의 공식 승인이나 조직 관리자 승인으로 오해하면 안 됩니다.",
+      "공개된 c99c1af9 커밋의 KakaoTalk 저장 코드는 자격 정보를 JSON으로 직렬화해 파일에 쓰고 0600 권한을 설정합니다. Windows 권한 한계 TODO도 있습니다. 이는 해당 커밋 확인이며 최신 버전 보안 전체에 대한 감사가 아닙니다.",
+      "세션 파일·디버그 로그·백업을 채팅이나 공개 저장소에 올리지 마세요. 설치·로그인·메시지 전송 테스트는 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/agent-messenger/agent-messenger",
+      "https://github.com/agent-messenger/agent-messenger/blob/c99c1af9a8cd0a31b862bb5c333ee1f96f9182a4/src/platforms/kakaotalk/credential-manager.ts"
+    ]
+  },
+  {
+    "id": "n8n-docker-persistence-recovery-checklist",
+    "title": "n8n Docker 복구 점검표: 재설치보다 볼륨·암호화 키 확인",
+    "summary": "자동화 환경이 다시 초기 설정으로 돌아갈 때 컨테이너·영구 저장소·암호화 키를 분리해 확인하고, 삭제 전 전체 백업을 확보하는 안내입니다.",
+    "type": "가이드",
+    "categories": [
+      "업무 자동화",
+      "개발 워크플로우"
+    ],
+    "tags": [
+      "n8n",
+      "Docker",
+      "백업",
+      "데이터 보존"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-06",
+    "url": "https://docs.n8n.io/deploy/host-n8n/keep-n8n-running/backup-and-restore",
+    "content": [
+      "1. 현재 실행 중인 컨테이너와 접속 포트를 먼저 확인합니다. 다른 인스턴스에 접속한 것인지, 저장 폴더가 연결되지 않은 것인지 구분하고 삭제·초기화를 서두르지 않습니다.",
+      "2. Docker의 /home/node/.n8n이 의도한 영구 볼륨에 연결됐는지 확인합니다. 공식 설명상 이 폴더에는 기본 SQLite 데이터베이스와 자격 증명 암호화 키가 저장된 config 등이 있습니다.",
+      "3. 복구 전 .n8n 폴더를 백업합니다. SQLite를 복사할 때는 n8n을 멈추거나 일관된 스냅샷 방식을 사용합니다. PostgreSQL·외부 파일 저장소를 쓰면 그 저장소도 함께 백업해야 합니다.",
+      "4. 기존 암호화 키와 배포 설정을 유지한 채 복원합니다. CLI workflow·credential 내보내기는 전체 인스턴스 백업과 다릅니다. 사용자·실행 이력·설정·암호화 키를 포함하는지 별도 확인하세요.",
+      "5. 재시작 후 기존 워크플로와 연결이 유지되는지 확인하고 작은 테스트를 통과한 뒤 운영을 재개합니다. 예를 들어 알림 워크플로 하나로 재시작 전후 상태를 비교하는 점검을 계획할 수 있습니다."
+    ],
+    "cautions": [
+      "컨테이너 재시작과 컨테이너 재생성·볼륨 삭제를 구분해야 합니다. 영구 볼륨이 없거나 다른 볼륨을 쓰면 데이터가 없는 것처럼 보일 수 있습니다.",
+      "로그인 실패·요금 화면·429 오류를 모두 데이터 손실로 단정하지 마세요. HTTP 상태·로그·접속한 서비스와 계정을 각각 확인해야 합니다.",
+      "암호화 키나 평문 credential 내보내기는 민감정보입니다. 공개 저장소에 넣지 마세요. 이 안내에 따라 실제 복구 테스트를 수행한 것은 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://docs.n8n.io/deploy/host-n8n/keep-n8n-running/backup-and-restore",
+      "https://docs.n8n.io/deploy/host-n8n/install-options/install-using-docker-compose"
+    ]
+  },
+  {
+    "id": "agent-design-planning-review-harness",
+    "title": "AI 화면 디자인: 토큰 파일과 기획·디자인·리뷰를 분리하기",
+    "summary": "DESIGN.md에 디자인 규칙을 전달하는 것만으로 좋은 화면이 보장되지는 않습니다. Liner의 Pencil 제작 기록에서 단계별 목표와 반복 리뷰 방법을 정리했습니다.",
+    "type": "가이드",
+    "categories": [
+      "개발 워크플로우",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "DESIGN.md",
+      "디자인 하네스",
+      "화면 검토",
+      "Pencil"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-06",
+    "url": "https://liner.com/ko/blog/liner-pencil-design-harness",
+    "content": [
+      "원리: 디자인 토큰은 색상·간격·컴포넌트 등 재료와 규칙을 전달합니다. 사용자의 목적·정보 우선순위·다음 행동은 화면마다 별도로 정의해야 합니다.",
+      "1. 기획에서는 사용자가 해야 할 일과 먼저 보여줄 정보를 적습니다. 예를 들어 신청 화면이라면 필수 입력·확인·완료 흐름을 먼저 정합니다.",
+      "2. 디자인에서는 그 기획을 토큰·컴포넌트·레이아웃 규칙으로 구현합니다. 이미 알려진 컴포넌트 key와 속성을 정적 JSON에 정리하면 같은 맥락을 반복 요청하는 낭비를 줄일 수 있습니다.",
+      "3. 리뷰에서는 실제 화면의 시선 흐름·강조·밀도·사용성을 살핍니다. “더 자연스럽게” 대신 문제 요소와 관계, 바꿀 행동을 구체적으로 적고 수정 후 다시 확인합니다.",
+      "적용 조건: 디자인 시스템이나 반복 화면이 있는 제품에 단계별 지침을 축적하는 방식입니다. 이 글은 Liner 내부 도구의 제작 사례이지 누구나 설치할 수 있는 공개 제품을 배포한다는 안내가 아닙니다."
+    ],
+    "cautions": [
+      "브랜드 토큰을 따랐다는 사실과 실제 사용자에게 쓰기 좋은 화면이라는 평가는 다릅니다.",
+      "제작자는 내부 Pencil Hermes Agent를 구현했다고 설명하며, Slack에서 태그해 작업을 시작하는 흐름은 확장 계획으로 제시합니다. 내부 구현이 외부 사용자에게 공개된 기능이라는 뜻은 아닙니다. 여기서는 문서 내용을 확인했으며 하네스 실행 시험은 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://liner.com/ko/blog/liner-pencil-design-harness"
+    ]
+  },
+  {
+    "id": "workspace-suspended-vs-deleted-recovery",
+    "title": "Google Workspace 계정 중지와 삭제: 복구 요청 전 구분하기",
+    "summary": "로그인이 막혔다고 곧바로 파일 삭제를 뜻하지는 않습니다. 공식 관리자 문서를 기준으로 중지 사유·관리 권한·삭제 복구 기한을 구분하는 안내입니다.",
+    "type": "가이드",
+    "categories": [
+      "업무 자동화",
+      "개발 워크플로우"
+    ],
+    "tags": [
+      "Google Workspace",
+      "계정 복구",
+      "관리자",
+      "데이터 보존"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-06",
+    "url": "https://support.google.com/a/answer/1110339?hl=en-PK",
+    "content": [
+      "1. 화면의 정확한 중지 문구와 시각을 기록하고 조직 관리자에게 문의합니다. 관리자가 중지한 것인지, Google의 위험 감지나 정책 위반 등 다른 사유인지 관리자 화면에서 확인해야 합니다.",
+      "2. 중지된 계정은 삭제된 계정과 구분합니다. 공식 문서는 적절한 User management 권한이 있는 관리자가 Directory의 Users에서 중지된 사용자를 찾아 Reactivate하는 절차를 안내합니다. 위험 계정이면 복구 전에 보안 점검이 필요합니다.",
+      "3. 삭제된 계정이면 별도 절차를 적용합니다. Google은 삭제 후 최대 20일 이내 복구를 안내하며 이 작업은 super administrator 권한이 필요합니다. 라이선스·도메인 상태 등의 조건도 확인해야 합니다.",
+      "4. 접근이 복구되면 원래 서비스와 데이터가 돌아왔는지 확인하고, 조직 정책에 허용되는 방식으로 정기 백업·담당자 연락 경로를 마련합니다. 예를 들어 관리자에게 “중지인지 삭제인지, 사유와 복구 가능한 상태인지”를 구체적으로 요청할 수 있습니다."
+    ],
+    "cautions": [
+      "중지 원인을 특정 교육기관·도메인 만료·정책 변경으로 추정하지 마세요. 실제 관리자 기록 없이는 원인을 알 수 없습니다.",
+      "약관 위반으로 중지된 계정 등 복구할 수 없는 경우가 있습니다. 모든 중지가 반드시 복원된다는 보장은 없습니다.",
+      "20일은 삭제 계정 복구 조건입니다. 중지 계정에 똑같은 기한을 적용하거나 별도의 파일 복구 기한과 혼동하지 마세요. 실제 계정 복구를 수행하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://support.google.com/a/answer/1110339?hl=en-PK",
+      "https://knowledge.workspace.google.com/admin/users/restore-a-recently-deleted-user"
+    ]
+  },
+  {
+    "id": "gemini-personal-model-access-october-2026",
+    "title": "Gemini 개인 계정 모델 액세스: 2026년 10월 변경 확인",
+    "summary": "Google 공식 도움말은 개인 계정의 Gemini 앱 모델 사용 가능 여부가 2026년 10월부터 변경되며, 미구독 사용자는 10월 9일부터 적용된다고 안내합니다.",
+    "type": "자료",
+    "categories": [
+      "AI 에이전트",
+      "업무 자동화"
+    ],
+    "tags": [
+      "Gemini",
+      "개인 계정",
+      "구독",
+      "모델 액세스"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-06",
+    "url": "https://support.google.com/gemini/answer/17004136?hl=ko-KR",
+    "content": [
+      "공식 도움말은 이번 변경의 대상을 개인 계정으로 설명합니다. AI 구독이 없는 사용자에게는 10월 9일부터 적용하고 AI Plus 구독자는 적용 시점을 설명하는 이메일을 받는다고 명시합니다.",
+      "모델별 사용 가능 여부는 도움말의 요금제 표와 자신의 계정에서 확인해야 합니다. 구독 전에 필요한 모델·기능·사용량 한도를 구분해 살펴보세요.",
+      "공식 페이지는 노력 수준과 기능별로 사용량 소모가 달라진다고 설명합니다. 긴 채팅·미디어 생성·Deep Research·Pro·확장 사고를 사용하면 단순 메시지 개수만으로 한도를 예측하기 어렵습니다."
+    ],
+    "cautions": [
+      "개인 계정 Gemini 앱 안내를 Workspace·교육용 계정·Gemini API의 조건으로 확대 적용하지 마세요.",
+      "모델별 세부 가용성과 적용일은 자신의 계정과 공식 요금제 표를 직접 확인하세요. 이 카드에서는 자동 추출로 확인되지 않은 모델별 상세 제공 여부를 단정하지 않습니다.",
+      "정책은 변경될 수 있습니다. 실제 구독 조건·가격·현재 계정별 제공 상태는 결제 전에 다시 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://support.google.com/gemini/answer/17004136?hl=ko-KR"
+    ]
   }
 ]
