@@ -212,7 +212,7 @@
   {
     "id": "hermes-bot-mode",
     "title": "Hermes Bot Mode",
-    "summary": "여러 개의 Hermes 프로필을 하나의 데스크톱 화면에서 마치 여러 봇 팀처럼 관리할 수 있게 해주는 플러그인",
+    "summary": "여러 Hermes 봇 프로필을 데스크톱에서 관리하던 기능으로, 별도 저장소는 보관 처리되었고 현재 Hermes Desktop에 내장됨",
     "type": "GitHub",
     "categories": [
       "AI 에이전트"
@@ -222,16 +222,16 @@
       "멀티 프로필",
       "에이전트 운영"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-08-14",
+    "updated": "2026-10-07",
     "url": "https://github.com/NousResearch/Hermes-Bot-Mode",
     "content": [
-      "기존 Hermes는 프로필 분리, Skill, Cron, 기억 기능이 있었지만 CLI와 설정 파일 중심이라 프로필 전환을 직접 해야 했습니다.",
-      "Bot Mode는 이 기능들을 하나의 데스크톱 화면에 통합해 여러 AI 프로필을 팀처럼 동시에 운영할 수 있게 해줍니다."
+      "저장소 README는 Bot Mode가 Hermes Desktop에 내장되어 별도 설치가 필요하지 않다고 안내합니다.",
+      "기존 독립 저장소는 ARCHIVED 상태이므로 새 설치는 Hermes Desktop의 최신 안내를 확인해야 합니다."
     ],
     "cautions": [
-      "세부 설정과 리소스 사용량은 공식 저장소 문서에서 재확인 필요"
+      "이 저장소는 보관된 이전 구현입니다. 현행 기능과 설치법은 Hermes Desktop 문서를 확인하세요."
     ],
     "sourceEvidence": [
       "https://github.com/NousResearch/Hermes-Bot-Mode"
@@ -296,7 +296,7 @@
   {
     "id": "nvlabs-sana-video-2",
     "title": "NVIDIA SANA-Video 2.0",
-    "summary": "NVIDIA SANA 계열의 5B 파라미터 720p 영상 생성 모델로, 추론 코드뿐 아니라 학습(Training) 코드까지 공개된 오픈소스 프로젝트",
+    "summary": "NVIDIA SANA 계열의 5B 파라미터·720p 영상 생성 모델. 공식 README에서 T2V·I2V를 확인했으며 Video 2.0 전용 학습 코드 범위는 별도 확인이 필요합니다.",
     "type": "GitHub",
     "categories": [
       "영상 생성"
@@ -306,22 +306,25 @@
       "T2V",
       "I2V"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-08-19",
+    "updated": "2026-10-07",
     "url": "https://github.com/NVlabs/Sana",
     "content": [
-      "텍스트-투-비디오(T2V)와 이미지-투-비디오(I2V)를 모두 지원.",
-      "단일 영상 제작보다는 자체 데이터셋으로 전용 비디오 모델을 파인튜닝하려는 연구 목적에 더 적합."
+      "공식 README는 SANA-Video 2.0을 5B 파라미터·720p 영상 생성 모델로 소개하며 텍스트-투-비디오(T2V)와 이미지-투-비디오(I2V)를 안내합니다.",
+      "이 출처만으로 Video 2.0 전용 학습 코드 공개나 자체 데이터셋 파인튜닝 절차까지 확인되지는 않습니다."
     ],
     "sourceEvidence": [
       "https://github.com/NVlabs/Sana"
+    ],
+    "cautions": [
+      "SANA 계열 다른 모델의 코드 공개 범위를 Video 2.0에 그대로 적용하지 마세요."
     ]
   },
   {
     "id": "gpt-5-6-release",
     "title": "OpenAI GPT-5.6 공개",
-    "summary": "연구·개발 루프 전반(진단, 학습 최적화, 실험, 결과 해석)을 겨냥해 설계된 OpenAI의 최신 프런티어 모델",
+    "summary": "OpenAI가 2026년에 소개한 GPT-5.6 모델의 공식 발표",
     "type": "가이드",
     "categories": [
       "AI 모델 출시"
@@ -331,12 +334,13 @@
       "GPT-5.6",
       "모델 출시"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-08-08",
+    "updated": "2026-10-07",
     "url": "https://openai.com/index/gpt-5-6",
     "content": [
-      "OpenAI가 공개한 최신 프런티어 모델로, 공식 설명상 연구 진단, 학습 최적화, 실험 설계, 결과 해석 등 연구·개발 워크플로우 지원에 초점을 맞췄습니다."
+      "공식 발표는 GPT-5.6의 연구·개발 작업 활용을 설명합니다.",
+      "현재 같은 공식 페이지는 GPT-6을 최신 모델로 안내하므로 GPT-5.6을 최신 모델이라고 표기하지 않습니다."
     ],
     "sourceEvidence": [
       "https://openai.com/index/gpt-5-6"
@@ -345,29 +349,27 @@
   {
     "id": "openresearch-cli",
     "title": "OpenResearch CLI",
-    "summary": "arXiv 논문을 입력하면 자동으로 재현 실험을 설계하고 실행해주는 오픈소스 CLI 도구",
+    "summary": "연구 에이전트를 위한 로컬 우선 하네스와 워크스페이스",
     "type": "GitHub",
     "categories": [
       "연구 자동화",
       "에이전트"
     ],
     "tags": [
-      "논문 재현",
-      "자동 실험",
-      "hypothesis-driven"
+      "연구 에이전트",
+      "로컬 워크스페이스",
+      "가설·실험"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-08-01",
+    "updated": "2026-10-07",
     "url": "https://github.com/alphaXiv/openresearch-cli",
     "content": [
-      "논문의 가설을 탐색하고 병렬로 실험을 설계·실행하는 자동 재현 도구로 소개됨.",
-      "기존의 자동 리서치 도구 대비 사전 가설 탐색과 병렬 실험 구성이 강화된 접근으로 언급됨.",
-      "논문, 코드, 가설 생성/평가 알고리즘을 결합해 연구 파이프라인 자체를 자동화하려는 흐름을 보여주는 사례."
+      "저장소 README는 문헌 검토, 가설 탐색, 실험을 수행하는 연구 에이전트의 로컬 작업 환경으로 설명합니다.",
+      "arXiv 논문 하나를 넣으면 재현 실험이 자동으로 설계·실행된다는 고정 워크플로는 이 출처에서 확인되지 않습니다."
     ],
     "cautions": [
-      "실제 재현 정확도와 비용은 논문마다 다를 수 있어 직접 검증이 필요함",
-      "실험 결과에 대한 최종 검증 절차는 별도로 필요함"
+      "실험 설계·실행 범위와 재현 정확도는 실제 문서와 환경에서 별도 확인이 필요합니다."
     ],
     "sourceEvidence": [
       "https://github.com/alphaXiv/openresearch-cli"
@@ -376,7 +378,7 @@
   {
     "id": "ouroboros-harness",
     "title": "Ouroboros 에이전트 하네스",
-    "summary": "소크라테스식 대화(질문을 반복해 던지는 인터뷰 방식)로 요구사항을 구체화한 뒤 반복 루프를 도는 AI 에이전트 하네스",
+    "summary": "소크라테스식 인터뷰로 요구사항을 정제하고 반복 실행을 지원하는 에이전트 하네스",
     "type": "GitHub",
     "categories": [
       "AI 에이전트",
@@ -392,19 +394,16 @@
       "Claude Code",
       "Codex"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-08-11",
+    "updated": "2026-10-07",
     "url": "https://github.com/Q00/ouroboros/blob/main/README.ko.md",
     "content": [
-      "사용자에게 이것저것 되묻는 소크라테스식 인터뷰 과정을 거친 뒤, 정리된 목표를 바탕으로 자동 반복 루프를 실행하는 에이전트 하네스입니다.",
-      "실제로 이 하네스와 AI 브라우저(Aside)를 함께 사용해 짧은 시간에 게임을 완성한 해커톤 사례가 공유되었습니다.",
-      "초기 설계 단계에서 주로 활용하도록 설계된 MCP로 소개됨.",
-      "설치 후 기존 도구(Codex, Claude Code)와 충돌이 발생한 사례가 보고되어 설치 시 환경 점검이 필요함."
+      "저장소 README는 인터뷰와 반복 실행 흐름을 설명합니다.",
+      "프로젝트 전체를 초기 설계 전용 MCP로 한정할 근거는 이 출처에 없습니다."
     ],
     "cautions": [
-      "한국어 README 기준으로 세부 동작은 저장소 최신 버전에서 재확인 필요",
-      "다른 MCP·CLI 도구와 동시 설치 시 충돌 가능성이 보고됨"
+      "호스트별 연동과 설치 조건은 저장소 문서를 확인하세요. 외부 사례나 충돌 보고는 이 공개 카드의 근거로 사용하지 않았습니다."
     ],
     "sourceEvidence": [
       "https://github.com/Q00/ouroboros/blob/main/README.ko.md"
@@ -502,25 +501,26 @@
   {
     "id": "karpathy-autoresearch",
     "title": "autoresearch",
-    "summary": "Andrej Karpathy가 공개한 자동 리서치용 오픈소스 프로젝트",
+    "summary": "AI 에이전트가 LLM 학습 코드를 수정하고 짧은 훈련·평가 실험을 반복하는 오픈소스 프로젝트",
     "type": "GitHub",
     "categories": [
       "AI 리서치 자동화"
     ],
     "tags": [
       "Karpathy",
-      "리서치 자동화"
+      "LLM 학습 실험",
+      "자동 실험"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-08-11",
+    "updated": "2026-10-07",
     "url": "https://github.com/karpathy/autoresearch",
     "content": [
-      "AI를 활용해 조사·리서치 작업을 자동화하는 목적의 오픈소스 프로젝트로 언급되었습니다.",
-      "세부 기능과 사용법은 저장소 README에서 직접 확인해야 합니다."
+      "README는 에이전트가 작은 LLM 학습 설정에서 코드를 변경하고 약 5분간 훈련·평가하는 실험 루프를 설명합니다.",
+      "웹 검색이나 일반적인 인터넷 정보 조사 자동화 도구가 아닙니다."
     ],
     "cautions": [
-      "신규 공개 프로젝트일 수 있어 안정성은 별도 검증 필요"
+      "학습 실험에 필요한 컴퓨팅 자원과 재현 조건은 저장소 문서를 확인하세요."
     ],
     "sourceEvidence": [
       "https://github.com/karpathy/autoresearch"
@@ -529,7 +529,7 @@
   {
     "id": "buzz-hive-mind-workspace",
     "title": "Buzz: 사람-에이전트 협업 워크스페이스",
-    "summary": "사람과 여러 AI 에이전트가 같은 공간에서 협업하도록 만든 자체 호스팅형 오픈소스 플랫폼",
+    "summary": "사람과 AI 에이전트의 협업 및 작업 소유권 릴레이를 지원하는 Buzz 워크스페이스",
     "type": "GitHub",
     "categories": [
       "AI 에이전트",
@@ -537,20 +537,19 @@
     ],
     "tags": [
       "멀티에이전트",
-      "자체호스팅",
+      "협업",
       "오픈소스"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-08-31",
+    "updated": "2026-10-07",
     "url": "https://github.com/block/buzz",
     "content": [
-      "여러 AI 에이전트와 사람이 같은 워크스페이스에서 소통하도록 설계된 자체 호스팅 플랫폼입니다.",
-      "기본적으로 로컬 릴레이에 연결되는 구조입니다.",
-      "멀티 모델 오케스트레이션 도구가 아니라 멀티 프로바이더 등록이 쉬운 시스템에 가깝다는 실사용 피드백이 있어, 기대하는 기능과 다를 수 있으니 목적을 먼저 확인하는 것이 좋습니다."
+      "저장소는 사람과 에이전트가 같은 작업 공간에서 협업하는 기능을 소개합니다.",
+      "README의 내부 빌드는 Block 릴레이와 에이전트 제공자에 사전 연결되어 있다고 설명하므로 기본 연결이 로컬 릴레이라고 단정할 수 없습니다."
     ],
     "cautions": [
-      "실제 협업 오케스트레이션보다는 다중 모델 프로바이더 연동 도구에 가깝다는 사용자 의견이 있습니다."
+      "배포 방식과 릴레이 연결 조건은 사용하는 빌드의 README를 확인하세요."
     ],
     "sourceEvidence": [
       "https://github.com/block/buzz"
@@ -583,8 +582,8 @@
   },
   {
     "id": "claude-ai-text-watermark",
-    "title": "Claude의 AI 생성 텍스트 워터마크 방식",
-    "summary": "Anthropic이 설명하는, 단어 선택 확률을 조작해 AI 생성 텍스트임을 통계적으로 식별 가능하게 만드는 텍스트 워터마킹 원리",
+    "title": "Claude의 AI 생성 콘텐츠 표시",
+    "summary": "Anthropic 공식 도움말이 안내하는 Claude 생성 텍스트·파일의 표시 방식과 지원 범위",
     "type": "가이드",
     "categories": [
       "AI 안전성",
@@ -593,19 +592,18 @@
     "tags": [
       "워터마크",
       "Claude",
-      "AI 판별"
+      "생성 콘텐츠 표시"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-08-11",
+    "updated": "2026-10-07",
     "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-",
     "content": [
-      "AI가 다음 단어를 고를 때 특정 단어를 더 자주 선택하도록 확률을 조정해, 사람이 읽기에는 자연스럽지만 통계적으로는 AI 생성 여부를 판별할 수 있게 하는 기법입니다.",
-      "대표적으로 Kirchenbauer 알고리즘이 언급되며, 글의 일부를 수정하거나 복사해도 문맥 전체의 통계적 흔적은 남는다고 설명됩니다.",
-      "이 워터마킹은 유럽연합 AI법의 AI 생성물 표시 요구와도 연결된다고 언급됐습니다."
+      "공식 도움말은 Claude 생성 텍스트에 내장 워터마크를 적용하고, 지원되는 생성 파일에는 Content Credentials(C2PA)를 포함한다고 설명합니다.",
+      "EU AI Act 관련 표시 요구와 지원 범위도 공식 안내에서 다룹니다. 구체적인 텍스트 워터마크 알고리즘은 공개된 도움말만으로 확인되지 않습니다."
     ],
     "cautions": [
-      "세부 알고리즘과 법적 근거는 공식 문서 원문으로 재확인 필요"
+      "특정 단어 선택 확률 조정이나 Kirchenbauer 알고리즘을 Claude의 구현으로 단정할 근거가 없습니다."
     ],
     "sourceEvidence": [
       "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-"
@@ -749,28 +747,28 @@
   },
   {
     "id": "comfyui-nkd-face-rig",
-    "title": "ComfyUI NKD Face Rig",
-    "summary": "눈썹·눈꺼풀·시선·입꼬리·턱을 마우스로 직접 조작해 얼굴 표정을 먼저 고정한 뒤 Klein·Qwen Edit·I2V로 넘기는 ComfyUI 확장",
+    "title": "ComfyUI NKD Basic Tools",
+    "summary": "ComfyUI의 반복적인 노드 연결 작업을 돕는 NKD Basic Tools 커스텀 노드 모음",
     "type": "GitHub",
     "categories": [
       "이미지 생성",
       "ComfyUI"
     ],
     "tags": [
-      "표정 제어",
-      "페이스 리그",
-      "I2V"
+      "ComfyUI",
+      "커스텀 노드",
+      "워크플로"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-08-26",
+    "updated": "2026-10-07",
     "url": "https://github.com/Nekodificador/ComfyUI-NKD-Basic-Tools",
     "content": [
-      "감정 연기가 중요한 장면에서는 프롬프트를 길게 수정하기보다 표정을 직접 고정해두는 편이 빠르다는 활용 팁이 공유됨.",
-      "표정 고정 후 Klein, Qwen Edit, I2V 파이프라인으로 넘기는 방식."
+      "저장소 README는 ComfyUI의 일상적인 연결 작업을 줄이기 위한 여러 노드를 소개합니다.",
+      "해당 출처만으로 눈썹·눈꺼풀 등 세부 얼굴 리그 조작이나 Klein·Qwen Edit·I2V 연동 워크플로는 확인되지 않습니다."
     ],
     "cautions": [
-      "ComfyUI 커스텀 노드이므로 설치 전 노드 출처와 최신 업데이트를 확인 필요"
+      "특정 Face Rig 기능과 호환 파이프라인은 추가 자료나 실제 노드 목록에서 확인해야 합니다."
     ],
     "sourceEvidence": [
       "https://github.com/Nekodificador/ComfyUI-NKD-Basic-Tools"
@@ -890,7 +888,7 @@
   {
     "id": "gpt-5-6-price-performance",
     "title": "GPT-5.6 가격 대비 성능 개선",
-    "summary": "OpenAI가 기업 고객 대상으로 GPT-5.6의 비용 대비 성능을 개선했다고 발표한 공식 업데이트",
+    "summary": "OpenAI가 발표한 GPT-5.6 계열의 가격 대비 성능 및 Terra·Luna 접근 범위 업데이트",
     "type": "가이드",
     "categories": [
       "AI 모델",
@@ -901,20 +899,19 @@
       "GPT-5.6",
       "가격정책"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-08-31",
+    "updated": "2026-10-07",
     "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
     "content": [
-      "OpenAI는 GPT-5.6 라인업의 효율을 높여 더 낮은 비용으로 강력한 성능을 제공한다고 밝혔습니다.",
-      "GPT-5.6 Luna는 무료 사용자에게도 확대 제공되고 있습니다."
+      "공식 발표는 GPT-5.6 Luna와 Terra의 가격 및 성능 관련 변경을 설명합니다.",
+      "ChatGPT Work와 Codex에서 Free·Go 이용자는 Terra에 접근하고, Plus·Pro·Business·Enterprise 이용자는 Terra와 Luna를 선택할 수 있다고 안내합니다."
     ],
     "cautions": [
-      "요금제별 세부 조건은 지역과 시점에 따라 달라질 수 있어 공식 페이지 재확인이 필요합니다."
+      "요금제별 제공 범위와 가격은 변경될 수 있으므로 이용 시 공식 페이지를 확인하세요."
     ],
     "sourceEvidence": [
-      "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
-      "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt"
+      "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6"
     ]
   },
   {
@@ -1003,7 +1000,7 @@
   {
     "id": "llm-as-a-verifier",
     "title": "LLM-as-a-Verifier",
-    "summary": "스탠포드에서 공개한, LLM 출력의 품질과 정확성을 다른 LLM이 검증하도록 하는 평가 프레임워크",
+    "summary": "다양한 모달리티와 응용 분야의 검증을 지향하는 LLM-as-a-Verifier 프레임워크",
     "type": "GitHub",
     "categories": [
       "AI 평가",
@@ -1012,22 +1009,21 @@
     "tags": [
       "평가 프레임워크",
       "검증",
-      "스탠포드"
+      "멀티모달"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-08-31",
+    "updated": "2026-10-07",
     "url": "https://github.com/llm-as-a-verifier/llm-as-a-verifier",
     "content": [
-      "LLM의 출력을 다른 LLM이 검증자 역할로 평가하도록 설계된 프레임워크입니다.",
-      "관련하여 OpenAI도 AI 생성물 여부를 확인하는 공식 검증 도구(openai.com/ko-KR/research/verify)를 제공하고 있습니다."
+      "저장소는 여러 모달리티·응용 분야를 위한 통합 검증 프레임워크로 프로젝트를 소개합니다.",
+      "이 저장소만으로 스탠퍼드 소속이나 별도 AI 생성물 감지 서비스와의 동일성은 확인되지 않습니다."
     ],
     "cautions": [
-      "자동 검증 결과는 참고용이며 최종 판단은 사람이 해야 합니다."
+      "검증 결과의 정확도와 적용 범위는 실제 사용 사례에서 확인하세요."
     ],
     "sourceEvidence": [
-      "https://github.com/llm-as-a-verifier/llm-as-a-verifier",
-      "https://openai.com/ko-KR/research/verify"
+      "https://github.com/llm-as-a-verifier/llm-as-a-verifier"
     ]
   },
   {
@@ -1208,28 +1204,28 @@
   },
   {
     "id": "solar-pro4-model-harness",
-    "title": "Solar Pro4 모델을 오픈코드 하네스에 연결하기",
-    "summary": "업스테이지 Solar Pro4 모델을 API 설정 파일을 통해 오픈코드 계열 하네스(OpenClaw, Hermes 등)에 연결하는 방법",
+    "title": "Solar Pro 4 모델 메타데이터",
+    "summary": "models.dev 저장소에 등재된 Upstage Solar Pro 4 모델의 메타데이터",
     "type": "가이드",
     "categories": [
       "AI 도구",
       "모델 연동"
     ],
     "tags": [
-      "Solar Pro4",
+      "Solar Pro 4",
       "Upstage",
-      "모델 하네스"
+      "모델 메타데이터"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-08-31",
+    "updated": "2026-10-07",
     "url": "https://github.com/anomalyco/models.dev/blob/dev/providers/upstage/models/solar-pro4.toml",
     "content": [
-      "models.dev 저장소의 업스테이지 provider 설정 파일을 참고하면 Solar Pro4 모델을 API로 연결해 오픈코드 계열 도구에서 사용할 수 있습니다.",
-      "같은 방식이 다른 오픈소스 코딩 에이전트 하네스에도 적용될 수 있는 것으로 보입니다."
+      "해당 TOML 파일은 Solar Pro 4의 이름, 비용 및 기능 등의 모델 정보를 담고 있습니다.",
+      "이 파일 자체는 OpenClaw나 Hermes에 연결하는 설정 가이드가 아닙니다."
     ],
     "cautions": [
-      "모델 성능은 하네스(실행 환경)와의 궁합에 따라 달라질 수 있어 실제 작업 전 검증이 필요합니다."
+      "특정 에이전트 하네스와의 연동 방법 및 호환성은 각 도구의 공식 문서에서 따로 확인하세요."
     ],
     "sourceEvidence": [
       "https://github.com/anomalyco/models.dev/blob/dev/providers/upstage/models/solar-pro4.toml"
@@ -1263,7 +1259,7 @@
   {
     "id": "trackio",
     "title": "Trackio (Hugging Face)",
-    "summary": "에이전트의 작업 과정을 투명하게 추적할 수 있는 Hugging Face의 경량 트래킹 도구",
+    "summary": "Hugging Face Buckets와 Spaces를 기반으로 한 경량 무료 Python 실험 추적 라이브러리",
     "type": "도구",
     "categories": [
       "에이전트",
@@ -1274,15 +1270,16 @@
       "실험 추적",
       "관측 가능성"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-08-01",
+    "updated": "2026-10-07",
     "url": "https://huggingface.co/docs/trackio/index",
     "content": [
-      "ICML 2026 논문 재현 작업 중 알려진 도구로, 에이전트가 어떻게 작업을 수행하는지 투명하게 관찰하는 데 활용됨."
+      "Hugging Face 문서는 Trackio를 경량 무료 실험 추적 라이브러리로 소개합니다.",
+      "문서에 Traces 및 ML Agents 관련 항목도 있으나, 에이전트 전용 제품으로 한정되지는 않습니다."
     ],
     "cautions": [
-      "작업 종류에 따라 유용성 차이가 있을 수 있음"
+      "어떤 실험 지표와 추적 기능이 필요한지 문서의 기능 범위를 확인하세요."
     ],
     "sourceEvidence": [
       "https://huggingface.co/docs/trackio/index"
@@ -1523,7 +1520,7 @@
   {
     "id": "upstage-cli-solar-pro2",
     "title": "Upstage CLI",
-    "summary": "Upstage Solar Pro2 기반 에이전트형 터미널 UI — 코드 분석·페어 프로그래밍·자동화를 도구 30종과 MCP 서버 연동으로 지원",
+    "summary": "Solar Pro4를 중심으로 설명하는 Upstage 기반 에이전트형 터미널 UI",
     "type": "GitHub",
     "categories": [
       "AI 에이전트",
@@ -1531,23 +1528,22 @@
     ],
     "tags": [
       "Upstage",
-      "Solar Pro2",
+      "Solar Pro4",
       "터미널",
       "MCP",
       "에이전트 하네스"
     ],
-    "status": "테스트 중",
+    "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-09-02",
+    "updated": "2026-10-07",
     "url": "https://github.com/VectorSophie/upstage-cli",
     "content": [
-      "Upstage의 Solar Pro2 모델을 기반으로 코드 분석, 페어 프로그래밍, 자동화 작업을 터미널 안에서 지원하는 에이전트형 TUI입니다.",
-      "30개의 내장 도구와 MCP 서버 연동, 평가용 하네스를 포함합니다.",
-      "macOS/Linux는 설치 스크립트, Windows는 릴리스 바이너리, 또는 Bun 1.3+ 환경에서 npm으로 설치할 수 있으며 `upstage chat`, `upstage ask` 명령으로 실행합니다."
+      "현재 저장소 README는 Solar Pro4 기반 TUI이며 내장 도구 36개, MCP 클라이언트·서버 연동, 평가 하네스를 갖췄다고 설명합니다.",
+      "모델별 기능 표에는 solar-pro3와 solar-pro2 지원도 안내됩니다.",
+      "설치와 실행 명령은 현재 README의 빠른 시작 절차를 따르세요. 기존 카드의 30개 도구와 upstage chat 명령은 최신 README 기준으로 확인되지 않습니다."
     ],
     "cautions": [
-      "Windows 설치 시 릴리스 페이지에서 플랫폼에 맞는 바이너리를 직접 선택해야 합니다.",
-      "Upstage API 키 발급 등 별도 계정·인증 설정이 필요할 수 있어 README의 설치 절차를 순서대로 따라야 합니다."
+      "모델 지원 범위와 설치·인증 절차는 사용 시점의 README를 확인하세요."
     ],
     "sourceEvidence": [
       "https://github.com/VectorSophie/upstage-cli"
@@ -1894,13 +1890,13 @@
     "content": [
       "공식 모델 카드는 실험적 멀티모달 모델로 소개하며 토크나이저, 프롬프트 인코딩과 최소 PyTorch 추론 구현을 안내합니다.",
       "입력 인코딩은 OpenAI 스타일 JSON 콘텐츠 블록과 이미지 경로를 포함하는 TXT 표기를 지원합니다. 이미지 기반 문서·차트 이해 실험의 출발점으로 참고할 수 있습니다.",
-      "vLLM과 SGLang 실행 예제가 제공됩니다. 공식 카드의 vLLM 예시는 GB300 GPU 4개 노드를 사용하므로 배포 전에 별도 하드웨어 레시피와 메모리 요구량을 확인하세요."
+      "vLLM과 SGLang 실행 예제가 제공됩니다. 공식 카드의 vLLM 예시는 GB300 GPU 4개를 장착한 단일 노드(single 4×GB300 node)를 사용합니다. 배포 전 별도 하드웨어 레시피와 메모리 요구량을 확인하세요."
     ],
     "cautions": [
       "실험적 모델이며 공개 벤치마크 수치는 제작자 평가입니다. 실제 정확도와 업무 적합성을 직접 검증한 것은 아닙니다.",
       "일반 개인용 컴퓨터에서 바로 실행된다고 가정하지 마세요. 민감한 이미지의 업로드·저장 정책도 별도 검토해야 합니다."
     ],
-    "updated": "2026-09-06",
+    "updated": "2026-10-07",
     "status": "자료 확인",
     "sourceEvidence": [
       "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp"
@@ -2418,17 +2414,17 @@
     ],
     "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-09-12",
+    "updated": "2026-10-07",
     "url": "https://github.com/epoko77-ai/im-not-ai",
     "content": [
-      "저장소 설명에 따르면 번역투, 기계적인 병렬 나열, '결론적으로' 같은 관용구, 피동태 남용, 이모지·불릿 남용 등을 10개 대분류와 70개 세부 패턴으로 정리하고 심각도(S1~S3)를 매겨 문장 구간 단위로 탐지한 뒤 다듬습니다.",
+      "저장소 설명에 따르면 번역투, 기계적인 병렬 나열, '결론적으로' 같은 관용구, 피동태 남용, 이모지·불릿 남용 등을 10개 대분류와 85개 세부 패턴(검증 대기 hold 1건 별도)으로 정리하고 심각도(S1~S3)를 매겨 문장 구간 단위로 탐지한 뒤 다듬습니다.",
       "네 가지 원칙을 명시합니다. 사실·주장·수치·고유명사·직접 인용은 100% 보존하고, 탐지된 구간만 고치며, 글의 장르를 바꾸지 않고, 변경률이 30%를 넘으면 경고·50%를 넘으면 중단합니다.",
       "Claude Code, GitHub Copilot CLI, OpenAI Codex CLI, Gemini CLI를 지원합니다. 플러그인 마켓플레이스 방식은 저장소 클론 없이 설치할 수 있고, 클론 후 install.sh로 전역 설치하는 경로도 제공합니다.",
       "글 상태에 따라 light(1회 호출)·standard(2회)·heavy(3회 이상) 경로를 자동으로 고르는 구조라, 이미 다듬어진 글은 호출 수가 줄어듭니다. 영어권 humanizer가 한국어 번역투를 잘 못 잡는 문제를 겨냥한 도구입니다."
     ],
     "cautions": [
       "개인이 공개한 커뮤니티 스킬이며 특정 AI 제품사의 공식 기능이 아닙니다. 조직에서 쓰기 전 라이선스와 유지 상태를 직접 확인하세요.",
-      "다중 호출 경로(진단·finalize 포함)는 Claude Code 전용으로 안내되고, Copilot CLI와 Codex CLI는 단일 호출 경로만 제공합니다. 도구마다 동작 범위가 다릅니다.",
+      "Codex CLI도 light·standard·heavy 경로를 제공합니다. 도구별 설치·호출 방식과 최신 지원 범위는 README에서 확인하세요.",
       "AI 탐지기를 통과시켜 준다는 보장은 저장소에서 제시되지 않습니다. 과제·논문 등 출처 표기 규정이 있는 글에 쓰면 규정 위반이 될 수 있으니 용도를 먼저 확인하세요. 이 카드는 공개 문서 확인이며 설치·품질 실측이 아닙니다."
     ],
     "sourceEvidence": [
@@ -2521,21 +2517,23 @@
     ],
     "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-09-14",
+    "updated": "2026-10-07",
     "url": "https://github.com/CodeBoarding/CodeBoarding",
     "content": [
       "코드베이스의 상위 구조도와 세부 컴포넌트 다이어그램을 생성하고 .codeboarding/에 Markdown 문서와 분석 결과를 저장합니다. Mermaid 출력은 문서나 코드 변경 검토에 활용할 수 있습니다.",
-      "Python 3.12 또는 3.13 환경에서 pipx install codeboarding --python python3.12로 CLI를 설치하고 codeboarding-setup 뒤 codeboarding full --local 경로로 전체 분석을 실행하는 방법을 안내합니다.",
+      "현재 패키지 선언 `requires-python = \">=3.12,<3.13\"`에 맞는 Python 3.12 환경에서 pipx install codeboarding --python python3.12로 CLI를 설치하고 codeboarding-setup 뒤 codeboarding full --local 경로로 전체 분석을 실행하는 방법을 안내합니다.",
       "전체 분석 결과를 기준선으로 만든 다음 incremental 명령으로 변경 부분을 다시 분석하거나 partial 명령으로 특정 컴포넌트만 분석할 수 있습니다. 기존 analysis.json은 LLM을 다시 호출하지 않고 별도 렌더러로 문서화할 수 있습니다.",
       "AI가 수정한 코드를 검토할 때 구조도와 실제 변경 파일을 대조해 의존 관계와 영향 범위를 확인하는 보조 자료로 활용하세요. 구조도만으로 코드의 정확성을 판정하지는 마세요."
     ],
     "cautions": [
       "외부 LLM 제공자를 쓰면 분석 과정의 데이터 처리 조건과 API 비용을 확인해야 합니다. 로컬 저장소를 분석한다는 말이 모든 처리가 기기 안에서 끝난다는 뜻은 아닙니다. Ollama 등 로컬 제공자 설정도 지원합니다.",
       "사용량 텔레메트리는 기본 켜짐으로 안내됩니다. 조직 정책에 맞게 공식 TELEMETRY.md와 비활성화 환경변수를 확인하세요.",
-      "증분 분석에는 기존 기준선이 필요합니다. 이 카드는 제작자 문서 확인이며 설치·정확도 실험을 수행한 결과가 아닙니다."
+      "증분 분석에는 기존 기준선이 필요합니다. 이 카드는 제작자 문서 확인이며 설치·정확도 실험을 수행한 결과가 아닙니다.",
+      "Python 3.13은 현재 패키지 선언 범위 밖입니다. 설치 전 최신 pyproject.toml을 확인하세요."
     ],
     "sourceEvidence": [
-      "https://github.com/CodeBoarding/CodeBoarding"
+      "https://github.com/CodeBoarding/CodeBoarding",
+      "https://raw.githubusercontent.com/CodeBoarding/CodeBoarding/main/pyproject.toml"
     ]
   },
   {
@@ -2930,10 +2928,10 @@
     ],
     "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-09-16",
+    "updated": "2026-10-07",
     "url": "https://github.com/sodam-ai/SoDam_O-Brain-Codex",
     "content": [
-      "제작자 README에 따르면 SessionEnd 훅이 확정 신호가 있는 사용자 문장을 선별해 저장하고 SessionStart 훅이 프로젝트 관련 기억을 다시 제공합니다. 질문이나 AI 답변 전체를 무조건 저장하는 방식은 아닙니다.",
+      "제작자 README에 따르면 Codex `Stop` 훅이 확정 신호가 있는 사용자 문장을 선별해 저장하고 SessionStart 훅이 프로젝트 관련 기억을 다시 제공합니다. 질문이나 AI 답변 전체를 무조건 저장하는 방식은 아닙니다.",
       "도입 절차: 저장소의 현재 지원 상태와 Node.js 요구 버전, Codex 플러그인 구조를 먼저 확인합니다. 민감하지 않은 테스트 프로젝트에서 설치·자체 테스트를 수행한 뒤 검색·대시보드·백업을 확인합니다.",
       "사용 예시: 작업 규칙 하나를 확정해 저장한 뒤 새 세션에서 해당 규칙이 정확히 검색되는지 확인합니다. 중요한 내용은 제작자가 안내하는 $o-brain-remember로 직접 저장하고 잘못 저장된 기억도 점검합니다.",
       "적용 조건: 1인 로컬 메모리와 2D·3D 그래프, 타임라인, 검색 화면이 필요한 경우 검토할 수 있습니다. 제작자는 Windows 중심 검증 범위를 구분하고 있으므로 다른 운영체제까지 동일하게 검증됐다고 해석하지 않습니다."
@@ -2961,10 +2959,10 @@
     ],
     "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-09-17",
+    "updated": "2026-10-07",
     "url": "https://github.com/Mineru98/claude-mode",
     "content": [
-      "원리: claude --mode 이름 명령이 settings/settings.이름.json을 해당 세션의 --settings로 전달합니다. 원본 ~/.claude/settings.json을 변경하지 않습니다.",
+      "원리: claude --mode 이름 명령이 settings/settings.<이름>.jsonc을 해당 세션의 --settings로 전달합니다. 원본 ~/.claude/settings.json을 변경하지 않습니다.",
       "절차: Claude Code CLI가 먼저 작동하는지 확인하고 저장소의 설치 스크립트와 변경할 셸 설정·PATH를 검토합니다. bash와 zsh에는 jq가 필요합니다.",
       "사용 예시: 문서 작업과 코드 리뷰에 서로 다른 모드를 만들고 claude --mode write 또는 claude --mode review로 실행합니다. 모드별 필요한 플러그인과 MCP만 허용합니다.",
       "확인: --mode로 목록을 보고 --mode-help로 사용법을 확인합니다. bash/zsh 파일은 직접 실행하는 대신 source로 로드하며 기존 별칭 충돌도 점검합니다."
@@ -3328,15 +3326,15 @@
     ],
     "status": "자료 확인",
     "importance": 2,
-    "updated": "2026-09-19",
+    "updated": "2026-10-07",
     "url": "https://open.law.go.kr/LSO/main.do",
     "content": [
-      "법제처가 운영하는 '국가법령정보 공동활용' 사이트는 대한민국 법령·행정규칙·자치법규 등을 오픈 API 형태로 제공하는 공식 정부 서비스입니다. law.go.kr의 검색 엔드포인트(DRF/lawSearch.do 등)로 법령명·조문 키워드를 조회하고, 이어서 상세 본문을 조회하는 2단계 흐름이 일반적입니다.",
+      "법제처가 운영하는 국가법령정보 공동활용 사이트는 법령정보의 OPEN API 이용안내를 제공하는 공식 출발점입니다. 대상 자료, 검색·본문 조회 방식, 응답 형식과 인증 절차는 적용하려는 API의 개별 공식 문서에서 확인하세요.",
       "커뮤니티에서는 이 공식 API를 n8n 같은 노코드 자동화 도구와 연결해 법령 원문을 다국어로 번역하는 개인 워크플로우 사례가 공유됐습니다(예: GitLab의 개인 프로젝트 n8n-law-translate). 이런 개인 프로젝트는 공식 서비스가 아니라 공식 API를 활용한 커뮤니티 구현 예시로 참고하는 것이 적절합니다.",
-      "표 형태의 법령 데이터를 다루는 자동화 파이프라인에서는 XML/HTML 응답보다 JSON 응답을 선택하면 병합 셀·표 구조가 깨지는 문제를 줄일 수 있다는 실무 팁도 함께 공유됐습니다."
+      "표나 병합 셀이 포함된 법령 자료는 응답 형식만 바꿔 구조가 보존된다고 가정하지 마세요. 원문과 변환 결과의 행·열·병합 정보를 대조하는 별도 검증이 필요합니다."
     ],
     "cautions": [
-      "사용 신청과 이용 문의는 공식 대표번호(02-2109-6446)를 통해야 하며, API 키 발급 등 절차는 open.law.go.kr에서 직접 확인해야 합니다.",
+      "이용 신청·인증 방식과 문의처는 국가법령정보 공동활용 사이트의 최신 이용안내에서 확인하세요.",
       "언급된 n8n 연동 예시(GitLab 개인 저장소)는 법제처의 공식 도구가 아닌 제3자의 개인 프로젝트이므로, 실제 도입 시 소스와 신뢰도를 별도로 검증해야 합니다."
     ],
     "sourceEvidence": [
@@ -3362,7 +3360,7 @@
     ],
     "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-09-20",
+    "updated": "2026-10-07",
     "url": "https://github.com/sodam-ai/SoDam-WikiMate-Codex",
     "content": [
       "SoDam WikiMate for Codex는 원래 Claude Code용으로 나온 WikiMate를 Codex 플러그인으로 포팅한 오픈소스 도구입니다. 공식 README에 따르면 웹 페이지·PDF 텍스트·직접 입력 메모를 Obsidian Markdown 볼트에 정리하되, 모든 새 노트 생성과 기존 노트 수정은 기본적으로 dry-run(미리보기)으로 계획만 보여주고 사용자 승인 후에만 실제로 저장합니다.",
@@ -3370,7 +3368,7 @@
       "설치는 `codex plugin marketplace add sodam-ai/SoDam-WikiMate-Codex` 후 `codex plugin add wikimate@wikimate-codex`로 진행하며, 새 Codex 작업을 열어야 스킬과 MCP 구성이 반영됩니다. Apache License 2.0으로 배포되며 Notion 연동은 선택 사항이고 핵심 MCP 서버는 Notion API를 직접 호출하지 않습니다."
     ],
     "cautions": [
-      "공식 README(2026-09-20 확인)는 핵심 검증 236개·MCP smoke 18개·보안 검사 88개 통과 등 코드 자체의 검증 상태만 밝히고 있으며, 실제 사용자 볼트에 대한 쓰기 작업과 실시간 Notion 연동은 배포 전 별도로 환경별 확인이 필요하다고 명시합니다.",
+      "기존 카드의 2026-09-20 확인 기록에는 핵심 검증 236개·MCP smoke 18개·보안 검사 88개가 표기되어 있었습니다. 이후 README의 2026-09-23 점검 기록에는 보안 검사 93/93이 명시됩니다. 이는 서로 다른 시점의 기록이며 코드 자체의 점검 수치입니다. 실제 사용자 볼트에 대한 쓰기 작업과 실시간 Notion 연동은 배포 전 환경별로 별도 확인해야 합니다.",
       "자료 수집 전 저작권·개인정보·robots 정책 준수 여부를 사용자가 직접 확인해야 하며, SoDam·WikiMate 명칭이나 로고를 자체 브랜드처럼 사용하는 것은 라이선스가 허용하지 않습니다."
     ],
     "sourceEvidence": [
@@ -3551,16 +3549,17 @@
     ],
     "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-09-22",
+    "updated": "2026-10-07",
     "url": "https://github.com/statico/nobg",
     "content": [
       "핵심 원리: 이미지 생성 모델 대부분은 투명 배경을 직접 지원하지 않거나 격자무늬로 표현합니다. nobg는 모델에게 단색(기본값 #00FF00) 그린스크린 배경으로 이미지를 생성하도록 프롬프트를 지시한 뒤, sharp 라이브러리로 해당 색상 영역만 투명하게 치환하는 전통적인 크로마키 합성 기법을 AI 생성 이미지에 적용합니다.",
-      "사용 절차: bunx nobg@latest \"a red apple\"처럼 프롬프트만 넘기면 기본 설정(1:1 비율, 1k 해상도)으로 생성합니다. -a 16:9 -r 2k로 비율과 해상도를 조절하고, -i photo.jpg \"배경 제거\"처럼 기존 이미지를 입력해 배경만 제거할 수도 있으며, -c로 크로마키 색상을 직접 지정할 수 있습니다. 기본 모델은 Gemini 3 Pro Image Preview이며 GEMINI_API_KEY 환경변수가 필요합니다.",
+      "사용 절차: bunx nobg@latest \"a red apple\"처럼 프롬프트만 넘기면 기본 설정(1:1 비율, 1k 해상도)으로 생성합니다. -a 16:9 -r 2k로 비율과 해상도를 조절하고, -i photo.jpg \"배경 제거\"처럼 기존 이미지를 입력해 배경만 제거할 수도 있으며, -c로 크로마키 색상을 직접 지정할 수 있습니다. README는 `GEMINI_API_KEY` 설정을 안내하지만 기본 모델명은 명시하지 않습니다.",
       "적용 조건: 아이콘, 로고, 스티커처럼 투명 배경이 필요한 생성물에 적합합니다. 원본 이미지의 피사체 경계 색이 크로마키 색과 겹치면(예: 초록 계열 피사체) 해당 부분도 함께 투명 처리될 수 있으므로 -c 옵션으로 색을 바꿔 회피할 수 있습니다."
     ],
     "cautions": [
       "GitHub star 수가 적은 개인 프로젝트(Unlicense 라이선스)로, 공식 벤더 지원이 없으며 유지보수 지속 여부가 불확실합니다.",
-      "Gemini API 키가 필요해 별도 비용이 발생할 수 있고, 결과 품질은 사용하는 이미지 생성 모델의 지시 순응도에 따라 달라집니다."
+      "Gemini API 키가 필요해 별도 비용이 발생할 수 있고, 결과 품질은 사용하는 이미지 생성 모델의 지시 순응도에 따라 달라집니다.",
+      "사용 모델의 정확한 기본값·지원 범위는 버전별 코드와 설정에서 별도 확인해야 합니다."
     ],
     "sourceEvidence": [
       "https://github.com/statico/nobg"
@@ -3736,7 +3735,7 @@
   {
     "id": "gpt-6-sol-luna",
     "title": "GPT-6 Sol·Luna: 비용 효율 중심 GPT-6 라인업 확장",
-    "summary": "OpenAI 공식 발표. 최상위 모델 GPT-6 Astra 아래에 더 저렴하고 빠른 Sol·Luna를 추가해 API 가격을 GPT-5.6 대비 절반으로 낮춘 모델 확장",
+    "summary": "OpenAI 공식 발표. GPT-6 Astra 아래에 Sol·Luna를 추가한 저비용 모델 라인업. 발표 표의 입력·출력 가격별 인하율은 서로 다릅니다.",
     "type": "자료",
     "categories": [
       "AI 모델 출시",
@@ -3750,11 +3749,11 @@
     ],
     "status": "자료 확인",
     "importance": 2,
-    "updated": "2026-09-24",
+    "updated": "2026-10-07",
     "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
     "content": [
-      "OpenAI가 공식 블로그에서 GPT-6 Astra의 하위 라인업으로 GPT-6 Sol과 GPT-6 Luna를 발표했습니다. Astra와 같은 학습 방식을 저비용·고속 모델에 적용해 전문 업무·사실성·코딩·컴퓨터 사용·정합성 성능을 유지하면서 API 가격을 GPT-5.6 프로모션 가격 대비 50% 낮췄다고 설명합니다.",
-      "가격표 기준 GPT-6 Sol은 입력 100만 토큰당 4달러에서 2달러로, 출력은 20달러에서 10달러로 인하됐고, GPT-6 Luna는 입력 0.2달러에서 0.1달러, 출력 1.2달러에서 0.5달러로 인하됐습니다(가격은 발표 시점 기준이며 변동될 수 있습니다).",
+      "OpenAI가 공식 블로그에서 GPT-6 Astra의 하위 라인업으로 GPT-6 Sol과 GPT-6 Luna를 발표했습니다. Astra와 같은 학습 방식을 저비용·고속 모델에 적용해 전문 업무·사실성·코딩·컴퓨터 사용·정합성 성능을 유지하면서 전반적인 가격 인하를 설명합니다. 아래 발표 가격표의 항목별 인하율을 별도로 확인해야 합니다.",
+      "가격표 기준 GPT-6 Sol은 입력 100만 토큰당 4달러에서 2달러로, 출력은 20달러에서 10달러로 인하됐고, GPT-6 Luna는 입력 0.2달러에서 0.1달러, 출력 1.2달러에서 0.5달러로 인하됐습니다. Sol 입·출력 및 Luna 입력은 50% 인하이고 Luna 출력은 약 58.3% 인하입니다(가격은 발표 시점 기준이며 변동될 수 있습니다).",
       "공식 발표는 최고 성능이 필요한 작업에는 여전히 Astra를 권장하고, Sol·Luna는 반복적이거나 예산 제약이 있는 업무를 더 저렴하게 처리하기 위한 용도로 소개합니다. AutomationBench 등 벤치마크 비교 수치도 함께 제시되어 있습니다."
     ],
     "cautions": [
@@ -3848,16 +3847,16 @@
     ],
     "status": "자료 확인",
     "importance": 2,
-    "updated": "2026-10-03",
+    "updated": "2026-10-07",
     "url": "https://developers.openai.com/api/docs/guides/safety-checks/under-18-api-guidance",
     "content": [
       "OpenAI 공식 개발자 문서는 API로 18세 미만 사용자에게 서비스를 제공하는 조직에게 이용약관 외에 추가 안전장치를 요구합니다. COPPA 등 아동 보호·개인정보 법규 준수, 13세 미만 개인정보 처리 시 API의 데이터 보관 안 함(zero data retention) 설정을 먼저 적용할 것, 연령에 맞는 콘텐츠 필터링과 모니터링·신고 체계 마련을 안내합니다.",
       "Anthropic 공식 지원 문서도 유사하게, API를 활용한 제품이 미성년자와 직접 상호작용하는 경우 연령 확인 시스템, 콘텐츠 필터링, 모니터링·신고 체계, 안전한 이용 안내 자료 제공을 권고하며, AI 시스템과 대화 중임을 사용자에게 고지할 의무를 명시합니다.",
-      "Google의 Gemini API 추가 서비스 약관은 API 사용자가 만 18세 이상이어야 하고, 만 18세 미만을 대상으로 하거나 이들이 접근할 가능성이 있는 웹사이트·앱·서비스의 일부로 API를 사용하지 않도록 정합니다. 학생이 직접 쓰는 앱을 만든다면 이 조건을 설계 단계에서 먼저 확인해야 합니다.",
-      "OpenAI와 Anthropic은 자사가 조직의 정책 준수 여부를 주기적으로 감사할 수 있으며, 미준수가 반복되면 계정이 정지되거나 종료될 수 있다고 밝힙니다."
+      "Google의 Gemini API 추가 서비스 약관은 API 사용자가 만 18세 이상이어야 하고, 만 18세 미만을 대상으로 하거나 이들이 접근할 가능성이 있는 웹사이트·앱·서비스의 일부로 API를 사용하지 않도록 정합니다. 유럽 경제 지역·스위스·영국 사용자에게 API 클라이언트를 제공할 때 유료 서비스만 사용하도록 한 별도 지역 조건은 미성년자 관련 예외가 아닙니다. 학생이 직접 쓰는 앱을 만든다면 이 조건을 설계 단계에서 먼저 확인해야 합니다.",
+      "Anthropic은 해당 미성년자 대상 조직 가이드에서 안전장치 준수 여부를 정기적으로 감사할 수 있다고 밝힙니다. OpenAI에 동일한 정기 감사 정책이 있다는 주장은 이 카드의 근거 문서만으로 확인되지 않았습니다."
     ],
     "cautions": [
-      "각 문서가 제시하는 구체적 연령 기준·요구 조치는 지역 법규와 약관 개정에 따라 달라질 수 있으므로, 실제 서비스 설계 전 반드시 원문과 자국 법률을 함께 확인해야 합니다.",
+      "각 문서가 제시하는 구체적 연령 기준·요구 조치는 지역 법규와 약관 개정에 따라 달라질 수 있으므로, Gemini API 추가 약관의 확인된 시행일은 2026-03-23입니다. 실제 서비스 설계 전 반드시 원문과 자국 법률을 함께 확인해야 합니다.",
       "Google Workspace for Education 등 기관 계약으로 제공되는 Gemini 앱은 API 약관과 조건이 다를 수 있으니 별도로 확인하세요.",
       "이 카드는 세 회사의 정책 요약이며 법률 자문을 대체하지 않습니다."
     ],
@@ -4046,19 +4045,20 @@
     ],
     "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-09-27",
-    "url": "https://news.hada.io/topic?id=34248",
+    "updated": "2026-10-07",
+    "url": "https://github.com/tt-a1i/archify",
     "content": [
       "Archify는 Cursor, Claude Code, Codex CLI, OpenCode 같은 에이전트 코딩 도구 위에서 동작하는 스킬로, 저장소가 없어도 자연어 설명만으로 시작할 수 있습니다. 코드베이스를 분석하거나 시스템을 말로 설명하면 구성 요소와 연결 관계를 직접 탐색할 수 있는 다이어그램을 생성합니다.",
       "아키텍처, 워크플로, 시퀀스, 데이터 흐름, 생명주기 등 다섯 가지 다이어그램 유형을 지원하며, 에이전트가 구조화된 JSON을 작성하면 Node.js 렌더러가 이를 HTML/SVG로 변환하는 방식입니다. 생성된 JSON을 수정하며 대화로 결과를 다듬을 수 있고, 노드를 검색해 앞뒤 연결 관계나 두 요소 사이의 경로를 따라가며 단계별 설명·발표 모드로 시스템 동작을 보여줄 수 있습니다.",
       "변경 전후 다이어그램을 비교해 추가·삭제·수정된 요소와 연결 경로 변화를 표시하는 기능도 있고, 요청 시 노드에 특정 Git 커밋의 소스 파일과 코드 위치를 연결해 설명의 근거를 확인할 수 있습니다. 결과는 단일 HTML 파일로 생성되며 PNG/SVG/WebM과 소셜 공유용 이미지로 내보낼 수 있습니다."
     ],
     "cautions": [
-      "`npx skills add tt-a1i/archify -g`로 설치하는 MIT 라이선스 프로젝트입니다. 이 항목은 공식 소개 글을 확인한 것이며 실제 설치·사용 테스트는 하지 않았습니다.",
+      "`npx skills add tt-a1i/archify -g`로 설치하는 MIT 라이선스 프로젝트입니다. 주요 기능은 원저자 README에서 확인했고 GeekNews는 제3자 요약입니다. 이 항목은 공개 문서 확인이며 실제 설치·사용 테스트는 하지 않았습니다.",
       "생성 과정에서 데이터 구조·배치·간격을 자체 검사해 오류를 반환한다고 소개하지만, 대규모 코드베이스에서의 정확도나 처리 속도는 별도로 검증되지 않았습니다."
     ],
     "sourceEvidence": [
-      "https://news.hada.io/topic?id=34248"
+      "https://news.hada.io/topic?id=34248",
+      "https://github.com/tt-a1i/archify"
     ]
   },
   {
@@ -4299,7 +4299,7 @@
   {
     "id": "openai-gpt6-prompt-caching-guide",
     "title": "GPT-6 프롬프트 캐싱: 30분 재사용 할인과 캐시 미스 진단 도구",
-    "summary": "장시간 에이전트의 반복 컨텍스트 비용을 줄이는 OpenAI의 향상된 프롬프트 캐싱. 30분 재사용 기준, 명시적 중단점, 대시보드·진단 도구, 캐시를 깨지 않는 도구·지침 관리법 정리",
+    "summary": "장시간 에이전트의 반복 컨텍스트 비용을 줄이는 OpenAI의 향상된 프롬프트 캐싱. 30분 재사용 기준과 모델별 할인율, 명시적 중단점, 대시보드·진단 도구, 캐시를 깨지 않는 도구·지침 관리법 정리",
     "type": "가이드",
     "categories": [
       "비용 최적화",
@@ -4314,16 +4314,16 @@
     ],
     "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-09-27",
+    "updated": "2026-10-07",
     "url": "https://openai.com/index/better-prompt-caching-for-gpt-6/",
     "content": [
-      "OpenAI 공식 발표(2026-09-22)에 따르면 GPT-6 제품군과 함께 기본 캐시 적중률을 높인 프롬프트 캐싱 시스템이 도입됐습니다. 여러 요청이 같은 지침·도구 정의·이전 대화를 앞부분(접두부)으로 공유하면, 30분 이내에 재사용되는 적격 공유 접두부에 캐시 할인이 적용되며 캐시된 입력 토큰은 최대 90%까지 할인됩니다.",
-      "공식 프롬프트 캐싱 가이드의 비교표 기준으로 GPT-5.6 이후 모델은 캐시 읽기가 일반 입력 단가의 0.1배, 캐시 쓰기가 1.25배이며, 수명은 `prompt_cache_options.ttl`의 `30m`(기본값)으로 마지막 쓰기·재사용 뒤 최소 30분입니다. 한 번 쓰고 여러 번 읽을수록 절감 폭이 커집니다.",
+      "OpenAI 공식 발표(2026-09-22)에 따르면 GPT-6 제품군과 함께 기본 캐시 적중률을 높인 프롬프트 캐싱 시스템이 도입됐습니다. 여러 요청이 같은 지침·도구 정의·이전 대화를 앞부분(접두부)으로 공유하면, 30분 이내에 재사용되는 적격 공유 접두부에 캐시된 입력 토큰에 모델별 할인이 적용됩니다.",
+      "공식 프롬프트 캐싱 가이드의 비교표 기준으로 표의 대상 모델 대부분은 캐시 읽기가 일반 입력 단가의 0.1배이나 GPT-6.1 Sol은 0.05배입니다. 캐시 쓰기 단가와 적용 모델 범위는 표에서 별도 확인해야 하며, 수명은 `prompt_cache_options.ttl`의 `30m`(기본값)으로 마지막 쓰기·재사용 뒤 최소 30분입니다. 한 번 쓰고 여러 번 읽을수록 절감 폭이 커집니다.",
       "새 도구로 프롬프트 캐싱 대시보드(시간별 적중률, 캐시된/미캐시 토큰 비율)와 진단 도구가 제공됩니다. 진단 결과는 예를 들어 `tools_changed`처럼 무엇이 바뀌어 재사용이 막혔는지와 영향받은 토큰 수를 알려 줍니다.",
       "캐시를 지키는 요령: 명시적 캐시 중단점으로 재사용할 접두부를 고르고 자주 바뀌는 내용은 프롬프트 끝에 둡니다. 도구 정의·스키마·순서는 그대로 두고 `allowed_tools`로 호출 가능한 도구만 제한하거나 필요 없을 땐 tool_choice를 none으로 둡니다. 지침을 바꿀 때는 기존 지침을 고치지 말고 새 개발자 메시지를 끝에 덧붙입니다. 알려진 공통 컨텍스트는 사전 준비(prewarm)로 미리 캐시할 수 있고, GPT-6에서는 `configuration_update`로 대화 중 추론 강도를 바꿔도 캐시가 유지됩니다."
     ],
     "cautions": [
-      "'비용 90% 절감'은 전체 비용이 아니라 캐시된 입력 토큰에 대한 최대 할인입니다. 캐시 쓰기 요금이 붙는 모델이 있고, 세션을 유지한다고 캐시 적중이 보장되지는 않습니다. 모델 세대별 규칙이 달라 공식 가이드의 비교표를 먼저 확인하세요.",
+      "'비용 90% 절감'은 전체 비용이 아니라 캐시된 입력 토큰에 대한 모델별 최대 할인(대부분 읽기 90%, GPT-6.1 Sol 읽기 95%)입니다. 캐시 쓰기 요금이 붙는 모델이 있고, 세션을 유지한다고 캐시 적중이 보장되지는 않습니다. 모델 세대별 규칙이 달라 공식 가이드의 비교표를 먼저 확인하세요.",
       "이 카드는 공식 발표·가이드 확인이며 실제 적중률이나 비용 절감을 측정하지 않았습니다."
     ],
     "sourceEvidence": [
@@ -4746,7 +4746,7 @@
   {
     "id": "kling-4-video-model",
     "title": "Kling 4.0: 최대 10개 키프레임과 30초·4K 출력을 내세운 영상 모델",
-    "summary": "Kling AI가 공개한 4.0 세대의 텍스트·이미지 영상화, 다중 키프레임, 참조 제어, 립싱크와 HDR 사양, 그리고 Flash 한정 조기 접근 범위",
+    "summary": "Kling AI 릴리스 노트에 제시된 Kling 4.0의 키프레임·길이·해상도 사양과 제한적 Flash 조기 접근. 10비트 HDR은 출시 예정으로 표기됩니다.",
     "type": "모델",
     "categories": [
       "영상 생성",
@@ -4761,17 +4761,18 @@
     ],
     "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-09-28",
+    "updated": "2026-10-07",
     "url": "https://kling.ai/release-note/release-notes/Kling_4?type=dialog",
     "content": [
       "Kling AI 공식 릴리스 노트는 Kling 4.0을 텍스트·이미지 기반 영상 생성, 첫·마지막 프레임, Omni Reference를 한 모델 계열에 묶은 업데이트로 소개합니다.",
-      "사양표에는 입력 키프레임을 최대 10개까지 지정하고, 3~30초 영상을 720p·1080p·4K로 만들 수 있다고 적혀 있습니다. 1080p와 4K에서는 10비트 HDR도 지원한다고 안내합니다.",
+      "공식 사양표에는 Kling 4.0의 입력 키프레임 최대 10개, 3~30초 영상, 720p·1080p·4K 해상도가 제시됩니다. 다만 1080p·4K의 10비트 HDR 출력은 현재 지원이 아니라 \"coming soon\"으로 명시됩니다.",
       "제작 제어 측면에서는 여러 키프레임 사이의 움직임과 장면 전환, 립싱크, 영상 안 글자 표현, 기존 영상의 창의적 재구성을 개선 항목으로 제시합니다.",
-      "전체 Kling 4.0 출시는 10월로 예고됐고, 4.0 Flash는 9월 28일부터 일부 사용자에게만 조기 제공됐습니다. 시험할 때는 계정별 실제 제공 모델과 해상도·길이·크레딧 조건을 별도로 기록해야 합니다."
+      "전체 Kling 4.0 출시는 10월로 예고됐고, 4.0 Flash는 9월 28일부터 일부 사용자에게만 조기 제공됐습니다. 시험할 때는 계정별 실제 제공 모델과 해상도·길이·크레딧 조건을 별도로 기록해야 합니다. Flash의 별도 사양은 3~20초·720p·8비트 SDR이며 전체 4.0의 30초·4K·HDR 사양을 Flash에 적용하면 안 됩니다."
     ],
     "cautions": [
       "품질 향상과 사양은 제작사의 릴리스 노트 기준이며 이 환경에서 같은 프롬프트로 독립 비교하지 않았습니다.",
-      "조기 접근과 정식 출시의 기능·가격·지역 범위가 다를 수 있습니다. 인물·저작물·브랜드를 사용할 때는 동의와 권리, 합성 표시 정책을 확인하세요."
+      "조기 접근과 정식 출시의 기능·가격·지역 범위가 다를 수 있습니다. 인물·저작물·브랜드를 사용할 때는 동의와 권리, 합성 표시 정책을 확인하세요.",
+      "10비트 HDR은 릴리스 노트에서 출시 예정으로 표시됩니다. 실제 제공 여부와 Flash·전체 모델의 사양 차이를 사용 전 확인하세요."
     ],
     "sourceEvidence": [
       "https://kling.ai/release-note/release-notes/Kling_4?type=dialog"
@@ -5096,8 +5097,8 @@
   },
   {
     "id": "google-stitch-cli-agent-skill",
-    "title": "Stitch CLI: 터미널과 코딩 에이전트에서 Google Stitch 화면 만들기",
-    "summary": "npm으로 설치하는 Google Stitch 공식 CLI로, Google 로그인 뒤 /stitch 스킬을 코딩 에이전트에 추가해 화면 생성·DESIGN.md 동기화·앱 UI 점검을 대화나 명령어로 실행합니다.",
+    "title": "Google Stitch CLI 공식 문서(본문 검증 필요)",
+    "summary": "Google Stitch의 CLI 문서로 연결되는 자료. 이 검토 환경에서는 문서 본문을 읽지 못해 설치 요건·명령어·에이전트 스킬 지원 범위를 검증하지 못했습니다.",
     "type": "도구",
     "categories": [
       "개발 도구",
@@ -5111,18 +5112,17 @@
       "에이전트 스킬",
       "UI 디자인"
     ],
-    "status": "자료 확인",
+    "status": "검증 필요",
     "importance": 4,
-    "updated": "2026-10-02",
+    "updated": "2026-10-07",
     "url": "https://stitch.withgoogle.com/docs/cli/overview/",
     "content": [
-      "Stitch 공식 문서(베타)의 CLI 빠른 시작은 Node.js 20 이상에서 `npm install -g @google/stitch`로 설치하거나 `npx @google/stitch`로 바로 실행하는 방법을 안내합니다. `stitch login`은 브라우저 Google OAuth로 로그인하며, 헤드리스·CI 환경은 `STITCH_API_KEY` 환경 변수나 전역 설정의 API 키를 쓰고 `stitch status`로 상태를 확인합니다.",
-      "Claude Code·Cursor·Gemini CLI·Antigravity 같은 코딩 에이전트를 쓴다면 `stitch agent-skills add --user`로 /stitch 스킬을 설치합니다. 이후 에이전트 대화에서 /stitch로 화면 생성, DESIGN.md 추출·동기화, 실행 중인 앱 점검을 요청할 수 있습니다.",
-      "터미널만으로도 `stitch create project` → `stitch config set project <id>`로 현재 폴더에 프로젝트를 고정하고, `stitch generate screen`에 제목·기기·프롬프트를 넣어 화면을 만든 뒤 `stitch serve` 또는 `stitch open project`로 결과를 봅니다. 문서는 다음 단계로 로컬 개발 서버 화면 캡처, DESIGN.md 기준 UI 감사, 기존 저장소 분석 워크플로를 안내합니다."
+      "Google Stitch CLI 공식 문서의 개요 페이지 링크입니다. 이 검토에서 페이지 제목은 확인했으나 본문을 읽을 수 없어 CLI의 구체적 설치 요건과 사용 절차를 독립적으로 확인하지 못했습니다.",
+      "Node.js 버전, 패키지명과 설치 명령, 로그인 방식, 에이전트 스킬 명령 및 화면 생성 워크플로는 현재 카드에서 확정적으로 안내하지 않습니다. 실제 사용 전 접근 가능한 공식 CLI 문서 본문에서 최신 명령과 권한 범위를 확인하세요."
     ],
     "cautions": [
-      "문서에 베타로 표시되어 있어 명령어와 지원 범위가 바뀔 수 있습니다. 설치 전 공식 CLI 명령어 문서를 다시 확인하세요.",
-      "API 키를 전역 설정에 저장하면 같은 계정의 다른 도구도 접근할 수 있으니, 공용 PC나 공개 저장소에 키가 남지 않게 관리하세요."
+      "이 검토에서 공식 CLI 문서 본문을 확인하지 못했습니다. 설치·실행 또는 기능 검증을 마친 안내가 아닙니다.",
+      "인증 정보와 프로젝트 자료를 다룬다면 공식 문서에서 저장 위치·접근 권한·비용을 확인하세요."
     ],
     "sourceEvidence": [
       "https://stitch.withgoogle.com/docs/cli/overview/"

@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/hermes-bot-mode/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/nvlabs-sana-video-2/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/gpt-5-6-release/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/openresearch-cli/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ouroboros-harness/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/karpathy-autoresearch/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/buzz-hive-mind-workspace/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-ai-text-watermark/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/comfyui-nkd-face-rig/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/gpt-5-6-price-performance/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/llm-as-a-verifier/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/solar-pro4-model-harness/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/trackio/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/upstage-cli-solar-pro2/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/deepseek-v4-flash-vision-exp/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/humanize-kr-ai-style-cleaner/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/codeboarding-codebase-architecture/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/sodam-o-brain-codex-local-memory/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-mode-session-presets/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/korea-open-law-api-legal-text-automation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/sodam-wikimate-codex/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/nobg-ai-chroma-key-transparent-background/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/gpt-6-sol-luna/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ai-api-minors-safeguards-openai-anthropic/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/archify-code-diagram-agent-skill/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/openai-gpt6-prompt-caching-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/kling-4-video-model/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/google-stitch-cli-agent-skill/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/openai-textgrain-eu-watermark/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/llm-automated-meta-analysis-accuracy-study/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/awesome-claude-code-mods-catalog/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -16,14 +44,12 @@
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/agent-design-planning-review-harness/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/workspace-suspended-vs-deleted-recovery/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/gemini-personal-model-access-october-2026/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ai-api-minors-safeguards-openai-anthropic/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/cloudflare-clef-decision-models/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/nvidia-dgx-spark-64gb-sync-cluster/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/elevenlabs-eleven-v4-tts/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/meta-muse-personal-agent/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/internal-ai-assistant-api-business-plan-checklist/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/shared-space-agent-safety-instructions/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/google-stitch-cli-agent-skill/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/copilotkit-opendots-agent-template/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/deepseek-harness-plugin-agent/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/herdr-web-ui-remote-agent-panes/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -45,12 +71,9 @@
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/pluto-starcraft-brood-war-selfplay-ai/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/joonlab-fold-agent-android/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/scientisttwo-autonomous-research-agent/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/kling-4-video-model/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/microsoft-copilot-home-code-autopilot/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/archify-code-diagram-agent-skill/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/meta-muse-code-terminal-agent/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/jev-star-starcraft2-planning-paper/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/openai-gpt6-prompt-caching-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/in-app-webview-login-testing-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/cognitive-surrender-think-first-ai/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/xiaomi-mimo-v2-6-rl-environments/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -65,30 +88,25 @@
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/reference-image-json-decomposition-prompt/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/malkuth-korean-decision-model/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/sodam-rhino-mcp-offline/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/gpt-6-sol-luna/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-opus-5-5/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/aimoviestorage-video-workbench/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/langchain-paid-media-agent-case-study/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/microsoft-surface-rtx-spark-dev-box/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/nobg-ai-chroma-key-transparent-background/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ai-grading-rubric-vs-binary-design/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/hermes-claude-subscription-directsdk/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/googlebook-android-gemini-laptop/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/fish-audio-s2-pro-multilingual-tts/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/laya-open-decision-model/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/sodam-wikimate-codex/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/hacktron-ai-agent-pentest-case-study/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/qwen-image-2-1-comfyui/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/openai-additional-safety-checks-bio-cyber/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/typesafe-jev-system-one-model/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/oliveyoung-sllm-alignment-dpo-grpo/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/remiqora-local-music-studio/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/korea-open-law-api-legal-text-automation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/unity-official-codex-plugin/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ltx25-cq-generative-restoration/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/agent-complexity-decision-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/google-labs-cc-family-agent/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-mode-session-presets/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-unified-docs-slides-workflow/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/fasth3-eight-step-v2/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/agent-context-progressive-loading/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -102,16 +120,13 @@
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-code-session-resume/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ai-project-handoff-documentation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/obsidian-sync-and-ai-index-boundaries/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/sodam-o-brain-codex-local-memory/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/comfy-mcp/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/llm-wiki-source-knowledge-base/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/huggingface-gui-model-management/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/antigravity-usage-community-skill/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/gpt-6-astra/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/codeboarding-codebase-architecture/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/screenshot-markup-picker-codex-pptx/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/gemini-desktop-app/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/humanize-kr-ai-style-cleaner/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/google-pics-image-editing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ai-credential-theft-patterns-2026/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/deepseek-v4-1-flash/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -127,7 +142,6 @@
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/mistral-training-data-opt-out/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/google-workspace-live-voice/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-commerce-agents/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/deepseek-v4-flash-vision-exp/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/mai-image-2-6-flash/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/cerebras-inference-model-catalog/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/minimax-speech-2-8/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -140,21 +154,16 @@
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/openclaw-v2026-8-2-release/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/comfyui-dlss5-enhancer/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/sodam-family-claude-code-plugins/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/upstage-cli-solar-pro2/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/agent-file-lock-afl/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/openmaic-course-generator/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-academy/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/buzz-hive-mind-workspace/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/codex-router/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/gpt-5-6-price-performance/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/microsoft-intelligent-terminal/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/k-exaone-2-0/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/llm-as-a-verifier/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/minimax-h3-turbo/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/nano-banana-cartoon-prompts/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/oil-motion-interactive/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/huggingchat-pdf-to-markdown/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/solar-pro4-model-harness/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/assembly-api-mcp/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/voice-memo-doc/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/skills-store-repo/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -165,29 +174,20 @@
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/comfyui-web-image-swap/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/comfyui-h3-audiorefine/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/comfyui-minimax-h3-continuation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/comfyui-nkd-face-rig/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/tencent-evie-preview/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-status-page/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/gpt-image-2-transparent-bg/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/nvlabs-sana-video-2/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/microsoft-data-formulator/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/hermes-bot-mode/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/deepseek-api-pricing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/fireworks-ai-nexus/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ouroboros-harness/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/karpathy-autoresearch/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/claude-ai-text-watermark/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/gpt-5-6-release/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/codex-reset-credit-skill/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/k12-teacher-skills/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/hwpx-skill/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/openresearch-cli/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/qwen-3-8-27b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/korea-pii-model/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/akm-eval/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/cmux-tips/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/solar-pro4-hermes-agent/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/trackio/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/upstage-console-chat-api/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/deepseek-v4-flash/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
