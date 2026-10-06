@@ -5845,5 +5845,134 @@
     "sourceEvidence": [
       "https://support.google.com/gemini/answer/17004136?hl=ko-KR"
     ]
+  },
+  {
+    "id": "openai-textgrain-eu-watermark",
+    "title": "OpenAI textGrain: EU AI Act 대응 텍스트 워터마킹",
+    "summary": "OpenAI 공식 발표로, 모델이 생성한 텍스트에 보이지 않는 통계적 신호를 넣는 textGrain 워터마킹 기술과 그 한계를 설명합니다.",
+    "type": "자료",
+    "categories": [
+      "AI 안전·정책",
+      "AI 모델 출시"
+    ],
+    "tags": [
+      "OpenAI",
+      "워터마킹",
+      "콘텐츠 출처",
+      "EU AI Act"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-07",
+    "url": "https://openai.com/index/eu-text-provenance/",
+    "content": [
+      "OpenAI 공식 발표에 따르면 EU AI Act의 생성 텍스트 식별 요구에 대응해 'textGrain'이라는 텍스트 워터마킹 기술을 선보였습니다. 모델의 단어 선택에 보이지 않는 통계적 신호를 추가하고, 탐지기가 해당 신호의 존재 여부를 판별하는 방식입니다. API 고객은 전역적으로 선택 모델에 대해 워터마킹을 opt-in 할 수 있으며 API 기본값은 꺼짐 상태이고, EU 내 ChatGPT·Codex 출력에는 단계적으로 적용됩니다.",
+      "공식 평가에 따르면 200토큰 분량의 짧은 글은 400토큰 글보다 탐지가 어렵고(위양성률 1% 기준 약 80% vs 95% 탐지), 수학처럼 단어 선택의 자유도가 낮은 콘텐츠는 탐지율이 더 낮습니다. 400토큰 글에서 단어의 10%를 동의어로 바꾸면 탐지율이 92%에서 66%로, 25%를 바꾸면 17%까지 떨어진다고 공개했습니다.",
+      "OpenAI는 이러한 한계 때문에 탐지기 접근을 승인된 연구자·전문기관으로 제한하고 있으며, 기술을 향후 오픈소스로 공개할 계획이라고 밝혔습니다. 이미지·오디오용 검증 도구(openai.com/verify, Content Provenance API)는 이번 발표와 별개로 계속 공개 운영됩니다."
+    ],
+    "cautions": [
+      "짧은 글, 특정 분야(예: 수학), 사후 편집(동의어 교체 등)에서는 탐지율이 크게 낮아진다고 OpenAI 스스로 명시합니다. 워터마크 탐지 결과를 단정적 증거로 사용하지 마세요.",
+      "현재 탐지기 접근은 일반 공개가 아니라 승인된 연구자·기관으로 제한되어 있습니다. 적용 범위(EU 우선, API는 opt-in)도 지역·서비스별로 다릅니다."
+    ],
+    "sourceEvidence": [
+      "https://openai.com/index/eu-text-provenance/"
+    ]
+  },
+  {
+    "id": "llm-automated-meta-analysis-accuracy-study",
+    "title": "LLM 자동 메타분석 정확도 연구: 개별 추출은 되지만 통합은 아직 부족",
+    "summary": "Nature 계열 저널(Eye)에 실린 연구로, 4개 주요 LLM에 동일한 안과학 1차 연구 데이터를 주고 메타분석을 자동 수행시켜 정확도를 평가한 결과를 공개합니다.",
+    "type": "논문",
+    "categories": [
+      "AI 연구",
+      "데이터 분석"
+    ],
+    "tags": [
+      "메타분석",
+      "LLM 평가",
+      "학술 연구",
+      "데이터 추출"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-07",
+    "url": "https://www.nature.com/articles/s41433-026-04899-y",
+    "content": [
+      "Nature 자매지 Eye에 실린 연구는 Claude Sonnet 5 High Effort, Gemini 3.1 Pro, GPT 5.6, GPT 5.3 네 모델에 동일한 1차 연구 PDF를 주고 2x2 표 작성, 개별·통합 오즈비(OR) 계산, 이질성(I²) 산출, 포레스트 플롯 생성을 자연어 프롬프트만으로 지시해 기존 출판 메타분석 5건과 비교했습니다.",
+      "개별 셀 추출 정확도는 70~87.5%로 비교적 높았지만, 통합 오즈비(pooled OR) 정확도는 20~60%로 크게 떨어졌습니다. GPT 5.6이 전반적으로 가장 우수(셀 87.5%, 완전한 2x2표 85%, 통합OR 60%)했고, GPT 5.3이 가장 낮았습니다. 모든 모델이 만든 포레스트 플롯은 출판 기준에 미달해 수작업 보정이 필요했습니다.",
+      "연구진은 '개별 데이터 식별이 정확해도 올바른 메타분석 통합을 보장하지 않는다'고 결론지었으며, 현재 LLM은 투명한 보고와 수동 검증, 엄격한 통계적 감독 없이는 메타분석을 자율적으로 대체할 수 없다고 명시했습니다."
+    ],
+    "cautions": [
+      "평가 대상은 안과학 분야 5개 메타분석(20개 연구-결과 쌍)에 한정됩니다. 다른 분야나 더 복잡한 통계 모델에는 결과가 그대로 적용되지 않을 수 있습니다.",
+      "모델 버전(Claude Sonnet 5, Gemini 3.1 Pro, GPT 5.6/5.3)에 따른 결과이므로 이후 모델 업데이트로 정확도가 달라질 수 있습니다. 통합 오즈비 등 핵심 통계치는 반드시 수작업 검증을 거쳐야 한다는 점이 연구의 핵심 결론입니다."
+    ],
+    "sourceEvidence": [
+      "https://www.nature.com/articles/s41433-026-04899-y"
+    ]
+  },
+  {
+    "id": "awesome-claude-code-mods-catalog",
+    "title": "Awesome Claude Code Mods: 2,600여 개 커뮤니티 확장 카탈로그",
+    "summary": "GitHub 공식 README 기준, Claude Code 2.1.287 이상에서 동작하는 커뮤니티 제작 mod(함수 훅)를 자동 스캔·검증해 분류한 카탈로그 저장소입니다.",
+    "type": "GitHub",
+    "categories": [
+      "개발 도구",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "Claude Code",
+      "플러그인",
+      "오픈소스",
+      "확장"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-07",
+    "url": "https://github.com/karanb192/awesome-claude-code-mods",
+    "content": [
+      "공식 README에 따르면 이 저장소는 Claude Code 2.1.287 이상에서 동작하는 mod(JavaScript/TypeScript 함수 훅으로 인터페이스나 동작을 바꾸는 플러그인)를 GitHub에서 자동으로 스캔해 모은 커뮤니티 카탈로그입니다. 2026년 10월 6일 기준 2,685개 mod가 등록되어 있으며, 각 mod가 읽기·쓰기·실행·네트워크 접근 중 무엇을 하는지 Claude의 검증기로 스캔한 결과를 함께 보여줍니다.",
+      "카탈로그는 용도별로 분류되어 있습니다: 사용량·비용 대시보드(cctop, token-ledger 등), 대기 중 미니게임, Git/PR/CI 연동, 메모리·컨텍스트 관리, 렌더링(mermaid·수식 등), 멀티 에이전트 워크플로우 등. mod 설치는 `claude --plugin-dir` 로컬 플러그인 방식이나 각 mod의 설치 안내를 따르면 됩니다.",
+      "저장소는 공식 Anthropic 디렉터리가 아니라 독립적인 커뮤니티 스캔임을 명시하며, 검증은 소스 코드를 실행하지 않고 정적으로 확인하는 수준이라 실제 런타임 안전성을 보장하지 않는다고 밝힙니다."
+    ],
+    "cautions": [
+      "공식 Anthropic 카탈로그가 아니라 독립 운영되는 커뮤니티 스캔 결과입니다. 소스 검증은 정적 분석 수준이므로 설치 전 각 mod의 소스와 접근 권한을 직접 확인해야 합니다.",
+      "mod 다수가 네트워크 호출이나 파일 읽기/쓰기 권한을 가지므로, 민감한 저장소나 데이터가 있는 환경에서는 권한 범위를 먼저 검토하세요."
+    ],
+    "sourceEvidence": [
+      "https://github.com/karanb192/awesome-claude-code-mods"
+    ]
+  },
+  {
+    "id": "kakao-playmcp-open-mcp-hub",
+    "title": "카카오 PlayMCP: 설치 없이 쓰는 국내 MCP 허브 플랫폼",
+    "summary": "카카오 공식 플랫폼으로, 카카오 계정 로그인만으로 다양한 MCP 서버를 체험·도구함에 담아 ChatGPT·Claude·OpenClaw 등 외부 AI에 연결할 수 있습니다.",
+    "type": "도구",
+    "categories": [
+      "AI 에이전트",
+      "업무 자동화"
+    ],
+    "tags": [
+      "MCP",
+      "카카오",
+      "도구 연결",
+      "한국 서비스"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-07",
+    "url": "https://playmcp.kakao.com/",
+    "content": [
+      "카카오 공식 사이트와 카카오corp 보도자료에 따르면 PlayMCP는 2025년 8월 베타 오픈한 'MCP(Model Context Protocol) 기반 개방형 플랫폼'으로, 로컬 설치나 JSON 설정 파일 편집 없이 웹 브라우저에서 카카오 계정으로 로그인만 하면 다양한 MCP 서버를 바로 체험할 수 있습니다. 2026년 7월 기준 외부 개발자가 등록한 MCP 서버가 약 200개 이상이며, 일일 호출이 8만 건을 넘는다고 보도됐습니다.",
+      "핵심 기능은 세 가지입니다: ①사이트 내 채팅창에서 선택한 MCP를 바로 테스트하는 플레이그라운드, ②2025년 11월 추가된 '도구함' 기능으로 여러 MCP를 모아 한 번의 계정 인증으로 사용, ③개발자가 자신의 원격(remote) MCP 서버를 등록·배포하는 기능(로컬 stdio 방식은 미지원). 도구함에 담은 도구는 Claude, ChatGPT, OpenClaw 등 외부 AI 서비스에 URL 하나로 연결해 그대로 사용할 수 있습니다.",
+      "카카오톡 나와의 채팅방, 톡캘린더, 카카오맵, 멜론, 선물하기 등 카카오 자체 서비스뿐 아니라 사람인(채용 정보), 한국 주식 정보, 아파트 정보, 법제처 판례 검색 등 외부 개발자가 만든 국내 서비스 특화 MCP도 다수 등록되어 있습니다."
+    ],
+    "cautions": [
+      "원격(remote) MCP만 지원하며 로컬 파일이나 사내 시스템을 다루는 stdio 방식 MCP는 등록·사용할 수 없습니다. 민감한 로컬 데이터 작업에는 적합하지 않습니다.",
+      "카카오 계정 인증이 필요하고, 외부 AI 서비스에서 PlayMCP 도구함에 접근할 때 해당 서비스가 어떤 데이터에 접근하는지 연결 전에 확인해야 합니다. Claude Code는 카카오 계정 인증을 직접 지원하지 않아 claude.ai에서 먼저 연결 후 플러그인으로 불러와야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://playmcp.kakao.com/",
+      "https://www.kakaocorp.com/page/detail/11865?lang=ENG"
+    ]
   }
 ]
