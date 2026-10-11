@@ -6539,5 +6539,108 @@
     ],
     "status": "자료 확인",
     "updated": "2026-10-11"
+  },
+  {
+    "id": "nvidia-kumo-tabular",
+    "title": "NVIDIA Kumo Tabular: 표 데이터 사전학습 모델",
+    "summary": "분류·회귀 작업에 라벨된 예시를 맥락으로 주고 바로 추론하는 NVIDIA의 표 데이터 사전학습 모델 사용법",
+    "type": "도구",
+    "categories": [
+      "머신러닝",
+      "표 데이터",
+      "NVIDIA"
+    ],
+    "tags": [
+      "Kumo Tabular",
+      "NVIDIA",
+      "structured-data-models",
+      "In-context learning"
+    ],
+    "importance": 3,
+    "url": "https://huggingface.co/nvidia/Kumo-Tabular",
+    "content": [
+      "Hugging Face 공식 모델 카드는 Kumo Tabular를 분류·회귀용 사전학습 표 데이터 기반 모델로 소개합니다. 레이블이 있는 예시(context)를 함께 넣으면 추가 학습 없이 새 데이터의 클래스 확률을 바로 예측합니다.",
+      "사용은 공식 저장소 `structured-data-models`(pip install git+https://github.com/NVIDIA/structured-data-models.git)를 설치하고, `sdm.TableTensor.from_pandas`로 표를 텐서로 바꾼 뒤 `sdm.models.KumoTabular(task=\"classification\")`에 context 행과 query 행을 넣는 방식입니다.",
+      "가중치 라이선스는 OpenMDW 1.1입니다. 소규모 정형 데이터셋에서 라벨링 예시만으로 빠르게 분류·회귀를 시험해보는 용도로 적합합니다."
+    ],
+    "cautions": [
+      "실제 설치·추론 테스트는 하지 않았습니다. GPU 메모리 요구량과 대규모 데이터에서의 실제 정확도는 공식 카드 외 별도 벤치마크로 확인하세요.",
+      "OpenMDW 1.1 라이선스 조건을 상업적 용도 적용 전 직접 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/nvidia/Kumo-Tabular"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "unimate-skeleton-animation",
+    "title": "UniMate: 임의 스켈레톤을 위한 통합 모션 생성 모델",
+    "summary": "사람·동물·사물 등 서로 다른 뼈대 구조를 가진 캐릭터에 텍스트 설명만으로 모션을 생성하는 SIGGRAPH Asia 2026 모델",
+    "type": "도구",
+    "categories": [
+      "3D·애니메이션",
+      "모션 생성",
+      "연구"
+    ],
+    "tags": [
+      "UniMate",
+      "SIGGRAPH Asia",
+      "Flow matching",
+      "모션 생성"
+    ],
+    "importance": 3,
+    "url": "https://huggingface.co/Linzhan/UniMate",
+    "content": [
+      "Hugging Face 공식 모델 카드(SIGGRAPH Asia 2026)는 UniMate를 텍스트 조건 flow-matching 모델로 설명합니다. 동물·휴머노이드·리깅된 사물 등 임의 토폴로지의 스켈레톤에 대해 60프레임(2초) 모션을 생성합니다.",
+      "Mixamo(22조인트)·Truebones(동물 73종)·UniML3D 범용 체크포인트가 구분되어 제공되며, 공식 코드 저장소(github.com/Friedrich-M/UniMate)의 안내대로 모델 다운로드 후 `unimate.inference.sample`로 텍스트 프롬프트를 넣어 GLB/FBX 메시에 모션을 입힙니다.",
+      "프롬프트 확장, 인베트위닝, 조인트 편집 등 추가 기능은 코드 저장소 README에서 다룹니다."
+    ],
+    "cautions": [
+      "공식 카드는 접지(contact) 모델이 없어 접지가 중요한 동작에서 미끄러짐·관통이 생길 수 있다고 명시합니다. 발 고정이나 IK 후처리가 필요할 수 있습니다.",
+      "Truebones ZOO 학습 데이터의 상업 게임 자산 유래 의혹이 제3자로부터 제기되었으나 모델 제작자는 이를 검증하지 않았다고 밝혔습니다. Truebones 학습 모델의 데이터 출처는 불확실한 상태로 다루세요.",
+      "학습 데이터(Mixamo, Objaverse-XL)는 각자의 라이선스를 따르며 일부는 비상업적 조건입니다. 실제 설치·생성 테스트는 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/Linzhan/UniMate",
+      "https://arxiv.org/abs/2609.05415"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-12"
+  },
+  {
+    "id": "fibo-scene-analyzer",
+    "title": "FIBO Scene Analyzer: 구조화된 장면 이해 모델",
+    "summary": "이미지 캡션·객체 탐지·세그멘테이션·키포인트·OCR·프롬프트 확장을 하나의 장면 기술(scene description) 형식으로 처리하는 Bria의 비전-언어 모델",
+    "type": "도구",
+    "categories": [
+      "컴퓨터 비전",
+      "이미지 이해",
+      "멀티모달"
+    ],
+    "tags": [
+      "FIBO",
+      "Bria",
+      "Scene description",
+      "OCR",
+      "Qwen3.6"
+    ],
+    "importance": 3,
+    "url": "https://huggingface.co/briaai/fibo-scene-analyzer",
+    "content": [
+      "Hugging Face 공식 모델 카드는 FIBO Scene Analyzer를 Qwen3.6-35B-A3B 기반으로 다단계 SFT와 GRPO 강화학습을 거쳐 만든 이미지 이해 모델로 설명합니다. 이미지 전체의 일반 설명부터 객체별 바운딩박스·마스크·관계·텍스트(OCR)까지 하나의 장면 기술 스키마로 출력합니다.",
+      "지원 작업은 caption(캡션), detect/mask/keypoints(탐지·마스크·키포인트), ocr, describe(특정 객체 설명), expand(짧은 프롬프트를 장면 기술로 확장), refine/edit(기존 장면 기술 수정)입니다. 상세도는 general/short/long/full/full_mask 5단계로 조절합니다.",
+      "실행은 Transformers, vLLM, OpenAI 호환 서버(vllm serve) 세 가지 하네스를 제공하며 bfloat16 기준 약 70GB GPU 메모리가 필요하다고 공식 문서에 명시되어 있습니다."
+    ],
+    "cautions": [
+      "대형 모델(36B 파라미터)로 로컬 구동에는 상당한 GPU 자원이 필요합니다. 실제 설치·추론 테스트는 하지 않았습니다.",
+      "키포인트·마스크 등 세부 기하 정보의 실사용 정확도는 공식 예시 외 별도 검증이 필요합니다."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/briaai/fibo-scene-analyzer",
+      "https://arxiv.org/abs/2602.20672"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-12"
   }
 ]
