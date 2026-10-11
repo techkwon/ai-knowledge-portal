@@ -3426,20 +3426,23 @@
     ],
     "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-09-20",
+    "updated": "2026-10-11",
     "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
     "content": [
       "ComfyUI 공식 블로그에 따르면 Qwen-Image-2.1은 알리바바 Qwen팀이 공개한 오픈 웨이트 이미지 모델로, MMDiT 구조 기반 7B 파라미터를 사용해 2026년 2월 공개된 Qwen-Image 2.0의 후속작입니다. 소비자용 GPU에서도 추론이 가능한 크기이며 생성과 편집 기능을 하나의 체크포인트로 제공합니다.",
       "가장 두드러진 특징은 RGBA(알파 채널 포함) 출력을 기본 지원한다는 점으로, 별도의 배경 제거 노드나 매팅 모델 없이도 스프라이트·로고·아이콘·제품 컷아웃을 바로 합성 가능한 형태로 생성할 수 있습니다. 또한 업스케일 없이 2048×2048 네이티브 해상도로 직접 생성하며, Text Encode Qwen Image 2.1 노드를 통해 캐릭터·제품·배경 등 최대 10장의 참조 이미지를 텍스트 인코더에 함께 입력할 수 있습니다.",
-      "사용 방법은 ComfyUI를 최신 버전으로 업데이트하거나 Comfy Cloud를 이용하고, Hugging Face(Comfy-Org/Qwen-Image-2.1)에서 가중치를 내려받아 모델 폴더에 배치한 뒤 Templates 패널의 Qwen-Image-2.1 템플릿을 불러오는 순서입니다."
+      "사용 방법은 ComfyUI를 최신 버전으로 업데이트하거나 Comfy Cloud를 이용하고, Hugging Face(Comfy-Org/Qwen-Image-2.1)에서 가중치를 내려받아 모델 폴더에 배치한 뒤 Templates 패널의 Qwen-Image-2.1 템플릿을 불러오는 순서입니다.",
+      "별도 Qwen-Image-2.1-Turbo 모델 카드는 같은 7B 구조에서 생성·편집을 위한 8단계 가속 체크포인트를 소개합니다. 최신 Diffusers 소스가 필요하고 모델에 내장된 샘플링 스케줄은 num_inference_steps 값만으로 바뀌지 않습니다. 기본 모델의 ComfyUI 안내와 Turbo 체크포인트의 사용 경로를 구분하세요."
     ],
     "cautions": [
       "공식 블로그는 모델의 기능과 사용법을 설명하며, 다른 이미지 모델 대비 정량적 품질 비교 수치는 제시하지 않습니다. 실제 결과물 품질은 프롬프트와 참조 이미지 구성에 따라 달라질 수 있습니다.",
-      "가중치는 Hugging Face의 Comfy-Org 배포판을 통해 받아야 하며, 라이선스와 상업적 사용 가능 여부는 Hugging Face 모델 카드에서 별도로 확인해야 합니다."
+      "가중치는 Hugging Face의 Comfy-Org 배포판을 통해 받아야 하며, 라이선스와 상업적 사용 가능 여부는 Hugging Face 모델 카드에서 별도로 확인해야 합니다.",
+      "Turbo는 Qwen Research License Agreement를 따릅니다. 상업적 이용 권리, Turbo의 공식 ComfyUI 지원·VRAM 요구량·속도 및 품질 비교는 이번 검토에서 확인하지 못했으며 설치·생성 테스트도 하지 않았습니다."
     ],
     "sourceEvidence": [
       "https://blog.comfy.org/p/qwen-image-21-in-comfyui-open-weight",
-      "https://huggingface.co/Comfy-Org/Qwen-Image-2.1"
+      "https://huggingface.co/Comfy-Org/Qwen-Image-2.1",
+      "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo"
     ]
   },
   {
@@ -3519,19 +3522,21 @@
     ],
     "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-09-22",
+    "updated": "2026-10-11",
     "url": "https://www.microsoft.com/en-us/surface/devices/surface-rtx-spark-dev-box",
     "content": [
-      "핵심 원리: 일반 워크스테이션과 달리 처음부터 AI 개발에 맞춰 사전 구성된 Windows 11 Pro 환경을 제공해 설정 시간을 줄이는 것이 목표입니다. VS Code, WSL, PowerShell 7이 미리 설치되어 있고, 명령줄에서 AI 지원을 받을 수 있는 Intelligent Terminal이 포함됩니다.",
-      "특징: 1,000테라플롭스 연산 성능에 맞춘 방열 설계(알루미늄 3D 프린팅 바디, 1,000개 통풍구)와 100W 열설계전력으로 장시간 학습·실험 중 성능을 유지하도록 설계했습니다. USB-C 2개, USB-A, HDMI, 이더넷 등 개발자용 포트를 갖췄습니다.",
+      "공식 안내는 Windows 11 Pro와 VS Code·WSL·PowerShell 7 및 GitHub Copilot CLI가 사전 구성된 AI 개발 환경을 설명합니다. 설치 시간을 줄이는 제품 목표와 실제 작업 성능은 구분해야 합니다.",
+      "1,000 TFLOPS 수치는 sparsity를 적용한 이론적 FP4 연산 성능입니다. 일반적인 FP16 성능이나 실제 앱 속도와 같다고 보지 마세요. 총 128GB 메모리 전부를 GPU가 사용할 수 있는 것은 아니며 대형 모델 실행 주장은 공급자 설명입니다. 100W 열설계전력과 개발자용 포트가 안내돼 있습니다.",
       "활용 근거: 공식 페이지는 로컬에서 추론·실험을 돌리면 API 토큰 비용과 클라우드 사용료를 줄일 수 있다고 설명합니다. BitLocker, Microsoft Defender, Entra ID, Intune과 연동되는 보안 코어 PC로 조직 배포 환경도 고려했습니다."
     ],
     "cautions": [
-      "공식 페이지에 출시 전 제품이며 기능이 출시 전 변경될 수 있다고 명시되어 있고, FCC 인증이 아직 완료되지 않아 정식 출하 여부와 시점이 확정되지 않았습니다.",
-      "가격, 정확한 사양(VRAM 용량 등), 국내 출시 여부는 공식 페이지에 명시되어 있지 않아 별도 확인이 필요합니다."
+      "미국 공식 블로그는 MSRP $5,999, 제품 페이지는 From $5,999.99를 표기하고 Microsoft.com 사전 주문·11월 출하 예정을 안내합니다. 실제 출하 완료를 확인한 것은 아닙니다.",
+      "국내 출시·원화 가격·실제 GPU 가용 메모리와 작업별 성능은 별도 확인이 필요합니다. 이번 작업에서는 구매·하드웨어 테스트를 하지 않았습니다."
     ],
     "sourceEvidence": [
-      "https://www.microsoft.com/en-us/surface/devices/surface-rtx-spark-dev-box"
+      "https://www.microsoft.com/en-us/surface/devices/surface-rtx-spark-dev-box",
+      "https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/",
+      "https://www.nvidia.com/en-us/products/rtx-spark"
     ]
   },
   {
@@ -5372,7 +5377,7 @@
   {
     "id": "meta-muse-personal-agent",
     "title": "Meta Muse: 전용 보안 VM에서 일하는 개인용 AI 에이전트",
-    "summary": "Meta의 개인 에이전트 Muse는 사용자별 클라우드 VM과 브라우저로 작업을 이어 하고, 별도 Sentinel 에이전트가 외부 통신을 승인하는 구조입니다. 공식 발표 기준 미국에서 iOS·Android·웹으로 순차 제공됩니다.",
+    "summary": "Meta의 개인 에이전트 Muse는 사용자별 클라우드 VM과 브라우저로 작업을 이어 하고, 별도 Sentinel 에이전트가 외부 통신을 승인하는 구조입니다. 최근 공식 발표 기준 미국·캐나다에서 iOS·Android·웹으로 순차 제공됩니다.",
     "type": "서비스",
     "categories": [
       "AI 에이전트",
@@ -5388,7 +5393,7 @@
     ],
     "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-10-03",
+    "updated": "2026-10-11",
     "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent",
     "content": [
       "Meta 공식 발표에 따르면 Muse는 Muse Spark 모델로 동작하는 개인 AI 에이전트입니다. Muse 앱이나 WhatsApp에서 메시지를 보내듯 일을 맡기면 브라우저를 열고 양식을 채우는 등 실제 작업을 하고, 앱을 닫은 뒤에도 긴 작업을 이어 갑니다.",
@@ -5396,13 +5401,14 @@
       "연결할 앱과 권한 범위(예: 메일 읽기만 또는 발송까지)는 사용자가 정하고 언제든 바꿀 수 있습니다. 비밀번호와 결제 수단은 Muse가 볼 수 없는 보안 저장소에 두며, 상호작용을 Meta AI 학습에 쓰지 않도록 선택할 수 있다고 밝힙니다."
     ],
     "cautions": [
-      "공식 발표 기준 제공 지역은 미국입니다. 지역 제한을 우회하는 VPN 가입이나 제3자 사이트의 설치 파일은 약관 위반과 보안 위험이 있으니 권하지 않습니다.",
+      "10/8 업데이트된 Meta 공식 발표는 제공 지역을 미국과 캐나다로 안내합니다. 국가별 실제 제공 여부는 공식 안내에서 다시 확인하며 지역 제한 우회나 제3자 설치 파일은 권하지 않습니다. 한국 출시일·가입 중단 여부는 확인하지 못했습니다.",
       "개인 메일·결제 계정을 연결하기 전에 권한 범위를 최소로 시작하고, 학교·업무 계정과 학생 정보는 기관 정책을 먼저 확인하세요.",
       "같은 이름의 Meta 코딩 에이전트 Muse Code와는 다른 제품입니다."
     ],
     "sourceEvidence": [
       "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent",
-      "https://security.muse.ai/"
+      "https://security.muse.ai/",
+      "https://about.fb.com/news/2026/09/introducing-muse-small-business/"
     ]
   },
   {
@@ -5994,16 +6000,17 @@
     ],
     "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-10-10",
+    "updated": "2026-10-11",
     "url": "https://www.anthropic.com/claude-haiku-5-5",
     "content": [
       "Anthropic 공식 발표에 따르면 Claude Haiku 5.5는 요약, 컨텍스트 압축(compaction), DB 조회, 분류 같은 대량·반복 작업과 코딩 서브에이전트, 브라우저 사용 등 속도가 중요한 작업에 적합하도록 설계된 소형 모델입니다. Haiku 4.5 대비 평균 약 75% 저렴하며(10만 토큰 이하 요청은 90% 저렴, 이상 요청은 50% 저렴), 처리 속도도 자사 모델 중 가장 빠릅니다.",
       "함께 발표된 가격 변경: Sonnet 5.5의 캐시 읽기 비용이 100만 토큰당 $0.20→$0.10으로 반값 인하되어 대부분의 에이전틱 작업 비용이 약 20% 줄어듭니다. 또한 이번 주부터 Claude Max·Team 구독자에게 Claude Platform(API) 사용을 위한 신규 월간 크레딧이 제공됩니다: Max 5x는 월 $100, Max 20x는 월 $200, Team은 사용자 풀링 기준 월 최대 $500.",
-      "Haiku 5.5는 자사 소형 모델 최초로 조절 가능한 effort(노력) 설정을 지원해 비용과 지능 중 우선순위를 선택할 수 있습니다. AWS·Google Cloud·Microsoft Azure 등 주요 플랫폼에서 바로 사용 가능하며, Claude Platform에서는 모델명 claude-haiku-5-5로 호출합니다."
+      "Haiku 5.5는 자사 소형 모델 최초로 조절 가능한 effort(노력) 설정을 지원해 비용과 지능 중 우선순위를 선택할 수 있습니다. AWS·Google Cloud·Microsoft Azure 등 주요 플랫폼에서 바로 사용 가능하며, Claude Platform에서는 모델명 claude-haiku-5-5로 호출합니다.",
+      "공식 Help Center의 크레딧 조건: Team은 Standard 좌석당 $20, Premium 좌석당 $100을 조직에서 풀링하며 월 $500 한도입니다. 해당 플랜 가입 7일 후 claude.ai Settings > Billing에서 하나의 Console 조직을 연결해 수령합니다. Free·Pro·Enterprise는 대상이 아니며 실제 계정의 자격을 확인해야 합니다."
     ],
     "cautions": [
       "Terminal-Bench 4.0(복잡한 멀티스텝 CLI 작업) 기준 Haiku 5.5는 39.2%로 Sonnet 5.5(70.6%)보다 크게 낮습니다. 복잡한 에이전틱 코딩에는 Sonnet/Opus가 여전히 더 적합하며, Haiku 5.5는 좁게 정의된 반복 작업에 최적화된 모델입니다.",
-      "Max/Team 월간 API 크레딧은 구독 플랜과 별도로 API(Claude Platform) 호출에만 사용 가능하며, 정확한 적용 범위와 소진 규칙은 Anthropic Help Center 문서를 직접 확인해야 합니다."
+      "API 크레딧은 인터랙티브 Claude Code나 extra usage에는 적용되지 않습니다. 미사용분은 각 결제 주기에 만료되고 구매한 크레딧보다 먼저 소진됩니다. 구독 사용 한도와 API 혜택을 혼동하지 마세요."
     ],
     "sourceEvidence": [
       "https://www.anthropic.com/claude-haiku-5-5",
@@ -6113,5 +6120,424 @@
       "https://arxiv.org/abs/2610.08722",
       "https://github.com/nokia-applied-research/Trace"
     ]
+  },
+  {
+    "id": "google-labs-playground-guide",
+    "title": "Google Labs Playground: 게임 제작과 이용 조건 확인",
+    "summary": "텍스트로 게임을 만드는 Google Labs 실험 서비스의 제작·공개 흐름과 미국 18세 이상 이용 조건을 구분하는 안내",
+    "type": "가이드",
+    "categories": [
+      "AI 도구",
+      "게임 제작",
+      "교육 활용"
+    ],
+    "tags": [
+      "Google Labs",
+      "Playground",
+      "게임",
+      "이용 조건"
+    ],
+    "importance": 2,
+    "url": "https://labs.google/playground",
+    "content": [
+      "텍스트 프롬프트와 장르 템플릿으로 게임을 만들고 수정하는 실험적 플랫폼입니다. 만든 게임은 자동으로 공개되지 않으며 제작자가 공개 범위를 선택해 게시하고 안전 검사를 거칩니다.",
+      "공식 FAQ 기준 카탈로그 게임 플레이는 무료입니다. 게임 제작은 주간 갱신 토큰의 무료 등급과 Google One AI 구독 등급을 구분하며 무료 사용자는 제작 대기자 명단, 구독자는 즉시 제작 접근을 안내합니다. 생성에 실패하면 크레딧이 환불되고 성공적으로 컴파일될 때 차감됩니다.",
+      "참조 이미지는 PNG/JPG를 받아 게임 스타일의 애셋으로 변환합니다. 원본이 그대로 삽입되는 기능이나 동영상 업로드로 이해하지 마세요. Play Games 프로필과 공개·링크 공유 설정을 확인해야 합니다."
+    ],
+    "cautions": [
+      "2026-10-11 공식 FAQ는 미국의 만 18세 이상 이용자를 대상으로 안내합니다. 한국 이용이나 중학생의 직접 사용을 전제로 수업을 설계하지 말고 지역 제한 우회도 권하지 않습니다.",
+      "실험 서비스여서 접근 조건과 한도가 바뀔 수 있습니다. FAQ에 없는 가격·토큰 수치를 임의로 계산하지 마세요.",
+      "Google One 가족 공유로 제작 크레딧을 공유할 수 없다는 안내가 있습니다. 타인 초상과 저작물을 업로드하기 전 권리를 확인하세요.",
+      "공식 문서만 확인했으며 로그인·게임 제작·결제는 실행하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://labs.google/playground",
+      "https://playground.google/helpcenter"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
+  },
+  {
+    "id": "google-ai-edge-gallery-on-device-guide",
+    "title": "Google AI Edge Gallery: 온디바이스 모델 비교·체험",
+    "summary": "Google 공식 베타 앱에서 기기 내 AI를 체험하고 모델별 기능·라이선스·벤치마크를 확인하는 안내",
+    "type": "GitHub",
+    "categories": [
+      "로컬 AI",
+      "AI 도구",
+      "교육 활용"
+    ],
+    "tags": [
+      "Google",
+      "Edge Gallery",
+      "온디바이스",
+      "macOS"
+    ],
+    "importance": 4,
+    "url": "https://github.com/google-ai-edge/gallery",
+    "content": [
+      "Google 공식 저장소는 Android 12 이상, iOS 17 이상과 macOS 다운로드 링크를 제공합니다. 앱은 실험적 베타이며 모델 관리와 벤치마크, AI Chat, 이미지 질문, 음성·미디어 관련 체험 기능을 안내합니다.",
+      "공식 배포 링크에서 앱과 지원 모델을 확인한 뒤 민감정보가 없는 작은 입력으로 지연 시간과 결과를 비교하세요. 추론은 기기에서 실행하지만 기능 지원과 성능은 모델 및 하드웨어에 따라 달라집니다.",
+      "미디어 검색이나 영상 구간 찾기처럼 로컬 자료를 다루는 기능도 있습니다. 개인·학생 사진 라이브러리 전체를 바로 연결하기보다 비민감 샘플로 범위를 제한하세요."
+    ],
+    "cautions": [
+      "인터넷 없이 실행한다는 설명은 모델 추론 기준입니다. 모델 다운로드, URL 스킬과 외부 도구는 네트워크를 사용할 수 있습니다.",
+      "앱의 Apache 2.0 라이선스와 개별 모델 라이선스는 구분해야 합니다.",
+      "공식 README에서 macOS 최소 요구사항은 확인하지 못했습니다. 이 작업에서는 다운로드·설치·실행 테스트를 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/google-ai-edge/gallery"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
+  },
+  {
+    "id": "kandinsky-6-audio-video-guide",
+    "title": "Kandinsky 6.0: 동기 오디오가 있는 5초 영상 시안",
+    "summary": "Lite 3B·Pro 29B 모델로 텍스트 또는 이미지에서 동기화된 영상·오디오를 생성하는 공식 자료 안내",
+    "type": "모델",
+    "categories": [
+      "영상 생성",
+      "오디오 생성",
+      "로컬 AI"
+    ],
+    "tags": [
+      "Kandinsky",
+      "영상",
+      "동기 오디오",
+      "Diffusers"
+    ],
+    "importance": 3,
+    "url": "https://github.com/kandinskylab/kandinsky-6",
+    "content": [
+      "공식 저장소는 Lite 3B와 Pro 29B를 소개합니다. 텍스트 또는 이미지 입력으로 5초 영상과 44kHz 동기 오디오를 생성하며 립싱크를 포함한다고 설명합니다.",
+      "짧은 설명 장면의 영상과 소리를 함께 설계하는 시안 제작에 참고할 수 있습니다. Diffusers와 ComfyUI 등 공식 안내의 지원 경로를 확인하고 모델별 요구사항을 먼저 점검하세요.",
+      "README는 NVIDIA GPU와 Python 3.13 또는 3.14를 요구합니다. 모델 크기가 크므로 일반 학교 PC나 Mac에서 바로 실행할 수 있다고 가정하지 마세요."
+    ],
+    "cautions": [
+      "공식 README의 clone 이후 디렉터리 명령은 저장소 이름과 불일치합니다. 그대로 복사하지 말고 실제 폴더를 확인하세요.",
+      "모델 라이선스와 상업적 이용 권리는 이번 검토에서 확인하지 못했습니다. 공개 가중치라는 이유만으로 자유로운 상업 이용을 단정하지 마세요.",
+      "실제 인물의 립싱크에는 초상권과 딥페이크 위험이 있습니다. 설치·생성·성능 테스트는 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/kandinskylab/kandinsky-6"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
+  },
+  {
+    "id": "autorag-agent-local-source-check-guide",
+    "title": "AutoRAG Agent 2.0: 문서 검색과 원문 근거 확인",
+    "summary": "모델 없이 검색하는 Lite와 모델 기반 사서 에이전트를 구분하고 로컬 문서의 근거를 확인하는 활용 안내",
+    "type": "GitHub",
+    "categories": [
+      "RAG",
+      "AI 에이전트",
+      "문서 검색"
+    ],
+    "tags": [
+      "AutoRAG",
+      "MCP",
+      "원문 확인",
+      "로컬 검색"
+    ],
+    "importance": 4,
+    "url": "https://github.com/Marker-Inc-Korea/AutoRAG",
+    "content": [
+      "AutoRAG 저장소는 2.0의 문서 사서형 에이전트로 전환됐으며 기존 Python AutoML 도구는 legacy 디렉터리에서 유지됩니다. 두 계열의 설치법과 기능을 혼동하지 마세요.",
+      "Lite는 LLM 없이 로컬 문서를 색인하고 검색하며 MCP로 검색 결과를 외부 모델에 제공할 수 있습니다. 모델 기반 사서는 원문을 열어 근거를 확인하고 출처를 붙이는 흐름을 안내합니다.",
+      "검색 결과에 나온 주장을 원본 파일의 해당 부분과 대조하는 용도로 시작하세요. Node.js 24 이상 또는 Bun이 필요하며 2.0은 MIT, legacy는 Apache 2.0으로 라이선스가 다릅니다."
+    ],
+    "cautions": [
+      "원격 재정렬은 선택 기능이고 모델 기반 모드는 설정된 공급자를 호출할 수 있습니다. 모든 구성에서 데이터가 기기 밖으로 나가지 않는다고 단정하지 마세요.",
+      "색인 산출물이 작업 폴더에 남으며 외부 커넥터는 별도 설정·권한이 필요합니다. 민감한 대화·학생 자료를 무단 색인하지 마세요.",
+      "공식 문서 확인만 했으며 설치·색인·개인 문서 테스트는 실행하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/Marker-Inc-Korea/AutoRAG"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
+  },
+  {
+    "id": "github-education-teacher-benefits-guide",
+    "title": "GitHub Education 교사 인증과 Copilot Pro 혜택 확인",
+    "summary": "학교 이메일·재직 증빙·개인 계정 요건과 신청 심사를 확인하고 승인된 교사의 혜택을 구분하는 안내",
+    "type": "가이드",
+    "categories": [
+      "교육 활용",
+      "개발 도구",
+      "AI 코딩"
+    ],
+    "tags": [
+      "GitHub Education",
+      "교사 인증",
+      "Copilot Pro",
+      "신청 요건"
+    ],
+    "importance": 4,
+    "url": "https://docs.github.com/en/education/about-github-education/github-education-for-teachers/apply-to-github-education-as-a-teacher",
+    "content": [
+      "공식 신청 안내는 교육자 재직, 검증 가능한 학교 발급 이메일, 소속 증빙과 개인 GitHub 계정을 요구합니다. Settings의 Education benefits에서 신청 절차를 확인합니다.",
+      "증빙 이미지에서 현재 소속과 재직 정보를 명확히 확인할 수 있도록 준비하세요. 승인은 GitHub 심사 결과에 따르며 정보가 불명확하면 보완 후 재신청 안내를 확인해야 합니다.",
+      "공식 교사 혜택 페이지는 인증된 교육자에게 Copilot Pro 무료 혜택을 안내합니다. 인증 승인과 실제 기능 활성화를 별도로 확인하세요."
+    ],
+    "cautions": [
+      "학교 유형·재직 증빙 등 자격 요건에 따라 심사가 달라집니다. 공식 거절 안내에는 비학위 수여 교육기관 소속도 사유로 언급되므로 초·중·고 교사에게 자동 승인된다고 보장하지 않습니다.",
+      "개인 사례로 다른 신청자의 승인·거절 원인을 일반화하지 마세요. GitHub Copilot과 OpenAI Codex는 별도 제품입니다.",
+      "신청·서류 업로드·계정 활성화는 이 작업에서 실행하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://docs.github.com/en/education/about-github-education/github-education-for-teachers/apply-to-github-education-as-a-teacher",
+      "https://github.com/education/teachers",
+      "https://docs.github.com/en/education/about-github-education/github-education-for-teachers/why-wasnt-my-application-to-github-education-for-teachers-approved"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
+  },
+  {
+    "id": "codex-cli-official-install-chatgpt-auth-guide",
+    "title": "Codex CLI 설치와 ChatGPT 로그인: 공식 경로 확인",
+    "summary": "공식 npm·Homebrew 설치 경로와 ChatGPT 구독 로그인·API 사용량 과금을 구분하는 시작 안내",
+    "type": "가이드",
+    "categories": [
+      "AI 코딩",
+      "개발 도구",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "Codex CLI",
+      "OpenAI",
+      "구독 로그인",
+      "설치"
+    ],
+    "importance": 4,
+    "url": "https://developers.openai.com/codex/cli",
+    "content": [
+      "공식 저장소는 npm install -g @openai/codex와 brew install --cask codex 등 설치 경로를 안내합니다. 공식 문서에서 운영체제와 요구사항을 확인하고 이미 설치된 실행 파일·버전·PATH를 먼저 점검하세요.",
+      "프로젝트 폴더에서 codex를 실행해 첫 로그인에 Sign in with ChatGPT를 선택할 수 있습니다. 공식 안내는 지원되는 ChatGPT 구독과 API 키 기반 사용량 과금 접근을 구분하므로 API 키가 반드시 필요하다고 설명하지 마세요.",
+      "Codex는 선택 디렉터리의 파일을 읽고 수정하거나 설치된 도구를 실행할 수 있습니다. 작은 테스트 프로젝트와 적절한 승인·권한 설정으로 시작하고 변경 내용을 확인하세요."
+    ],
+    "cautions": [
+      "재설치가 특정 오류의 해결책이라고 보장하지 않습니다. 출처를 확인하지 않은 curl 파이프 설치 스크립트를 맹목적으로 실행하지 마세요.",
+      "개별 구독 플랜·조직 제한·로컬 패키지 관리자 상태는 확인해야 합니다. API 키 사용은 OpenAI Platform의 별도 과금입니다.",
+      "인증 저장 파일은 비밀번호처럼 보호하고 공유하지 마세요. 이 작업에서는 설치·로그인·명령 실행을 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://developers.openai.com/codex/cli",
+      "https://developers.openai.com/codex/auth",
+      "https://github.com/openai/codex"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
+  },
+  {
+    "id": "synthid-nondetection-interpretation-limits",
+    "title": "SynthID 미검출: 비AI 생성의 증거가 아닌 이유",
+    "summary": "워터마크 검사 범위와 변형에 따른 탐지 한계를 구분하고 Gemini 검증과 별도 SynthID Detector를 혼동하지 않는 안내",
+    "type": "가이드",
+    "categories": [
+      "AI 윤리",
+      "AI 생성물 검증",
+      "교육 활용"
+    ],
+    "tags": [
+      "SynthID",
+      "워터마크",
+      "탐지 한계",
+      "출처 검증"
+    ],
+    "importance": 4,
+    "url": "https://support.google.com/gemini/answer/16722517?hl=en&co=GENIE.Platform%3DDesktop",
+    "content": [
+      "SynthID는 지원되는 기술의 워터마크를 확인하는 수단입니다. 미검출만으로 비AI 생성이라고 판단할 수 없으며 다른 AI 시스템의 생성 가능성도 남습니다.",
+      "Google 도움말은 크기·색·압축 변화 뒤에도 보통 워터마크가 남지만 여러 번 변형하면 미검출될 가능성이 있다고 설명합니다. DeepMind는 텍스트를 철저히 재작성하거나 번역하면 탐지 신뢰도가 크게 낮아질 수 있다고 밝힙니다.",
+      "Gemini 앱 검증은 개인 또는 적격 Workspace 계정 요건과 Google AI 콘텐츠 인식 범위가 있습니다. 별도 SynthID Detector의 전 세계 영어 제공 및 Google·파트너 이미지·영상·오디오 검사 안내와 구분해 제품별 지원 범위를 확인하세요."
+    ],
+    "cautions": [
+      "미검출 결과만으로 학생의 저작 여부를 단정하거나 제재하지 말고 출처·원본·작성 과정 같은 독립 근거와 함께 검토하세요.",
+      "모든 편집으로 제거된다는 주장과 모든 변형에도 완전 검출된다는 주장은 모두 피해야 합니다. 개별 위음성률은 확인하지 않았습니다.",
+      "두 검사 도구의 텍스트 지원·업로드 제한·계정 자격을 동일하게 가정하지 마세요. 학생의 사적 파일 업로드는 기관 정책과 동의 범위를 확인해야 합니다.",
+      "공식 문서만 확인했으며 파일 업로드나 실제 탐지 시험은 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://support.google.com/gemini/answer/16722517?hl=en&co=GENIE.Platform%3DDesktop",
+      "https://deepmind.google/blog/watermarking-ai-generated-text-and-video-with-synthid/",
+      "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
+  },
+  {
+    "id": "liquidai-d1-3b-decision-model",
+    "title": "LiquidAI d1-3B: 생성 대신 구조화된 판단을 하는 모델",
+    "summary": "텍스트·JSON·이미지 상태를 받아 예·아니오, 선택, 점수 판단을 한 번의 순전파로 제공하는 3B급 결정 모델",
+    "type": "모델",
+    "categories": [
+      "결정 모델",
+      "AI 에이전트",
+      "분류·평가"
+    ],
+    "tags": [
+      "LiquidAI",
+      "d1",
+      "구조화된 판단",
+      "가드레일"
+    ],
+    "importance": 3,
+    "url": "https://huggingface.co/LiquidAI/d1-3B",
+    "content": [
+      "d1-3B는 LFM2.5-VL-3B를 바탕으로 한 약 3.12B 파라미터 결정 모델입니다. 대화 문장을 생성하는 모델이 아니라 상태와 질문을 받아 예·아니오, 선택, 점수 같은 구조화된 답을 제공합니다.",
+      "라우팅, 분류, 재정렬, 평가와 에이전트 가드레일처럼 판단 종류가 정해진 작업에 참고할 수 있습니다. 모델 카드는 32,768 토큰 컨텍스트와 한 번의 순전파·출력 토큰 없는 판단을 설명합니다.",
+      "공식 사용법은 transformers 5.14 이상과 trust_remote_code=True를 요구합니다. 배포 코드의 내용을 검토하고 고정된 버전·격리된 환경에서 검증할 계획을 세우세요."
+    ],
+    "cautions": [
+      "출력 토큰이 없다는 설명은 계산이나 서비스 비용이 없다는 뜻이 아닙니다.",
+      "Decision Index 48.57은 공급자가 공식 채점기로 자체 측정한 값이지 독립 리더보드 제출·재현 결과가 아닙니다. 이 작업에서는 성능을 측정하지 않았습니다.",
+      "라이선스 메타데이터는 lfm1.0이며 Apache로 표기되지 않습니다. 전체 이용 조건·상업적 권리와 한국어 정확도는 별도 확인이 필요합니다.",
+      "원격 코드를 신뢰해 로드하는 옵션에는 실행 위험이 있습니다. 설치·추론 테스트는 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/LiquidAI/d1-3B"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
+  },
+  {
+    "id": "google-flow-credits-guide",
+    "title": "Google Flow: 일일·월간 크레딧과 생성 비용 확인",
+    "summary": "공식 도움말의 무료 일일 크레딧과 구독 월간 크레딧을 구분하고 영상 생성 전 차감 조건을 확인하는 안내",
+    "type": "가이드",
+    "categories": [
+      "영상 생성",
+      "비용 최적화",
+      "AI 도구"
+    ],
+    "tags": [
+      "Google Flow",
+      "Veo",
+      "크레딧",
+      "Google One"
+    ],
+    "importance": 3,
+    "url": "https://support.google.com/flow/answer/16526234?co=GENIE.Platform=Desktop",
+    "content": [
+      "공식 Flow 도움말은 일일 50 크레딧과 미사용 일일 크레딧의 비이월을 안내합니다. 비구독 영상 생성은 혼잡 시간대에 이용할 수 없을 수 있습니다. 무료 접근과 언제나 생성 가능한 접근은 다릅니다.",
+      "구독의 추가 월간 크레딧은 일일 크레딧과 별도입니다. Google One 도움말의 Plus 200, Pro 1,000, Ultra 10,000 또는 25,000 안내는 실제 플랜과 현재 계정 조건을 확인한 뒤 적용하세요. 월간 크레딧은 결제 주기에 갱신되며 이월되지 않습니다.",
+      "차감은 요청 수가 아니라 생성 단위로 계산됩니다. 요청에 복수 결과가 포함될 수 있으므로 모델·모드·결과 수에 따른 현재 표를 생성 직전에 확인하세요."
+    ],
+    "cautions": [
+      "플랫폼별 도움말의 표현과 표가 다를 수 있으며 이번 검토에서 전체 모델별 비용표는 확보하지 못했습니다. 고정된 모든 모델 가격표로 제시하지 않습니다.",
+      "한국 가격·제공 국가와 학교 Workspace for Education 계정의 자격은 확인하지 않았습니다. 개인 Google One 도움말을 학교 계정에 그대로 적용하지 마세요.",
+      "환율·프로모션·변경된 크레딧을 임의로 더해 비용을 보장하지 않습니다. 로그인·구독·생성·결제 테스트는 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://support.google.com/flow/answer/16526234?co=GENIE.Platform=Desktop",
+      "https://support.google.com/googleone/answer/16287445?hl=en",
+      "https://labs.google/flow/about"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
+  },
+  {
+    "id": "letsencrypt-64-day-certificates-renewal-guide",
+    "title": "Let’s Encrypt 64일 인증서 전환: 자동 갱신 점검",
+    "summary": "2027년 기본 인증서 수명 변경에 대비해 AI 웹앱·자체 호스팅 서비스의 자동 갱신 주기를 확인하는 안내",
+    "type": "가이드",
+    "categories": [
+      "자체 호스팅",
+      "웹앱 운영",
+      "보안"
+    ],
+    "tags": [
+      "Let’s Encrypt",
+      "TLS",
+      "자동 갱신",
+      "ARI"
+    ],
+    "importance": 3,
+    "url": "https://letsencrypt.org/2026/10/07/64-day-certs.html",
+    "content": [
+      "공식 발표는 2027-02-10부터 기본 인증서 수명을 64일로 바꾸고 staging 환경은 2026-10-14에 먼저 전환한다고 안내합니다. 이미 발급된 인증서가 이 변경으로 폐기되는 것은 아닙니다.",
+      "ARI를 지원하는 자동 갱신 클라이언트는 변경 없이 대응한다고 설명합니다. 날짜를 하드코딩한 자체 스크립트는 수명 약 3분의 2 지점에서 갱신하도록 검토하고 고정된 83·80·60일 같은 값을 확인하세요.",
+      "공식 발표는 인가 재사용 기간도 단계적으로 줄이고 2028년에는 45일 기본 수명을 계획합니다. AI 에이전트·RAG 웹앱의 인증서 만료 모니터링과 갱신 실패 알림을 점검하는 계기로 활용하세요."
+    ],
+    "cautions": [
+      "자동 갱신이 실제로 작동하는지는 사용하는 클라이언트·호스팅 서비스에서 확인해야 합니다. 특정 관리형 호스팅의 수동 조치가 필요하다고 단정하지 않습니다.",
+      "현재 인증서를 불필요하게 폐기하거나 운영 스크립트를 확인 없이 변경하지 마세요. 이번 작업에서는 갱신·배포 테스트를 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://letsencrypt.org/2026/10/07/64-day-certs.html"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
+  },
+  {
+    "id": "google-ai-edge-foresight-local-meeting-guide",
+    "title": "Google AI Edge Foresight: 로컬 회의 노트와 자료 검색",
+    "summary": "Apple Silicon에 최적화된 macOS 앱의 온디바이스 회의 전사·맥락 검색·인용 기능을 확인하는 안내",
+    "type": "도구",
+    "categories": [
+      "로컬 AI",
+      "회의 기록",
+      "RAG"
+    ],
+    "tags": [
+      "Google Foresight",
+      "Gemma",
+      "macOS",
+      "원문 인용"
+    ],
+    "importance": 4,
+    "url": "https://developers.google.com/edge/foresight",
+    "content": [
+      "Google 공식 소개는 macOS에서 로컬·오프라인 회의 전사와 노트를 제공하고 Apple Silicon에 최적화된 앱이라고 설명합니다. Gemma 4와 EmbeddingGemma 2를 기기에서 실행하는 구조입니다.",
+      "로컬 폴더와 Google Drive·캘린더 같은 지식 연결원을 안내하며 PDF, Google Docs, Office 파일, 일반 텍스트, Markdown과 웹 북마크를 대상으로 맥락 카드와 출처 인용을 제공합니다.",
+      "민감하지 않은 회의·문서 샘플로 전사와 근거 인용을 평가하고 반환된 주장을 원본 문서와 비교하는 용도로 시작하세요. 설치·실행이나 실제 회의 녹음은 이 작업에서 하지 않았습니다."
+    ],
+    "cautions": [
+      "로컬 추론 설명을 모든 연동·동기화에서 네트워크나 외부 전송이 전혀 없다는 보장으로 해석하지 마세요. Google Drive 연결의 실제 데이터 흐름은 별도로 확인해야 합니다.",
+      "최소 macOS·메모리, 가격·라이선스와 실제 기기 호환성은 확인하지 못했습니다.",
+      "회의 녹음 전 참석자 안내·동의와 기관 정책을 확인하고 학생·성적·민감 자료를 무단 연결하지 마세요."
+    ],
+    "sourceEvidence": [
+      "https://developers.google.com/edge/foresight"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
+  },
+  {
+    "id": "portainer-3-upgrade-selfhosted-ai-guide",
+    "title": "Portainer 3.0 전환: 자체 호스팅 AI 운영 경로 선택",
+    "summary": "Kubernetes 중심 3.x와 유지되는 2.45 LTS·Community Edition을 구분해 컨테이너 운영 도구 업그레이드를 판단하는 안내",
+    "type": "가이드",
+    "categories": [
+      "자체 호스팅",
+      "AI 인프라",
+      "개발 워크플로우"
+    ],
+    "tags": [
+      "Portainer",
+      "Docker",
+      "Kubernetes",
+      "업그레이드"
+    ],
+    "importance": 2,
+    "url": "https://www.portainer.io/blog/portainer-3-0-is-coming",
+    "content": [
+      "공식 예고는 2.45 LTS를 마지막 2.x 계열로 안내하고 3.0은 short-term support로 시작한다고 설명합니다. AI 서비스 컨테이너를 운영할 때 최신 번호만 보고 바로 전환하지 마세요.",
+      "3.x는 Kubernetes 중심입니다. Docker·Swarm·Podman 사용은 유지되지만 신규 기능 개발 대상은 아니라는 설명과 기존 배포 구조를 비교하세요.",
+      "Community Edition은 2.x에 남으며 3.x의 무료 접근은 별도 3 Nodes Free 프로그램으로 안내합니다. 2.45를 유지하는 선택에는 보안 수정과 일부 기능 이식 지원 안내가 있습니다."
+    ],
+    "cautions": [
+      "3.0 출시일과 2.45 지원 종료일은 이번 공식 자료에서 확인하지 못했습니다.",
+      "다른 컨테이너 관리 도구로의 자동 대체나 특정 AI 서비스 호환성을 검증한 것은 아닙니다. 구성·백업·라이선스를 확인한 뒤 계획하세요.",
+      "설치·컨테이너 이동·업그레이드 테스트는 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://www.portainer.io/blog/portainer-3-0-is-coming"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-11"
   }
 ]
