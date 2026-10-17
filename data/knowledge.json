@@ -6893,5 +6893,110 @@
     "sourceEvidence": [
       "https://github.com/caesar00723-max/side-panel"
     ]
+  },
+  {
+    "id": "neko-self-hosted-virtual-browser",
+    "title": "Neko: Docker로 띄우는 셀프호스팅 공유 가상 브라우저",
+    "summary": "WebRTC 기반으로 컨테이너 안에서 브라우저(또는 데스크톱)를 스트리밍해, 여러 사람·에이전트가 동시에 접속해 화면을 함께 보고 제어권을 넘겨받아 조작할 수 있는 오픈소스 셀프호스팅 프로젝트",
+    "type": "도구",
+    "categories": [
+      "AI 도구",
+      "브라우저 자동화",
+      "자체 호스팅"
+    ],
+    "tags": [
+      "Docker",
+      "WebRTC",
+      "오픈소스",
+      "원격 브라우저"
+    ],
+    "status": "자료 확인",
+    "importance": 2,
+    "updated": "2026-10-17",
+    "url": "https://github.com/m1k1o/neko",
+    "content": [
+      "공식 GitHub README에 따르면 Neko는 Docker 컨테이너 안에서 브라우저를 실행하고 WebRTC로 화면을 스트리밍해, 여러 사용자가 동시에 접속할 수 있게 하는 셀프호스팅 오픈소스 프로젝트입니다. 공식 UI 문서(neko.m1k1o.net/docs/v3/customization/ui)는 한 번에 화면을 제어하는 사람이 있고 다른 참가자는 보면서 제어권을 요청해 넘겨받는 방식으로 조작을 공유한다고 설명합니다.",
+      "브라우저에만 한정되지 않고 Linux에서 실행되는 어떤 프로그램(예: VLC)이나 전체 데스크톱 환경(XFCE, KDE 등)도 같은 방식으로 스트리밍할 수 있다고 설명합니다.",
+      "공식 문서가 제시하는 활용 예로는 공동 시청(watch party), 인터랙티브 발표, 공동 브라우징·디버깅, 세션 녹화/방송, VPN 없는 내부 애플리케이션 접근(jump host), 그리고 Playwright·Puppeteer를 설치해 자동화 작업을 수행하면서 실시간으로 개입할 수 있는 '자동화된 브라우저' 용도가 있습니다.",
+      "다중 사용자 룸 관리가 필요하면 별도 프로젝트인 neko-rooms를 함께 쓸 수 있으며, HTTPS를 포함한 설치 가이드도 공식 문서(neko.m1k1o.net)에서 제공합니다."
+    ],
+    "cautions": [
+      "AI 에이전트에게 '공유 가능한 브라우저'를 주는 용도로 커뮤니티에서 언급되었으나, 이는 사용 사례 제안일 뿐 공식 문서가 에이전트 연동을 전제로 설계된 것은 아니며, 이 글도 실제 설치·연동 테스트를 거치지 않았습니다.",
+      "공식 README의 연결 종료 후 호스트 브라우저에 상태가 남지 않는다는 설명은 접속자 쪽 브라우저를 가리킵니다. 서버의 프로필 볼륨은 북마크 등 프로필 파일을 보존할 수 있지만, 기본 브라우저 정책은 종료 시 쿠키·세션을 지웁니다. 로그인 상태를 재시작 후에도 유지하려면 볼륨뿐 아니라 관련 정책도 조정해야 합니다. 설정에 따른 서버 데이터 보존과 공유 세션 접근권한·민감 계정 노출을 함께 검토해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/m1k1o/neko",
+      "https://neko.m1k1o.net/docs/v3/customization/browsers",
+      "https://neko.m1k1o.net/docs/v3/customization/ui"
+    ]
+  },
+  {
+    "id": "comfyui-nvidia-vfx-nodes",
+    "title": "ComfyUI Nvidia VFX Nodes: RTX 기반 업스케일·HDR·프레임 보간 노드팩",
+    "summary": "NVIDIA RTX의 nvidia-vfx 바인딩을 ComfyUI 노드로 감싸, 이미지/영상에 AI 업스케일(Super Resolution), SDR→HDR 변환, 프레임 생성(보간)을 적용할 수 있게 하는 공식 Comfy-Org 확장",
+    "type": "도구",
+    "categories": [
+      "ComfyUI 확장",
+      "NVIDIA",
+      "이미지·영상 생성"
+    ],
+    "tags": [
+      "ComfyUI",
+      "NVIDIA",
+      "DLSS",
+      "4K",
+      "GPU"
+    ],
+    "status": "자료 확인",
+    "importance": 2,
+    "updated": "2026-10-17",
+    "url": "https://github.com/Comfy-Org/ComfyUI_Nvidia_VFX_Nodes",
+    "content": [
+      "공식 GitHub README(이전 명칭 Nvidia RTX Nodes for ComfyUI)에 따르면 이 노드팩은 RTX Video Super Resolution(업스케일·디노이즈·디블러), RTX Video HDR(SDR→BT.2020 HDR 변환), RTX Video Frame Generation(프레임 보간)의 세 가지 기능을 ComfyUI 노드로 제공합니다.",
+      "요구 사항으로 NVIDIA RTX GPU와 CUDA 지원 PyTorch(cu130 이상)가 필요하며, CPU 전용이나 비 NVIDIA GPU는 지원하지 않는다고 명시합니다. 프레임 생성 기능은 RTX 40시리즈 이상에서만 지원됩니다.",
+      "Super Resolution은 BICUBIC부터 DENOISE/DEBLUR/HIGHBITRATE/STREAMING 등 용도별 품질 모드를 제공하고, HDR 노드는 대비·채도·피크 휘도 등을 조절할 수 있으며 출력이 HDR 메타데이터 없이 일반 ComfyUI IMAGE로 나오므로 다운스트림에서 별도로 HDR로 표시/인코딩해야 한다고 주의를 줍니다.",
+      "설치는 ComfyUI Manager에서 검색하거나, ComfyUI/custom_nodes에 저장소를 클론한 뒤 요구사항을 설치하는 방식이며, 노드 래퍼 저장소는 Apache License 2.0으로 공개되어 있습니다. 종속 NVIDIA 바인딩·SDK의 라이선스는 별도로 확인해야 합니다."
+    ],
+    "cautions": [
+      "이 글은 공식 README 기준 사양 정리이며 실제 설치·렌더링 테스트는 하지 않았습니다. 반드시 지원 GPU·드라이버·CUDA 버전 조건을 먼저 확인해야 합니다.",
+      "HDR 출력은 BT.2020/HLG 또는 PQ 색공간 데이터이므로, 이를 일반 SDR로 저장·표시하면 의도한 색감이 나오지 않는다고 공식 문서가 경고합니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/Comfy-Org/ComfyUI_Nvidia_VFX_Nodes"
+    ]
+  },
+  {
+    "id": "flux-3-image-klein",
+    "title": "FLUX.3 Image Klein: 5.6B 이미지 모델과 전용 프롬프트 업샘플러(FLUX Kommunity License)",
+    "summary": "Black Forest Labs의 5.6B 이미지 생성·편집 모델로, 짧은 요청을 상세 장면 캡션으로 확장해주는 별도의 9B 프롬프트 업샘플러(PUP)와 함께 쓰도록 설계됨. 이미지 모델은 FLUX Kommunity License(비상업용+제한적 상업 예외), PUP과 별도 텍스트 인코더는 Apache 2.0",
+    "type": "모델",
+    "categories": [
+      "AI 이미지 생성"
+    ],
+    "tags": [
+      "FLUX",
+      "Black Forest Labs",
+      "이미지 생성",
+      "Hugging Face"
+    ],
+    "status": "자료 확인",
+    "importance": 2,
+    "updated": "2026-10-17",
+    "url": "https://huggingface.co/collections/black-forest-labs/flux-3-image-klein",
+    "content": [
+      "Black Forest Labs의 공식 Hugging Face 모델 카드에 따르면 FLUX.3 Image Klein은 5.6B 규모 이미지 트랜스포머(파라미터 수는 이미지 트랜스포머 기준이며 텍스트 인코더는 별도)로, 텍스트-이미지 생성과 최대 10장 참조 이미지를 활용한 편집·합성을 하나의 모델로 처리하고, 0~1000 격자의 바운딩 박스로 요소 배치를 지정할 수 있습니다.",
+      "공식 카드는 '프롬프트 업샘플러 없이는 쓰지 말라'고 명시합니다. 짧은 프롬프트를 그대로 넣으면 범용적인 결과가 나오므로, 요청을 상세한 장면 캡션(매체·스타일·장면·조명·구도, 각 피사체의 색상·재질·위치)으로 확장해주는 별도의 9B 모델인 FLUX.3 Image Klein PUP(Qwen3.5-9B 파인튜닝)를 기본으로 함께 로드해 쓰도록 설계되어 있습니다. PUP은 이미지를 생성하지 않고 텍스트·참조 이미지를 받아 상세 프롬프트를 작성하는 9B 비전·언어 모델입니다.",
+      "라이선스가 구성 요소별로 다릅니다. 이미지 트랜스포머(base/메인/ComfyUI용)는 FLUX Kommunity License v1.0으로, 비상업적 사용과 라이선스 조건을 충족하는 상업적 출력물 생성 예외를 규정합니다. 예외는 본인·계열사 합산 연환산 총매출이 500만 달러 미만인 적격 사용자에게 적용되며 콘텐츠 필터 또는 출력물 검토 등 조건도 확인해야 합니다. PUP과 별도 Qwen3-VL-4B-Instruct 텍스트 인코더는 Apache License 2.0입니다.",
+      "배포 형태는 파인튜닝·LoRA·연구용 Base, 증류된 배포용 Klein(BF16/FP8/NVFP4 변형), ComfyUI용 변형, PUP까지 총 4종 저장소로 공개되어 있으며, 공식 Hugging Face Space 데모도 제공됩니다."
+    ],
+    "cautions": [
+      "이 글은 공식 Hugging Face 모델 카드 기준 정리이며, 실제 생성 품질이나 성능을 직접 테스트하지 않았습니다.",
+      "이미지 트랜스포머는 오픈소스로 일반화할 수 없는 FLUX Kommunity License 대상이며, 상업적 활용 전 적격 사용자·매출 산정·출력물 생성 범위·안전 조치·금지 용도 등 원문 조건을 직접 확인해야 합니다. PUP 및 별도 텍스트 인코더의 Apache 2.0 라이선스와 구별해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/black-forest-labs/flux-3-image-klein",
+      "https://huggingface.co/black-forest-labs/flux-3-image-klein-pup",
+      "https://huggingface.co/black-forest-labs/flux-3-image-klein/blob/main/LICENSE.md"
+    ]
   }
 ]
