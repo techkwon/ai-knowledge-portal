@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/harness2-recursive-agent-harnessing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/edu-legal-mcp/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ai-app-builder-product-discovery-checklist/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ps5lm-local-llm-on-ps5/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/self-evolving-agent-harness-paper/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/deepseek-v4-1-flash/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
