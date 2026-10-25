@@ -3612,20 +3612,24 @@
     ],
     "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-09-22",
+    "updated": "2026-10-25",
     "url": "https://snorkel.ai/blog/the-science-of-rubric-design/",
     "content": [
       "핵심 원리: 루브릭은 평가 기준(criteria)과 각 기준의 등급 수준(quality levels)으로 구성됩니다. 이진(합격/불합격) 척도는 더 단호한 판단을 끌어내지만 합격과 불합격 기준이 명확히 정의되어 있어야 하고, 일반적으로는 5~7단계 척도가 세분성과 판단 부담 사이의 균형을 잘 맞춘다고 설명합니다.",
       "절차: 채점 기준마다 근거(rationale) 설명을 함께 요구하면 평가자(사람 또는 AI)가 왜 그렇게 판단했는지 드러나 모호한 기준을 찾아 개선할 수 있습니다. 복잡한 과제는 상위 목표를 하위 세부 기준으로 쪼개는 계층적 루브릭 구조를 쓰면 부분 점수를 줄 수 있어 진행 상황을 더 세밀하게 측정할 수 있습니다.",
       "예시: HealthBench 벤치마크는 5,000개 대화에 48,000개 이상의 세부 루브릭 기준을 사용했는데도 평가자 간 일치도가 55~75%에 머물렀다고 보고했습니다. 이는 기준이 아무리 상세해도 모호함이나 해석 차이가 남을 수 있음을 보여주며, 루브릭 작성 후 실제 평가자 간 일치도를 측정해 기준을 반복 수정하는 과정이 필요함을 시사합니다.",
-      "적용 조건: 과제, 에세이, 에이전트 결과물처럼 정답이 하나로 정해지지 않는 평가에 특히 유용합니다. 단순 정오 판정이 가능한 객관식 채점에는 이진 방식이 더 적합할 수 있습니다."
+      "적용 조건: 과제, 에세이, 에이전트 결과물처럼 정답이 하나로 정해지지 않는 평가에 특히 유용합니다. 단순 정오 판정이 가능한 객관식 채점에는 이진 방식이 더 적합할 수 있습니다.",
+      "서술형 퀴즈·게임에 적용할 때는 문장 전체의 완전 일치, 허용한 표현의 일치, 의미 기준에 따른 판단을 구분하세요. 핵심어가 등장한다는 이유만으로 정답으로 확정하지 말고 동의어·어순 차이·오타·부정문·핵심어만 나열한 오답 같은 반례를 교사가 먼저 정답/부분정답/오답으로 표시한 시험 묶음에 넣으세요. 애매한 답은 재검토로 보내고, 판정 결과와 다음 힌트를 분리하는 방식은 이 평가 원칙을 교육용 앱에 적용하는 예시입니다.",
+      "OpenAI 평가 지침은 과제별 명확한 기준, 실제·경계·적대적 사례, 사람의 판정으로 자동 채점을 보정하는 과정을 권장합니다. 표현이 다양한 답에는 의미를 판단하는 모델 채점도 선택지지만 교사 표본과 일치도를 확인해야 합니다. 이는 평가 설계 보강이며 특정 채점 서비스의 정확도나 실제 수업 효과를 검증한 결과는 아닙니다."
     ],
     "cautions": [
       "이 원칙은 일반적인 평가 설계 지침이며 특정 교육기관이나 과목에 즉시 적용 가능한 완성된 채점 기준표가 아닙니다. 실제 도입 전 자체 과제에 맞게 루브릭을 만들고 소규모로 시범 적용해 일치도를 확인해야 합니다.",
-      "언급된 HealthBench, PaperBench 수치는 의료, 연구 재현이라는 특정 고난도 도메인의 사례로, 다른 과목과 수준에서는 일치도가 다르게 나타날 수 있습니다."
+      "언급된 HealthBench, PaperBench 수치는 의료, 연구 재현이라는 특정 고난도 도메인의 사례로, 다른 과목과 수준에서는 일치도가 다르게 나타날 수 있습니다.",
+      "학생 성적을 AI 판정만으로 자동 확정하지 말고 오류 정정·사람 검토 경로를 두세요. 학생 답안을 외부 모델로 보낼 때는 실명 등 개인정보를 제거하고 학교의 데이터 처리 기준을 확인해야 합니다."
     ],
     "sourceEvidence": [
-      "https://snorkel.ai/blog/the-science-of-rubric-design/"
+      "https://snorkel.ai/blog/the-science-of-rubric-design/",
+      "https://developers.openai.com/api/docs/guides/evaluation-best-practices"
     ]
   },
   {
@@ -8227,6 +8231,500 @@
     ],
     "sourceEvidence": [
       "https://stevekrouse.com/ends"
+    ]
+  },
+  {
+    "id": "datapitfalls-data-review-mcp",
+    "title": "datapitfalls: 데이터 분석·차트의 함정을 점검하는 MCP와 스캐너",
+    "summary": "질문 설정부터 수집·변환·분석·시각화·해석까지 점검하는 데이터 검토 도구. 규칙을 제공하는 MCP와 Claude API로 검사하는 CLI·웹 스캐너는 동작·비용·전송 범위가 다르다.",
+    "type": "GitHub",
+    "categories": [
+      "MCP",
+      "데이터 분석",
+      "AI 평가"
+    ],
+    "tags": [
+      "데이터 검증",
+      "차트",
+      "SQL",
+      "루브릭"
+    ],
+    "importance": 4,
+    "url": "https://github.com/bjonesdataliteracy/datapitfalls",
+    "content": [
+      "Ben Jones가 자신의 책 Avoiding Data Pitfalls의 분류 체계를 소프트웨어로 옮긴 프로젝트다. 차트 축뿐 아니라 누락값 제거, 잘못된 JOIN, 생존자 편향, 상관과 인과의 혼동처럼 분석 과정의 문제를 검토한다. 완성 차트가 깔끔하다는 사실과 분석이 타당하다는 판단을 구분할 때 참고할 수 있다.",
+      "MCP 서버는 get_checklist, get_pitfall, list_pitfalls, search_pitfalls 등으로 규칙을 제공하고, 연결된 Claude가 그 규칙을 사용해 판단한다. 제작자 README에 따르면 MCP 자체는 읽기 전용이며 네트워크 호출이나 별도 Anthropic API 키가 필요 없다. Claude Code 등록 예시는 claude mcp add datapitfalls -- npx -y datapitfalls mcp다.",
+      "반면 CLI·검사 엔진은 Claude API 키를 사용한다. npx datapitfalls scan ./chart.png 또는 SQL 파일·분석 설명을 넣는 방식이며 Node.js 18 이상이 필요하다. 웹 스캐너는 PDF·Word·PowerPoint 등의 문서와 여러 차트를 받는다. 입력에서 확인된 문제와 추가 데이터 검토가 필요한 잠재적 문제를 구분해 사람이 원자료를 재확인하는 보조 수단으로 쓰세요."
+    ],
+    "cautions": [
+      "코드(engine·CLI·MCP·웹)는 MIT지만 현행 검사 규칙과 텍스트는 CC BY-NC 4.0이다. 제작자는 업무에서 규칙을 쓰는 것은 무료라고 설명하되 유료 제품·강좌에 규칙을 포함하거나 판매할 때는 별도 허가가 필요하다고 안내한다. 과거 0.11.0까지의 규칙 배포본과 현행 조건을 혼동하지 마세요.",
+      "웹 스캐너 입력은 Claude API로 전송된다. MCP 서버 자체가 통신하지 않는다는 설명이 연결된 AI 서비스까지 오프라인이라는 뜻은 아니다. 학생·고객·업무 기밀을 넣기 전에 사용 경로와 데이터 정책을 확인하세요.",
+      "규칙을 만족했다고 통계적 정확성이나 인과관계가 증명되지는 않는다. 공식 제작자 문서 확인 기준이며 설치·검사·성능 실측은 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/bjonesdataliteracy/datapitfalls",
+      "https://github.com/bjonesdataliteracy/datapitfalls/blob/main/LICENSE-TAXONOMY.md",
+      "https://www.avoidingdatapitfalls.com/scan"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-25"
+  },
+  {
+    "id": "rakazo-self-hosted-ai-teammates",
+    "title": "Rakazo: 기억·예약·컴퓨터를 갖춘 AI 동료를 직접 호스팅하기",
+    "summary": "지속적인 대화·메모리·반복 작업을 가진 봇을 Docker 기반으로 운영하고, 웹·데스크톱·모바일 클라이언트에서 접속하는 베타 오픈소스 에이전트 플랫폼.",
+    "type": "GitHub",
+    "categories": [
+      "AI 에이전트",
+      "셀프호스팅"
+    ],
+    "tags": [
+      "Docker",
+      "MCP",
+      "반복 작업",
+      "승인 흐름"
+    ],
+    "importance": 3,
+    "url": "https://github.com/elie222/rakazo",
+    "content": [
+      "제작자 README는 봇별 대화·메모리·루틴·작업 이력, 다른 봇이나 일시적 하위 에이전트로의 위임, 브라우저·터미널·파일·화면 접근을 지원한다고 설명한다. 여러 봇이 공유하는 Team Computer와 분리된 Private Computer를 구분하며, 모델 자격증명과 컴퓨터 제공자를 선택하도록 설계돼 있다.",
+      "공개 이미지 설치에는 Docker Engine, Compose 플러그인, curl, OpenSSL이 필요하다. 공식 설치 스크립트가 Compose 파일을 받고 임의의 비밀값을 담은 환경 파일과 서비스를 준비한다. 앱을 설치했다고 백엔드가 필요 없어지는 것은 아니며, 서버에서 계속 실행해야 봇의 반복 작업도 지속된다.",
+      "로컬 Docker 컴퓨터 외에 여러 클라우드 실행 환경, MCP·OpenAPI 및 외부 앱 연동을 안내한다. 웹, Electron 데스크톱, iOS·Android 클라이언트는 같은 Rakazo API에 연결한다. 코드는 Apache-2.0이며 현재 베타로 안내한다."
+    ],
+    "cautions": [
+      "브라우저·파일·쉘·화면을 조작하는 에이전트다. 설치 스크립트를 검토하고 로그인·비밀키·파일 접근을 최소화하세요. 로컬 호스팅이라고 모델 제공자나 외부 연동까지 로컬 처리되는 것은 아니다.",
+      "공개 서버에는 HTTPS와 호스트 보안 구성이 필요하다. 선택한 모델·음성·클라우드 샌드박스 및 연동 서비스의 비용과 약관은 소프트웨어 라이선스와 별개다. 원격 실행 환경의 네트워크·자격증명 범위를 확인하세요.",
+      "공식 저장소 본문 기준 정리이며 설치·상시 운영·권한 격리·성능을 직접 검증하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/elie222/rakazo",
+      "https://github.com/elie222/rakazo/blob/main/docs/self-host.md"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-25"
+  },
+  {
+    "id": "idealab-ai-problem-first-idea-briefs",
+    "title": "Idealab.ai: 문제·근거·고객 검증으로 사업 아이디어 좁히기",
+    "summary": "역량·관심·자원·지역을 바탕으로 아이디어를 찾고, 근거·위험·초기 로드맵을 읽어 고객에게 검증할 가설로 바꾸는 아이디어 탐색 서비스.",
+    "type": "도구",
+    "categories": [
+      "AI 활용",
+      "기획",
+      "문제 해결"
+    ],
+    "tags": [
+      "아이디어",
+      "고객 검증",
+      "제품 기획"
+    ],
+    "importance": 2,
+    "url": "https://idealab.ai/",
+    "content": [
+      "공식 사이트는 자신의 역량·관심·초기 자원·활동 지역을 입력해 맞는 아이디어를 찾는 흐름을 설명한다. 뉴스·연구·특허·고객 불만 등을 Opportunity(해결할 문제), Enabler(가능하게 하는 기술), Shift(환경 변화)로 분류해 아이디어의 근거를 연결한다고 소개한다.",
+      "아이디어 브리프는 초기 비용, 첫 고객까지의 예상 기간, 성공을 가정한 매출, 지금 검토할 이유, 90일 로드맵, 경쟁자와 위험 등 조사 출발점을 제공한다고 설명한다. 숫자를 사업 성과로 받아들이지 말고 고객 인터뷰·반례 조사로 확인할 가설 목록으로 쓰세요.",
+      "제작자는 공개 아이디어 탐색과 활용을 무료로 제공하며, 이를 사업화하는 데 자사의 유료 서비스를 이용할 의무가 없다고 안내한다. 아이디어를 고른 뒤 고객 반응에 따라 수정하는 과정이 필요하다고 명시한다."
+    ],
+    "cautions": [
+      "수익·비용·기간은 서비스가 제시하는 추정과 가정이지 실제 시장 검증이나 성공 보장이 아니다. 근거의 품질과 최신성, 자신의 지역·규제·고객 조건을 별도로 확인하세요.",
+      "공개 아이디어의 무료 이용 안내를 모든 유료 서비스·기업용 기능·제3자 지식재산의 무제한 이용 허가로 확대하지 마세요. 실제 사용 전 약관과 제출할 정보의 공개 범위를 확인하세요.",
+      "공식 소개·작동 원리·무료 범위 문서 확인 기준이며 계정 생성·아이디어 생성·사업성 검증은 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://idealab.ai/",
+      "https://idealab.ai/how-it-works",
+      "https://idealab.ai/why-its-free"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-25"
+  },
+  {
+    "id": "awesome-opus55-code-video-prompts",
+    "title": "Awesome Opus 5.5 Videos: 코드 애니메이션 프롬프트 사례 모음",
+    "summary": "HTML·Canvas·SVG·Three.js 등으로 만든 모션그래픽·설명·3D·인터랙티브 사례와 제작자가 공개한 프롬프트 또는 원 게시물을 모은 비공식 자료집.",
+    "type": "자료",
+    "categories": [
+      "프롬프트",
+      "콘텐츠 제작"
+    ],
+    "tags": [
+      "코드 애니메이션",
+      "HTML",
+      "Canvas",
+      "모션그래픽"
+    ],
+    "importance": 3,
+    "url": "https://github.com/yihui-dev/awesome-opus5-5-videos",
+    "content": [
+      "저장소는 Claude Opus 5.5에 애니메이션 코드를 작성하게 해 만든 사례를 모션그래픽, 설명, 3D 장면, 게임·인터랙티브 유형으로 묶는다. 각 항목은 원 제작자 게시물과 공개된 프롬프트를 연결하며 일부는 재제작된 결과도 함께 보여준다. 모델 성능을 통제 비교한 벤치마크는 아니다.",
+      "안내된 활용 순서는 프롬프트 파일의 Prompt 부분을 확인하고, 코딩 에이전트에 단일 HTML로 렌더링하도록 요청한 뒤 필요하면 페이지를 녹화하는 것이다. 기존 영상 제작 파이프라인 도구와 달리 표현 방식과 요청문을 살펴보는 참고 자료로 활용할 수 있다.",
+      "일부 파일은 제작자가 공개한 프롬프트가 일부뿐이거나 결과에 대한 설명만 담고 있다고 명시한다. 예시의 장면·동작·기술 선택을 학습하되 자기 목적에 맞게 다시 작성하고 실제 브라우저에서 동작을 확인하세요."
+    ],
+    "cautions": [
+      "제작자별 영상과 프롬프트의 권리는 각 원 제작자에게 있다고 Credits가 명시한다. 모음에 실렸다는 이유로 상업적 재사용·재배포가 일괄 허가된 것으로 보지 말고 원 게시물과 개별 조건을 확인하세요.",
+      "데모와 프롬프트만으로 같은 출력이나 성능을 재현할 수 있다는 보장은 없다. 공식 제품 문서가 아닌 비공식 큐레이션 저장소이며, 직접 생성·녹화·재현 실험은 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/yihui-dev/awesome-opus5-5-videos"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-25"
+  },
+  {
+    "title": "Claude와 Theorem의 바이너리 수준 형식 검증: 증명 범위와 공개 자료",
+    "summary": "Anthropic은 Claude로 123개 OSS 라이브러리의 239개 퍼징 진입점에 대한 제한적 증명을 작성했다고 보고했다. Theorem은 그중 공개 증명과 오픈소스 등록 절차를 제공한다. 보안 전체를 보증하는 결과는 아니다.",
+    "type": "자료",
+    "categories": [
+      "AI 연구",
+      "개발 워크플로우",
+      "보안"
+    ],
+    "tags": [
+      "형식 검증",
+      "Rocq",
+      "OSS-Fuzz",
+      "RISC-V",
+      "Claude"
+    ],
+    "importance": 4,
+    "url": "https://www.anthropic.com/research/formal-verification",
+    "content": [
+      "Anthropic/Theorem의 자체 보고는 123개 라이브러리·239개 진입점이다. 공개 저장소의 증명은 25개 라이브러리·60개 진입점이며 전체 결과를 그대로 공개한 것은 아니다.",
+      "기존 퍼징 테스트를 명세로 삼아 컴파일된 정적 RISC-V 바이너리의 특정 무충돌 성질을 Rocq로 확인한다. 입력 크기·메모리·단일 스레드·Linux 모델 등 가정이 붙는다.",
+      "Theorem의 OSS Verify는 적격 오픈소스 핵심 유지관리자가 빌드·퍼징 대상 정보를 PR로 제출하는 별도 프로그램이다. 프로젝트 선정과 빌드 포팅이 필요하다."
+    ],
+    "cautions": [
+      "연구팀의 자체 보고 수치이며 여기서 증명을 재현하지 않았다.",
+      "특정 명세·진입점의 증명이지 전체 라이브러리의 버그 부재나 실환경 보안 보증이 아니다.",
+      "비공개 코드의 가격·자료 처리 조건과 지역 범위는 확인되지 않았다."
+    ],
+    "sourceEvidence": [
+      "https://www.anthropic.com/research/formal-verification",
+      "https://github.com/theorem-labs/oss-verify-proofs",
+      "https://theorem.dev/oss-verify/"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-25",
+    "id": "claude-theorem-formal-verification-scope"
+  },
+  {
+    "title": "AI 글이 왜 읽기 어려운가: 영어 문장 특성 연구",
+    "summary": "2026년 arXiv 프리프린트는 여러 AI 모델의 영어 글에서 드문 표현·긴 통사관계 등 처리 부담과 연관된 특징을 비교하고, 길이 압축 압력이 문체에 미칠 가능성을 실험했다. 실제 독자 이해도를 직접 입증한 결과는 아니다.",
+    "type": "논문",
+    "categories": [
+      "AI 연구",
+      "글쓰기",
+      "언어"
+    ],
+    "tags": [
+      "가독성",
+      "AI 문체",
+      "심리언어학",
+      "정보 밀도",
+      "프리프린트"
+    ],
+    "importance": 4,
+    "url": "https://arxiv.org/abs/2610.29162",
+    "content": [
+      "Thomas Hikaru Clark·Matias B. Martin·Kyle Mahowald의 2026-10-21 제출 프리프린트. 영어 대화·코딩·에세이를 사람 글 및 왕복번역 대조문과 비교했다.",
+      "저자들은 9개 주요 모델에서 드문 n-gram과 무생물 주어에 유정성 동사를 붙이는 표현 등이 사람 글보다 많았다고 보고했다. 모델과 과제에 따른 차이도 있었다.",
+      "Qwen2.5-1.5B-Instruct에 길이 페널티를 주는 별도 실험은 짧은 문장 형태 선호가 생길 수 있음을 시사하지만, 실제 상용 모델의 훈련 원인을 증명하지는 않는다."
+    ],
+    "cautions": [
+      "영어 중심·제한된 프롬프트와 모델의 프리프린트이며 재현 실험은 하지 않았다.",
+      "문장 지표는 실제 인간의 읽기 이해·속도를 직접 측정한 값이 아니다.",
+      "한국어 글쓰기나 모든 AI 모델로 일반화하지 말 것."
+    ],
+    "sourceEvidence": [
+      "https://arxiv.org/abs/2610.29162",
+      "https://arxiv.org/html/2610.29162v1"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-25",
+    "id": "ai-language-readability-research"
+  },
+  {
+    "title": "Reason Network: 서로 다른 AI 에이전트 세션을 연결하는 네트워크",
+    "summary": "로컬 코딩 에이전트와 일부 호스팅 도우미가 같은 네트워크에서 세션을 발견하고 메시지를 교환하도록 하는 서비스. 엔진은 오픈소스지만 설정용 CLI는 비공개이며, 설치·계정 연결과 민감정보 노출을 먼저 검토해야 한다.",
+    "type": "도구",
+    "categories": [
+      "AI 에이전트",
+      "개발 워크플로우",
+      "협업"
+    ],
+    "tags": [
+      "멀티에이전트",
+      "MCP",
+      "메시징",
+      "오픈소스 엔진",
+      "원격 협업"
+    ],
+    "importance": 4,
+    "url": "https://reasonmachines.com/network",
+    "content": [
+      "공식 문서는 세션 목록, 메시지 송수신, 받은 편지 확인, 사용자 확인 도구를 제시한다. 로컬 에이전트는 CLI 설치·로그인과 도구/훅 설정을 거치고, 호스팅 도우미는 MCP 연결을 이용한다.",
+      "네트워크 가입에는 계정 또는 초대 링크가 쓰이며, 사람·컴퓨터·세션의 저장소/브랜치·활동 상태가 팀원에게 보일 수 있다.",
+      "공식 설명상 네트워크 자체는 무료다. Reason 클라우드 세션 사용은 별도 과금될 수 있다. 네트워크 엔진은 MIT 또는 Apache-2.0, 설정 CLI는 비오픈소스다."
+    ],
+    "cautions": [
+      "설치 명령·계정 연결을 실행해 검증한 것이 아니다. 원격 설치 스크립트와 에이전트 도구 권한을 먼저 살필 것.",
+      "종단간 암호화와 프라이버시 설명은 제공사 주장으로, 독립 감사를 뜻하지 않는다.",
+      "초대 링크, 저장소·세션 메타데이터, 메시지·파일의 민감정보 공유 범위와 팀원 메시지의 신뢰 경계를 확인할 것.",
+      "지역별 제공 및 개인정보 보관 조건은 이 검토에서 확인되지 않았다."
+    ],
+    "sourceEvidence": [
+      "https://reasonmachines.com/network",
+      "https://docs.reasonmachines.com/docs/network",
+      "https://github.com/reason-machines/reason-network"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-25",
+    "id": "reason-network-agent-session-messaging"
+  },
+  {
+    "id": "google-gemini-api-cli",
+    "title": "Gemini API CLI: 기존 에이전트에서 Gemini API 호출하기",
+    "summary": "Google의 실험적 gemini-api 바이너리로 다른 코딩 에이전트나 쉘 스크립트에서 모델·미디어·관리형 에이전트 API를 호출한다. 대화형 Gemini CLI와 별개다.",
+    "type": "도구",
+    "categories": [
+      "AI 에이전트",
+      "개발 도구"
+    ],
+    "tags": [
+      "Gemini API",
+      "CLI",
+      "쉘 자동화",
+      "멀티모달",
+      "Google"
+    ],
+    "importance": 4,
+    "url": "https://github.com/google-gemini/gemini-api-cli",
+    "content": [
+      "Google 공식 gemini-api는 macOS·Linux·Windows용 단일 Go 바이너리다. 기존 Codex·Claude Code·Hermes 같은 호스트 에이전트가 명령행에서 Gemini API 기능을 사용하도록 연결한다. 독립적인 대화형 코딩 에이전트 Gemini CLI(gemini 명령)와 구분한다.",
+      "공식 README는 운영체제별 설치 스크립트, Go install, 사전 빌드 바이너리를 안내한다. Gemini API 키를 구성한 뒤 generate, analyze, image, tts, video, agent 등의 명령을 쓸 수 있으며 --help, --schema, --dry-run으로 호출 내용을 살펴볼 수 있다.",
+      "Apache-2.0은 CLI 소프트웨어 라이선스다. API 호출은 모델·기능별 무료 한도/유료 요금과 계정 권한이 적용된다. 공식 Gemini API 지역 목록에는 한국이 있다."
+    ],
+    "cautions": [
+      "beta라 명령과 API가 달라질 수 있다. 설치 스크립트와 에이전트의 쉘·파일·네트워크 권한을 검토하고 API 키를 노출하지 마세요.",
+      "Gemini CLI의 개인 계정 무료 사용량을 이 CLI의 무료 보장으로 혼동하지 마세요. 모델별 비용과 기능 가용성을 호출 전에 공식 가격표·계정에서 확인하세요.",
+      "공식 문서 본문 확인 기준이며 직접 설치·API 호출·성능 검증은 하지 않았습니다. 소개 페이지 자체는 웹 읽기에서 본문이 비어 공식 저장소와 문서로 교차 확인했습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/google-gemini/gemini-api-cli",
+      "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-cli-open-source-ai-agent/",
+      "https://aistudio.google.com/docs/pricing.md",
+      "https://aistudio.google.com/docs/available-regions.md"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-25"
+  },
+  {
+    "id": "magika-document-from-pixel-blur-gate",
+    "title": "MagikaDocumentFromPixel: OCR 이전 이미지 흐림 점검",
+    "summary": "촬영 이미지를 선명·흐림·불확실로 분기하는 가벼운 선명도 게이트. 글자를 읽는 범용 OCR이 아니라 OCR·VLM 호출 전 품질 확인에 쓴다.",
+    "type": "모델",
+    "categories": [
+      "컴퓨터 비전",
+      "문서 처리"
+    ],
+    "tags": [
+      "이미지 품질",
+      "흐림 감지",
+      "OCR 전처리",
+      "오픈소스",
+      "PyTorch"
+    ],
+    "importance": 3,
+    "url": "https://huggingface.co/bradduy/MagikaDocumentFromPixel",
+    "content": [
+      "Duy Tran Thanh(Brad Duy)의 MobileNetV3 기반 모델이다. RGB 영상에 라플라시안 엣지 정보를 더해 선명/흐림을 분류하고, 낮은 확신도에는 uncertain을 반환해 재촬영 또는 재검토로 보낼 수 있다. Google Magika의 파일 형식 식별이나 범용 OCR과는 별개다.",
+      "제작자 안내는 Python 3.10 이상, GitHub 코드·requirements, Hugging Face best.pt 체크포인트로 추론하는 경로를 제공한다. CPU 선처리 및 ONNX 변환을 설명하지만 이 환경에서 설치·실행하지 않았다.",
+      "제작자는 GoPro Large 시험 분할에서 F1 0.9803, 정확도 0.9806, CPU 단일 스케일 약 17ms/이미지, 모델 17MB를 보고한다. 이 수치는 자체 보고이며 실제 문서 사진 성능은 검증하지 않았다. 코드 라이선스는 저장소의 MIT 고지다."
+    ],
+    "cautions": [
+      "GoPro 모션블러 위주 학습이라 초점 흐림·저조도·압축 손상·스캐너 왜곡에는 성능 보장이 없다. 현장 샘플로 임계값과 재촬영 기준을 검증하세요.",
+      "제작자 벤치마크와 배포/모바일 변환 가능성은 독립 검증이 아니다. 사진에 민감정보가 있다면 외부 서비스 업로드 여부를 별도로 판단하세요.",
+      "공식 제작자 자료 확인 기준이며 다운로드·설치·추론·성능 실측은 하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/bradduy/MagikaDocumentFromPixel",
+      "https://github.com/bradduy/MagikaDocumentFromPixel",
+      "https://github.com/bradduy/MagikaDocumentFromPixel/blob/main/LICENSE"
+    ],
+    "status": "자료 확인",
+    "updated": "2026-10-25"
+  },
+  {
+    "id": "tencent-hunyuan-hy-nomas",
+    "title": "Hy-Nomas: 텍스트·카메라로 이어 만드는 비디오 세계",
+    "summary": "Tencent-Hunyuan이 공개한 세그먼트 기반 상호작용형 비디오 생성 모델과 추론 코드",
+    "type": "GitHub",
+    "categories": [
+      "생성형 AI",
+      "영상 생성"
+    ],
+    "tags": [
+      "Tencent-Hunyuan",
+      "비디오 생성",
+      "카메라 제어",
+      "오픈 모델"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-25",
+    "url": "https://github.com/Tencent-Hunyuan/Hy-Nomas",
+    "content": [
+      "텍스트 지시나 카메라 궤적으로 이전 문맥을 이어받아 다음 영상 구간을 생성합니다. 코드 저장소와 모델 가중치의 공식 배포처가 별도입니다.",
+      "표준 추론 예시는 8개 GPU 병렬 설정이고, RTX 4090 단일 GPU 예시는 별도 INT8 DiT·FP8 디코더·CPU 오프로드 구성을 사용합니다. Linux/CUDA 설치 또는 제작자 Docker 이미지와 모델 자산 다운로드가 필요합니다.",
+      "프로젝트 코드는 Apache-2.0으로 안내되지만 Qwen 등 제3자 모델/구성요소 조건은 별도 확인해야 합니다."
+    ],
+    "cautions": [
+      "직접 설치하거나 생성 속도·화질·VRAM 사용량을 실측하지 않았습니다. 24 FPS는 출력 영상 설정이지 실시간 생성 성능이 아닙니다.",
+      "온라인 데모의 프롬프트 처리·보존 정책은 별도 확인해야 합니다. 단일 GPU 추론을 전체 웹 데모나 학습 요구사항으로 일반화하지 마세요."
+    ],
+    "sourceEvidence": [
+      "https://github.com/Tencent-Hunyuan/Hy-Nomas",
+      "https://huggingface.co/tencent/Hy-Nomas"
+    ]
+  },
+  {
+    "id": "sodam-o-brain-claude-local-memory",
+    "title": "SoDam O-Brain: Claude Code용 로컬 기억·그래프",
+    "summary": "Claude Code의 확정된 대화 내용을 로컬 SQLite에 기록하고 검색·그래프로 관리하는 선택형 플러그인/웹 앱",
+    "type": "GitHub",
+    "categories": [
+      "AI 에이전트",
+      "지식 관리"
+    ],
+    "tags": [
+      "Claude Code",
+      "로컬 메모리",
+      "MCP",
+      "SQLite"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-25",
+    "url": "https://github.com/sodam-ai/SoDam_O-Brain",
+    "content": [
+      "Windows 10/11과 Node.js 26.7.x를 안내합니다. 웹 대시보드는 Claude Code 없이 사용 가능하고, 선택형 Claude Code 플러그인·MCP 연결은 자동 저장/되읽기와 7개 기억 도구를 제공합니다.",
+      "기억은 로컬 SQLite에 저장하며 FTS5·로컬 임베딩 검색, 2D/3D 그래프, 백업/내보내기를 지원한다고 제작자 README가 설명합니다. Codex용 포팅판은 별도 저장소이자 이미 등록된 별도 카드입니다.",
+      "제작자는 Apache-2.0을 안내합니다. 첫 설치 때 npm 패키지와 임베딩 모델을 다운로드하며 Claude Code 모델 서비스의 데이터 정책은 별개입니다."
+    ],
+    "cautions": [
+      "직접 설치·성능·보안 실측은 하지 않았습니다. 자동 추출 대상의 개인정보·비공개 업무 정보는 DB/백업/내보내기 및 다음 AI 문맥에 남을 수 있습니다.",
+      "시크릿 자동 가림은 누락될 수 있습니다. MCP 저장 권한과 시작/종료 훅 실행 권한을 확인하고 민감하지 않은 자료로 먼저 검토하세요.",
+      "기본 SDK 세션 수집은 꺼져 있지만 OBRAIN_CAPTURE_SDK=1은 수집 범위를 넓힙니다. '로컬 저장'을 Claude Code/모델로 전송되지 않음이라는 뜻으로 해석하지 마세요."
+    ],
+    "sourceEvidence": [
+      "https://github.com/sodam-ai/SoDam_O-Brain"
+    ]
+  },
+  {
+    "id": "ai-native-handbook-2026",
+    "title": "지능을 전기처럼 쓰는 시대: AI 네이티브 핸드북 2026",
+    "summary": "전종홍이 AI를 전제로 업무·제품·조직을 재설계하는 관점과 모델·인프라·에이전트 생태계를 설명한 공개 PDF·EPUB",
+    "type": "자료",
+    "categories": [
+      "AI 에이전트",
+      "AI 전환",
+      "교육 자료"
+    ],
+    "tags": [
+      "AI 네이티브",
+      "AX",
+      "MCP",
+      "에이전트",
+      "핸드북"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-25",
+    "url": "https://github.com/hollobit/ai-native",
+    "content": [
+      "저자 전종홍의 공개 책으로 PDF와 EPUB를 공식 저장소에서 제공합니다. 확인한 PDF의 판권면은 v1.4(2026년 10월 24일 고침)입니다.",
+      "파운데이션 모델을 발전소, MCP·A2A를 송전망, 에이전트를 가전제품에 빗대며 AI-Ready/Enabled/First/Native의 전환과 9가지 설계 원칙을 살펴봅니다.",
+      "목차는 인프라, 조직 전환, 산업 사례, 에이전트, 사회·한국 전략의 7부와 증거 점검 질문·용어집 등의 부록으로 구성됩니다."
+    ],
+    "cautions": [
+      "CC BY-NC-ND 4.0: 저자표시·비영리·변경금지. 원문을 번역·개작해 배포하거나 상업적으로 이용하려면 별도 허락을 확인하세요.",
+      "계속 고쳐 펴내는 책이므로 버전·쪽수는 공식 PDF에서 재확인하세요. 읽기 자료 소개이며 내용의 개별 주장 전체를 독립 검증한 것은 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/hollobit/ai-native",
+      "https://hollobit.github.io/ai-native/book.pdf"
+    ]
+  },
+  {
+    "id": "pickle-personal-ai-agent-android",
+    "title": "Pickle: 통화·예약·주문을 돕는 개인 AI 에이전트(Android)",
+    "summary": "Pickle, Inc.의 공식 Android 등록 앱. 통화·예약·주문·웹 작업을 사용자 승인과 연결 계정 권한에 따라 처리한다고 소개한다.",
+    "type": "서비스",
+    "categories": [
+      "AI 에이전트",
+      "업무 자동화"
+    ],
+    "tags": [
+      "Android",
+      "음성 통화",
+      "예약",
+      "앱 연결"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-25",
+    "url": "https://play.google.com/store/apps/details?id=com.pickle.client",
+    "content": [
+      "Google Play에 개발자 Pickle, Inc.의 Android 앱 com.pickle.client가 등록되어 있으며 공식 개발자 사이트도 같은 Play 페이지를 연결합니다.",
+      "앱 설명은 고객센터 통화, 예약·주문, 웹사이트 작업, Gmail·Google Calendar 등 계정 연결을 다룹니다. 지출 또는 되돌리기 어려운 행동은 먼저 승인을 요청한다고 명시합니다.",
+      "앱 내 구매가 표시되며 연결 계정과 제공한 대화·음성·파일은 서비스 운영 및 AI 제공업체 처리에 쓰일 수 있습니다."
+    ],
+    "cautions": [
+      "한국 이용 가능 여부와 무료·유료 기능별 한도는 확인하지 않았습니다. 공식 약관과 개인정보방침의 제공 지역 안내도 서로 달라 가입 전에 현재 지역 표시를 확인해야 합니다.",
+      "위치·연락처·메일·일정·결제 권한은 필요한 범위만 연결하고, 외부 서비스로 처리될 수 있는 개인정보와 통화 상대의 정보를 고려하세요.",
+      "앱 설치·계정 연결·전화·구매를 실제로 시험한 결과가 아닙니다."
+    ],
+    "sourceEvidence": [
+      "https://play.google.com/store/apps/details?id=com.pickle.client",
+      "https://www.pickle.com/",
+      "https://www.pickle.com/privacy-policy",
+      "https://www.pickle.com/terms-of-service"
+    ]
+  },
+  {
+    "id": "kimi-k3-1-pro",
+    "title": "Kimi K3.1 Pro: Kimi 웹·앱·Code·API로 제공되는 모델",
+    "summary": "Moonshot/Kimi가 공식 발표한 1M 토큰 컨텍스트 모델. 서비스 채널은 공개했지만 전체 가중치는 2026년 11월 4일 공개 예정이라고 밝혔다.",
+    "type": "모델",
+    "categories": [
+      "AI 모델",
+      "코딩",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "Kimi",
+      "Moonshot AI",
+      "장문맥",
+      "멀티모달"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-10-25",
+    "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+    "content": [
+      "Kimi 공식 발표는 K3.1 Pro와 더 빠른 Highspeed 변형을 Kimi 웹·모바일, Kimi Work, Kimi Code, Kimi API에서 제공한다고 설명합니다.",
+      "공식 가이드는 API 모델 ID kimi-k3.1-pro / kimi-k3.1-pro-highspeed와 1M 토큰 컨텍스트를 안내합니다. Kimi Code는 /model에서 선택하도록 설명합니다.",
+      "전체 모델 가중치는 2026년 11월 4일까지 공개하겠다고 예고했습니다. API 이용은 Kimi 소비자 멤버십과 별도인 사용량 기반 과금입니다."
+    ],
+    "cautions": [
+      "가중치·오픈 라이선스가 이미 공개됐다고 쓰지 마세요. 공개 예정일과 실제 공개는 다릅니다.",
+      "실제 계정 접근, 지역별 제공, 속도·성능은 시험하지 않았습니다. 기업용은 관리자 활성화가 필요하며 요금·세금은 채널별로 확인하세요.",
+      "공식 가이드는 웹 검색 기능을 업데이트 중이라 당분간 프로덕션에 권장하지 않습니다. 민감한 자료의 전송·보존 조건도 사용 채널별로 확인하세요."
+    ],
+    "sourceEvidence": [
+      "https://www.kimi.ai/blog/kimi-k3-1-pro",
+      "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart",
+      "https://platform.kimi.ai/docs/pricing/chat"
     ]
   }
 ]
