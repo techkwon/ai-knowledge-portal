@@ -8764,5 +8764,143 @@
       "https://cohere.com/enterprise-data-commitments",
       "https://cohere.com/privacy"
     ]
+  },
+  {
+    "id": "comfyui-zip-ties",
+    "title": "Zip Ties for ComfyUI: 워크플로우 연결선 정리 확장",
+    "summary": "ComfyUI 캔버스에서 여러 노드 연결선을 묶음(지퍼타이)으로 묶어 리본 형태로 정리해 보여주는 프런트엔드 전용 확장",
+    "type": "도구",
+    "categories": [
+      "ComfyUI 확장",
+      "개발 도구"
+    ],
+    "tags": [
+      "ComfyUI",
+      "워크플로우",
+      "UI 확장"
+    ],
+    "status": "자료 확인",
+    "importance": 2,
+    "updated": "2026-10-27",
+    "url": "https://github.com/safzanpirani/comfyui-zip-ties",
+    "content": [
+      "공식 GitHub README에 따르면 Z 키를 누른 채 여러 연결선을 가로지르게 드래그하면 그 선들을 하나의 \"타이\"로 묶어 리본처럼 겹쳐 보여주고, 다시 Z를 누른 채 타이를 가로질러 드래그하거나 더블클릭하면 묶음이 풀립니다. 키보드 없이도 캔버스 우클릭 메뉴의 Tie wires로 같은 동작을 할 수 있습니다.",
+      "타이는 색상 변경, 15도 단위 회전(Alt로 자유 회전), 그룹과 함께 이동, 복사/붙여넣기, Undo 등을 지원하며, 워크플로우 JSON의 extra.zipTies 필드에 저장되어 저장·불러오기·실행 취소 시 함께 유지됩니다. 확장이 없는 환경에서 워크플로우를 열어도 연결선 자체는 정상적으로 표시됩니다.",
+      "설치는 ComfyUI-Manager에서 \"Zip Ties\" 검색, Comfy CLI의 comfy node install comfyui-zip-ties, 또는 ComfyUI/custom_nodes에 직접 git clone하는 방식입니다. 순수 프런트엔드 JS 확장으로 별도 노드를 추가하지 않고 Python 의존성도 없습니다.",
+      "공식 문서는 ComfyUI 0.42.0과 프런트엔드 1.57.1(클래식 캔버스·Vue 노드 모드 모두)에서 테스트되었다고 명시하며, 숨겨진 링크 배지에서 그려지는 리라우트 조각은 묶을 수 없다는 한계도 함께 밝히고 있습니다."
+    ],
+    "cautions": [
+      "이 카드는 공식 README 기준 정리이며 실제 설치·조작 테스트는 하지 않았습니다. 복잡한 대형 워크플로우에서의 성능이나 다른 커스텀 노드팩과의 충돌 여부는 직접 확인이 필요합니다.",
+      "MIT 라이선스로 공개되어 있으나, ComfyUI 버전이 명시된 테스트 범위(0.42.0/프런트엔드 1.57.1)를 벗어나면 동작이 다를 수 있습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/safzanpirani/comfyui-zip-ties"
+    ]
+  },
+  {
+    "id": "windows-mcp-agent",
+    "title": "Windows-MCP: AI 에이전트용 Windows 제어 MCP 서버",
+    "summary": "LLM 에이전트가 파일 탐색, 앱 제어, UI 상호작용, QA 테스트 등 Windows 운영체제 작업을 수행할 수 있게 다리 역할을 하는 오픈소스 MCP 서버",
+    "type": "GitHub",
+    "categories": [
+      "MCP",
+      "AI 에이전트",
+      "브라우저 자동화"
+    ],
+    "tags": [
+      "MCP",
+      "Windows",
+      "컴퓨터 사용 에이전트",
+      "UI 자동화"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-27",
+    "url": "https://github.com/CursorTouch/Windows-MCP",
+    "content": [
+      "공식 GitHub README에 따르면 Windows-MCP는 Windows 10/11에서 동작하는 경량 오픈소스 MCP 서버로, 어떤 LLM과도 함께 쓸 수 있고 별도의 컴퓨터 비전이나 전용 파인튜닝 모델에 의존하지 않는다고 설명합니다. 현재 패키지는 Python 3.14 이상을 요구합니다.",
+      "키보드/마우스 조작, 창·UI 상태 캡처 등 UI 자동화 도구 세트를 제공하며, 동작 간 지연은 보통 0.2~0.5초로 시스템 부하와 LLM 추론 속도에 따라 달라진다고 명시합니다. 브라우저 자동화를 위한 DOM 모드도 포함합니다.",
+      "PyPI(uvx windows-mcp 또는 pip install windows-mcp)와 MCP 레지스트리에 등록되어 있으며, 공식 README는 Claude Desktop 확장 디렉터리 기준 200만 명 이상이 사용 중이라고 밝힙니다. 이 프로젝트를 기반으로 만든 에이전트 windows-use도 PyPI에 별도 공개되어 있습니다.",
+      "MIT 라이선스로 전체 소스가 공개되어 있고, 별도 API 키 없이 로컬에서 실행하는 구조입니다."
+    ],
+    "cautions": [
+      "이 카드는 공식 README 기준 정리이며 실제 설치·구동 테스트는 하지 않았습니다.",
+      "AI 에이전트가 실제 Windows 데스크톱을 직접 제어하므로, 실행 권한 범위와 의도치 않은 파일/설정 변경 위험을 테스트 환경에서 먼저 확인해야 합니다. 보안이 중요한 업무 PC에서 바로 사용하는 것은 권장되지 않습니다.",
+      "사용자 수(2M+) 등 수치는 공급자 자체 발표이며 독립적으로 검증되지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/CursorTouch/Windows-MCP"
+    ]
+  },
+  {
+    "id": "openpencil-ai-design-editor",
+    "title": "OpenPencil: Figma 파일을 여는 오픈소스 AI 디자인 에디터",
+    "summary": ".fig 파일을 직접 열고 저장할 수 있는 로컬 우선 오픈소스 디자인 에디터로, Claude Code·Cursor·Codex·Gemini CLI 등 코딩 에이전트가 MCP로 디자인 문서를 직접 편집할 수 있게 지원",
+    "type": "도구",
+    "categories": [
+      "3D·디자인",
+      "AI 코딩",
+      "MCP"
+    ],
+    "tags": [
+      "디자인 도구",
+      "Figma",
+      "MCP",
+      "오픈소스"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-27",
+    "url": "https://openpencil.dev",
+    "content": [
+      "공식 홈페이지에 따르면 OpenPencil은 .fig 파일을 페이지·컴포넌트·인스턴스·변수·오토레이아웃까지 편집 가능한 레이어로 직접 읽고 다시 .fig로 저장할 수 있는 로컬 전용(local-first) 디자인 에디터입니다. 계정이나 서버 연결 없이 디스크의 파일로 동작하며, MIT 라이선스로 에디터·렌더링 엔진·fig 코덱·CLI가 공개되어 있습니다.",
+      "\"AI로 디자인하기\" 기능은 자체 API 키로 어떤 공급자든 연결하거나, 이미 쓰고 있는 코딩 에이전트(Claude Code, Cursor, Windsurf, Codex, Gemini CLI, 그 외 모든 MCP 클라이언트)를 그대로 연결해 자연어로 캔버스를 편집하게 할 수 있다고 설명합니다.",
+      "공식 CLI(openpencil)는 24개 명령(쿼리, 린트, 내보내기, Figma 플러그인 코드 eval 실행 등)을 제공하고, MCP 서버는 122개의 도구를 stdio 또는 HTTP로 노출해 에이전트가 앱이 켜져 있지 않아도 파일을 직접 다루게 합니다. 디자인 결과는 Vue/React 컴포넌트, HTML+Tailwind, Storybook 스토리 등으로 변환해 내보낼 수 있습니다.",
+      "팀 협업·AI 호스팅·SSO 등을 포함한 \"OpenPencil Cloud\"는 초기 접근(Early access) 단계이며, 자체 호스팅(Self-hosted OpenPencil) 기능은 로드맵상 \"다음\" 단계로 아직 공개되지 않았습니다."
+    ],
+    "cautions": [
+      "이 카드는 공식 홈페이지 설명 기준 정리이며 실제 설치·파일 변환·에이전트 연동 테스트는 하지 않았습니다.",
+      "에디터·CLI·fig 코덱 본체는 MIT지만, OpenPencil Cloud(팀 실시간 동기화, 호스팅 AI 등)는 별도 상용/초기 접근 서비스로 라이선스·요금 조건이 다를 수 있습니다. 실제 적용 전 로드맵과 라이선스 범위를 공식 사이트에서 재확인해야 합니다.",
+      "디자인 파일을 외부 AI 공급자 API로 보내 편집을 요청하는 경우, 전달되는 디자인 내용(텍스트, 이미지 등)의 처리 정책을 사용하는 공급자 쪽에서 별도로 확인해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://openpencil.dev"
+    ]
+  },
+  {
+    "id": "lambdadb-memory-retrieval-guide",
+    "title": "지식 그래프 없이 대화 기억 구현하기: 원문 보존 + 검색 기반 메모리",
+    "summary": "긴 대화 전체를 매번 모델에 다시 넣는 대신, 원문을 그대로 저장해두고 질문마다 관련 구간만 검색·재정렬해 가져오는 방식으로 긴 기억을 저렴하고 안정적으로 유지하는 설계 패턴",
+    "type": "가이드",
+    "categories": [
+      "RAG",
+      "정보 탐색",
+      "AI 에이전트"
+    ],
+    "tags": [
+      "장기 기억",
+      "검색 증강",
+      "토큰 비용 절감",
+      "RAG"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-27",
+    "url": "https://lambdadb.ai/blog/ai-memory-fewer-tokens-without-graphs",
+    "content": [
+      "핵심 원리: 대화가 길어질수록 전체 히스토리를 매 요청에 포함시키면 토큰 비용이 늘고 응답이 느려지며, 컨텍스트 창이 가득 차기 전에도 관련 없는 내용이 섞여 모델이 중요한 사실을 덜 신뢰성 있게 활용할 수 있습니다. 이 가이드는 지식 그래프를 만들거나 생성형 LLM으로 요약·정리하는 대신, 원문 텍스트와 타임스탬프를 그대로 보존하고 질문이 들어올 때만 관련 구간을 임베딩 검색 + 재정렬로 찾아오는 방식(LambdaDB 공식 블로그의 SillyMemory 사례)을 제시합니다.",
+      "사용 절차: (1) 대화를 작은 조각(청크)으로 나누고 임베딩을 생성해 저장만 해둔다 — LLM으로 요약·엔티티 추출을 하지 않는다. (2) 새 질문이 오면 그 질문 자체를 임베딩해 키워드+의미 검색을 함께 수행하고, 재정렬(rerank) 모델로 가장 관련 있는 구간만 추려낸다. (3) 추려진 원문 구간을 토큰 예산 안에서 질문·최근 대화와 함께 답변 모델에 전달한다.",
+      "예시(공식 공개 LongMemEval 500문항 평가): 전체 히스토리를 매번 그대로 넣는 방식은 정확도 95.2%에 평균 105,183 입력 토큰이 들었고, 이 검색 기반 방식은 정확도 96.0%(오차범위 내 비슷)에 평균 4,886 입력 토큰(약 95% 감소)으로 비슷한 품질을 보였다고 공식 블로그가 보고합니다.",
+      "적용 조건과 한계: 공식 글 스스로도 현재 방식은 질문마다 검색을 1회만 수행하는 단일 패스이며, 여러 세션에 걸친 복잡한 추론(멀티세션 리즈닝)은 더 개선할 여지가 있다고 밝힙니다(1,000만 토큰 규모 BEAM 벤치마크에서 해당 항목 점수가 상대적으로 낮음). 비용·정확도 수치는 특정 임베딩/재정렬 모델·청크 크기·벤치마크 데이터셋 조건에서 측정된 것으로, 다른 설정에서는 달라질 수 있습니다."
+    ],
+    "cautions": [
+      "이 카드는 공급사(LambdaDB)가 자사 제품으로 수행한 벤치마크 결과이며, 독립 기관의 재현 검증이나 이 사이트의 직접 설치·실측이 아닙니다. \"95% 토큰 절감\", \"96% 정확도\" 등의 수치를 다른 모델·데이터에 그대로 일반화하지 마세요.",
+      "핵심 아이디어(원문 보존 + 질문 시점 검색)는 LambdaDB 같은 특정 상용 서비스 없이도 일반적인 벡터DB/하이브리드 검색 조합으로 구현 가능한 설계 패턴입니다. 특정 제품 도입 여부와 이 설계 원리 자체는 구분해서 참고하세요.",
+      "학생 정보나 민감한 개인 대화를 실제 서비스에 적용할 때는, 원문을 그대로 외부 벡터DB·재정렬 API로 전송하게 되므로 데이터 처리 위치·보존 기간·제3자 전송 정책을 사용하려는 서비스의 공식 문서에서 별도로 확인해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://lambdadb.ai/blog/ai-memory-fewer-tokens-without-graphs",
+      "https://docs.lambdadb.ai/guides/get-started/overview"
+    ]
   }
 ]

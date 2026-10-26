@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/comfyui-zip-ties/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/windows-mcp-agent/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/openpencil-ai-design-editor/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/lambdadb-memory-retrieval-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/cohere-rerank-5-context-focus/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/ai-grading-rubric-vs-binary-design/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/datapitfalls-data-review-mcp/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
