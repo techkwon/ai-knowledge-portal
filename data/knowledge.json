@@ -9135,9 +9135,9 @@
     "updated": "2026-10-29",
     "url": "https://hermes-agent.nousresearch.com/docs/plugins/advanced-delegation",
     "content": [
-      "핵심 원리: 기본 Hermes는 모든 서브에이전트를 하나의 delegation.model/provider로 실행하지만, 이 플러그인은 두 가지 라우팅 모드를 추가합니다. Model routes(model_map)는 작업이 fast/deep/local처럼 미리 정의한 이름 중 하나를 고르게 하고, Profile routes(profile_routes)는 서브에이전트를 다른 Hermes 프로필(고유 모델·자격증명·스킬·SOUL.md 포함)로 통째로 실행하게 합니다. 한 번에 한 모드만 활성화됩니다.",
-      "사용 절차: `hermes plugins install advanced-delegation`으로 설치(Hermes 0.22.5 이상 필요) 후 `hermes delegation config`로 모드를 고르고 라우트를 등록합니다. 대화 중에는 `/delegation model_map` 같은 명령으로 모드를 전환할 수 있으며, `--now`를 붙이면 현재 대화에 즉시 적용되지만 프롬프트 캐시가 한 번 끊깁니다.",
-      "활용: 간단한 조회/요약 작업은 저비용 모델로, 어려운 디버깅은 고성능 모델로 자동 분기하거나, 특정 서브작업만 별도 자격증명·스킬을 가진 프로필로 격리 실행하고 싶을 때 쓸 수 있습니다."
+      "핵심 원리: 기본 Hermes는 delegation.model/provider를 사용하고 설정이 없으면 부모 모델을 따릅니다. 플러그인은 model_map(사전 등록한 fast/deep/local 등의 모델 경로)과 profile_routes(다른 Hermes 프로필의 모델·자격증명·스킬·SOUL.md) 중 한 모드를 활성화합니다. 라우트를 선택하지 않은 작업은 해당 모드의 기본 라우트를, 이것도 없으면 부모 모델을 사용합니다. 두 확장 모드에서는 기본 delegation.model/provider 설정을 사용하지 않습니다.",
+      "사용 절차: Hermes 0.22.5 이상에서 `hermes plugins install advanced-delegation`으로 설치한 뒤 `hermes delegation config`로 모드와 라우트를 등록합니다. 설치·설정은 작업을 위임하는 프로필별로 하며 대상 프로필은 작동하는 모델 설정을 갖추면 됩니다. `/delegation model_map` 등으로 저장한 변경은 기본적으로 다음 세션(`/new`)부터 적용됩니다. 지원되는 Hermes에서 `--now`로 현재 대화에도 적용할 수 있지만 도구 스키마가 바뀌어 프롬프트 캐시가 한 번 끊기고 다음 요청 비용이 늘 수 있습니다.",
+      "활용: 작업에 따라 사전 등록한 저비용·고성능·로컬 모델 경로를 고르거나 다른 프로필의 설정으로 서브작업을 실행할 때 쓸 수 있습니다. 공급자 경로는 이미 구성된 자격증명을 사용하며, 경로의 원시 키·엔드포인트를 모델이 자유롭게 만들어 도구 인자로 넘기는 방식은 아닙니다. 프로필 선택 자체를 안전한 OS 격리로 과신하지 말고, 대상 프로필이 상속하는 자격증명과 터미널 권한을 확인해야 합니다."
     ],
     "cautions": [
       "Profile routes는 나열된 프로필의 자격증명·크리덴셜 풀·SOUL.md·터미널 정책까지 서브에이전트가 그대로 쓰게 되므로, 키·터미널 접근을 믿고 맡길 프로필만 등록해야 한다고 공식 경고가 명시되어 있습니다.",
@@ -9151,7 +9151,7 @@
   {
     "id": "artificial-analysis-intelligence-index-v5",
     "title": "Artificial Analysis Intelligence Index v5: 모델 성능을 비교하는 독립 복합 벤치마크",
-    "summary": "수학·과학·코딩·추론 등 9개 평가를 종합한 독립 기관(Artificial Analysis)의 복합 벤치마크로, 모델별 점수·비용·속도를 공개 웹에서 비교할 수 있는 객관적 참고 자료",
+    "summary": "Artificial Analysis가 자체 방법론으로 9개 평가를 합산하는 제3자 복합 지수. 모델별 점수·작업당 비용·생성 시간을 비교할 수 있지만 모든 업무의 보편적 성능 순위를 뜻하지는 않음",
     "type": "평가 자료",
     "categories": [
       "AI 모델 평가"
@@ -9167,17 +9167,18 @@
     "updated": "2026-10-29",
     "url": "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index",
     "content": [
-      "핵심 내용: Frontier Code 2.0, Terminal-Bench-Science, GPQA Diamond, Humanity's Last Exam 등 9개의 어려운 평가를 가중 합산해 하나의 지능 지수 점수로 제공하는 독립 3자 벤치마크입니다. 모델별 점수뿐 아니라 '점수 대비 비용', '작업당 토큰 사용량', '작업당 처리 시간' 등을 같은 페이지에서 비교할 수 있습니다.",
-      "활용: 커뮤니티에서 종종 벌어지는 '어느 모델이 더 낫다'는 주관적 인상 비교 대신, 공개된 독립 기관의 복합 점수·비용·속도 그래프를 참고 지표로 제시할 수 있습니다. 같은 사이트에 법률·의료·에이전트형 업무 등 특화 벤치마크(Harvey LAB, MLCR 등)도 함께 제공됩니다.",
-      "예시 활용법: 여러 모델을 두고 어떤 것을 쓸지 고민될 때, 커뮤니티의 개인적 느낌만 참고하기보다 이 지수의 '점수 대비 비용' 사분면에서 자신의 용도(저비용 우선/고성능 우선)에 맞는 모델을 먼저 추려보고, 실제 자기 업무로 소규모 테스트를 해보는 순서를 권장할 수 있습니다."
+      "구성: 공식 v5.0 방법론은 AA-Briefcase v1.1, AutomationBench-AA, GDP.pdf, FrontierCode 2.0, Terminal-Bench 4.0, AA-Omniscience v1.1, HLE-Diamond, CritPt v2(Hard Subset), Terminal-Bench-Science 0.1.0의 9개 평가를 사용합니다. 지식 업무·코딩·과학·일반의 네 범주에 각각 25%를 배정하고 범주 안의 평가별 가중치로 종합 점수를 계산합니다. GPQA Diamond나 일반 HLE를 그대로 포함하는 구성으로 혼동하지 말아야 합니다.",
+      "비교 화면: 점수, 지수 작업당 가중 평균 비용, 추론·답변 출력 토큰 수, 작업당 가중 평균 디코딩 시간을 볼 수 있습니다. 속도 그래프는 첫 토큰 대기(TTFT)와 부가 처리 시간을 제외하므로 실제 업무의 전체 완료 시간과는 다릅니다. 다른 업무용 별도 평가도 제공되지만 지능 지수에 포함된 평가와 구분해야 합니다.",
+      "활용: 같은 지수 버전과 모델·추론 설정에서 점수와 비용을 참고해 후보를 좁힌 뒤 실제 자기 업무로 소규모 검증을 하는 순서가 유용합니다. 가격·추론 예산·평가 하네스가 달라지면 결과도 달라질 수 있으며, 공개 그래프의 평가 비용을 개인 구독료나 자기 업무의 실제 비용으로 곧바로 환산하지 마세요."
     ],
     "cautions": [
-      "벤치마크 점수는 실제 업무 성능과 반드시 일치하지 않으며, 특정 평가셋에 최적화된 모델이 실제 사용 사례에서는 다르게 느껴질 수 있습니다.",
+      "주로 텍스트 기반 영어 평가이며 이미지·음성·다국어 평가는 별도로 이뤄집니다. 자체 설계·가중치와 일부 비공개 평가를 포함하므로 제3자 측정이라는 사실이 무편향성이나 모든 사용 사례의 우수성을 보증하지는 않습니다.",
       "일부 모델은 '공개 API 없음'으로 표시되어 비용/속도 데이터가 제공되지 않습니다.",
       "직접 벤치마크를 재현·실행하지 않았으며 Artificial Analysis가 공개한 점수를 그대로 인용한 것입니다."
     ],
     "sourceEvidence": [
-      "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index"
+      "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index",
+      "https://artificialanalysis.ai/methodology/intelligence-benchmarking"
     ]
   },
   {
@@ -9197,17 +9198,21 @@
     "status": "자료 확인",
     "importance": 3,
     "updated": "2026-10-29",
-    "url": "https://x.com/GoogleWorkspace/status/2114764745064493426",
+    "url": "https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html",
     "content": [
-      "핵심 내용: Google Workspace 공식 계정이 2026-10-26 발표한 바에 따르면 Google Drive와 Google Docs 전반에 네이티브 Markdown 지원이 적용되어, .md 파일을 다른 형식으로 변환하지 않고 Drive에서 바로 미리보기하거나 Docs에서 열어 편집하고 실시간으로 공동 작업할 수 있습니다.",
-      "활용: AI 도구나 코드 저장소에서 생성되는 README, 노트, 산출물이 대부분 .md 형식인 경우가 많은데, 기존에는 Google Docs 형식으로 변환해야 공유·협업이 편했던 과정을 생략하고 원본 Markdown 그대로 Drive/Docs 생태계에서 다룰 수 있게 되었습니다."
+      "공식 안내: Google은 2026-10-05 Workspace 업데이트에서 .md·.markdown 파일을 Drive에 그대로 저장해 렌더링 미리보기하고, Docs에서 파일 형식을 바꾸지 않은 채 편집·실시간 공동작업할 수 있다고 발표했습니다. 10-26 개발자 블로그와 공식 X 계정은 이 기능을 다시 소개했습니다. 최초 안내는 10-05부터 최대 15일 점진 배포이며 모든 Workspace 고객과 개인 Google 계정이 대상이라고 명시합니다.",
+      "사용 절차: Markdown 파일을 Drive에 업로드한 뒤 미리보기에서 Markdown/Preview를 전환하거나, 파일을 두 번 클릭해 Docs의 Markdown Mode로 엽니다. 문서 제목 옆 .md 표시로 원래 파일 형식을 확인할 수 있습니다. 공동 편집·댓글·공유와 변경 이력을 활용하되 Docs 문서로 변환된 것으로 혼동하지 마세요.",
+      "활용과 제한: README·노트·AI 산출물을 Markdown 원본으로 협업할 때 유용합니다. 다만 Docs의 스마트 칩은 텍스트나 링크로 바뀌고, HTML 서식은 일반 텍스트가 되며, 글자색·하이라이트·텍스트 정렬은 제거된다고 공식 도움말은 설명합니다. 원본 형식 유지가 모든 Docs 서식의 보존을 뜻하지는 않습니다."
     ],
     "cautions": [
-      "발표 시점 기준 iOS 앱에서는 아직 지원되지 않는다는 사용자 댓글이 있었으나, 추후 롤아웃 범위가 바뀔 수 있어 실제 사용 전 각자 환경에서 재확인이 필요합니다.",
-      "로컬 디스크에 있는 .md 파일을 업로드하지 않고 바로 포맷된 상태로 열어보는 기능까지 지원하는지는 이 발표만으로 확인되지 않습니다.",
-      "직접 사용해 실측하지 않았으며 공식 발표 내용만 확인한 것입니다."
+      "공식 웹 안내를 확인한 것이며 iOS·Android 등 플랫폼별 세부 동작은 직접 테스트하지 않았습니다. 사용자 댓글만으로 특정 앱의 지원 여부를 확정하지 않습니다.",
+      "이 절차는 파일을 Drive에 업로드해 다루는 기능이며 업로드 없는 로컬·오프라인 Markdown 뷰어를 뜻하지 않습니다. 민감한 파일은 조직의 클라우드 저장·공유 정책을 먼저 확인하세요.",
+      "직접 업로드·편집·협업 테스트는 하지 않았습니다. 서식이 달라졌다면 공식 도움말은 파일의 버전 기록에서 원본 복원을 안내합니다."
     ],
     "sourceEvidence": [
+      "https://workspaceupdates.googleblog.com/2026/10/preview-edit-and-collaborate-on-Markdown-files-natively-across-Drive-and-Docs.html",
+      "https://developers.googleblog.com/preview-edit-and-collaborate-on-markdown-md-files-natively-in-google-docs-and-drive/",
+      "https://support.google.com/docs/answer/18289341",
       "https://x.com/GoogleWorkspace/status/2114764745064493426"
     ]
   }
