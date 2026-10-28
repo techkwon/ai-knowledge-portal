@@ -9079,5 +9079,136 @@
       "https://github.com/flowhmr/flowhmr",
       "https://huggingface.co/fafsaf1/flowhmr-0.46B"
     ]
+  },
+  {
+    "id": "anthropic-discovering-vulnerabilities-with-claude",
+    "title": "Claude로 Chrome·Safari·Android·Windows·Linux의 치명적 취약점 발견",
+    "summary": "Anthropic이 미공개 내부 연구 모델로 브라우저·OS의 5가지 실제 공격 체인(크롬 원격코드실행, 사파리 SOP 우회, 안드로이드 잠금화면 우회, 윈도우 원격 DoS, 리눅스 제로클릭 RCE)을 발견하고 조정된 취약점 공개(90일) 절차로 각 벤더에 신고·패치한 공식 사례",
+    "type": "연구",
+    "categories": [
+      "AI 보안",
+      "AI 리서치"
+    ],
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "취약점 연구",
+      "보안",
+      "CVE"
+    ],
+    "status": "자료 확인",
+    "importance": 5,
+    "updated": "2026-10-29",
+    "url": "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+    "content": [
+      "핵심 내용: Anthropic은 공개하지 않은 내부 연구 모델로 수개월에 걸쳐 크롬 V8·Safari JavaScriptCore·Android 기기간 전송 프로토콜·Windows 커널 QUIC 구현·Linux 커널 네트워킹 스택에서 다단계 공격 체인 5건을 직접 작성했습니다. 모두 코디네이티드 취약점 공개(90일 패치 기한, 이후 45일 추가 유예) 절차를 따라 각 벤더(Google, Apple, Microsoft, 리눅스 커뮤니티)에 신고됐고, 크롬은 62개 CVE가 할당·패치(Chrome 156)됐으며 윈도우 취약점은 CVE-2026-33096, 리눅스 커널 취약점은 CVE-2026-98432로 각각 공개 패치됐습니다.",
+      "방법론 인사이트: 다수의 스캐닝 에이전트를 병렬로 돌리고 스캐너별로 추가로 찾아낸 취약점 수를 측정해 커버리지를 동적으로 추적하는 플랫폼을 구축했다고 설명합니다. 전략은 순수 커버리지 기반, 목표 기반(이 앱이 고객 데이터를 노출하는가), 위협모델 기반(문서화된 위협모델을 우회하는가) 등으로 나뉘며, 확인된 발견마다 자동 변종 분석을 추가로 수행합니다.",
+      "실무 교훈: 기존 취약점 백로그를 없애는 것만으로는 절반만 해결되며, 신규 취약점이 코드베이스에 유입되는 속도를 PR 시점에서 스캔해 낮추는 것이 나머지 절반이라는 운영 교훈을 제시합니다. 이를 위해 Claude Code 플러그인(보안 가이드)을 공개 저장소로 배포했습니다."
+    ],
+    "cautions": [
+      "이 내부 연구 모델은 공개 제품이 아니며, 기재된 다섯 사례는 모두 사전 보고·벤더 패치가 완료된 뒤 공개된 것으로, 재현 가능한 공격 코드는 포함되어 있지 않습니다.",
+      "방어자용으로 Anthropic의 Cyber Verification Program(심사를 통과한 보안 전문가 대상 고급 사이버 역량 제공)이 확장 운영 중이라고 언급되나, 일반 사용자에게 바로 열려 있는 서비스는 아닙니다.",
+      "직접 재현·실측하지 않았으며, 수치(CVE 개수, 패치 시점 등)는 Anthropic 공식 발표를 그대로 인용한 것입니다."
+    ],
+    "sourceEvidence": [
+      "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude"
+    ]
+  },
+  {
+    "id": "hermes-agent-advanced-delegation-plugin",
+    "title": "Hermes Agent Advanced Delegation: 서브에이전트에 모델/프로필 라우팅 추가하기",
+    "summary": "Hermes Agent 공식 플러그인으로, 기존 단일 delegation 모델 대신 작업별로 이름이 붙은 모델 라우트(model_map) 또는 프로필 라우트(profile_routes)를 골라 서브에이전트를 실행할 수 있게 하는 공식 확장",
+    "type": "GitHub",
+    "categories": [
+      "AI 에이전트",
+      "에이전트"
+    ],
+    "tags": [
+      "Hermes Agent",
+      "서브에이전트",
+      "delegation",
+      "Nous Research",
+      "플러그인"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-29",
+    "url": "https://hermes-agent.nousresearch.com/docs/plugins/advanced-delegation",
+    "content": [
+      "핵심 원리: 기본 Hermes는 모든 서브에이전트를 하나의 delegation.model/provider로 실행하지만, 이 플러그인은 두 가지 라우팅 모드를 추가합니다. Model routes(model_map)는 작업이 fast/deep/local처럼 미리 정의한 이름 중 하나를 고르게 하고, Profile routes(profile_routes)는 서브에이전트를 다른 Hermes 프로필(고유 모델·자격증명·스킬·SOUL.md 포함)로 통째로 실행하게 합니다. 한 번에 한 모드만 활성화됩니다.",
+      "사용 절차: `hermes plugins install advanced-delegation`으로 설치(Hermes 0.22.5 이상 필요) 후 `hermes delegation config`로 모드를 고르고 라우트를 등록합니다. 대화 중에는 `/delegation model_map` 같은 명령으로 모드를 전환할 수 있으며, `--now`를 붙이면 현재 대화에 즉시 적용되지만 프롬프트 캐시가 한 번 끊깁니다.",
+      "활용: 간단한 조회/요약 작업은 저비용 모델로, 어려운 디버깅은 고성능 모델로 자동 분기하거나, 특정 서브작업만 별도 자격증명·스킬을 가진 프로필로 격리 실행하고 싶을 때 쓸 수 있습니다."
+    ],
+    "cautions": [
+      "Profile routes는 나열된 프로필의 자격증명·크리덴셜 풀·SOUL.md·터미널 정책까지 서브에이전트가 그대로 쓰게 되므로, 키·터미널 접근을 믿고 맡길 프로필만 등록해야 한다고 공식 경고가 명시되어 있습니다.",
+      "Hermes 0.22.0~0.22.4는 설치 자체가 거부되고, 0.22.0 미만에서는 설치는 되지만 동작하지 않고 경고만 남깁니다.",
+      "직접 설치·구성 실행은 하지 않았으며 공식 문서 내용만 확인한 것입니다."
+    ],
+    "sourceEvidence": [
+      "https://hermes-agent.nousresearch.com/docs/plugins/advanced-delegation"
+    ]
+  },
+  {
+    "id": "artificial-analysis-intelligence-index-v5",
+    "title": "Artificial Analysis Intelligence Index v5: 모델 성능을 비교하는 독립 복합 벤치마크",
+    "summary": "수학·과학·코딩·추론 등 9개 평가를 종합한 독립 기관(Artificial Analysis)의 복합 벤치마크로, 모델별 점수·비용·속도를 공개 웹에서 비교할 수 있는 객관적 참고 자료",
+    "type": "평가 자료",
+    "categories": [
+      "AI 모델 평가"
+    ],
+    "tags": [
+      "벤치마크",
+      "모델 비교",
+      "Artificial Analysis",
+      "LLM 평가"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-29",
+    "url": "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index",
+    "content": [
+      "핵심 내용: Frontier Code 2.0, Terminal-Bench-Science, GPQA Diamond, Humanity's Last Exam 등 9개의 어려운 평가를 가중 합산해 하나의 지능 지수 점수로 제공하는 독립 3자 벤치마크입니다. 모델별 점수뿐 아니라 '점수 대비 비용', '작업당 토큰 사용량', '작업당 처리 시간' 등을 같은 페이지에서 비교할 수 있습니다.",
+      "활용: 커뮤니티에서 종종 벌어지는 '어느 모델이 더 낫다'는 주관적 인상 비교 대신, 공개된 독립 기관의 복합 점수·비용·속도 그래프를 참고 지표로 제시할 수 있습니다. 같은 사이트에 법률·의료·에이전트형 업무 등 특화 벤치마크(Harvey LAB, MLCR 등)도 함께 제공됩니다.",
+      "예시 활용법: 여러 모델을 두고 어떤 것을 쓸지 고민될 때, 커뮤니티의 개인적 느낌만 참고하기보다 이 지수의 '점수 대비 비용' 사분면에서 자신의 용도(저비용 우선/고성능 우선)에 맞는 모델을 먼저 추려보고, 실제 자기 업무로 소규모 테스트를 해보는 순서를 권장할 수 있습니다."
+    ],
+    "cautions": [
+      "벤치마크 점수는 실제 업무 성능과 반드시 일치하지 않으며, 특정 평가셋에 최적화된 모델이 실제 사용 사례에서는 다르게 느껴질 수 있습니다.",
+      "일부 모델은 '공개 API 없음'으로 표시되어 비용/속도 데이터가 제공되지 않습니다.",
+      "직접 벤치마크를 재현·실행하지 않았으며 Artificial Analysis가 공개한 점수를 그대로 인용한 것입니다."
+    ],
+    "sourceEvidence": [
+      "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index"
+    ]
+  },
+  {
+    "id": "google-workspace-native-markdown-support",
+    "title": "Google Drive·Docs 네이티브 Markdown(.md) 지원",
+    "summary": "Google Drive와 Docs에서 .md 파일을 변환 없이 바로 미리보기·편집·실시간 협업할 수 있게 된 공식 업데이트",
+    "type": "공식 발표",
+    "categories": [
+      "생산성 도구"
+    ],
+    "tags": [
+      "Google Workspace",
+      "Google Drive",
+      "Google Docs",
+      "Markdown"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-29",
+    "url": "https://x.com/GoogleWorkspace/status/2114764745064493426",
+    "content": [
+      "핵심 내용: Google Workspace 공식 계정이 2026-10-26 발표한 바에 따르면 Google Drive와 Google Docs 전반에 네이티브 Markdown 지원이 적용되어, .md 파일을 다른 형식으로 변환하지 않고 Drive에서 바로 미리보기하거나 Docs에서 열어 편집하고 실시간으로 공동 작업할 수 있습니다.",
+      "활용: AI 도구나 코드 저장소에서 생성되는 README, 노트, 산출물이 대부분 .md 형식인 경우가 많은데, 기존에는 Google Docs 형식으로 변환해야 공유·협업이 편했던 과정을 생략하고 원본 Markdown 그대로 Drive/Docs 생태계에서 다룰 수 있게 되었습니다."
+    ],
+    "cautions": [
+      "발표 시점 기준 iOS 앱에서는 아직 지원되지 않는다는 사용자 댓글이 있었으나, 추후 롤아웃 범위가 바뀔 수 있어 실제 사용 전 각자 환경에서 재확인이 필요합니다.",
+      "로컬 디스크에 있는 .md 파일을 업로드하지 않고 바로 포맷된 상태로 열어보는 기능까지 지원하는지는 이 발표만으로 확인되지 않습니다.",
+      "직접 사용해 실측하지 않았으며 공식 발표 내용만 확인한 것입니다."
+    ],
+    "sourceEvidence": [
+      "https://x.com/GoogleWorkspace/status/2114764745064493426"
+    ]
   }
 ]
