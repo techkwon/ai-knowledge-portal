@@ -9457,5 +9457,78 @@
       "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
       "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
     ]
+  },
+  {
+    "id": "openjutsu-video-character-swap",
+    "title": "Openjutsu: 오픈 가중치 기반 영상 인물·오브젝트 교체 도구",
+    "summary": "영상과 캐릭터 사진을 넣으면 카메라·컷·사운드트랙을 유지한 채 영상 속 인물을 교체하는 오픈소스 ComfyUI 기반 앱. MiniMax H3·SAM 3.1·Qwen3-VL을 자신의 GPU에서 구동",
+    "type": "오픈소스 도구",
+    "categories": [
+      "영상 생성·편집",
+      "오픈소스"
+    ],
+    "tags": [
+      "ComfyUI",
+      "MiniMax H3",
+      "SAM 3.1",
+      "Qwen3-VL",
+      "영상 편집"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-31",
+    "url": "https://github.com/D3voz/openjutsu",
+    "content": [
+      "Next.js 프런트엔드가 ComfyUI 워크플로 위에서 동작하는 영상 인물/오브젝트 교체 앱입니다. 영상과 캐릭터 사진을 올리면 비디오 속 주요 인물을 교체하거나 머리·옷을 바꾸고, 특정 사물을 추가·제거할 수 있습니다. 카메라 움직임·컷·사운드트랙은 그대로 유지됩니다.",
+      "영상은 MiniMax H3로 생성하고, 인물 추적은 SAM 3.1, 장면·인물 설명은 Qwen3-VL(8B INT8 기본, 4B FP8/Gemma 4 E2B INT8 선택 가능)을 사용합니다. 전부 오픈 가중치 모델이며 자신의 GPU에서 로컬로 구동합니다.",
+      "Simple(단일 인물 교체)·Advanced(최대 4명, 역할별 교체, 몽타주 지원)·Object swap(변경/제거/배경 교체) 세 모드를 제공하며, Fix faces(얼굴 복원)·Fix colours(색보정) 후처리 기능도 포함합니다.",
+      "참고 성능: 4060 Ti 기준 480p 6초 클립 생성에 약 6~13분이 소요되며(대부분 H3 샘플링 단계), 1080p는 736p 대비 약 2.5배 느립니다. 얼굴 복원은 768p 17초 영상(4청크) 기준 약 28분(모델 로딩 포함)입니다."
+    ],
+    "cautions": [
+      "앱 코드 자체는 MIT 라이선스지만, Fix faces 기능이 의존하는 InsightFace(buffalo_l)는 비영리 연구용으로만 라이선스되어 있고, Ultralytics YOLO 가중치(Bingsu/adetailer)는 AGPL-3.0입니다. 상업적 사용 전 각 모델 라이선스를 반드시 개별 확인해야 합니다.",
+      "거울·창문 등의 반사에는 아직 작동하지 않으며, 반사 속 인물은 원본 그대로 남아 교체 인물의 외형이 반사에 다시 나타날 수 있습니다.",
+      "공식 Comfy Developer Platform 배포 경로는 저장소 문서에 안내되어 있으나 '아직 테스트되지 않음(Not tested yet)'이라고 명시되어 있습니다.",
+      "직접 설치·실행·성능 재현은 하지 않았으며, 저장소 README에 기재된 설명과 수치를 확인한 것입니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/D3voz/openjutsu"
+    ]
+  },
+  {
+    "id": "upstage-solar-work-pc-agent",
+    "title": "Upstage Solar Work: 내 PC 파일에서 작업을 끝내는 에이전트 데스크톱 앱",
+    "summary": "Upstage가 공개한 데스크톱 AI 에이전트. 사용자가 고른 폴더 안에서 문서·보고서 작성, 반복 업무 자동화를 수행하며 파일 삭제나 외부 공유 시에만 확인을 요청. 한글(HWPX)·스캔 문서 인식 지원, 현재 프리릴리스(rc) 단계",
+    "type": "제품 출시",
+    "categories": [
+      "AI 에이전트",
+      "업무 자동화"
+    ],
+    "tags": [
+      "Upstage",
+      "Solar",
+      "데스크톱 에이전트",
+      "HWPX",
+      "문서 자동화"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-10-31",
+    "url": "https://upstageai.github.io/solar-work-release/",
+    "content": [
+      "Upstage의 Solar Work는 사용자가 지정한 폴더 안에서 파일을 읽고 쓰며 문서·발표자료·보고서를 자연어 지시로 생성·수정하는 macOS/Windows/Linux 데스크톱 앱입니다. 웹·모바일(app.solarwork.dev)에서도 설치 없이 사용할 수 있습니다.",
+      "핵심 동작 원칙: 읽기·정리·새 파일 생성 같은 작업은 알아서 수행하고, 파일 삭제·휴지통 비우기·외부 공개 공유·다른 폴더/컴퓨터 설정 변경처럼 되돌리기 어렵거나 범위를 벗어나는 작업만 사전에 이유를 설명하고 확인을 요청합니다.",
+      "한글(HWPX) 문서, 스캔된 계약서, 사진으로 찍은 영수증을 그대로 읽어 처리할 수 있고, 카카오·Gmail·Notion·Jira·Slack 등 기존 서비스 계정을 연결해 대화 중 바로 조회·작업할 수 있습니다(가져오기는 자동, 발송·변경은 확인 후 진행).",
+      "로그인 후 Upstage 자체 Solar 모델을 무료 사용량 내에서 쓸 수 있고, Upstage 콘솔 API 키를 연결하면 한도 없이, GPT·Claude·Gemini 등 다른 모델도 선택해 사용할 수 있습니다. 사내 설치형(기업용) 버전은 서버·데이터를 내부에 두고 승인·감사 로그·권한 관리를 제공합니다.",
+      "현재 다운로드 가능한 버전은 프리릴리스(-rc) 단계이며, GitHub 릴리스 페이지에 SHA256SUMS로 받은 파일의 무결성을 검증하는 절차가 안내되어 있습니다."
+    ],
+    "cautions": [
+      "공식 페이지 기준 아직 정식 출시가 아닌 프리릴리스(-rc) 단계입니다. 기능과 동작이 추후 버전에서 바뀔 수 있습니다.",
+      "메일·채팅 연동, 발표자료 생성 등 데모 화면의 구체적 내용(회사명·수치 등)은 페이지 자체에 '시뮬레이션'이라고 명시되어 있어 실제 결과물의 품질을 보장하는 것은 아닙니다.",
+      "비밀번호·인증서 등 민감 파일은 애초에 보지 못하도록 설계되었다고 소개하나, 이는 제작사의 자체 설명이며 독립적인 보안 검증을 거친 것은 아닙니다.",
+      "직접 설치·실행·연동 테스트는 하지 않았으며, 공식 공개 페이지에 기재된 설명을 확인한 것입니다."
+    ],
+    "sourceEvidence": [
+      "https://upstageai.github.io/solar-work-release/"
+    ]
   }
 ]
