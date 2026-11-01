@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/nvidia-motionbricks-realtime-character-motion/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/veed-dubbing-api-lip-sync-localization/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/trakkr-zombie-stats-ai-citation-audit/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/atelier-launch-idea-validation-claude-code/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/harvard-cmsa-math-research-ai-summit-2026/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
