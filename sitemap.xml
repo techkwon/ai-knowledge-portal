@@ -2,6 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/vercel-agent-desktop-accessibility/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/suno-official-mcp-beta/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/pymupdf-office-hwp-extraction/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/elevenlabs-realtime-voice-agents/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/koevd-korean-safety-benchmark/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/minimax-m3-1-flash-local-gguf/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/pruna-p-h3-image/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/higgsfield-mangaka/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/rea-video-shot-analysis/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/nvidia-auto-ontology/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/nvidia-dory-1-0-4b/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/openai-scan-cad-manufacturing-review-workflow/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/openai-pando-agent-built-system-verification/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/amazon-bedrock-agent-cost-cache-finops-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/n8n-3-1-agent-versioning-mcp-session-logs/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/finedna-carbon-x-training-data/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/checkpoint-haiou-prompt-adware-report/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/comfyui-moss-manga-panel-layouts/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/idol-single-image-3d-gaussian-splat/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/nvidia-motionbricks-realtime-character-motion/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/veed-dubbing-api-lip-sync-localization/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techkwon.github.io/ai-knowledge-portal/knowledge/trakkr-zombie-stats-ai-citation-audit/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
