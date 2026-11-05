@@ -10609,5 +10609,153 @@
       "https://github.com/speridlabs/idol-sdk/blob/main/LICENSE",
       "https://huggingface.co/Comfy-Org/Idol"
     ]
+  },
+  {
+    "id": "openai-images-2-6",
+    "title": "OpenAI Images 2.6: GIF 출력 추가, 편집 일관성·속도 개선",
+    "summary": "ChatGPT·Codex·API에 공개된 이미지 생성 모델 업데이트. 반복 애니메이션 GIF 출력을 추가하고, API에서 GPT-Image-2.6 Flare(저지연)와 Sunburst(고품질) 두 변형을 선택할 수 있다.",
+    "type": "제품 출시",
+    "categories": [
+      "이미지 생성",
+      "AI 모델 출시"
+    ],
+    "tags": [
+      "OpenAI",
+      "GPT-Image-2.6",
+      "GIF",
+      "이미지 편집",
+      "API"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-11-06",
+    "url": "https://openai.com/index/introducing-images-2-6/",
+    "content": [
+      "공식 발표(2026-11-04)에 따르면 Images 2.6은 ChatGPT, Codex, API에 적용되며 이전보다 약 50% 빠르게 이미지를 생성한다고 설명한다. API에서는 저지연의 GPT-Image-2.6 Flare와, 품질을 중간·높음으로 올려 편집 일관성을 높인 Sunburst 중에서 선택한다.",
+      "새로 추가된 GIF 출력은 스프라이트시트 방식이 아니라 모델이 직접 반복 애니메이션 프레임을 생성하는 기능으로, 마스코트·제품 비주얼에 움직임을 더하는 용도로 소개됐다.",
+      "API에는 이미지 마크업(수정할 위치 지정), SVG 내보내기, '복잡도' 매개변수(장면에 담을 요소 수 조절)가 추가됐다. 복잡도와 품질은 서로 다른 축으로, 복잡도는 빠른 편집에 낮게 설정하는 것을 공식 가이드가 권장한다.",
+      "가격은 공식 가격 페이지(developers.openai.com/api/docs/pricing#image-generation)를 확인해야 하며, 발표문 자체에는 구체적 단가가 나와 있지 않다."
+    ],
+    "cautions": [
+      "발표문의 Flare 최소 6초, 50% 속도 향상 등 수치는 OpenAI 자체 소개 자료의 수치이며 독립 재현 측정은 아니다. 실제 체감 속도는 품질·복잡도 설정, 프롬프트 복잡도에 따라 달라질 수 있다.",
+      "GIF 생성이 모든 플랜/지역에서 동일하게 제공되는지, 생성 길이·해상도 제한이 있는지는 공식 가격·이용정책 페이지에서 최신 상태를 재확인해야 한다.",
+      "직접 설치나 API 호출, GIF 생성 테스트는 하지 않았다. 본 카드는 공식 발표문 내용을 정리한 것이다."
+    ],
+    "sourceEvidence": [
+      "https://openai.com/index/introducing-images-2-6/",
+      "https://developers.openai.com/api/docs/pricing#image-generation"
+    ]
+  },
+  {
+    "id": "gif-maker-skill-images-2-6",
+    "title": "gif-maker-skill: Claude Code/Codex로 반복 루프 GIF를 만드는 오픈소스 스킬",
+    "summary": "프롬프트 한 줄이나 캐릭터 이미지 한 장으로 끊김 없이 반복되는 GIF를 만드는 Claude Code/Codex 스킬. OPENAI_API_KEY가 있으면 GPT-Image-2.6의 GIF 출력을 바로 받고, 없으면 6칸 스프라이트시트를 그려 잘라 붙이는 방식으로 동작한다.",
+    "type": "스킬",
+    "categories": [
+      "이미지 생성",
+      "AI 코딩",
+      "콘텐츠 제작"
+    ],
+    "tags": [
+      "GIF",
+      "Claude Code",
+      "Codex CLI",
+      "GPT-Image-2.6",
+      "스프라이트시트"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-11-06",
+    "url": "https://github.com/jkf87/gif-maker-skill",
+    "content": [
+      "공식 README에 따르면 기본 경로(`--via auto`)는 `OPENAI_API_KEY` 존재 여부로 두 방식 중 하나를 고른다: 키가 있으면 GPT-Image-2.6 Flare/Sunburst의 GIF 출력을 직접 받고, 키가 없으면 ChatGPT 구독+Codex CLI로 움직임을 6칸 스프라이트시트 한 장에 그린 뒤 잘라 GIF로 합친다.",
+      "제작자가 2026-11-05 기준 실측했다고 밝힌 처리 시간은 키 있음(Flare 12~14초, Sunburst 24초, 512px 9프레임), 키 없음(시트 방식 23~60초), SVG 내보내기(49초, 키 필요)다.",
+      "키 없는 경로를 쓰는 이유로, 2026-11-05 기준 Codex CLI(0.165·0.166) 이미지 도구가 prompt·참고 이미지·투명 배경만 받고 GIF·SVG·품질·복잡도 옵션이 없다는 점을 명시한다.",
+      "설치는 `git clone`으로 Claude Code 스킬 폴더에 넣고 `pip install pillow`(ffmpeg는 --mp4 사용 시만 필요), 키 없는 경로는 Codex CLI 로그인이 필요하다. MIT 라이선스, 유튜버 '코난쌤'이 OpenAI Images 2.6 소개 영상 제작 과정에서 만든 스킬이다."
+    ],
+    "cautions": [
+      "실측 처리시간·초당 비용은 제작자 1인의 환경·시점 기준이며, 독립 재현이나 OpenAI 공식 수치가 아니다. Codex CLI 버전이 올라가면 옵션이 바뀌어 '키 없는 경로'의 전제가 달라질 수 있다.",
+      "GPT-Image-2.6 API를 쓰는 경로는 OpenAI API 키·요금이 별도로 발생한다. 민감한 캐릭터·인물 이미지를 입력할 때는 각 서비스의 이용정책을 따로 확인해야 한다.",
+      "직접 설치·실행 테스트는 하지 않았다. 본 카드는 공식 저장소 README를 정리한 것이다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/jkf87/gif-maker-skill",
+      "https://openai.com/index/introducing-images-2-6/"
+    ]
+  },
+  {
+    "id": "notesoop-stt-ko-v1",
+    "title": "Notesoop-STT-Ko-v1: Apple Silicon 가속 한국어 온디바이스 음성인식 모델",
+    "summary": "구글 EmbeddingGemma-2 오디오 인코더 기반의 경량 한국어 ASR 모델. PyTorch MPS에서 비자기회귀 구조로 Whisper 대비 훨씬 빠른 처리 속도를 내도록 설계됐으며 Apache-2.0으로 가중치·코드가 공개돼 있다.",
+    "type": "모델",
+    "categories": [
+      "음성 인식",
+      "한국어 LLM",
+      "온디바이스 AI"
+    ],
+    "tags": [
+      "Notesoop",
+      "한국어 STT",
+      "EmbeddingGemma",
+      "Apple Silicon",
+      "온디바이스"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-11-06",
+    "url": "https://huggingface.co/Phsoft-ai/Notesoop-STT-Ko-v1",
+    "content": [
+      "공식 모델카드에 따르면 Notesoop-STT-Ko-v1은 Google의 embeddinggemma-2 오디오 인코더에 경량 한국어 음향 리더와 KenLM 3-gram 언어모델을 결합했다. 약 1.2~1.5GB 메모리로 동작하며, 비자기회귀(단일 패스) 구조라 긴 음성에서도 처리 시간이 선형적으로 늘어난다고 설명한다.",
+      "학습 데이터는 AI Hub의 한국어 강의 음성 약 300GB이며, 25,000개 형태소/음절 혼합 어휘를 사용한다. 지원 백엔드는 PyTorch MPS(bfloat16)·CUDA·CPU.",
+      "모델카드가 제시한 Apple M1 Pro(16GB) 실측치: 공식 Zeroth-Korean 테스트셋(457문장, 1시간11분)을 2분30초(RTF 0.0352, CER 16.21%)에 처리했고, 41분43초 분량의 실제 전공강의 녹음에서는 1분2초(RTF 0.0251, CER 22.46%)로 같은 조건의 Whisper-large-v3(11분45초, CER 25.55%)보다 빠르고 정확했다고 보고한다.",
+      "Apache-2.0 라이선스로 체크포인트·어휘·언어모델·추론 코드 전체가 공개돼 있으며, CLI(`transcribe.py`)와 Python API(`EmbeddingGemmaSTT`)를 제공한다."
+    ],
+    "cautions": [
+      "위 벤치마크 수치는 모델 제작사(Notesoop/Phsoft-ai)가 자체 환경(M1 Pro)에서 측정해 모델카드에 올린 것으로, 제3자 독립 재현이 아니다. 다른 하드웨어·오디오 조건에서는 속도·오차율이 달라질 수 있다.",
+      "WER(단어 오차율)은 CER보다 상당히 높게 보고돼(예: Zeroth 테스트 45.40%), 형태소 단위 평가와 어절 단위 평가의 차이를 혼동하지 않아야 한다.",
+      "모델은 'Notesoop' 앱에 추후 탑재될 예정이라고 명시돼 있어, 현재 공개된 것은 연구/온디바이스 실험용 가중치이며 상용 앱 품질과 동일하다고 가정해서는 안 된다.",
+      "직접 설치·추론 테스트는 하지 않았다. 본 카드는 공식 모델카드 내용을 정리한 것이다."
+    ],
+    "sourceEvidence": [
+      "https://huggingface.co/Phsoft-ai/Notesoop-STT-Ko-v1"
+    ]
+  },
+  {
+    "id": "mit-weight-space-programming",
+    "title": "MIT CSAIL \"Weight-Space Programming\": LLM이 그래디언트 없이 신경망 가중치를 직접 읽고 고친다",
+    "summary": "MIT CSAIL 연구팀(Takehi·Teoh·Zhang·Khattab)의 블로그 연구. 프런티어 LLM이 신경망 가중치를 직접 해석하고 수정해, 훈련 루프 없이 작은 정책망을 처음부터 작성하거나 기존 모델의 특정 결함을 미세 수정할 수 있음을 보인 초기 실험 결과.",
+    "type": "연구",
+    "categories": [
+      "AI 연구",
+      "머신러닝",
+      "해석가능성"
+    ],
+    "tags": [
+      "MIT CSAIL",
+      "Weight-Space Programming",
+      "모델 해석",
+      "가중치 편집",
+      "연구 블로그"
+    ],
+    "status": "연구 공개",
+    "importance": 4,
+    "updated": "2026-11-06",
+    "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+    "content": [
+      "2026-11-02 공개된 블로그에서 MIT CSAIL 연구팀(지도교수 Omar Khattab)은 프런티어 LLM이 신경망 가중치(숫자 목록)만 보고 그 모델이 무엇을 하도록 훈련됐는지 판별할 수 있었다고 보고한다. 저자들은 이를 'Weight-Space Programming'이라 명명한다.",
+      "사례로 제시된 실험: 특정 LLM이 PPO로 1억 스텝 학습된 게임 플레이 네트워크를 능가하는 작은 정책망을 훈련 루프 없이 직접 작성했다고 설명한다. 또 다른 사례로, Qwen3.5-0.8B의 수학 성능을 그래디언트 없이 개선해달라는 요청에 LLM이 가중치의 0.016%만 직접 수정해 MATH-500 점수를 7.9%에서 48.1%로, IFEval도 함께 끌어올렸다고 보고한다.",
+      "저자들은 이 결과가 최적화(가중치 자동 수정)와 해석가능성(가중치만으로 모델 행동 추론) 양쪽에 의미가 있을 수 있다고 주장하며, 전체 실험 과정과 수치를 블로그에 공개했다.",
+      "공개 직후 X(트위터)에서 수백만 조회수로 확산됐고, 독립 개발자들이 재현을 시도하는 openwsp/openwsp 같은 오픈소스 재현 프로젝트도 등장했다(저자들과 무관한 비공식 재현)."
+    ],
+    "cautions": [
+      "이 블로그는 동료 심사를 거친 논문이 아니라 연구팀 자체 블로그 포스트이며, 보고된 수치(0.016% 가중치 수정으로 MATH-500 7.9%→48.1% 등)는 저자들의 자체 실험 결과로, 독립 재현이나 더 큰 모델/다양한 과제에 대한 일반화는 아직 검증되지 않았다.",
+      "openwsp 같은 비공식 재현 저장소는 저자들과 무관하며, 재현 성공을 보장하지 않는다. 블로그 저자 소속(MIT CSAIL)과 재현 프로젝트의 신뢰도를 구분해야 한다.",
+      "직접 실험을 재현하거나 코드를 실행하지 않았다. 본 카드는 공식 블로그와 저자 SNS 설명을 정리한 것이다."
+    ],
+    "sourceEvidence": [
+      "https://rikiyat.github.io/blog/weight-space-programming/",
+      "https://x.com/rikiyatakehi/status/2117313742891327994",
+      "https://github.com/openwsp/openwsp"
+    ]
   }
 ]
