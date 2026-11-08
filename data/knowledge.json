@@ -8693,8 +8693,8 @@
   },
   {
     "id": "kimi-k3-1-pro",
-    "title": "Kimi K3.1 Pro: Kimi 웹·앱·Code·API로 제공되는 모델",
-    "summary": "Moonshot/Kimi가 공식 발표한 1M 토큰 컨텍스트 모델. 서비스 채널은 공개했지만 전체 가중치는 2026년 11월 4일 공개 예정이라고 밝혔다.",
+    "title": "Kimi K3.1 Pro: 서비스 제공과 공개 가중치 배포를 구분하기",
+    "summary": "1M 토큰 문맥의 멀티모달 MoE 모델. 기존 공개 예정 안내를 넘어 공식 Hugging Face 가중치 배포가 확인됐으며, 자체 라이선스의 서비스 사업·규모별 조건과 내부 이용 예외를 구분해야 한다.",
     "type": "모델",
     "categories": [
       "AI 모델",
@@ -8709,22 +8709,27 @@
     ],
     "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-10-25",
+    "updated": "2026-11-09",
     "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
     "content": [
       "Kimi 공식 발표는 K3.1 Pro와 더 빠른 Highspeed 변형을 Kimi 웹·모바일, Kimi Work, Kimi Code, Kimi API에서 제공한다고 설명합니다.",
       "공식 가이드는 API 모델 ID kimi-k3.1-pro / kimi-k3.1-pro-highspeed와 1M 토큰 컨텍스트를 안내합니다. Kimi Code는 /model에서 선택하도록 설명합니다.",
-      "전체 모델 가중치는 2026년 11월 4일까지 공개하겠다고 예고했습니다. API 이용은 Kimi 소비자 멤버십과 별도인 사용량 기반 과금입니다."
+      "기존 공식 블로그가 예고했던 가중치는 현재 Moonshot AI의 Hugging Face 저장소에서 공개된 상태로 확인했다. 모델카드는 총 2.8T·토큰당 활성 104B 파라미터, MXFP4 가중치·MXFP8 활성화, 1,048,576토큰 문맥과 텍스트·이미지 입력을 안내한다.",
+      "공식 모델카드는 vLLM·SGLang·TokenSpeed 배포 가이드를 연결한다. 초대형 MoE 배포에는 가중치 저장공간 외에도 런타임·KV 캐시·문맥 길이에 따른 메모리가 필요하다. 개인 PC에서 바로 실행 가능하다고 검증한 것은 아니다."
     ],
     "cautions": [
-      "가중치·오픈 라이선스가 이미 공개됐다고 쓰지 마세요. 공개 예정일과 실제 공개는 다릅니다.",
+      "가중치가 공개됐지만 MIT나 무제한 상업 이용으로 부르지 않는다. 실제 Kimi K3.1-Pro License는 저작권·허가 고지 보존을 요구한다. 제3자에게 입력·파라미터·학습데이터의 실질적 통제권을 주는 Model as a Service 사업을 하며 계열사 합산 연속12개월 매출이 2,000만달러를 넘으면 상업 이용 전 별도 계약이 필요하다.",
       "실제 계정 접근, 지역별 제공, 속도·성능은 시험하지 않았습니다. 기업용은 관리자 활성화가 필요하며 요금·세금은 채널별로 확인하세요.",
-      "공식 가이드는 웹 검색 기능을 업데이트 중이라 당분간 프로덕션에 권장하지 않습니다. 민감한 자료의 전송·보존 조건도 사용 채널별로 확인하세요."
+      "공식 가이드는 웹 검색 기능을 업데이트 중이라 당분간 프로덕션에 권장하지 않습니다. 민감한 자료의 전송·보존 조건도 사용 채널별로 확인하세요.",
+      "상용 제품·서비스가 월활성이용자 1억 명 또는 월매출 2,000만달러를 넘으면 모델명 표시 조건이 있다. 라이선스 2·3조 조건에는 내부 이용과 Moonshot 공식 제품·인증 추론 파트너를 통한 이용 예외가 있으므로 정확한 정의·적용 범위를 전문에서 확인한다.",
+      "가중치 다운로드·설치·추론·벤치마크는 직접 시험하지 않았다. 모델카드의 성능은 제작사 평가이며 하네스·추론노력·도구·반복횟수 등이 달라 점수만으로 보편적 우열을 단정하지 않는다."
     ],
     "sourceEvidence": [
       "https://www.kimi.ai/blog/kimi-k3-1-pro",
       "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart",
-      "https://platform.kimi.ai/docs/pricing/chat"
+      "https://platform.kimi.ai/docs/pricing/chat",
+      "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "https://huggingface.co/moonshotai/Kimi-K3.1-Pro/blob/main/LICENSE"
     ]
   },
   {
