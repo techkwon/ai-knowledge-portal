@@ -5276,8 +5276,8 @@
   },
   {
     "id": "herdr-web-ui-remote-agent-panes",
-    "title": "herdr web ui: 여러 PC의 Claude Code·Codex 세션을 휴대폰에서 이어 보기",
-    "summary": "herdr 플러그인으로 동작하는 오픈소스 웹·PWA 클라이언트로, 실행 중인 코딩 에이전트 세션을 채팅과 터미널로 보고 승인 요청에 응답하며 SSH로 등록한 여러 PC를 한 사이드바에서 관리합니다.",
+    "title": "herdr web ui / Ovis: 현재 연결 대상과 공식 모바일 구분하기",
+    "summary": "기존 저장소 URL의 현재 README는 Ovis를 소개합니다. 과거 웹 클라이언트 소개, 현재 제작자 안내, Herdr 공식 모바일의 서버를 구분해야 합니다.",
     "type": "GitHub",
     "categories": [
       "AI 코딩",
@@ -5293,20 +5293,25 @@
     ],
     "status": "자료 확인",
     "importance": 3,
-    "updated": "2026-10-02",
+    "updated": "2026-11-13",
     "url": "https://github.com/devswha/herdr-web-ui",
     "content": [
-      "README에 따르면 herdr web ui는 herdr가 관리하는 에이전트 세션에 붙는 브라우저·휴대폰 클라이언트입니다. 같은 세션을 채팅 형태로 읽고 답하며, 필요할 때 실제 터미널을 열 수 있습니다. 지원 대상으로 Claude Code, Codex 등의 기록 형식을 명시합니다.",
-      "승인·질문·계획 메뉴를 카드로 바꿔 현재 상태인지 확인한 뒤 응답을 보내고, 입력이 필요하거나 작업이 끝나면 푸시 알림을 줍니다. 에이전트가 만든 파일을 열거나 내려받고, SSH로 Linux·macOS·Windows PC를 추가해 한 사이드바에서 볼 수 있습니다.",
-      "Linux·macOS는 설치 스크립트가 herdr·Bun·Node 선행 조건과 플러그인을 설치하고, Windows는 PowerShell 스크립트를 제공합니다. 서버는 기본적으로 127.0.0.1에서만 열리며, 휴대폰 접속은 Tailscale 주소와 QR 코드를 쓰는 방식을 안내합니다.",
-      "일반 SSH 클라이언트와의 차이: 여러 서버에 셸·파일 전송으로 접속하는 범용 원격 접속 도구와 달리, 이 도구는 에이전트 세션의 작업 상태와 승인 대기를 관제하는 데 초점이 있습니다."
+      "이 카드의 기존 저장소 URL을 이번에 읽으면 현재 Ovis README가 반환됩니다. 제작자는 Ovis를 herdr 위에 구축한 도구로 소개하고 기존 herdr/Herdr 앱과 나란히 쓸 수 있다고 설명합니다. 리다이렉트 관측만으로 공식 개명 이력이나 안전한 자동 이관이 확인된 것은 아닙니다.",
+      "따라서 과거 herdr web ui의 설치·접속 안내와 현재 README를 버전별로 비교해야 합니다. 기존 설치가 자동으로 호환되거나 마이그레이션된다고 보장하지 않으며, 실제 설치·업데이트는 수행하지 않았습니다.",
+      "Herdr 공식 모바일은 별도 제품 경로입니다. 공식 문서는 herdr-core에 SSH로 연결하고 Herdr TUI와는 서버가 달라 TUI의 에이전트가 보이지 않는다고 명시합니다. 원격 접속에는 SSH/VPN 도달성과 적절한 장치 권한이 필요합니다.",
+      "Ovis README의 기본 활성 익명 사용량 집계와 Herdr 공식 모바일의 자체 분석 없음, 데스크톱의 기본 익명 보고·피드백 전송 설명은 제품별로 구분해야 합니다. 한 제품의 설정을 모든 Herdr 도구에 공통 적용한다고 해석하지 않습니다."
     ],
     "cautions": [
-      "원격 접속을 열면 휴대폰에서 에이전트 승인과 터미널 입력이 가능해집니다. README의 접근·안전 문서를 따라 신뢰한 네트워크 안에서만 노출하세요.",
-      "설치 스크립트를 파이프로 바로 실행하기 전에 내용을 확인하는 것이 안전합니다."
+      "현재 제작자 README와 공식 모바일·프라이버시 문서를 읽은 정정입니다. 공식 개명 날짜·이관 이력, 기존 사용자 설치의 호환·보안성, 개별 앱스토어 약관은 검증하지 않았습니다.",
+      "Ovis 코드의 MIT 조건과 연결 서비스·운영체제·모델 이용권은 별개입니다. 재배포 시 저작권·허가 고지 등 조건을 확인해야 합니다.",
+      "SSH와 터미널 제어는 실제 파일·계정·에이전트 승인 권한에 영향을 줍니다. 공식 배포처·서버 종류·접근 범위를 확인하고 신뢰한 네트워크에서만 노출하세요. 직접 설치·연결·실행하지 않았습니다."
     ],
     "sourceEvidence": [
-      "https://github.com/devswha/herdr-web-ui"
+      "https://github.com/devswha/herdr-web-ui",
+      "https://raw.githubusercontent.com/devswha/ovis/main/LICENSE",
+      "https://herdr.dev/mobile/",
+      "https://herdr.dev/privacy/",
+      "https://github.com/herdrdev/herdr-app"
     ]
   },
   {
@@ -5588,8 +5593,8 @@
   },
   {
     "id": "strata-qwen-local-pc-runtime",
-    "title": "Strata: GPU·RAM을 함께 쓰는 Qwen 로컬 추론 엔진",
-    "summary": "Qwen3.8-Flash-Next를 NVIDIA·AMD PC에서 실행하고 OpenAI·Anthropic 호환 인터페이스로 코딩 도구에 연결하는 오픈소스 런타임입니다.",
+    "title": "Strata: 모델별 조건을 나눠 보는 멀티플랫폼 로컬 런타임",
+    "summary": "현재 README는 Windows·Linux·Mac과 Apple Silicon 경로를 안내합니다. 운영체제 지원과 모델별 메모리·저장공간 요구를 따로 확인해야 합니다.",
     "type": "GitHub",
     "categories": [
       "로컬 AI",
@@ -5597,23 +5602,24 @@
     ],
     "tags": [
       "Strata",
-      "Qwen",
-      "GPU 오프로딩",
-      "로컬 LLM"
+      "로컬 LLM",
+      "Apple Silicon",
+      "GPU 오프로딩"
     ],
     "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-10-06",
+    "updated": "2026-11-13",
     "url": "https://github.com/Niko1221/Strata",
     "content": [
-      "제작자 README는 Windows·Linux, 지원 GPU의 VRAM 12GB 이상, RAM 32GB 이상, 약 80GB 여유 디스크를 안내합니다. 모델 변형에 따라 더 많은 RAM이 필요하며 64GB는 모든 안내된 기본 크기를 실행하는 기준입니다.",
-      "설정 도구가 GPU·RAM·디스크와 모델 크기·문맥 길이를 선택합니다. 기본 UI는 로컬 8080 포트이며 OpenAI 호환 /v1, Anthropic Messages, OpenAI Responses 인터페이스를 제공합니다.",
-      "처음에는 작은 모델 크기와 한 요청으로 한국어·코딩 표본을 평가한 뒤 문맥 길이·동시성을 늘리세요. 기본 동시 요청은 하나이며 늘리면 작은 GPU에서 각 응답이 느려질 수 있습니다."
+      "현재 제작자 README는 Windows·Linux·Mac 데스크톱 앱과 Apple Silicon M1 이상 하드웨어 가이드를 안내합니다. NVIDIA RTX 계열, AMD GPU, Intel Arc Linux, Strix Halo, DGX Spark Linux 등은 별도 가이드 경로로 구분합니다. 운영체제 지원이 모든 모델·엔진의 동일 동작을 뜻하지는 않습니다.",
+      "모델별 요구조건을 따로 보세요. README의 Apple Silicon 64GB 이상 조건은 DeepSeek V4.1-Flash-1017 지원 설명에 붙는 조건이지 전체 모델의 공통 최소 RAM이 아닙니다. 해당 DeepSeek 변형의 다운로드 예시는 약 191~274GB로 안내되어 저장 공간도 함께 검토해야 합니다.",
+      "현재 README는 OpenAI-compatible 및 Anthropic-compatible API를 설명합니다. 세부 포트·endpoint·동시 요청 설정은 해당 버전의 모델·엔진 문서에서 확인하고, 작은 비민감 표본에서 시작해 문맥 길이·동시성을 늘리는 계획이 적절합니다.",
+      "기존 Qwen 중심 안내에 있던 VRAM 12GB·RAM 32GB·디스크 80GB를 현재 모든 모델과 Mac에 공통 적용하지 않습니다. 현재 README에서 확인하지 못한 과거의 세부 설정이 제거됐다고 단정하는 것도 아닙니다."
     ],
     "cautions": [
-      "README의 속도 수치는 제작자가 특정 PC·엔진·양자화 설정에서 측정한 값이지 이 환경의 실측이 아닙니다.",
-      "Coder 변형은 일부 전문가를 제거해 RAM을 줄이며 제작자가 CJK 등 비코딩 과제의 약점을 안내합니다. 한국어 목적이면 별도 확인하세요.",
-      "다른 기기에서 접속하도록 바인딩을 넓히면 API 키와 네트워크 접근 제어를 설정하세요. 설치 스크립트는 실행하지 않았습니다."
+      "제작자 README를 확인했으며 설치·모델 다운로드·속도 측정은 하지 않았습니다. 모델 적재 가능 여부와 실제 처리량·동시성·지연은 별도 검증 항목입니다.",
+      "코드 라이선스와 모델 가중치·런타임·연결 서비스 조건은 별개입니다. 이번 갱신에서는 라이선스 전문과 모델별 세부 문서를 모두 읽지 않았으므로 이용권이나 포괄적 상업 허가를 새로 주장하지 않습니다.",
+      "로컬 실행만으로 외부 통신·로그·악성 코드 위험이 없어지는 것은 아닙니다. API 노출을 넓히기 전 인증·네트워크 접근과 비밀정보 범위를 점검하세요."
     ],
     "sourceEvidence": [
       "https://github.com/Niko1221/Strata"
@@ -11314,25 +11320,29 @@
     ],
     "status": "자료 확인",
     "importance": 4,
-    "updated": "2026-11-11",
+    "updated": "2026-11-13",
     "url": "https://www.anthropic.com/claude/fable",
     "content": [
       "Anthropic은 2026년 11월 9일 Claude Fable 5.2를 공개했다. 공식 제품 페이지는 대규모 코드베이스, 장기 에이전트 작업, 3D·모션·하드웨어 설계 등을 주요 용도로 소개한다. 이는 제작사의 기능 설명이며 이 카드가 모델의 실제 성능 우위나 무감독 작업의 안전성을 독립 검증했다는 뜻은 아니다.",
       "공식 안내상 Pro·Max·Ultra·Team·Enterprise에서 이용할 수 있고 Claude Platform 및 지원 클라우드 경로로도 제공된다. API 모델 ID는 claude-fable-5-2이며 표준 가격은 입력 100만 토큰당 8달러, 출력 40달러, 캐시 읽기 0.20달러다. Fast mode의 입력·출력 가격은 각각 16·80달러로 별도이므로 구독료와 API 비용, 표준·빠른 모드를 구분한다.",
       "코딩 작업에 적용할 때는 프로젝트 권한과 목표를 먼저 좁히고 작은 결과물부터 검토한다. 예를 들어 한 페이지 인터랙션을 만들도록 한 뒤 화면·입력 동작·오류 처리·모바일 표시를 별도로 검사할 수 있다. 정적 캡처만으로 애니메이션이나 게임 조작 품질을 평가하지 않고, 다른 모델과 비교할 때도 도구 실행 권한·추론 강도·반복 횟수를 맞춘다. 이 절차는 검토용 제안이며 실행한 벤치마크가 아니다.",
       "Fable 계열은 기본적으로 안전 모니터링을 위한 30일 데이터 보관을 요구한다. 공식 페이지는 적격 고객의 별도 예외 및 ZDR 경로도 설명하지만 모든 개인 계정에 적용되는 예외로 확대해서는 안 된다. 사이버·생물 분야 질의는 안전장치로 덜 강한 모델에 자동 전환될 수 있다.",
-      "API 등 상업용 서비스 약관은 허용 범위에서 입력 권리 유지·출력 소유를 규정하고 고객 콘텐츠로 모델을 학습하지 않는다고 명시하지만, 서비스 지식재산권 자체를 이전하지 않는다. 출력의 정확성과 적합성은 이용자가 검토해야 한다. 개인용 Claude.ai에는 별도 소비자 약관이 적용되므로 API 조건을 개인 구독 전체에 그대로 대입하지 않는다."
+      "API 등 상업용 서비스 약관은 허용 범위에서 입력 권리 유지·출력 소유를 규정하고 고객 콘텐츠로 모델을 학습하지 않는다고 명시하지만, 서비스 지식재산권 자체를 이전하지 않는다. 출력의 정확성과 적합성은 이용자가 검토해야 한다. 개인용 Claude.ai에는 별도 소비자 약관이 적용되므로 API 조건을 개인 구독 전체에 그대로 대입하지 않는다.",
+      "추론 강도도 같은 업무로 다시 평가하세요. 공식 Fable 5.2 프롬프트 가이드는 Claude API 기본값을 high로 설명하며, 과거 모델의 effort를 그대로 유지하기보다 medium·high 등 단계를 실제 과제로 비교하도록 안내합니다. API 설정을 모든 앱 UI와 동일시하지 않습니다.",
+      "장기 작업은 성공 선언보다 남은 작업과 환경의 실제 결과로 판정하고, 목표·허용 변경 범위를 먼저 고정합니다. 강한 코드 소유권 지시는 구조 통합과 함께 미요청 변경·비용 증가를 가져올 수 있으므로 최소 변경이 목적이면 실제 diff·테스트·문서 변경을 확인하세요. 낡은 절대 규칙을 검토하는 것과 중요한 외부 행동의 승인 단계를 없애는 것은 다릅니다."
     ],
     "cautions": [
       "직접 테스트하지 않았음. 모델 호출·설치·가입·유료 액션을 수행하지 않았다.",
       "제작사 제품 본문과 상업용 약관을 읽었으며 소비자 약관·전체 Usage Policy·시스템 카드까지 검토하지는 않았다. 개인용 이용권한의 포괄적 판단은 하지 않는다.",
       "금융·의료 성과나 사이버·생물학 성능 수치는 검증·재현하지 않아 이 카드에서 추천 근거로 쓰지 않는다.",
       "출력 소유 조항은 제3자 권리 비침해 보장이나 모델 가중치 재배포 허가가 아니다.",
-      "리셋권 지급·주간 한도 초기화 범위는 개인별 공식 도움말 검증을 하지 않아 포함하지 않는다."
+      "리셋권 지급·주간 한도 초기화 범위는 개인별 공식 도움말 검증을 하지 않아 포함하지 않는다.",
+      "이번 보강은 공식 프롬프트 가이드의 관련 원리를 요약한 것입니다. 문서의 프롬프트를 실행하거나 사용자 스킬·설정·승인 규칙을 변경하지 않았고, 특정 토큰 증가율·구독 한도·모델 서열을 일반화하지 않습니다."
     ],
     "sourceEvidence": [
       "https://www.anthropic.com/claude/fable",
-      "https://www.anthropic.com/legal/commercial-terms"
+      "https://www.anthropic.com/legal/commercial-terms",
+      "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2"
     ]
   },
   {
@@ -11485,6 +11495,586 @@
     ],
     "sourceEvidence": [
       "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/"
+    ]
+  },
+  {
+    "id": "phone-autopilot-hermes-approved-routines",
+    "title": "Phone Autopilot: 승인한 휴대폰 작업을 체크포인트로 반복",
+    "summary": "Phone Harness 위에 루틴 저장·버전 승인·실패 기록을 더하는 별도 Hermes 플러그인",
+    "type": "도구",
+    "categories": [
+      "AI 에이전트",
+      "자동화"
+    ],
+    "tags": [
+      "Phone Autopilot",
+      "Hermes",
+      "Android",
+      "승인",
+      "체크포인트"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-11-13",
+    "url": "https://github.com/jupist/phone-autopilot",
+    "content": [
+      "제작자 README에서 Phone Harness를 선행 플러그인으로 요구하는 별도 저장소다. Phone Harness는 phone_exec로 실시간 조작하고, Phone Autopilot은 성공한 절차를 Python 루틴으로 저장해 모델 없이 재생한다.",
+      "Hermes Agent 0.21.6 이상과 Phone Harness 플러그인, adb 및 USB 디버깅 Android가 필요하다. 기반 도구의 iPhone 지원과 달리 이 플러그인은 Android를 기준으로 제작·시험됐다고 명시한다.",
+      "루틴 저장과 미승인 루틴 실행은 승인을 요구하며 수정된 버전은 재승인이 필요하다. 화면 전환 뒤 텍스트·앱·이미지 체크포인트가 실패하면 중단하고 스크린샷과 실행기록을 남긴다.",
+      "예약 실행 중에는 자동 수리하지 않는다. 수리는 승인 가능한 대화에서 다시 요청한다. ask_before_apps 설정을 켜야 앱별 사용 허가를 묻는다. 기본값은 모든 앱 허용이다."
+    ],
+    "cautions": [
+      "코드는 MIT: 저작권·허가문 유지 조건으로 수정·배포·상업적 이용이 가능하지만 보증은 없다. 별도 SaaS/모델/휴대폰 앱 약관까지 허용하는 라이선스가 아니다.",
+      "모델이 쓴 Python이 컴퓨터 사용자 권한으로 실행되며 실제 폰 앱을 누른다. 앱 허용목록은 샌드박스가 아니므로 결제·전송·삭제 같은 작업은 별도 승인과 검토를 유지한다.",
+      "실패 스크린샷·루틴·입력·실행로그에 사적 정보가 남을 수 있다. 외부 모델·클라우드폰의 데이터 처리와 비용은 별도다.",
+      "직접 설치·연결·실행하지 않았다. 연령·지역별 앱/외부서비스 조건은 확인하지 않았으며 미성년자 이용 적합성을 보장하지 않는다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/jupist/phone-autopilot",
+      "https://raw.githubusercontent.com/jupist/phone-autopilot/main/LICENSE",
+      "https://github.com/phone-harness/phone-harness"
+    ]
+  },
+  {
+    "id": "minimax-h3-image-territory-license-review",
+    "title": "MiniMax H3 Image: 6단계 생성·편집, 한국은 라이선스 제외",
+    "summary": "ComfyUI 지원 공개 가중치 모델이지만 한국에서는 가중치와 출력의 사용도 기본 허가 대상이 아니다",
+    "type": "모델",
+    "categories": [
+      "이미지 생성",
+      "ComfyUI"
+    ],
+    "tags": [
+      "MiniMax H3 Image",
+      "ComfyUI",
+      "지역 제한",
+      "라이선스"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-11-13",
+    "url": "https://blog.comfy.org/p/minimax-h3-image-is-now-available",
+    "content": [
+      "ComfyUI 공식 발표는 한 체크포인트의 텍스트 이미지 생성·다중 참조 편집, 6단계 guidance 1 샘플링, 정사각형 최대 4096×4096 등 네이티브 고해상도 출력을 설명한다. 이는 공식 설명이며 직접 성능·속도를 시험한 결과가 아니다.",
+      "Comfy-Org 배포는 원본 MiniMaxAI 모델의 ComfyUI 재패키징이다. 다운로드 가능성과 오픈소스의 무제한 이용을 혼동하지 말아야 한다.",
+      "2026-11-10 라이선스는 대한민국·미국·영국·EU를 허가 지역에서 제외한다. V.4는 해당 지역 밖에서 모델뿐 아니라 출력의 사용·복제·수정·배포·표시도 기본 계약으로 허용하지 않는다.",
+      "허가 지역에서도 본인/계열사 연환산 매출 100만 달러 초과 또는 제3자 대상 호스팅 서비스 제공은 별도 사전 서면 허가가 필요하다. 모델 코드·가중치·파생물은 커뮤니티 라이선스이며 MIT/Apache의 포괄적 이용권으로 설명할 수 없다."
+    ],
+    "cautions": [
+      "한국 이용자에게 설치·로컬실행·상업활용을 권하는 카드가 아니라 권리 제약 확인용 정보다. 별도 서면 허가가 없는 한국 사용을 허용한다고 해석하지 않는다.",
+      "Partner Nodes/API 제공 사실이 한국 이용·출력 이용에 대한 별도 허가를 뜻하지 않는다. 호스팅 서비스 약관/별도 라이선스를 확인하기 전 우회 사용을 권하지 않는다.",
+      "참조 이미지·실존인물·목소리·캐릭터는 별도 권리와 동의 확인이 필요하다. 공개 출력의 AI 생성 표시, 타 모델 개선 금지 등 추가 사용제약도 있다.",
+      "직접 다운로드·실행하지 않았다. 학생 개인정보를 입력하지 않으며 미성년자 이용 적합성이나 서비스별 연령 요건을 확인한 것은 아니다."
+    ],
+    "sourceEvidence": [
+      "https://blog.comfy.org/p/minimax-h3-image-is-now-available",
+      "https://huggingface.co/Comfy-Org/MiniMax-H3-Image",
+      "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image/raw/main/LICENSE"
+    ]
+  },
+  {
+    "id": "google-maps-ai-studio-demo-key-prototype",
+    "title": "Google Maps in AI Studio: 무료 지도 시제품과 운영용 키 분리",
+    "summary": "API별 일일100회 데모는 개인 계정의 시험용이며 운영 사용은 금지된다",
+    "type": "가이드",
+    "categories": [
+      "앱 개발",
+      "API"
+    ],
+    "tags": [
+      "Google Maps",
+      "AI Studio",
+      "데모 키",
+      "API 과금"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-11-13",
+    "url": "https://developers.google.com/maps/ai/ai-studio",
+    "content": [
+      "공식 11/9 발표는 AI Studio에서 자연어로 지도·장소·경로·환경 앱을 구성하고 Maps 자격증명을 앱 비밀설정에 연결하는 기능을 설명한다.",
+      "Maps Demo Key로 API당 하루100회까지 시험하며 24시간마다 한도가 재설정된다. Google Cloud 신규/기존 사용자 경로와 키별 지원 API 범위가 다르므로 모든 Maps 기능을 무료로 쓸 수 있다고 일반화하지 않는다.",
+      "데모키 자격 안내는 개인 Google 계정만 허용하고 Workspace 계정은 제외한다. 지역은 현재 IP와 계정 위치로 판단하며 금지지역 목록이 별도 적용된다.",
+      "Maps Demo Project 약관은 평가·테스트 전용이며 운영 사용을 엄격히 금지한다. 실제 서비스는 유효한 Cloud Billing 계정을 연결하고 표준 가격·쿼터·키 제한을 검토한다."
+    ],
+    "cautions": [
+      "Google Maps/AI Studio는 SaaS/API 서비스다. 데모 무료할당은 지도 데이터·사진·리뷰의 무제한 재배포 라이선스가 아니며 Google Maps·Cloud·Demo 약관이 함께 적용된다.",
+      "데모는 SLA/지원 보장이 없고 한도가 변경·중단될 수 있다. 과금 프로젝트를 연결하면 무료 데모와 다른 청구 조건이 적용된다.",
+      "학교 Workspace 계정이나 학생이 바로 이용할 수 있다고 안내하지 않는다. AI Studio의 연령·지역 조건과 한국 내 개별 지도/경로 데이터 지원은 이 검토에서 확정하지 않았다.",
+      "위치·학생정보와 API 키는 공개 코드·자료에 넣지 않는다. 직접 키를 발급하거나 앱을 제작·배포·실행하지 않았다."
+    ],
+    "sourceEvidence": [
+      "https://developers.googleblog.com/from-prompt-to-app-build-with-google-maps-in-ai-studio",
+      "https://developers.google.com/maps/ai/ai-studio",
+      "https://developers.google.com/maps/demo-key",
+      "https://cloud.google.com/terms/maps-platform/demo-project-terms"
+    ]
+  },
+  {
+    "id": "google-slides-to-vids-conversion-guide",
+    "title": "Google Slides를 Vids 영상으로: 장면·대본 변환과 한도 확인",
+    "summary": "슬라이드를 장면으로 바꾸고 AI 대본·음성을 선택하되 가져오기 한도와 이용 조건을 따로 점검하기",
+    "type": "가이드",
+    "categories": [
+      "교육 활용",
+      "콘텐츠 제작"
+    ],
+    "tags": [
+      "Google Vids",
+      "Google Slides",
+      "영상 변환"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-11-13",
+    "url": "https://support.google.com/docs/answer/15577408?hl=en",
+    "content": [
+      "Google 공식 도움말은 Slides 프레젠테이션을 새 Vids 또는 기존 영상의 장면으로 가져오는 절차를 안내합니다. Slides의 파일 메뉴에서 영상 변환을 선택하거나 Vids에서 슬라이드 변환을 선택한 뒤 가져올 슬라이드를 고릅니다.",
+      "선택한 슬라이드마다 장면이 만들어집니다. AI 기능을 쓰면 대본·음성·배경음악·애니메이션을 추가할 수 있고, 생성 대본 대신 발표자 노트를 사용할 수도 있습니다. AI 기능이 필요하지 않으면 해당 선택을 끄고 가져옵니다.",
+      "이 가져오기 도움말 기준 AI 사용 시 최대45장, AI 미사용 시 최대100장입니다. 음성 없이 가져온 장면의 기본 길이는5초이며, 음성이 생성되면 장면 길이가 음성에 맞춰집니다. 기존 오디오 등에 따라 실제 가져오기 가능 장수는 줄어들 수 있습니다.",
+      "가져오기 도움말에는10분을 넘는 결과를 줄여야 한다고 명시돼 있습니다. Vids 전체의 최대 길이와 이 변환 경로의 제한은 같은 값으로 가정하지 마세요. Word Art와 슬라이드 안의 영상 파일은 가져오기 지원 대상이 아닙니다.",
+      "AI 변환은 적격 Workspace 또는 Google AI 플랜이 필요하며, Workspace with Gemini 일반 안내는18세 이상 요건을 명시합니다. 해당 변환의 지원 언어에는 한국어가 포함됩니다. 학교 계정의 실제 기능 허용·라이선스는 관리자와 서비스 화면에서 확인합니다."
+    ],
+    "cautions": [
+      "SaaS 기능 안내이며 코드·모델 가중치를 배포하는 오픈소스 라이선스가 아닙니다. 직접 변환·로그인·구독·결제·설치는 하지 않았습니다.",
+      "Google 일반 약관은 업로드할 권리를 보유해야 하고 기존 콘텐츠의 권리는 유지된다고 설명하지만, 조직 계정은 별도 계약·관리자 규정의 적용을 받을 수 있습니다. 학생 얼굴·음성·이름·저작물의 업로드·공개에는 별도 적법한 권한을 점검하세요.",
+      "상업 이용·제3자 음악 및 이미지·AI 아바타의 개별 권리가 자동으로 정리되는 것은 아닙니다. 해당 자산·플랜·조직 약관을 확인하기 전 무제한 상업 재배포를 보장하지 않습니다.",
+      "일반 AI 기능의18세 조건을 모든 비AI Vids 기능의 학생 이용 금지로 확대 해석하지 않습니다. 교육 계정별 연령·지역·플랜 접근 범위와 기능 제공 여부는 별도 확인이 필요합니다.",
+      "수치·메뉴는 확인한 공식 도움말 범위이며 단계적 배포와 향후 변경이 있을 수 있습니다."
+    ],
+    "sourceEvidence": [
+      "https://support.google.com/docs/answer/15577408?hl=en",
+      "https://support.google.com/docs/answer/13952129?hl=en",
+      "https://policies.google.com/terms?hl=en"
+    ]
+  },
+  {
+    "id": "herdr-session-keeper-windows-resume",
+    "title": "Herdr Session Keeper: Windows에서 AI 대화 기록을 이어 열기",
+    "summary": "Herdr 창과 Claude Code·Codex 세션의 연결을 기록하고 재개를 돕는 독립 보조 도구",
+    "type": "도구",
+    "categories": [
+      "AI 에이전트",
+      "개발 도구"
+    ],
+    "tags": [
+      "Windows",
+      "세션 관리",
+      "오픈소스"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-11-13",
+    "url": "https://github.com/sodam-ai/Herdr_Session-Keeper",
+    "content": [
+      "Herdr Session Keeper는 Windows의 Herdr 사용자용 보조 도구입니다. 제작자 문서는 창과 AI 대화의 연결을 주기적으로 기록하고, 남아 있는 대화 파일을 Claude Code 또는 Codex의 resume 기능으로 이어 여는 방식을 설명합니다.",
+      "목록에서 대화를 골라 재개하는 창과 Herdr가 받아 둔 앱 업데이트를 적용하는 기능도 제공합니다. Herdr 자체나 AI 모델을 배포하는 프로젝트가 아니라 별도 보조 프로그램입니다.",
+      "문서의 요구 환경은 Windows 10/11 64비트, Windows PowerShell 5.1, Node.js 18 이상과 Herdr입니다. 실제 개발자 시험은 Windows 11에서 이뤄졌으며 Windows 10은 미확인으로 적혀 있습니다.",
+      "복구 대상은 대화 기록입니다. 전원 종료 때 실행 중이던 단일 작업이나 세션 내부의 감시·예약을 되살리는 기능과는 다릅니다. 컴퓨터 자체를 켜 주지도 않습니다.",
+      "저장소 LICENSE는 Apache-2.0입니다. 조건에 따른 상업적 이용·수정·배포가 가능하지만 라이선스 사본과 관련 고지 유지, 수정 표시 등 의무가 있습니다. 상표 사용권은 별도로 주어지지 않습니다."
+    ],
+    "cautions": [
+      "직접 설치·실행·재부팅·복구를 시험하지 않았습니다. 제작자도 실제 재부팅 후 전부 복구, 실제 Codex 복구, 다른 PC 설치, 최종 UI 클릭 시험 등의 미검증 항목을 명시합니다.",
+      "제작자 문서는 세션 제목·마지막 요청 일부·폴더·모델 정보와 화면 글자 일부를 로컬에서 읽는다고 설명합니다. 로그·매핑 파일에 프로젝트 정보가 남을 수 있으므로 공유하지 말고 공용·학교·회사 PC 정책과 동의를 확인하세요. 독립 코드 보안감사를 한 것은 아닙니다.",
+      "설치는 설정 파일·작업 스케줄러·바로가기 등에 영향을 줄 수 있으며 앱 자동 업데이트 기능도 있습니다. 문서의 백업·되돌리기 범위를 검토한 뒤 별도로 판단하세요.",
+      "코드 라이선스는 Herdr·Node.js·Windows·Claude Code·Codex 및 연결 SaaS의 약관이나 이용권을 대신하지 않습니다. 모델 가중치나 구독 이용권을 포함하지 않습니다. 연결 서비스의 연령·지역·조직 계정 조건은 각각 확인해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/sodam-ai/Herdr_Session-Keeper",
+      "https://raw.githubusercontent.com/sodam-ai/Herdr_Session-Keeper/main/LICENSE"
+    ]
+  },
+  {
+    "id": "varco-sound-multitrack-sfx",
+    "title": "VARCO Sound: 영상·이미지에 맞춘 멀티트랙 사운드 제작",
+    "summary": "NC AI의 사운드 생성 서비스와 플랜별 결과물 권리 확인",
+    "type": "도구",
+    "categories": [
+      "오디오 생성",
+      "콘텐츠 제작"
+    ],
+    "tags": [
+      "효과음",
+      "멀티트랙",
+      "게임 제작"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-11-13",
+    "url": "https://sound.varco.ai",
+    "content": [
+      "공식 소개에 따르면 NC AI가 개발한 생성형 사운드 서비스로, 텍스트·이미지·영상을 입력해 장면에 맞는 효과음과 배경음을 생성한다.",
+      "개별 트랙으로 나누어 특정 소리의 볼륨을 조절하거나 요소를 바꾸는 후편집 방식을 안내한다. 단일 혼합 음원과 달리 필요한 요소를 따로 조절하는 용도로 검토할 수 있다.",
+      "공식 페이지는 브라우저 SaaS, Unity 플러그인, 데스크톱 앱, MCP 연결을 소개한다. 작업환경별 기능·현재 제공 여부와 외부전송 방식을 확인하고 선택해야 한다.",
+      "상업 이용에 관한 공식 FAQ는 이용 가능하다고 하면서도 상업 범위와 결과물 소유권 조건이 플랜마다 달라질 수 있다고 명시한다. 무료 체험이나 다운로드 가능 여부를 무제한 상업 라이선스와 동일시하지 않는다."
+    ],
+    "cautions": [
+      "특정 요금제의 상세 약관·연령·지역 제한과 업로드 자료 보관 조건은 직접 확인하지 못했다. 학생자료·얼굴·음성 등 개인정보 입력과 상업 납품은 해당 조건 확인 전 보류한다.",
+      "SaaS 및 연동 도구 소개이지 모델 가중치나 오픈소스 배포 권한을 확인한 것이 아니다. 데스크톱 앱이라는 이유만으로 완전 오프라인 처리를 보장하지 않는다.",
+      "기능은 공식 안내를 요약한 것이며 실제 음질·생성속도·Unity/MCP 동작은 실행 검증하지 않았다."
+    ],
+    "sourceEvidence": [
+      "https://sound.varco.ai"
+    ]
+  },
+  {
+    "id": "microsoft-classroom-2027-preview",
+    "title": "Microsoft Classroom: 2027년 초 프리뷰를 예고한 수업 허브",
+    "summary": "Teams를 없애는 새 정식 출시가 아니라 선택형 교육 경험의 발표",
+    "type": "공식 발표",
+    "categories": [
+      "교육 활용",
+      "업무 자동화"
+    ],
+    "tags": [
+      "Microsoft 365 Education",
+      "수업 관리",
+      "프리뷰"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-11-13",
+    "url": "https://techcommunity.microsoft.com/blog/educationblog/introducing-microsoft-classroom-a-new-experience-built-for-teaching-and-learning/4571185",
+    "content": [
+      "Microsoft 공식 Education 블로그는 Classroom을 과제, Classwork, 성적, OneNote Class Notebook, Learning Accelerators, Insights 등을 한곳에 모으는 독립형 교육 경험으로 발표했다.",
+      "현재 이용 가능한 정식 출시로 오해하지 말아야 한다. 공식 글은 프리뷰를 2027년 초로 계획하고 있으며 관리자의 사전 등록을 안내한다. 학교 도입·프리뷰 승인·실제 기능 제공이 완료됐다는 뜻은 아니다.",
+      "Microsoft Teams for Education이나 Microsoft 365 LTI를 대체하지 않는다고 명시한다. 수업은 Classroom, 교직원 회의·협업은 Teams처럼 기관 목적에 맞추어 공존하는 선택지를 설명한다.",
+      "공식 글은 기존 A1/A3/A5/A7에는 2027년 추가 비용 없이 제공할 계획이며, 2028년 1월부터의 미래 SKU에서는 A2 이상에 포함할 계획이라고 안내한다. 웹·모바일·데스크톱 경험과 School Data Sync 기반 학급·명단 연계도 계획에 포함한다."
+    ],
+    "cautions": [
+      "예정 기능·일정·라이선스는 변경될 수 있다. 조직 테넌트의 실제 제공 상태와 관리자 정책을 확인해야 하며 한국 제공이나 특정 학교 사용권을 이 발표만으로 확정하지 않는다.",
+      "Microsoft 365 Education 서비스의 이용 조건이 적용되는 제품 발표다. 오픈소스 코드나 모델 가중치 배포·상업 재판매 권한을 제공하는 자료가 아니다.",
+      "학생 개인정보·AI 기능 연령 및 기관별 계약 조건은 이 검토에서 별도 검증하지 않았다. 학생 명단 연동·계정 생성·신청·실제 사용은 하지 않았다."
+    ],
+    "sourceEvidence": [
+      "https://techcommunity.microsoft.com/blog/educationblog/introducing-microsoft-classroom-a-new-experience-built-for-teaching-and-learning/4571185"
+    ]
+  },
+  {
+    "id": "andy-matuschak-books-learning-feedback",
+    "title": "읽기 완료와 이해를 구분하기: 질문·피드백을 자료에 넣기",
+    "summary": "Andy Matuschak의 학습 매체 설계 에세이를 교재 검토에 적용하기",
+    "type": "가이드",
+    "categories": [
+      "교육 활용",
+      "지식 관리"
+    ],
+    "tags": [
+      "메타인지",
+      "회상 연습",
+      "피드백"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-11-13",
+    "url": "https://andymatuschak.org/books/",
+    "content": [
+      "Andy Matuschak의 2019년 에세이 “Why books don’t work”는 설명형 비문학을 읽는 행동이 자동으로 깊은 이해를 만들지는 않는다는 문제를 제기한다. 모든 책·독자에게 효과가 없다는 실험 결론으로 읽어서는 안 된다.",
+      "핵심은 학습자가 이해 여부를 점검하고 다음 활동을 고르는 메타인지 부담이다. 저자는 문제 해결·요약·토론 등 능동적 활동과 피드백을 매체 자체에 통합하는 방향을 제안한다.",
+      "수업 자료를 만들 때 짧은 설명 뒤에 핵심 개념을 보지 않고 설명하는 질문, 적용 문제, 오답을 확인하는 피드백을 넣는 설계안을 고려할 수 있다. 이는 원문 논지에서 도출한 활용 제안이며 실제 수업 효과를 측정한 결과가 아니다.",
+      "저자와 Michael Nielsen이 만든 Quantum Country는 설명 사이의 짧은 기억 점검과 이후 간격을 둔 재점검을 결합한 사례로 소개된다. 원문도 기억은 이해의 일부일 뿐이며 사회적·정서적 학습과 창의적 적용을 대체하지 못한다고 논의한다."
+    ],
+    "cautions": [
+      "원문 라이선스는 CC BY-NC 3.0이다. 원문·번역·도표의 재배포나 각색은 저작자표시와 비상업 조건 등을 확인해야 하며 상업용 재사용을 포괄 허용하지 않는다. 이 카드는 원문을 길게 복제하지 않은 독립 한국어 개요다.",
+      "이 글은 저자의 논지·사례를 담은 에세이다. 링크된 모든 연구를 별도 검증한 문헌고찰이나 특정 AI 튜터의 효과·성적 향상 보장이 아니다.",
+      "학생 응답을 온라인 시스템에 저장한다면 별도의 연령·개인정보·접근권한 검토가 필요하다. 새로운 앱 가입·실행·효과평가는 하지 않았다."
+    ],
+    "sourceEvidence": [
+      "https://andymatuschak.org/books/"
+    ]
+  },
+  {
+    "id": "paseo-agent-workspaces-worktrees",
+    "title": "Paseo: Claude Code·Codex를 작업공간별로 함께 관리하기",
+    "summary": "기존 코딩 CLI와 인증을 유지하면서 작업·세션·변경 내역을 묶고 worktree로 병렬 작업을 분리하는 개발 환경",
+    "type": "도구",
+    "categories": [
+      "AI 코딩",
+      "개발 워크플로우"
+    ],
+    "tags": [
+      "코딩 도구",
+      "오픈소스",
+      "병렬 작업"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-11-13",
+    "url": "https://paseo.sh/docs/workspaces",
+    "content": [
+      "Paseo는 이미 설치하고 인증한 코딩 CLI를 실행하는 개발 환경입니다. Claude Code는 공식 claude CLI와 Agent SDK, Codex는 공식 codex CLI와 app-server 인터페이스로 연결한다고 문서가 설명합니다. 모델 자체를 배포하는 도구는 아닙니다.",
+      "프로젝트 안에 작업공간(workspace)이 있고, 각 작업공간에 여러 에이전트 세션과 터미널·변경 내역을 함께 둡니다. Local 모드는 기존 디렉터리를 사용하고 Worktree 모드는 작업별 Git 디렉터리와 브랜치를 분리합니다. 같은 작업공간의 세션끼리는 작업 파일을 공유합니다.",
+      "병렬 작업은 서로 독립적인 요구사항에 별도 worktree를 배정하는 방식으로 설계합니다. 각 변경 내역을 검토하고 테스트한 뒤 병합할 결과를 고릅니다. worktree를 나눠도 네트워크 포트는 같은 컴퓨터에서 공유하므로 개발 서버 포트는 구분해야 합니다.",
+      "데스크톱은 macOS·Windows·Linux를 지원한다고 안내하며, 모바일·웹·CLI 클라이언트는 실행 중인 에이전트와 작업공간을 가진 daemon에 연결합니다. 이는 임의의 기존 채팅 자동 동기화 보장이나 서로 다른 프로젝트 파일의 자동 병합을 뜻하지 않습니다.",
+      "Claude Code의 사용량은 기존 Claude 플랜 한도를 따르고, Codex는 ChatGPT 로그인 또는 API 키 방식의 기존 한도·과금을 따릅니다. Paseo의 오픈소스 코드 이용권과 모델/구독 서비스 이용권은 별개입니다."
+    ],
+    "cautions": [
+      "직접 설치·실행·연결·병렬 성능 테스트를 하지 않았습니다. 제품 문서의 기능 설명을 독립 요약했습니다.",
+      "Paseo 자체 코드는 Apache-2.0이며 제3자 구성요소는 각 라이선스를 따릅니다. 상업 이용·수정·배포 시에도 라이선스 사본, 수정 표시, 관련 저작권·NOTICE 등 조건을 지켜야 하며 상표 사용권이 자동 부여되지는 않습니다.",
+      "모델 가중치나 Claude/OpenAI 서비스 권리는 이 코드 라이선스에 포함되지 않습니다. 각 제공자의 계정 자격·연령·지원 지역·요금·데이터 정책을 별도 확인하세요. 이 문서 검토로 모든 제공자의 제한을 확인한 것은 아닙니다.",
+      "에이전트는 호스트의 파일·터미널에 접근할 수 있습니다. worktree는 파일 분리이지 보안 샌드박스가 아닙니다. 원격 접근 권한과 승인 정책, 비밀정보·학생자료를 다루는 범위를 먼저 제한하세요."
+    ],
+    "sourceEvidence": [
+      "https://paseo.sh/docs/workspaces",
+      "https://paseo.sh/docs/providers",
+      "https://paseo.sh/docs/parallel-development",
+      "https://paseo.sh/docs/why",
+      "https://paseo.sh/docs/claude-code",
+      "https://paseo.sh/docs/codex",
+      "https://raw.githubusercontent.com/getpaseo/paseo/main/LICENSE"
+    ]
+  },
+  {
+    "id": "blender-agent-skills-3d-workflows",
+    "title": "Blender Agent Skills: 모델링부터 애니메이션·QA까지",
+    "summary": "Blender 작업 절차를 코딩 에이전트용 스킬로 묶은 MIT 저장소",
+    "type": "도구",
+    "categories": [
+      "3D·디자인",
+      "스킬"
+    ],
+    "tags": [
+      "Blender",
+      "3D",
+      "AI 스킬",
+      "자산 QA"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-11-13",
+    "url": "https://github.com/EL4CTEO/blender-skills",
+    "content": [
+      "제작자 README는 Blender 5.2 LTS 이상을 대상으로 모델링·UV·재질·리깅·애니메이션·렌더링·내보내기·자산 QA 등 28개 스킬을 소개합니다.",
+      "Blender MCP가 있으면 열린 앱과 연결하고, 없으면 백그라운드 Blender를 사용하는 구성을 설명합니다. Claude Code 외 여러 코딩 에이전트를 위한 설치 경로를 안내합니다.",
+      "게임 자산의 모델링·리깅·내보내기처럼 단계가 긴 작업을 나눠 설계할 때 참고할 수 있습니다. 버전·내보내기 대상·검증 기준을 먼저 정하세요."
+    ],
+    "cautions": [
+      "README와 LICENSE를 읽었으며 설치·코드 실행·Blender 렌더링·성능 비교는 하지 않았습니다. 제작자의 테스트 주장과 직접 검증을 구별하세요.",
+      "코드·문서는 MIT로 사용·수정·상업적 재배포가 가능하지만 저작권·허가문을 유지해야 하며 무보증입니다. Blender·외부 모델·텍스처·폰트·음원·AI 제공자의 조건은 별도입니다.",
+      "로컬 Blender 사용이 외부 모델로 보내는 프롬프트/파일까지 비공개임을 뜻하지 않습니다. 학생 얼굴·작품을 넣기 전 동의·권한을 확인하세요. 이 저장소가 서비스 연령·지역 제한을 면제하지 않습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/EL4CTEO/blender-skills",
+      "https://raw.githubusercontent.com/EL4CTEO/blender-skills/main/LICENSE"
+    ]
+  },
+  {
+    "id": "line-art-animation-svg-skill",
+    "title": "Line Art Animation: SVG 선화 애니메이션 스킬",
+    "summary": "보행·물리 움직임·낮밤 변화가 있는 선화 장면을 만드는 TypeScript 자료",
+    "type": "도구",
+    "categories": [
+      "웹 인터랙션",
+      "스킬"
+    ],
+    "tags": [
+      "SVG",
+      "TypeScript",
+      "애니메이션",
+      "AI 스킬"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-11-13",
+    "url": "https://github.com/JDhruv14/line-art-animation",
+    "content": [
+      "저장소는 Claude용 작업 지침과 의존성 없는 네 개 TypeScript 모듈을 제공합니다. SVG 선화, 보행/달리기, 스프링·진자·바람, 시간대별 팔레트를 다룹니다.",
+      "단일 인물과 마을 장면 예제를 제공하며 포인터 반응과 낮밤 전환을 설명합니다. 일반 영상 생성 모델의 가중치가 아니라 코드 기반 애니메이션 제작 자료입니다.",
+      "README는 참조 클립의 보행 주기·포즈를 측정하는 방법과 결정적 프레임 캡처 후 영상으로 묶는 절차를 안내합니다."
+    ],
+    "cautions": [
+      "README·MIT LICENSE만 검토했고 설치·예제 실행·참조 영상 분석·렌더링은 하지 않았습니다. README의 예제 실행 요건은 Node 22.18 이상이며 영상 캡처에는 Chrome/Chromium과 ffmpeg가 필요합니다.",
+      "MIT 코드의 사용·수정·상업적 배포 시 저작권·허가문을 유지하세요. 참조 영상·캐릭터·음악의 복제/변형 권리까지 MIT가 허락하지 않습니다.",
+      "참조 클립에 사람·학생·사적 장소가 있다면 동의와 업로드 경로를 점검하세요. 연결하는 AI 서비스의 연령·지역·데이터 조건은 별도이며 검증하지 않았습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/JDhruv14/line-art-animation",
+      "https://raw.githubusercontent.com/JDhruv14/line-art-animation/main/LICENSE"
+    ]
+  },
+  {
+    "id": "n8n-nod-personal-agent-preview",
+    "title": "Nod: n8n Labs의 별도 개인 에이전트 프리뷰",
+    "summary": "로컬 샌드박스·브라우저와 외부 모델을 연결하는 개인 작업 도구",
+    "type": "도구",
+    "categories": [
+      "AI 에이전트",
+      "자동화"
+    ],
+    "tags": [
+      "n8n",
+      "개인 에이전트",
+      "연구 프리뷰",
+      "권한 관리"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-11-13",
+    "url": "https://github.com/n8n-io/nod",
+    "content": [
+      "Nod는 n8n 워크플로 플랫폼과 별개인 연구 프리뷰입니다. Mac·Windows용 데스크톱 앱과 자체 호스팅 경로를 소개하며 n8n 계정 없이도 사용할 수 있다고 안내합니다.",
+      "자체 브라우저와 작업 공간에서 연결된 앱·웹사이트를 다루고 예약 작업과 장기 기억을 제공합니다. 설치 한 곳에 소유자 한 명이며, 실행 컴퓨터가 잠들면 예약 작업도 멈춥니다.",
+      "앱 코드는 무료지만 선택한 모델 사용료는 별도입니다. 요청 범위 밖의 보내기·결제·게시·삭제 등에 승인 검사를 두지만 이 검사 자체도 모델 판단이어서 오류를 낼 수 있습니다.",
+      "공식 개인정보 문서는 사용 데이터 공유가 기본 켜짐, 대화 추적 공유는 기본 꺼짐이라고 명시합니다. 로컬 저장과 외부 전송을 구분해야 합니다."
+    ],
+    "cautions": [
+      "설치·가입·계정 연결·실행·예약·전송은 하지 않았습니다. 프리뷰 안전성이나 업무 성공률을 보증하지 않습니다.",
+      "Apache 2.0 코드에는 상업적 사용·수정·재배포 권한이 있으나 LICENSE·NOTICE 유지, 수정 표시 등 조건이 있습니다. 포함 폰트·로고·런타임과 외부 AI·연결 서비스 약관은 별도입니다.",
+      "메시지·스크린샷·읽은 내용은 선택한 모델로, 앱 요청/결과는 기본 연결 서비스를 통해 전송될 수 있습니다. 사용 데이터와 선택적 대화 추적도 설정에서 별도 관리하세요. 가명처리는 완전 익명화가 아닙니다.",
+      "Nod 이용약관은 연결 계정과 결제수단의 정당한 권한 및 AI 행동 검토 책임을 사용자에게 둡니다. 연령·지역별 전체 서비스 조건은 확인하지 않았으므로 미성년자·학교 데이터 연결은 별도 검토가 필요합니다."
+    ],
+    "sourceEvidence": [
+      "https://blog.n8n.io/meet-nod/",
+      "https://github.com/n8n-io/nod",
+      "https://github.com/n8n-io/nod/blob/main/LICENSE",
+      "https://nod.n8n.io/docs/trust/privacy/",
+      "https://n8n.io/legal/nod-terms-of-use/"
+    ]
+  },
+  {
+    "id": "git-markdown-owner-inbox-agent-workflow",
+    "title": "여러 AI 작업의 판단을 한 받은편지함에 모으기",
+    "summary": "Git 티켓과 읽기용 화면을 분리해 작업 맥락을 닫는 운영 사례",
+    "type": "가이드",
+    "categories": [
+      "개발 워크플로우",
+      "지식 관리"
+    ],
+    "tags": [
+      "에이전트 운영",
+      "Git",
+      "Markdown",
+      "사람 승인"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-11-13",
+    "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+    "content": [
+      "제작자 경험 글은 여러 터미널 대화의 맥락을 계속 머리에 보관하는 부담을 줄이기 위해 Git 저장소의 Markdown 티켓을 작업 원장으로 사용하는 방식을 설명합니다.",
+      "에이전트는 조사·허용된 구현·테스트를 순환하고 사람이 결정해야 하는 질문·리뷰·트레이드오프는 한 받은편지함으로 모읍니다. 화면은 Git 내용을 보여주는 뷰어이며 결정은 다시 티켓에 기록합니다.",
+      "핵심은 한 항목의 맥락을 읽고 판단한 뒤 큐에 돌려놓아 그 맥락을 닫는 것입니다. 민감한 코드는 브랜치에서 검토하고 운영 배포는 사람이 담당하는 경계도 제시합니다."
+    ],
+    "cautions": [
+      "개인의 실험·경험 글이지 집중력 개선 효과를 입증한 연구가 아닙니다. 해당 시스템을 설치하거나 재현하지 않았습니다.",
+      "글의 아이디어를 독립 한국어 요약했습니다. 원문·이미지·구현 코드의 재배포 라이선스는 확인되지 않아 복제 배포 허가로 해석하면 안 됩니다.",
+      "업무 티켓에 개인정보·API 키·비공개 코드를 넣지 말고 저장소 접근 범위를 제한하세요. 사용하는 호스팅·AI 서비스의 연령·지역·요금 조건은 별도입니다."
+    ],
+    "sourceEvidence": [
+      "https://sergeykuhne.com/blog/fighting-ai-brain-fry"
+    ]
+  },
+  {
+    "id": "ide-mod-claude-code-session-panel",
+    "title": "ide-mod: Claude Code 세션·문서·알림·캐시를 한 패널에서",
+    "summary": "작업 상태와 확인 요청을 구분하고 문서 탐색·캐시 유지 비용을 함께 살피는 커뮤니티 플러그인",
+    "type": "도구",
+    "categories": [
+      "AI 코딩",
+      "개발 도구"
+    ],
+    "tags": [
+      "Claude Code",
+      "문서",
+      "캐시"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-11-13",
+    "url": "https://github.com/jkf87/ide-mod",
+    "content": [
+      "제작자 README는 Claude Code function-hooks 기반 패널로 에이전트 트리, 파일 탐색과 탭, 세션 문맥·캐시 적중·사용 한도 표시를 설명합니다. 공식 Anthropic 제품이 아닌 커뮤니티 확장입니다.",
+      "알림은 완료와 사용자 확인 필요를 구분하며, macOS의 “소리+읽기” 모드에서는 세션 이름을 읽어 어느 작업인지 알아보도록 설계됐다. 이름 변경 추종 개선은 v0.20.0 릴리스에 명시돼 있다.",
+      "v0.21.0 릴리스는 백그라운드 에이전트·명령·워크플로가 남아 있을 때 완료 소리를 미루도록 수정했다고 설명한다. 다만 계속 감시하는 작업과 요약 에이전트는 제외하며, 완료 알림을 놓친 작업은 6시간 후 종료로 간주한다. 소리 자체가 산출물 검증을 대신하지 않는다.",
+      "캐시 유지는 /cache로 상태를 보고 유지 시간을 조절합니다. README상 마지막 요청을 복제 호출해 만료 전에 캐시를 다시 읽는 방식이며, 작은 대화와 유지 시간에는 제한을 둡니다. 추가 호출이므로 무료 절약 기능으로 단정할 수 없습니다.",
+      "HWP·HWPX는 rhwp, PDF는 pdf.js 등 별도 엔진을 이용한다고 명시합니다. 대체 렌더러에서 보이는 모양과 실제 Hancom의 문서 호환성은 별도 확인 대상입니다.",
+      "라이선스 파일은 MIT로 사용·수정·상업 이용과 재배포를 허용하되 저작권·허가문 유지 및 무보증 조건을 둔다. 포함된 rhwp와 pdf.js에는 각각 MIT·Apache-2.0 조건이 별도로 적용된다."
+    ],
+    "cautions": [
+      "설치·실행·코드 전체 보안감사·문서 렌더링 검증은 하지 않았습니다. function-hooks는 early access API이며 제작자 테스트 버전은 2.1.290입니다.",
+      "캐시 유지 호출·보드 요약도 사용량을 소모할 수 있습니다. API 공식 문서상 기본 캐시는 5분이며 1시간 TTL은 추가 비용입니다. API 가격과 구독 한도를 같은 것으로 보지 마세요.",
+      "로컬 파일·요청 기록·다른 도구 세션을 읽는 기능과 인수인계 게시 기능이 있습니다. 금융·학생·계정 자료를 제외하고 공유 전 원문·비밀정보를 직접 확인하세요.",
+      "MIT는 플러그인 코드 허락이지 Claude 모델·구독·제3자 서비스 이용권이 아닙니다. 계정의 연령·지역·상업적 사용 가능 여부는 해당 서비스 약관을 별도 확인해야 합니다.",
+      "완료 소리는 산출물·테스트·남은 작업의 검증을 대신하지 않습니다. 음성 읽기 설명은 macOS 기준이며 다른 OS의 동일 동작을 보장하지 않습니다."
+    ],
+    "sourceEvidence": [
+      "https://github.com/jkf87/ide-mod",
+      "https://raw.githubusercontent.com/jkf87/ide-mod/main/LICENSE",
+      "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "https://github.com/jkf87/ide-mod/blob/main/LICENSE",
+      "https://github.com/jkf87/ide-mod/releases"
+    ]
+  },
+  {
+    "id": "baidu-ernie-5-5-flash-preview",
+    "title": "ERNIE 5.5 Flash Preview: 서비스 프리뷰와 가중치 공개 예고 구분",
+    "summary": "1M 문맥을 제공하는 Baidu 프리뷰 모델, 가중치 이용권과 서비스 조건은 별도 확인",
+    "type": "모델",
+    "categories": [
+      "AI 모델"
+    ],
+    "tags": [
+      "Baidu",
+      "프리뷰",
+      "이용 조건"
+    ],
+    "status": "자료 확인",
+    "importance": 3,
+    "updated": "2026-11-13",
+    "url": "https://x.com/Baidu_Inc/status/2120391732248637734",
+    "content": [
+      "Baidu 공식 발표는 총 280B 파라미터 중 토큰당 14B 활성, 1M 토큰 문맥, 코딩·3D 모델링·지식 업무·콘텐츠 제작 용도를 제시합니다. 성능은 제작자 발표이며 독립 비교 결과가 아닙니다.",
+      "공식 발표의 가중치 공개 목표는 11월 25일까지입니다. 현재 서비스 프리뷰 접근이 곧 다운로드 가능한 가중치와 재배포 권한을 뜻하지는 않습니다.",
+      "OpenRouter의 해당 free 모델 페이지에서 1.0M 문맥과 무료 표시를 확인했습니다. 발표의 200 tok/s 초과와 서비스 페이지 관측치 90 tok/s는 측정 환경이 다르므로 사용자가 그 속도를 보장받는다고 해석하지 않습니다."
+    ],
+    "cautions": [
+      "추론 호출·가입·키 발급·다운로드·설치는 하지 않았습니다. 공개 예정일은 보장된 배포 완료일이 아닙니다.",
+      "모델 가중치 링크는 이 확인에서 401/404로 본문·라이선스를 확인하지 못했습니다. 가중치 상업 이용·변경·재배포 권한은 미확인이므로 보류합니다.",
+      "OpenRouter는 18세 이상이며 모델 제공자별 약관·지역 제한을 추가 적용합니다. 해당 모델은 EU in-region routing 미지원으로 표시됩니다. 한국에서의 실제 계정 접근은 시험하지 않았습니다.",
+      "입력은 제공자에게 전달됩니다. 일부 제공자는 저장·학습할 수 있고 출력 권리도 모델 약관에 따릅니다. 무료 표시만 보고 학생·금융·조직 비밀을 입력하거나 상업적 출력 권리를 확정하지 마세요."
+    ],
+    "sourceEvidence": [
+      "https://x.com/Baidu_Inc/status/2120391732248637734",
+      "https://openrouter.ai/baidu/ernie-5.5-flash-preview:free",
+      "https://openrouter.ai/terms"
+    ]
+  },
+  {
+    "id": "gemini-decisions-api-bounded-choice",
+    "title": "Gemini Decisions API: 답변 생성 대신 선택지의 확률 반환하기",
+    "summary": "공유 멀티모달 입력에 여러 제한형 질문을 묶어 도구 선택·라우팅·검토 보조에 쓰는 API. 확신도와 실행 권한은 다릅니다.",
+    "type": "모델",
+    "categories": [
+      "분류·라우팅",
+      "AI 모델 API"
+    ],
+    "tags": [
+      "Google",
+      "Gemini Decision 1",
+      "결정 모델",
+      "확신도",
+      "권한 분리"
+    ],
+    "status": "자료 확인",
+    "importance": 4,
+    "updated": "2026-11-13",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+    "content": [
+      "Google 공식 발표는 gemini-decision-1 모델을 쓰는 별도 Decisions API를 소개합니다. 자유로운 답변을 토큰 단위로 생성하기보다 주어진 후보의 확률을 계산하며, 텍스트·이미지·오디오·영상·PDF를 공유 입력으로 사용할 수 있다고 설명합니다.",
+      "발표 기준 입력은 최대 256K 토큰이며 한 요청에 최대 1,000개 독립 질문을 묶습니다. noul은 예/아니오 조건, choice는 2~255개 후보 중 선택, score는 0부터 시작하는 순서형 평가 기준을 다룹니다. 각 답에는 0~1 확신도가 포함됩니다. 실제 SDK 필드·지원 범위는 최신 API 문서를 별도로 확인해야 합니다.",
+      "예를 들어 비민감 작업 설명 하나에 도구 선택·추가 검토 필요·작업 범위의 여러 질문을 함께 평가할 수 있습니다. 애매한 결과는 보류하거나 사람이 확인하도록 설계합니다. 모델이 높은 확신도를 내도 결제·게시·삭제 권한이나 사용자 승인이 생기는 것은 아닙니다. 실제 실행 전에는 허용 대상·입력·현재 상태를 별도로 검사해야 합니다.",
+      "발표 가격은 입력 100만 토큰당 0.10달러, 출력 토큰 과금은 0달러입니다. 공유 입력은 요청마다 한 번 계산하고 질문별 지시·기준 토큰은 각각 더해집니다. 무료 시험 경로를 안내하지만 계정별 한도·지원 지역·다른 서비스의 구독 포함 여부를 보장하지 않습니다. 지연·정확도·보정 성능은 제작자 발표이며 직접 비교 측정하지 않았습니다.",
+      "현재 Gemini API 추가 약관의 연령·데이터 관련 조항을 브라우저에서 확인했습니다. 사용자는 만 18세 이상이어야 하며, 18세 미만을 대상으로 하거나 이들이 접근할 가능성이 있는 API 클라이언트에 서비스를 사용하지 않도록 정합니다. 저가 결정 모델이라는 이유로 학생용 앱의 약관 예외가 되는 것은 아닙니다.",
+      "무료 서비스의 입력·출력은 제품과 머신러닝 기술 개선 및 인적 검토에 사용될 수 있습니다. Cloud Billing 활성화 여부에 따라 무료 할당량을 쓰더라도 데이터 이용 관점에서 유료 서비스로 취급되는 조건이 있습니다. 유료의 제품 개선 미사용과 로그·보안 목적의 일시 저장까지 전혀 없다는 주장은 다르므로 개인정보·기밀을 넣기 전 최신 계약과 설정을 확인해야 합니다."
+    ],
+    "cautions": [
+      "공식 발표와 Gemini API 추가 약관의 관련 조항을 확인한 정보입니다. API 호출·키 발급·결제·모델 성능·확신도 보정·보안성을 직접 테스트하지 않았습니다. SDK 전체와 기본 API 약관·모든 부록을 감사한 것은 아닙니다.",
+      "API 서비스 소개이지 모델 가중치·코드의 공개나 재배포 라이선스가 아닙니다. 서비스 자격·지원 지역·금지된 사용·입력 권리·제3자 콘텐츠 조건은 별도입니다. Gemini 앱·교육기관 계약과 API 조건을 동일시하지 않습니다.",
+      "확신도는 권한 검사나 사실 검증을 대체하지 않습니다. 사용자별 대표 과제에서 오탐·누락·폴백을 평가하고 중요한 외부 작업의 승인 단계를 유지해야 합니다."
+    ],
+    "sourceEvidence": [
+      "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "https://aistudio.google.com/docs/terms"
     ]
   }
 ]
